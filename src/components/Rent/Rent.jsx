@@ -8,7 +8,7 @@ import ImageHouse2 from "../../assets/images/house5.jpg";
 export function Rent() {
     return (
         <div className="Rent">
-            <h2>Imóveis similares</h2>  
+            <h2>Anúncios similares</h2>  
 
             <div className="itens">
             

@@ -15,7 +15,7 @@
     margin: 10px;
 }
 .ComingSoon img {
-    width: 500px;
+    width: 700px;
     margin: 10px;
 }
 .ComingSoon .image {
@@ -47,7 +47,7 @@
     font-weight: 900;
 }
 .ComingSoon .logo {
-    width: 150px;
+    width: 180px;
     margin: 20px;
 }
 .ComingSoon .logo img {
@@ -55,15 +55,15 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     .ComingSoon h1 {
         font-size: 20px;
     }
 
     .ComingSoon img {
-        width: 350px;
-        margin: 10px;
+        width: 95%;
+        margin: 40px 10px;
     }
 
     .ComingSoon .image {

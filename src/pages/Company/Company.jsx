@@ -4,7 +4,7 @@ import { IoLocationOutline, IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlob
 import { Footer } from "../../components/Footer/Footer";
 import { BrokerList } from "../../components/BrokerList/BrokerList";
 import { Sale } from "../../components/Sale/Sale";
-import imobiliária from "../../assets/images/imob1.png";
+import imobiliária from "../../assets/images/imob1.jpg";
 
 export function Company() {
     return (

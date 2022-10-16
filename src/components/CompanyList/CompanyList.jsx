@@ -1,8 +1,8 @@
 ﻿import "./companyList.css";
 import {FaBed, FaShower, FaCar} from 'react-icons/fa';
 import {IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoGlobeOutline, IoLocationOutline} from 'react-icons/io5'
-import imobiliária from "../../assets/images/imob1.png";
-import imobiliária2 from "../../assets/images/imob2.png";
+import imobiliária from "../../assets/images/imob1.jpg";
+import imobiliária2 from "../../assets/images/imob2.jpg";
 
 export function CompanyList() {
     return (

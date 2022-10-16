@@ -33,10 +33,11 @@ export function Property() {
                     </div>
             </div>
                 <div className="text">
-                    <h2>Lindo apartamento luxuoso</h2>
+                    <h2>VOLKSWAGEN <span>GOLF</span></h2>
+                    <h3>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h3>
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     {/* <h4>ID: 9fcb1vbb</h4> */}
-                    <h4>ID: IMOV-{data.getFullYear()}{data.getMonth()+1}{data.getDate()}{data.getHours()}{data.getMinutes()}</h4>
+                    <h4>ID: AUTO-{data.getFullYear()}{data.getMonth()+1}{data.getDate()}{data.getHours()}{data.getMinutes()}</h4>
                     <div className="status">
                         <p>Aceita financiamento</p>
                     </div>
@@ -44,42 +45,77 @@ export function Property() {
 
                     <div className="icons">
                         <div className="iconUnic">
-                            <p>Quartos</p>
+                            <p>Ano</p>
                             <div className="simbol">
                                 <FaBed />
                                 <p>3</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Suítes</p>
+                            <p>Km</p>
+                            <div className="simbol">
+                                <FaBed />
+                                <p>3</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Combustível</p>
                             <div className="simbol">
                                 <FaBath />
                                 <p>3</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
-                            <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
                                 <FaCar />
                                 <p>3</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Área total</p>
+                            <p>Portas</p>
                             <div className="simbol">
                                 <IoMove />
                                 <p>300 M2</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Construção</p>
+                            <p>Cor</p>
+                            <div className="simbol">
+                                <IoCrop />
+                                <p>150 M2</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Carroceria</p>
+                            <div className="simbol">
+                                <IoCrop />
+                                <p>150 M2</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Final de placa</p>
+                            <div className="simbol">
+                                <IoCrop />
+                                <p>150 M2</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>IPVA pago</p>
+                            <div className="simbol">
+                                <IoCrop />
+                                <p>150 M2</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Licenciado</p>
+                            <div className="simbol">
+                                <IoCrop />
+                                <p>150 M2</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Único dono</p>
                             <div className="simbol">
                                 <IoCrop />
                                 <p>150 M2</p>
@@ -89,31 +125,46 @@ export function Property() {
 
                     <div className="characteristics">
                         <div className="item">
-                            <IoCheckmarkSharp /> <p>Piscina</p> 
+                            <IoCheckmarkSharp /> <p>Direção Hidráulica</p> 
                         </div>
                         <div className="item">
-                            <IoCheckmarkSharp /> <p>Sacada</p>
+                            <IoCheckmarkSharp /> <p>Ar Condicionado</p>
                         </div>
                         <div className="item">
-                            <IoCheckmarkSharp /> <p>Sala de estar</p>
+                            <IoCheckmarkSharp /> <p>Vidros Elétricos</p>
                         </div>
                         <div className="item">
-                            <IoCheckmarkSharp /> <p>Suíte</p>
+                            <IoCheckmarkSharp /> <p>Trava Elétrica</p>
                         </div>
                         <div className="item">
-                            <IoCheckmarkSharp /> <p>Churrasqueira</p>
+                            <IoCheckmarkSharp /> <p>Computador de Bordo</p>
                         </div>
                         <div className="item">
-                            <IoCheckmarkSharp /> <p>Wifi</p>
+                            <IoCheckmarkSharp /> <p>Central Multimídia</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Air Bag</p> 
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Freio a Disco</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Câmera de Ré</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Alárme</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Volante com controle universal</p>
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h5>À venda por:</h5>
+                        <h2>R$ 123.900,00</h2>
                     </div>
 
                     <div className="video">
-                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/vrLSiAbdXb4" title="YouTube video player" frameBorder="0"
+                    <iframe width="100%" height="300" src="https://www.youtube-nocookie.com/embed/1UXGxXvhO3U" title="YouTube video player" frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 
@@ -129,10 +180,10 @@ export function Property() {
   src={`https://www.google.com/maps/embed/v1/place?key="AIzaSyAKKy0iHlEZMQavlxNM5i-tkIYp4q7X_Y0
     &q=Space+Needle,Seattle+WA`}>
 </iframe> */}
-                    <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    {/* <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                     src={text}
                     width="100%" height="300" style={{border:"0px", borderRadius: "6px"}} allowFullScreen=""
-                    loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12290.419599284141!2d-42.62790332892239!3d-22.711818016034076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1664680466523!5m2!1spt-BR!2sbr"
                     width="100%" height="300" style={{border:"0px", borderRadius: "6px"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>

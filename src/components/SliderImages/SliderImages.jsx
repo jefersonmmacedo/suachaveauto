@@ -89,7 +89,7 @@ import "./sliderImages.css"
               resolve: slidesToShowPlugin,
               options: {
                 addArrowClickHandler: true,
-              numberOfSlides: 6
+              numberOfSlides: 4
               }
               },
           ]}
@@ -101,7 +101,7 @@ import "./sliderImages.css"
                {
                  resolve: slidesToShowPlugin,
                  options: {
-                  numberOfSlides: 4
+                  numberOfSlides: 3
                  }
                }]},
             800: {

@@ -1,4 +1,4 @@
-﻿import "./newScheduling.css"
+﻿import "./newScheduling.css";
 import { IoCalendar, IoCloseOutline, IoLocationOutline, IoBusinessOutline } from "react-icons/io5";
 import Modal from 'react-modal';
 import { useState } from "react";
@@ -20,7 +20,7 @@ export function NewScheduling() {
     Modal.setAppElement('#root');
     return (
         <>
-        <button className="buttonScheduling" onClick={handleOpenModal}><IoCalendar/> Agendar visita</button>
+        <button className="buttonScheduling" onClick={handleOpenModal}> Agendar test drive</button>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"

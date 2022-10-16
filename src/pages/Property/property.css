@@ -81,23 +81,26 @@
     width: 100%;
 }
 .Property .main .data .propertyUnic .text h2 {
-    color: var(--Primary);
+    color: var(--Paragraph);
     font-weight: 700;
     margin: 20px 10px 5px 10px;
+}
+.Property .main .data .propertyUnic .text h2 span {
+    color: var(--Primary);
 }
 .Property .main .data .propertyUnic .text h4 {
     font-weight: 700;
     color: var(--Paragraph);
-    margin:20px 10px;
+    margin:5px 10px;
 }
 .Property .main .data .propertyUnic .text h3 {
-    color: var(--Paragraph);
+    color: var(--Gray);
     font-weight: 700;
-    margin: 20px 10px 5px 10px;
+    margin: 0 10px;
 }
 .Property .main .data .propertyUnic .text h5 {
     color: var(--Gray);
-    margin: 0 10px;
+    margin: 10px 10px;
     display: flex;
     flex-direction: row;
     align-items: center;

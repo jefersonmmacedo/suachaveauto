@@ -1,5 +1,5 @@
 ﻿import "./toolBar.css";
-import LogoImg from '../../../assets/images/imob2.png'
+import LogoImg from '../../../assets/images/imob2.jpg'
 import {IoSpeedometer, IoPerson,  IoNotifications, IoLogOutOutline, IoChatboxEllipses,
     IoHome, IoLaptopOutline, IoCalendar, IoLogoWhatsapp, IoQrCode, IoPeople } from 'react-icons/io5';
 export function ToolBar() {

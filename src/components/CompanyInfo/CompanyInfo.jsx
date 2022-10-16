@@ -1,6 +1,6 @@
 ﻿import "./companyInfo.css";
 import {IoCallOutline, IoLogoWhatsapp, IoMailOutline, IoChatboxEllipsesOutline} from 'react-icons/io5'
-import imobiliária from "../../assets/images/imob1.png";
+import imobiliária from "../../assets/images/imob1.jpg";
 
 export function CompanyInfo() {
     return (
@@ -8,7 +8,7 @@ export function CompanyInfo() {
             <div className="image">
                 <img src={imobiliária} alt="" />
             </div>
-            <h2>Sua Chave Imóveis</h2>
+            <h2>V8 Charger Automóveis</h2>
             <h5>Centro - Rio Bonito - Rio de Janeiro</h5>
 
             <div className="contact">
