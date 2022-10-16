@@ -1,0 +1,325 @@
+﻿.Company {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Company .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+.Company .main .btnCompany {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: var(--White);
+    background-color: var(--Primary);
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+}
+.Company .main .data {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+.Company .main .data .CompanyUnic {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--BorderHover);
+    border-radius: 6px;
+    margin: 85px 20px 20px 20px;
+    padding: 5px 20px;
+}
+
+.Company .main .data .CompanyUnic .targets {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.Company .main .data .CompanyUnic .targets .featured {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Primary);
+    border-radius: 20px;
+    padding: 10px 40px;
+    margin: 5px;
+}
+
+.Company .main .data .CompanyUnic .targets .featured p {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.Company .main .data .CompanyUnic .targets .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Secondary);
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.Company .main .data .CompanyUnic .targets .status p {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.Company .main .data .CompanyUnic .targets .heart {
+    margin: 10px;
+}
+
+.Company .main .data .CompanyUnic .targets .heart svg {
+    color: var(--White);
+    font-size: 30px;
+    cursor: pointer;
+}
+.Company .main .data .CompanyUnic .targets .heart svg:hover {
+    color: var(--Primary);
+}
+
+.Company .main .data .CompanyUnic .targets .heart2 {
+    margin: 10px;
+}
+
+.Company .main .data .CompanyUnic .targets .heart2 svg {
+    color: var(--Primary);
+    font-size: 24px;
+    cursor: pointer;
+}
+.Company .main .data .CompanyUnic .targets .heart svg:hover {
+    color: var(--Primary);
+}
+
+.Company .main .data .CompanyUnic .targets .chat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Delete);
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: var(--White);
+    cursor: pointer;
+    margin: 5px;
+}
+.Company .main .data .CompanyUnic .targets .chat svg {
+    margin-right: 10px;
+}
+
+.Company .main .data .CompanyUnic .targets .chat:hover {
+    background-color: var(--Primary);
+}
+
+
+
+
+.Company .main .data .CompanyUnic .title {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.Company .main .data .CompanyUnic .title .image {
+    width: 150px; 
+    height: 150px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-top: -75px;
+}
+.Company .main .data .CompanyUnic .title .image img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.Company .main .data .CompanyUnic .title .textTitle h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+
+.Company .main .data .CompanyUnic .title .textTitle h5 {
+    color: var(--Gray);
+    margin: 0 10px;
+}
+
+
+.Company .main .data .CompanyUnic .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.Company .main .data .CompanyUnic .text h4 {
+    color: var(--Paragraph);
+    margin:20px 10px;
+}
+.Company .main .data .CompanyUnic .text h3 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+
+.Company .main .data .CompanyUnic .text .iconsCompany {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    border: none;
+    border-top: 1px solid var(--Border);
+    flex-wrap: wrap;
+}
+
+.Company .main .data .CompanyUnic .text .iconsCompany .iconCompanyUnic {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 3px;
+    margin: 3px;
+    color: var(--Gray);
+}
+
+.Company .main .data .CompanyUnic .text .iconsCompany .iconCompanyUnic .simbol {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+.Company .main .data .CompanyUnic .text .iconsCompany .iconCompanyUnic .simbol p {
+    color: var(--Paragraph);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.Company .main .data .CompanyUnic .text .iconsCompany .iconCompanyUnic .simbol svg {
+    margin-right: 5px;
+    color: var(--Gray);
+    font-size: 18px;
+}
+
+.Company .main .data .CompanyUnic .text .characteristics {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.Company .main .data .CompanyUnic .text .characteristics .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    margin: 5px;
+    color: var(--Paragraph);
+}
+.Company .main .data .CompanyUnic .text .characteristics .item svg {
+    color: var(--Primary);
+    margin-right: 3px;
+}
+.Company .main .data .CompanyUnic .text .characteristics .item p {
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+
+
+.Company .main .data .CompanyUnic .text .pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: flex-start;
+}
+
+.Company .main .data .CompanyUnic .text .pricing h5 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+.Company .main .data .CompanyUnic .text .pricing h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 0 10px;
+}
+.Company .main .data .CompanyUnic .text .video {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.Company .main .data .CompanyUnic .text .map {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+
+@media (max-width: 950px) {
+    .Company .main .data {
+        width: 100%;
+    }
+@media (max-width: 850px) {
+    .Company .main .data {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 20px 0;
+        padding: 0 40px;
+    }
+    
+    .Company .main .data .CompanyUnic {
+        width: 90%;
+    }
+}
+
+@media (max-width: 750px) {
+    .Company .main .data {
+        padding: 0px;
+    }
+
+}
+
+}

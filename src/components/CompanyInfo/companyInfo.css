@@ -1,0 +1,108 @@
+﻿.CompanyInfo {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--BorderHover);
+    border-radius: 6px;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 70px; 
+}
+
+.CompanyInfo .image {
+    width: 120px;
+    height: 120px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    margin-top: -70px; 
+}
+.CompanyInfo .image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 6px;
+}
+
+.CompanyInfo h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;  
+}
+.CompanyInfo h5 {
+    color: var(--Gray);
+    margin: 0 10px;
+}
+.CompanyInfo .contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+.CompanyInfo .contact .info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: pre-line;
+    margin: 3px 0;
+    background-color: var(--BorderInput);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.CompanyInfo .contact .info h5 {
+    color: var(--Paragraph);
+    font-weight: 900;
+    margin-left: 5px;
+}
+.CompanyInfo .contact .info svg {
+    color: var(--Primary);
+}
+
+.CompanyInfo .buttonsContact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.CompanyInfo .buttonsContact button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: var(--Delete);
+    color: var(--White);
+    font-weight: 700;
+}
+
+.CompanyInfo .buttonsContact button svg {
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+.CompanyInfo .buttonsContact .btn-whats {
+    background-color: var(--Aproved);
+}
+.CompanyInfo .buttonsContact .btn-call {
+    background-color: var(--Secondary);
+}
+
+@media (max-width: 850px) {
+    
+    .CompanyInfo {
+        width: 95%;
+    }
+    
+}

@@ -1,0 +1,19 @@
+﻿.buttonMessage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Delete);
+    border-radius: 6px;
+    padding: 10px 20px;
+    color: var(--White);
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+}
+.buttonMessage svg {
+    margin-right: 10px;
+}
+.buttonMessage:hover {
+    background-color: var(--Primary);
+}

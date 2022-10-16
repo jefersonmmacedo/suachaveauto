@@ -1,0 +1,48 @@
+﻿.Simulator {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0px 0px 0px;
+}
+
+.Simulator h2 {
+    margin-top: 40px;
+    font-weight: bold;
+    color: var(--Primary);
+    text-align: center;
+}
+.Simulator h4 {
+    color: var(--Paragraph);
+    margin:10px;
+    text-align: center;
+}
+.Simulator .logosBank {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.Simulator .logosBank .logoUnicBank {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--White);
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.Simulator .logosBank .logoUnicBank .imageBank{
+   width: 80px;
+}

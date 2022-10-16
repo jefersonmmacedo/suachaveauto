@@ -1,0 +1,258 @@
+﻿.Property {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Property .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 65px 0;
+}
+.Property .main .data {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+.Property .main .data .propertyUnic {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--White);
+    border-radius: 6px;
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.Property .main .data .propertyUnic .targets {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.Property .main .data .propertyUnic .targets .featured {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Primary);
+    border-radius: 20px;
+    padding: 10px 40px;
+    margin: 5px;
+}
+
+.Property .main .data .propertyUnic .targets .featured p {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.Property .main .data .propertyUnic .targets .heart svg {
+    color: var(--Border);
+    font-size: 30px;
+    cursor: pointer;
+}
+.Property .main .data .propertyUnic .targets .heart svg:hover {
+    color: var(--Primary);
+}
+
+
+
+
+.Property .main .data .propertyUnic .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.Property .main .data .propertyUnic .text h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+.Property .main .data .propertyUnic .text h4 {
+    font-weight: 700;
+    color: var(--Paragraph);
+    margin:20px 10px;
+}
+.Property .main .data .propertyUnic .text h3 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+.Property .main .data .propertyUnic .text h5 {
+    color: var(--Gray);
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Property .main .data .propertyUnic .text .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Secondary);
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.Property .main .data .propertyUnic .text .status p {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.Property .main .data .propertyUnic .text .heart {
+    margin: 10px;
+}
+
+.Property .main .data .propertyUnic .text .icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+    flex-wrap: wrap;
+    border: none;
+    border-top: 1px solid var(--Border);
+}
+
+.Property .main .data .propertyUnic .text .icons .iconUnic {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    color: var(--Gray);
+}
+
+.Property .main .data .propertyUnic .text .icons .iconUnic p {
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+.Property .main .data .propertyUnic .text .icons .iconUnic .simbol {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.Property .main .data .propertyUnic .text .icons .iconUnic .simbol svg {
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--Gray);
+}
+
+.Property .main .data .propertyUnic .text .characteristics {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.Property .main .data .propertyUnic .text .characteristics .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    margin: 5px;
+    color: var(--Paragraph);
+}
+.Property .main .data .propertyUnic .text .characteristics .item svg {
+    color: var(--Primary);
+    margin-right: 3px;
+}
+.Property .main .data .propertyUnic .text .characteristics .item p {
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+
+
+.Property .main .data .propertyUnic .text .pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: flex-start;
+}
+
+.Property .main .data .propertyUnic .text .pricing h5 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+.Property .main .data .propertyUnic .text .pricing h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 0 10px;
+}
+.Property .main .data .propertyUnic .text .video {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.Property .main .data .propertyUnic .text .map {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+
+@media (max-width: 950px) {
+    .Property .main .data {
+        width: 100%;
+    }
+@media (max-width: 850px) {
+    .Property .main .data {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 20px 0;
+        padding: 0 40px;
+    }
+    
+    .Property .main .data .propertyUnic {
+        width: 90%;
+    }
+}
+
+@media (max-width: 750px) {
+    .Property .main .data {
+        padding: 0px;
+    }
+
+}
+
+}

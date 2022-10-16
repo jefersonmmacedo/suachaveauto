@@ -1,0 +1,194 @@
+﻿.ListProperty {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ListProperty .listProperties {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.ListProperty .listProperties .blockFavorite {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--White);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.ListProperty .listProperties .blockFavorite .image {
+    width: 100%; 
+    height: 150px;
+    border-radius: 6px 6px 0 0;
+}
+.ListProperty .listProperties .blockFavorite .image img {
+    width: 100%; 
+    height: 150px;
+    border-radius: 6px 6px 0 0;
+}
+
+
+.ListProperty .listProperties .blockFavorite .featured {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Primary);
+    border-radius: 20px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 10px;
+    padding: 10px 40px;
+}
+
+.ListProperty .listProperties .blockFavorite .featured p {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.ListProperty .listProperties .blockFavorite .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Secondary);
+    border-radius: 6px;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 10px;
+    padding: 10px 20px;
+}
+
+.ListProperty .listProperties .blockFavorite .status p {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.ListProperty .listProperties .blockFavorite .heart {
+    position: absolute;
+    margin-top: 115px;
+    margin-left: 245px;
+}
+
+.ListProperty .listProperties .blockFavorite .heart svg {
+    color: var(--White);
+    font-size: 24px;
+    cursor: pointer;
+}
+.ListProperty .listProperties .blockFavorite .heart svg:hover {
+    color: var(--Primary);
+}
+.ListProperty .listProperties .blockFavorite .heart2 {
+    position: absolute;
+    margin-top: 115px;
+    margin-left: 245px;
+}
+
+.ListProperty .listProperties .blockFavorite .heart2 svg {
+    color: var(--Primary);
+    font-size: 24px;
+    cursor: pointer;
+}
+.ListProperty .listProperties .blockFavorite .heart svg:hover {
+    color: var(--Primary);
+}
+
+
+
+
+.ListProperty .listProperties .blockFavorite .textFavorite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite h3 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 20px 10px 5px 10px;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite h4 {
+    color: var(--Gray);
+    margin: 0 10px;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite h5 {
+    color: var(--Gray);
+    margin: 0 10px;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite .icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.ListProperty .listProperties .blockFavorite .textFavorite .icons .iconUnic {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    textFavorite-align: center;
+    padding: 5px;
+    margin: 5px;
+    color: var(--Gray);
+}
+
+.ListProperty .listProperties .blockFavorite .textFavorite .icons .iconUnic p {
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite .icons .iconUnic .simbol {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    textFavorite-align: center;
+    margin-top: 5px;
+}
+
+.ListProperty .listProperties .blockFavorite .textFavorite .icons .iconUnic .simbol svg {
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--Gray);
+}
+.ListProperty .listProperties .blockFavorite .textFavorite .pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    textFavorite-align: flex-start;
+}
+
+.ListProperty .listProperties .blockFavorite .textFavorite .pricing h5 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+.ListProperty .listProperties .blockFavorite .textFavorite .pricing h2 {
+    color: var(--Primary);
+    font-weight: 700;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
