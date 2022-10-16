@@ -15,6 +15,7 @@ import LogoImg from '../../assets/images/Logo2.png';
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import { ToHire } from "../../components/ToHire/ToHire";
+import { BrandCarroussel } from "../../components/BrandCarroussel/BrandCarroussel";
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachaveautocity");
@@ -118,13 +119,16 @@ export function Home() {
             <Navbar2 />
             <SliderHome />
             <SearchProperty />
+              <div className="carrousselBrabd">
+            <BrandCarroussel />
+            </div>
             <div className="textFeature">
-            <h2>Imóveis em Destaque</h2>
+            <h2>Recomendados para você</h2>
             </div>
             <div className="carroussel">
             <PropertyCarroussel />
             </div>
-            <div className="textHome">
+            {/* <div className="textHome">
             <h2>Imóveis para alugar</h2>
             </div>
             <div className="carroussel">
@@ -135,7 +139,7 @@ export function Home() {
             </div>
             <div className="carroussel">
             <PropertyCarroussel />
-            </div>
+            </div> */}
             <ExploreIconsProperties />
             <Cities />
             <ToHire />

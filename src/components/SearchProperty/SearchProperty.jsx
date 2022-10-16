@@ -2,8 +2,9 @@
 import { useState } from "react";
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
-import {FaHome, FaBuilding, FaStore} from "react-icons/fa";
-import {IoBusiness} from "react-icons/io5";
+import {FaHome, FaBuilding, FaStore, FaTractor, FaCar, FaMotorcycle, FaBus, FaTruck} from "react-icons/fa";
+import {IoBusiness, IoLocationOutline} from "react-icons/io5";
+import {GiFarmTractor} from "react-icons/gi";
 
 export function SearchProperty() {
     const LocalCity = localStorage.getItem("suachavecity");
@@ -64,28 +65,55 @@ export function SearchProperty() {
     return (
         <div className="SearchProperty">
             <div className="selectButtons">
-            <button className="btn">Carros</button>
-            <button>Motos</button>
-            <button>Aluguel</button>
+            <button className="btn"><FaCar /></button>
+            <button><FaMotorcycle /></button>
+            <button><FaTruck /></button>
+            <button><FaBus /></button>
+            <button><FaTractor /></button>
                 </div>   
             <div className="search">
-            <select className="primary"> 
+                <input type="text" className="primary" placeholder="Digite Marca ou modelo" />
+            {/* <select className="primary"> 
                             <option value="">Tipo</option>   
                             <option value="">Comercial</option>   
                             <option value="">Residencial</option>   
                             <option value="">Industrial</option>   
                             <option value="">Rural</option>   
                             <option value="">Lotes</option>       
-                    </select>
-            <select> 
-                            <option value="">Escolha</option>   
+                    </select> */}
+                    <select> 
+                            <option value="">Ano Máximo</option>   
                             <option value="">Casa</option>   
                             <option value="">Apartamento</option>   
                             <option value="">Cobertura</option>   
                             <option value="">Kitnet</option>   
                             <option value="">Condomínio</option>       
                     </select>
-            <select value={uf} onChange={handleSetectUf}> 
+                    <select> 
+                            <option value="">Ano Mínimo</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
+                    </select>
+                    <select> 
+                            <option value="">Preço Máximo</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
+                    </select>
+                    <select> 
+                            <option value="">Preço Mínimo</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
+                    </select>
+            {/* <select value={uf} onChange={handleSetectUf}> 
                             <option value="">Escolha seu estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -128,10 +156,14 @@ export function SearchProperty() {
                         })}
                     </>
                     }     
-                    </select>
+                    </select> */}
                      <button onClick={handleSearchProfessional}>Buscar</button>
             </div>
-            <div className="icons">
+            <div className="textLocation">
+                <h4><IoLocationOutline /> {city} - {uf}</h4> 
+                <button>Alterar</button>
+            </div>
+            {/* <div className="icons">
                 <div className="unic">
                     <FaHome />
                     Casas
@@ -148,7 +180,7 @@ export function SearchProperty() {
                     <FaStore />
                     Lojas
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

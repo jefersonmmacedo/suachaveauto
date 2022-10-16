@@ -7,8 +7,8 @@ import SaoPaulo from "../../assets/images/SaoPaulo.jpg";
 export function Cities() {
     return (
         <div className="Cities">
-            <h2>Cidades em alta</h2>
-            <h4>Os melhores imóveis com as melhores localizações</h4>
+            <h2>Cidades com mais ofertas</h2>
+            <h4>Os melhores autos nas melhores localizações</h4>
             <div className="blocks">
                 <div className="block1">
                     <div className="city">

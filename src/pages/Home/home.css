@@ -2,14 +2,13 @@
     width: 100%;
 }
 .Home .textHome {
-    margin-top: 40px;
     width: 100%;
     text-align: center;
 }
 .Home .textFeature {
-    margin-top: 150px;
-    width: 100%;
-    text-align: center;
+    margin: 20px auto;
+    width: 1000px;
+    text-align: left;
 }
 .Home .textHome h2 {
     margin: 20px;
@@ -22,6 +21,10 @@
 .Home .carroussel {
     width: 1030px;
     margin: 0px auto;
+}
+.Home .carrousselBrabd {
+    width: 1000px;
+    margin: 100px auto 0px auto;
 }
 
 
@@ -139,27 +142,42 @@
 }
 
 @media (max-width: 1030px) {
+
+    .Home .carrousselBrabd {
+        width: 95%;
+        margin: 100px auto 0px auto;
+    }
+    
     .Home .carroussel {
         width: 95%;
         margin: 0px auto;
     }
 
-    @media (max-width: 970px) {
+    @media (max-width: 1000px) {
         .Home .carroussel {
             width: 100%;
             margin: 0px auto;
         }
 
+        .Home .textFeature {
+            width: 90%;
+            text-align: left;
+        }
+
         @media (max-width: 750px) {
+
+            .Home .carrousselBrabd {
+                width: 95%;
+                margin: 400px auto 0px auto;
+            }
+            
             .Home .textFeature {
-                margin-top: 350px;
-                width: 100%;
-                text-align: center;
+                width: 95%;
+                text-align: left;
             }
 
             @media (max-width: 555px) {
                 .Home .textFeature {
-                    margin-top: 400px;
                     width: 100%;
                     text-align: center;
                 }

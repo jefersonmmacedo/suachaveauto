@@ -22,6 +22,13 @@ export function PropertyCarroussel() {
 
     const responsiveSettings = [
         {
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4
+            }
+        },
+        {
             breakpoint: 900,
             settings: {
                 slidesToShow: 3,
@@ -64,9 +71,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                    <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -91,8 +99,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -113,9 +120,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -140,8 +148,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -162,9 +169,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -189,8 +197,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -211,9 +218,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -238,8 +246,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -260,9 +267,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -287,8 +295,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -309,9 +316,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -336,8 +344,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -358,9 +365,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -385,8 +393,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -407,9 +414,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -434,8 +442,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -456,9 +463,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -483,8 +491,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -505,9 +512,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -532,8 +540,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -554,9 +561,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -581,8 +589,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>
@@ -603,9 +610,10 @@ export function PropertyCarroussel() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                    <h3>Lindo apartamento luxuoso</h3>
+                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
-                    <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
+                    <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Quartos</p>
@@ -630,8 +638,7 @@ export function PropertyCarroussel() {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                     </div>
                 </div>

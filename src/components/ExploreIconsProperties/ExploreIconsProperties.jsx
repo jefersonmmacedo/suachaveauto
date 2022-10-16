@@ -1,5 +1,5 @@
 ﻿import "./exploreIconsProperties.css";
-import {FaHome, FaBuilding, FaStore, FaMapMarkedAlt} from "react-icons/fa";
+import {FaHome, FaBuilding, FaStore, FaTractor, FaCar, FaMotorcycle, FaBus, FaTruck} from "react-icons/fa";
 import {IoBusiness, IoArrowForward} from "react-icons/io5";
 
 
@@ -8,32 +8,32 @@ export function ExploreIconsProperties() {
         <div className="ExploreIconsProperties">
             <div className="mainExplorer">
             <div className="textExplore">
-                <h2>Explore mais imóveis</h2>
-                <h4>Veja os tipos de imóveis mais procurados</h4>
+                <h2>Explore mais categorias</h2>
+                <h4>Veja os tipos de autos mais procurados</h4>
 
                 <a href="/imoveis/all">+ 1.500 imóveis <IoArrowForward /> </a>
             </div>
 
             <div className="iconsExplore">
                 <div className="IconUnicExplore">
-                    <FaHome />
-                    <h5>Casas</h5>
+                    <FaCar />
+                    <h5>Carros</h5>
                 </div>
                 <div className="IconUnicExplore">
-                    <FaBuilding />
-                    <h5>Apartamentos</h5>
+                    <FaMotorcycle />
+                    <h5>Motos</h5>
                 </div>
                 <div className="IconUnicExplore">
-                    <IoBusiness />
-                    <h5>Salas Comerciais</h5>
+                    <FaTruck />
+                    <h5>Caminhões</h5>
                 </div>
                 <div className="IconUnicExplore">
-                    <FaStore />
-                    <h5>Lojas</h5>
+                    <FaBus />
+                    <h5>Ônibus</h5>
                 </div>
                 <div className="IconUnicExplore">
-                    <FaMapMarkedAlt />
-                    <h5>Terrenos e Lotes</h5>
+                    <FaTractor />
+                    <h5>Tratores</h5>
                 </div>
             </div>
             </div>
