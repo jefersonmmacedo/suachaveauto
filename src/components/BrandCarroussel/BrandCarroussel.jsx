@@ -35,7 +35,7 @@ export function BrandCarroussel() {
             breakpoint: 800,
             settings: {
                 slidesToShow: 10,
-                slidesToScroll: 10
+                slidesToScroll: 10,
             }
         },
         {
@@ -70,7 +70,7 @@ export function BrandCarroussel() {
 
     return (
         <div>
-            <Slide slidesToScroll={3} slidesToShow={3} indicators={true} {...properties} responsive={responsiveSettings}>
+            <Slide slidesToScroll={3} slidesToShow={3} autoplay={false} indicators={true} {...properties} responsive={responsiveSettings}>
             <div className="logoBrand">
                     <div className="image">
                         <a href="/imovel">

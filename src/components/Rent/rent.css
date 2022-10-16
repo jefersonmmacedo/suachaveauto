@@ -24,7 +24,7 @@
 }
 
 .Rent .itens .block {
-    width: 300px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -87,7 +87,7 @@
 .Rent .itens .block .heart {
     position: absolute;
     margin-top: 115px;
-    margin-left: 265px;
+    margin-left: 215px;
 }
 
 .Rent .itens .block .heart svg {
@@ -101,7 +101,7 @@
 .Rent .itens .block .heart2 {
     position: absolute;
     margin-top: 115px;
-    margin-left: 265px;
+    margin-left: 215px;
 }
 
 .Rent .itens .block .heart2 svg {

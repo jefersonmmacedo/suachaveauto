@@ -108,18 +108,25 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 33%;
-    padding: 10px 20px;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 50%;
     Background-color: rgba(0,0,0,0.6);
     color: var(--White);
     font-weight: 500;
     border: none;
-    border-radius: 25px;
+    margin: 5px;
+}
+
+.SearchPropertyListing .selectButtonsStatus button svg {
+font-size: 16px;
 }
 .SearchPropertyListing .selectButtonsStatus .btn {
-    width: 33%;
-    padding: 10px 20px;
-
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 50%;
     background-color: var(--Primary);
     border: 1px solid var(--Gray);
     color: var(--White);
@@ -179,6 +186,7 @@
     }
 
     .SearchPropertyListing .selectButtonsStatus {
-        width: 100%;
+        width: 95%;
+        justify-content: center;
     }
 }

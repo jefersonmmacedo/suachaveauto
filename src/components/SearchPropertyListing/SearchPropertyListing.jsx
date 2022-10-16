@@ -2,6 +2,7 @@
 import { useState } from "react";
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
+import {FaTractor, FaCar, FaMotorcycle, FaBus, FaTruck} from "react-icons/fa";
 
 export function SearchPropertyListing() {
     const LocalCity = localStorage.getItem("suachavecity");
@@ -58,67 +59,47 @@ export function SearchPropertyListing() {
     return (
         <div className="SearchPropertyListing">
             <div className="selectButtonsStatus">
-            <button className="btn">Aluguel</button>
-            <button>Venda</button>
-            <button className="btn2">Temporada</button>
+            <button className="btn"><FaCar /></button>
+            <button><FaMotorcycle /></button>
+            <button><FaTruck/></button>
+            <button><FaBus/></button>
+            <button><FaTractor /></button>
                 </div>   
             <div className="search">
-            <select className="primary"> 
-                            <option value="">Tipo</option>   
-                            <option value="">Comercial</option>   
-                            <option value="">Residencial</option>   
-                            <option value="">Industrial</option>   
-                            <option value="">Rural</option>   
-                            <option value="">Lotes</option>       
-                    </select>
-            <select> 
-                            <option value="">Escolha</option>   
+            <input type="text" className="primary" placeholder="Digite Marca ou modelo" />
+                    <select> 
+                            <option value="">Ano Máximo</option>   
                             <option value="">Casa</option>   
                             <option value="">Apartamento</option>   
                             <option value="">Cobertura</option>   
                             <option value="">Kitnet</option>   
                             <option value="">Condomínio</option>       
                     </select>
-            <select> 
-                            <option value="">Quartos</option>   
-                            <option value="1">1</option>   
-                            <option value="2">2</option>   
-                            <option value="3">3</option>   
-                            <option value="4">4</option>   
-                            <option value="5">5</option>       
-                            <option value="6">6</option>       
-                            <option value="7">7</option>       
-                            <option value="8">8</option>       
-                            <option value="9">9</option>       
-                            <option value="10">10</option>      
+                    <select> 
+                            <option value="">Ano Mínimo</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
                     </select>
-            <select> 
-                            <option value="">Banheiros</option>   
-                            <option value="1">1</option>   
-                            <option value="2">2</option>   
-                            <option value="3">3</option>   
-                            <option value="4">4</option>   
-                            <option value="5">5</option>       
-                            <option value="6">6</option>       
-                            <option value="7">7</option>       
-                            <option value="8">8</option>       
-                            <option value="9">9</option>       
-                            <option value="10">10</option>      
+                    <select> 
+                            <option value="">Preço Máximo</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
                     </select>
-            <select> 
-                            <option value="">Garagem</option>   
-                            <option value="1">1</option>   
-                            <option value="2">2</option>   
-                            <option value="3">3</option>   
-                            <option value="4">4</option>   
-                            <option value="5">5</option>       
-                            <option value="6">6</option>       
-                            <option value="7">7</option>       
-                            <option value="8">8</option>       
-                            <option value="9">9</option>       
-                            <option value="10">10</option>       
+                    <select> 
+                            <option value="">Preço Mínimo</option>   
+                            <option value="">Casa</option>   
+                            <option value="">Apartamento</option>   
+                            <option value="">Cobertura</option>   
+                            <option value="">Kitnet</option>   
+                            <option value="">Condomínio</option>       
                     </select>
-            <select value={uf} onChange={handleSetectUf}> 
+            {/* <select value={uf} onChange={handleSetectUf}> 
                             <option value="">Escolha seu estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
@@ -162,7 +143,7 @@ export function SearchPropertyListing() {
                         })}
                     </>
                     }     
-                    </select>
+                    </select> */}
                      <button onClick={handleSearchProfessional}>Buscar</button>
             </div>
         </div>
