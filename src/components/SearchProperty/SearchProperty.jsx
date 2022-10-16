@@ -64,9 +64,9 @@ export function SearchProperty() {
     return (
         <div className="SearchProperty">
             <div className="selectButtons">
-            <button className="btn">Aluguel</button>
-            <button>Venda</button>
-            <button>Temporada</button>
+            <button className="btn">Carros</button>
+            <button>Motos</button>
+            <button>Aluguel</button>
                 </div>   
             <div className="search">
             <select className="primary"> 

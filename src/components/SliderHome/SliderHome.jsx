@@ -46,7 +46,8 @@ const properties = {
                         <p>Novo</p>
                     </div>
                     <a href="/imovel">
-                    <h3>Apartamento de luxo</h3>
+                    <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h4>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h4>
                     </a>
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
@@ -94,8 +95,7 @@ const properties = {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,8 @@ const properties = {
                         <p>Novo</p>
                     </div>
                     <a href="/imovel">
-                    <h3>Apartamento luxuoso</h3>
+                    <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h4>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h4>
                     </a>
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
@@ -160,8 +161,7 @@ const properties = {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                 </div>
             </div>
@@ -178,7 +178,8 @@ const properties = {
                         <p>Novo</p>
                     </div>
                     <a href="/imovel">
-                    <h3>Apartamento luxuoso</h3>
+                    <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h4>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h4>
                     </a>
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
@@ -226,8 +227,7 @@ const properties = {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                 </div>
             </div>
@@ -244,7 +244,8 @@ const properties = {
                         <p>Novo</p>
                     </div>
                     <a href="/imovel">
-                    <h3>Apartamento luxuoso</h3>
+                    <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h4>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h4>
                     </a>
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
                     <div className="icons">
@@ -292,8 +293,7 @@ const properties = {
                         </div>
                     </div>
                     <div className="pricing">
-                        <h5>Aluguel</h5>
-                        <h2>R$ 2.000,00 / Mês</h2>
+                        <h2>R$ 139.000,00</h2>
                     </div>
                 </div>
             </div>

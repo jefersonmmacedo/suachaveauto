@@ -16,7 +16,7 @@
 }
 .ComingSoon img {
     width: 700px;
-    margin: 10px;
+    margin: 40px 10px;
 }
 .ComingSoon .image {
     width: 371px;
@@ -52,6 +52,7 @@
 }
 .ComingSoon .logo img {
     width: 100%;
+    margin: 0px;
 }
 
 
