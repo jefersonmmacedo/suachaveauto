@@ -11,7 +11,7 @@ export function ToHire() {
             </div>
             <div className="textToHire">
                 <h1><IoMegaphoneOutline />Anuncie com a gente</h1>
-                <h3>Saiba tudo sobre nossos planos para imobiliárias e corretores</h3>
+                <h3>Saiba tudo sobre nossos planos para agências e consultores</h3>
 
                 <a href="/sobre">Saber mais</a>
             </div>

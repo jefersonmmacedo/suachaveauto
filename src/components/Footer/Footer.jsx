@@ -19,9 +19,9 @@ export function Footer() {
                             <h3><b>SUA CHAVE</b></h3>
                                 <h5><a href="/sobre">Sobre nós</a></h5>
                                 {/* <h5><a href="/sobre">Blog</a></h5> */}
-                                <h5><a href="/imoveis/all">Imóveis</a></h5>
-                                <h5><a href="/imobiliarias">Imobiliárias</a></h5>
-                                <h5><a href="/corretores">Corretores</a></h5>
+                                <h5><a href="/imoveis/all">Carros</a></h5>
+                                <h5><a href="/imoveis/all">Motos</a></h5>
+                                <h5><a href="/imobiliarias">Agências</a></h5>
                                 <h5><a href="/simulador">Simulador</a></h5>
                                 <h5><a href="/planos">Planos</a></h5>
                         </div>
@@ -56,7 +56,7 @@ export function Footer() {
                                 </div>
                                 </div>
                                 <div className="app">
-                                <h5>Imobiliária</h5>
+                                <h5>Agências</h5>
                                 <div className="logos">
                                 <a href="/"><img src={google} alt="" /></a>       
                                 <a href="/"><img src={apple} alt="" /></a>         

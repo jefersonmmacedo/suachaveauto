@@ -13,14 +13,14 @@ export function Cities() {
                 <div className="block1">
                     <div className="city">
                         <h4>Rio de Janeiro</h4>
-                        <h5>450 Imóveis</h5>
+                        <h5>450 Autos</h5>
                     </div>
                     <img src={Rio} alt="" />
                 </div>
                 <div className="block2">
                 <div className="city">
                         <h4>Belo Horizonte</h4>
-                        <h5>450 Imóveis</h5>
+                        <h5>450 Autos</h5>
                     </div>
                     <img src={Minas} alt="" />
                 </div>
@@ -29,14 +29,14 @@ export function Cities() {
             <div className="block1">
             <div className="city">
                         <h4>São Paulo</h4>
-                        <h5>450 Imóveis</h5>
+                        <h5>450 Autos</h5>
                     </div>
                     <img src={SaoPaulo} alt="" />
                 </div>
                 <div className="block2">
                 <div className="city">
                         <h4>Salvador</h4>
-                        <h5>450 Imóveis</h5>
+                        <h5>450 Autos</h5>
                     </div>
                     <img src={Bahia} alt="" />
                 </div>

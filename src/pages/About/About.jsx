@@ -7,6 +7,7 @@ import { Plains } from "../../components/Plains/Plains";
 import SmartPhone from "../../assets/images/iphone.png";
 import Modal from 'react-modal';
 import { useState } from "react";
+import imgFamily from "../../assets/images/background2.jpg"
 
 export function About() {
     const [isOpenModal, setIsOpenModa] = useState(false);
@@ -27,25 +28,24 @@ export function About() {
 <div className="About">
     <Navbar2 />
     <div className="MainAbout">
-        <div className="topRotate">
             <div className="bloco">
-                <div className="textAbout">
-                    <h1>Seja bem vindo ao <span>Sua Chave</span></h1>
-                    <h3>Somos um marketplace para imobiliárias e corretores, <br />
-                    com foco em conectar seus imóveis a clientes interessados.</h3>
-
-                    <div className="buttonsText">
-                        <button>Fale conosco</button>
-                        <button className="btn">Cadastrar</button>
+                <div className="imageAbout">
+                    <div className="imgBlock">
+                  <img src={imgFamily} alt="" />
                     </div>
                 </div>
-                <div className="imageAbout">
-                    <IoPlayCircle onClick={handleOpenModal}/>
+                <div className="textAbout">
+                    <h1>Seja-bem vindo ao <br /> <span>Sua Chave Auto</span></h1>
+                    <h3>Fomos criados para agência e consultores, <br />
+                    com foco em conectar seus automóveis a seus clientes.</h3>
+
+                    <div className="buttonsText">
+                        <button onClick={handleOpenModal}><IoPlayCircle /> dê um play na nossa história</button>
+                    </div>
                 </div>
-            </div>
         </div>
         <div className="textPricing">
-        <h1>Porque escolher o <span>Sua Chave</span> ?</h1>
+        <h1>Porque escolher o <span>Sua Chave Auto</span> ?</h1>
         <h4>Veja os motivos que faz nossos clientes nos escolherem e o que podemos agregar ao seu negócio.</h4>
     </div>
         <div className="WhyChoose">
@@ -64,8 +64,8 @@ export function About() {
                         <IoChatbubblesOutline />
                     </div>
                     <div className="IconsWhyText">
-                    <h2>Chat único por imóvel</h2>
-                    <h4>Seu cliente conversa com você em uma aba específica por imóvel</h4>
+                    <h2>Chat único por anúncio</h2>
+                    <h4>Seu cliente conversa com você em uma aba específica por anúncio</h4>
                     </div>
                 </div>
                 <div className="IconsWhyChooseUnic">
@@ -113,7 +113,7 @@ export function About() {
         </div>
 
     <div className="howItWorks">
-        <h1>Como funciona o Sua Chave?</h1>
+        <h1>Como funciona o Sua Chave Auto?</h1>
         <h4>Somos um marketplace para imobiliárias e corretores, com foco em conectar seus imóveis a clientes interessados
             <br />
         Utilizando ferramentas de marketing, geolocalização e integrações trazemos mais objetividade nas ofertas de propriedades</h4>
@@ -147,7 +147,7 @@ export function About() {
         <div className="BlocksContact">
                 <div className="blockContact">
                         <h3><IoMailOpenOutline /> Email</h3>
-                        <h5>contato@suachave.com.br</h5>
+                        <h5>contato@suachaveauto.com.br</h5>
 
                         <button>Enviar e-mail</button>
                 </div>

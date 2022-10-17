@@ -15,82 +15,51 @@
     justify-content: center;
     flex-direction: column;
 }
-.About .MainAbout .topRotate{
+.About .MainAbout .bloco {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
     width: 100%;
-    height: 500px;
-    background-image: url("../../assets/images/background2.jpg"); /* The image used */
-    background-color: #cccccc; /* Used if the image is unavailable */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    border-radius: 0 0 300px 0;
-    object-fit: cover;
-}
-
-.About .MainAbout .topRotate .bloco {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(170,0,0, 0.8);
     object-fit: cover;
     border-radius: 0 0 300px 0;
-    padding: 100px 20px 50px 20px;
+    padding: 100px 40px 20px 40px;
 }
-.About .MainAbout .topRotate .bloco .textAbout {
+.About .MainAbout .bloco .textAbout {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
+    width: 500px;
 }
-.About .MainAbout .topRotate .bloco .textAbout h1 {
+.About .MainAbout .bloco .textAbout h1 {
     font-size: 45px;
     font-weight: 700;
-    color: var(--White);
+    color: var(--Paragraph);
+    text-align: left;
+    margin-bottom: 10px;
 }
-.About .MainAbout .topRotate .bloco .textAbout h3 {
+.About .MainAbout .bloco .textAbout h1 span {
+    color: var(--Primary);
+}
+.About .MainAbout .bloco .textAbout h3 {
     font-weight: 600;
-    color: var(--White);
+    color: var(--Gray);
+    margin-top: 5px;
+    text-align: left;
 }
-.About .MainAbout .topRotate .bloco .textAbout .buttonsText {
+.About .MainAbout .bloco .textAbout .buttonsText {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 40px 0 0 0;
 }
 
-.About .MainAbout .topRotate .bloco .textAbout .buttonsText button {
-    background-color: var(--White);
-    padding: 15px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    color: var(--Primary);
-    width: 250px;
-    margin: 5px;
-    font-weight: 700;
-}
-.About .MainAbout .topRotate .bloco .textAbout .buttonsText button:hover {
+.About .MainAbout .bloco .textAbout .buttonsText button {
     background-color: var(--Primary);
-    color: var(--White);
-}
-
-.About .MainAbout .topRotate .bloco .textAbout .buttonsText .btn {
-    background-color: rgba(255, 255, 255, 0);
     padding: 15px 20px;
     font-size: 16px;
     border: none;
@@ -100,25 +69,57 @@
     justify-content: center;
     flex-direction: row;
     color: var(--White);
-    width: 250px;
     margin: 5px;
     font-weight: 700;
 }
+.About .MainAbout .bloco .textAbout .buttonsText button:hover {
+    background-color: var(--PrimaryHover);
+    color: var(--White);
+}
 
-.About .MainAbout .topRotate .bloco .imageAbout {
+.About .MainAbout .bloco .textAbout .buttonsText button svg {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.About .MainAbout .bloco .imageAbout {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(170,0,0);
 }
-.About .MainAbout .topRotate .bloco .imageAbout svg {
+.About .MainAbout .bloco .imageAbout .imgBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.About .MainAbout .bloco .imageAbout .imgBlock img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+.About .MainAbout .bloco .imageAbout svg {
     color: var(--White);
     font-size: 120px;
     cursor: pointer;
 }
-.About .MainAbout .topRotate .bloco .imageAbout svg:hover {
-    color: var(--ButtonDisabled);
+.About .MainAbout .bloco .imageAbout svg:hover {
+    color: var(--Border);
 }
 
 .About .MainAbout .WhyChoose {
@@ -263,7 +264,7 @@
     justify-content: space-around;
     flex-direction: row;
     padding: 20px;
-    margin: 20px auto;
+    margin: 10px auto;
     flex-wrap: wrap;
 }
 
@@ -327,7 +328,35 @@
     color: var(--Primary);
 }
 
+@media (max-width: 1160px) {
+    .About .MainAbout .bloco {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0 0 300px 0;
+        padding: 100px 10px 50px 10px;
+    }
 @media (max-width: 1000px) {
+
+    
+.About .MainAbout .bloco .imageAbout {
+    width: 300px;
+    height: 300px;
+}
+.About .MainAbout .bloco .imageAbout .imgBlock {
+    width: 300px;
+    height: 300px;
+
+}
+.About .MainAbout .bloco .imageAbout .imgBlock img {
+    width: 300px;
+    height: 300px;
+}
+
+
     .About .MainAbout .howItWorks .iconsWorks {
         width: 100%;
         padding: 10px;
@@ -342,11 +371,40 @@
 
 
     @media (max-width: 920px) {
+        .About .MainAbout .bloco {
+            padding: 100px 10px 10px 10px;
+        }
+
+        .About .MainAbout .bloco .imageAbout {
+            display: none;
+        }
+
+        .About .MainAbout .bloco .textAbout {
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            margin-bottom: -50px;
+        }
+        .About .MainAbout .bloco .textAbout h1 {
+            text-align: center;
+        }
+        .About .MainAbout .bloco .textAbout h3 {
+            text-align: center;
+        }
+
+        .About .MainAbout .bloco .textAbout .buttonsText {
+            align-items: center;
+        }
+
         .About .MainAbout .WhyChoose {
             padding: 20px 5px;
         }
         .About .MainAbout .WhyChoose .WhyChooseImage {
             padding: 0 20px;
+        }
+
+        .About .MainAbout .textPricing{
+            padding: 0 20px 0 20px;
         }
 
         @media (max-width: 842px) {
@@ -389,20 +447,20 @@
             
 
     @media (max-width: 550px) {
-        .About .MainAbout .topRotate{
+        .About .MainAbout{
             height: 100%;
             border-radius: 0 0 150px 0;
             margin-bottom: 40px;
             flex-direction: column;
         }
         
-        .About .MainAbout .topRotate .bloco {
+        .About .MainAbout .bloco {
             border-radius: 0 0 150px 0;
             padding: 100px 20px 50px 20px;
             flex-direction: column;
         }
 
-        .About .MainAbout .topRotate .bloco .imageAbout svg {
+        .About .MainAbout .bloco .imageAbout svg {
             font-size: 80px;
             margin-top: 30px;
         }
@@ -410,4 +468,5 @@
     }
     }
     }
+}
 }

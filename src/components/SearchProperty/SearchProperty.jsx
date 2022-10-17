@@ -7,7 +7,7 @@ import {IoBusiness, IoLocationOutline} from "react-icons/io5";
 import {GiFarmTractor} from "react-icons/gi";
 
 export function SearchProperty() {
-    const LocalCity = localStorage.getItem("suachavecity");
+    const LocalCity = localStorage.getItem("suachaveautocity");
     const userCity = JSON.parse(LocalCity);
     const [uf, setUf] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.uf);
     const [city, setCity] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.city);
@@ -159,10 +159,16 @@ export function SearchProperty() {
                     </select> */}
                      <button onClick={handleSearchProfessional}>Buscar</button>
             </div>
+            {userCity !== null || userCity !== undefined || userCity !== "" ? 
             <div className="textLocation">
                 <h4><IoLocationOutline /> {city} - {uf}</h4> 
                 <button>Alterar</button>
             </div>
+             : 
+            <div className="textLocation">
+                <button>Definir cidade</button>
+            </div>
+             }
             {/* <div className="icons">
                 <div className="unic">
                     <FaHome />

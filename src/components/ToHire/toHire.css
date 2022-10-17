@@ -5,7 +5,7 @@
     flex-direction: row;
     width: 100%;
     height: 350px;
-    background-image: url("../../assets/images/backred3.jpg");
+    background-image: url("../../assets/images/backred2.jpg");
     background-color: #cccccc; 
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@
     justify-content: center;
     flex-direction: row;
     width: 80%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     background-color: #cccccc;
     border-radius: 6px;
@@ -32,7 +32,7 @@
 
 .ToHire .imageToHire .imgToHireIn img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     border-radius: 6px;
     object-fit: cover;
 }
@@ -55,6 +55,9 @@
     justify-content: center;
     flex-direction: row;
     text-align: left;
+}
+.ToHire .textToHire h1 svg {
+    margin-right: 10px;
 }
 
 .ToHire .textToHire h3 {

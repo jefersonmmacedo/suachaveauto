@@ -5,7 +5,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 50px 0;
+    margin: 40px 0 20px 0;
 }
 
 .Plains .plain {
@@ -34,6 +34,10 @@
 }
 
 .Plains .plain .title h1 {
+    font-weight: 700;
+}
+
+.Plains .plain .title h4 {
     font-weight: 700;
 }
 
