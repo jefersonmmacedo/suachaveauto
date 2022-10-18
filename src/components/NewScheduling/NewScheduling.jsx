@@ -3,6 +3,7 @@ import { IoCalendar, IoCloseOutline, IoLocationOutline, IoBusinessOutline } from
 import Modal from 'react-modal';
 import { useState } from "react";
 import ImageHouse1 from "../../assets/images/house.jpg";
+import volante from "../../assets/images/icons/volante.png";  
 
 export function NewScheduling() {
     const [isOpenModal, setIsOpenModa] = useState(false);
@@ -20,7 +21,7 @@ export function NewScheduling() {
     Modal.setAppElement('#root');
     return (
         <>
-        <button className="buttonScheduling" onClick={handleOpenModal}> Agendar test drive</button>
+        <button className="buttonScheduling" onClick={handleOpenModal}> <img src={volante} alt="" /> Agendar test drive</button>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"

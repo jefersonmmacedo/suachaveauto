@@ -134,7 +134,7 @@
 }
 
 .Rent .itens .block .icons .iconUnic {
-    width: 20%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -160,10 +160,15 @@
 }
 
 .Rent .itens .block .icons .iconUnic .simbol svg {
-    font-size: 18px;
-    margin-right: 10px;
+    font-size: 14px;
+    margin-right: 5px;
     color: var(--Gray);
 }
+.Rent .itens .block .icons .iconUnic .simbol img {
+    width: 14px;
+    margin-right: 3px;
+}
+
 .Rent .itens .block .pricing {
     width: 100%;
     display: flex;

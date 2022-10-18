@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Burger from './Burger';
 import LogoImg from '../../../assets/images/Logo2.png'
 import LogoSimbol from '../../../assets/images/Simbol.png'
-import {IoHome, IoNotifications, IoChatboxEllipses, IoCalendar} from 'react-icons/io5'
+import {IoCarSport, IoNotifications, IoChatboxEllipses, IoCalendar} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 
@@ -191,7 +191,7 @@ const NavbarAdm = () => {
       <div className="account2">
 
 
-                <button className='iconUnic2' data-tip data-for='Novo Imóvel' onClick={() => HandleOpenLink("/painel/novoimovel")}><IoHome/></button>
+                <button className='iconUnic2' data-tip data-for='Novo Imóvel' onClick={() => HandleOpenLink("/painel/novoimovel")}><IoCarSport/></button>
                 <ReactTooltip id='Novo Imóvel' place="bottom" type="dark" effect="solid">
                      <span>Novo Imóvel</span>
                 </ReactTooltip>

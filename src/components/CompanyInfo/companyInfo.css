@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: var(--BorderHover);
+    background-color: var(--White);
     border-radius: 6px;
     margin: 20px;
     padding: 10px;
@@ -31,6 +31,10 @@
     margin: 20px 10px 5px 10px;  
 }
 .CompanyInfo h5 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
     color: var(--Gray);
     margin: 0 10px;
 }
@@ -40,30 +44,38 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .CompanyInfo .contact .info {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     white-space: pre-line;
     margin: 3px 0;
-    background-color: var(--BorderInput);
+    background-color: var(--BorderHover);
     padding: 10px;
     border-radius: 6px;
 }
 
+.CompanyInfo .contact .info h4 {
+    color: var(--Primary);
+    font-weight: 800;
+    margin-left: 5px;
+    margin: 3px;
+}
 .CompanyInfo .contact .info h5 {
     color: var(--Paragraph);
-    font-weight: 900;
+    font-weight: 700;
     margin-left: 5px;
+    margin: 3px;
 }
-.CompanyInfo .contact .info svg {
-    color: var(--Primary);
+.CompanyInfo .contact .info h5 svg {
+    color: var(--Gray);
+    margin-right: 5px;
+    font-size: 16px;
 }
-
 .CompanyInfo .buttonsContact {
     width: 100%;
     display: flex;

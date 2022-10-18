@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 20px;
+    margin: 0 20px 40px 20px;
 }
 
 .CompanyList .searchCompanies {
@@ -241,11 +241,15 @@
     @media (max-width: 800px) {
         .CompanyList .listProperties {
             width: 97%;
-            margin: 0 20px;
+            margin: 0 20px 40px 20px;
         }
 
         @media (max-width: 711px) {
             .CompanyList .listProperties .propertyUnicFavorite {
+                width: 100%;
+            }
+
+            .CompanyList .searchCompanies {
                 width: 100%;
             }
 
@@ -273,6 +277,16 @@
                 }
 
                 @media (max-width: 515px) {
+
+                    .CompanyList .searchCompanies {
+                        width: 98%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 10px 0;
+                    }
+                    
                     .CompanyList .listProperties .propertyUnicFavorite .text {
                         justify-content: flex-start;
                     }

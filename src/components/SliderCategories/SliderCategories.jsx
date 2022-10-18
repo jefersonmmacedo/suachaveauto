@@ -1,4 +1,4 @@
-﻿import "./sliderHome.css"
+﻿import "./sliderCategories.css"
 import {FaBed, FaShower, FaCar, FaBath} from 'react-icons/fa';
 import {IoCrop, IoMove, IoArrowBack, IoArrowForward, IoLocationOutline} from 'react-icons/io5';
 import ImageHouse1 from "../../assets/images/house.jpg";
@@ -10,7 +10,7 @@ import ImageHouse6 from "../../assets/images/house6.jpg";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
-function SliderHome() {
+function SliderCategories() {
   const images = [
     ImageHouse1,
     ImageHouse2,
@@ -303,4 +303,4 @@ const properties = {
 };
   
 
-  export { SliderHome }
+  export { SliderCategories }

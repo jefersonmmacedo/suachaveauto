@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoSpeedometerOutline, IoCalendarOutline } from 'react-icons/io5';
+import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoCarSportOutline, IoSpeedometerOutline, IoCalendarOutline } from 'react-icons/io5';
 
 const Ul = styled.ul`
   list-style: none;
@@ -190,7 +190,7 @@ const RightNav = ({ open }) => {
           {user.type === "company" && user !== null && user !== undefined && user !== "" ?
           <>
                     <button className='btn' onClick={() => HandleOpenLink("/painel/novoimovel")}>
-            <IoHomeOutline /> &nbsp; Imóveis
+            <IoCarSportOutline /> &nbsp; Imóveis
           </button>
           <button className='btn' onClick={() => HandleOpenLink("/painel/chat")}>
             <IoChatboxEllipsesOutline /> &nbsp; Mensagens

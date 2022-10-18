@@ -1,6 +1,6 @@
 ﻿import "./listProperty.css";
 import {FaBed, FaShower, FaCar} from 'react-icons/fa';
-import {IoCrop, IoHeart, IoHeartOutline, IoLocationOutline} from 'react-icons/io5';
+import {IoCrop, IoHeart, IoCalendarOutline, IoLocationOutline} from 'react-icons/io5';
 import ImageHouse from "../../assets/images/house.jpg";
 import ImageHouse1 from "../../assets/images/house1.jpg";
 import ImageHouse2 from "../../assets/images/house2.jpg";
@@ -10,6 +10,8 @@ import ImageHouse5 from "../../assets/images/house5.jpg";
 import ImageHouse6 from "../../assets/images/house6.jpg";
 import ImageHouse7 from "../../assets/images/house7.jpg";
 import ImageHouse8 from "../../assets/images/house8.jpg";
+import km from "../../assets/images/icons/km.png";  
+import marcha2 from "../../assets/images/icons/marcha2.png"; 
 
 export function ListProperty() {
     return (
@@ -33,30 +35,30 @@ export function ListProperty() {
                     </div>
                     <div className="text">
                         <a href="/imovel">
-                                        <h3>VOLKSWAGEN <span>GOLF</span></h3>
+                    <h3>VOLKSWAGEN <span>GOLF</span></h3>
                     <h5>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h5>
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -88,25 +90,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -138,25 +140,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -188,25 +190,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -238,25 +240,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -288,25 +290,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -338,25 +340,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -388,25 +390,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -438,25 +440,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -488,25 +490,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -538,25 +540,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -588,25 +590,25 @@ export function ListProperty() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>

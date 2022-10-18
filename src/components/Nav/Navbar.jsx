@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Burger from './Burger';
 import LogoImg from '../../assets/images/Logo.png'
 import LogoSimbol from '../../assets/images/Simbol.png'
-import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
+import {IoCarSportOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
   IoLogOutOutline, IoSpeedometerOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
@@ -147,7 +147,7 @@ const Navbar2 = () => {
   return (
     <Nav>
       <div className="logo">
-        <a href="/">
+        <a href="/home">
       <img src={LogoImg} alt="Logo CPA Educacional" />
         </a>
       </div>
@@ -168,9 +168,9 @@ const Navbar2 = () => {
 
 {user.type === "company" && user !== null && user !== undefined && user !== "" ?
                 <>
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/novoimovel")} data-tip data-for='Imóveis'><IoHomeOutline/></button>
-                <ReactTooltip id='Imóveis' place="bottom" type="dark" effect="solid">
-                     <span>Imóveis</span>
+                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/novoimovel")} data-tip data-for='Autos'><IoCarSportOutline/></button>
+                <ReactTooltip id='Autos' place="bottom" type="dark" effect="solid">
+                     <span>Autos</span>
                 </ReactTooltip>
                 <button className='iconUnic' onClick={() => HandleOpenLink("/painel/agendamentos")} data-tip data-for='Agendamentos'><IoCalendarOutline/></button>
                 <ReactTooltip id='Agendamentos' place="bottom" type="dark" effect="solid">

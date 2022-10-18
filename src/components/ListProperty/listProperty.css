@@ -132,17 +132,21 @@ color: var(--Primary);
     color: var(--Gray);
     margin: 0 10px;
 }
+.ListProperty .itens .block .text h6 {
+    color: var(--Gray);
+    margin: 5px 10px;
+}
 .ListProperty .itens .block .text .icons {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 10px 0;
+    margin: 0;
 }
 
 .ListProperty .itens .block .text .icons .iconUnic {
-    width: 20%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -168,9 +172,13 @@ color: var(--Primary);
 }
 
 .ListProperty .itens .block .text .icons .iconUnic .simbol svg {
-    font-size: 18px;
-    margin-right: 10px;
+    font-size: 14px;
+    margin-right: 5px;
     color: var(--Gray);
+}
+.ListProperty .itens .block .text .icons .iconUnic .simbol img {
+    width: 14px;
+    margin-right: 3px;
 }
 .ListProperty .itens .block .text .pricing {
     width: 100%;

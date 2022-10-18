@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {IoSpeedometer, IoPerson, IoHeart, IoNotifications, IoLogOutOutline, IoChatboxEllipses, IoHome, IoLaptopOutline, IoCalendar, IoOptions } from 'react-icons/io5';
+import {IoSpeedometer, IoPerson, IoHeart, IoNotifications, IoLogOutOutline, IoChatboxEllipses, IoCarSport, IoLaptopOutline, IoCalendar, IoOptions } from 'react-icons/io5';
 
 const UlAdm = styled.ul`
   list-style: none;
@@ -203,7 +203,7 @@ const RightNav2 = ({ open }) => {
           </li>
           <li className='nav-item'>
             <Link to='/painel/novoimovel' >
-           <IoHome /> <p>Imóveis</p>
+           <IoCarSport/> <p>Autos</p>
             </Link>
           </li>
           <li className='nav-item'>

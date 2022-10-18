@@ -14,6 +14,10 @@
 .buttonScheduling svg {
     margin-right: 10px;
 }
+.buttonScheduling img {
+    width: 18px;
+    margin-right: 10px;
+}
 
 .buttonScheduling:hover {
     background-color: var(--AprovedHover);

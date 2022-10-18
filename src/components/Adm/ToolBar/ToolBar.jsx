@@ -1,7 +1,7 @@
 ﻿import "./toolBar.css";
 import LogoImg from '../../../assets/images/imob2.jpg'
 import {IoSpeedometer, IoPerson,  IoNotifications, IoLogOutOutline, IoChatboxEllipses,
-    IoHome, IoLaptopOutline, IoCalendar, IoLogoWhatsapp, IoQrCode, IoPeople } from 'react-icons/io5';
+    IoCarSport, IoLaptopOutline, IoCalendar, IoLogoWhatsapp, IoQrCode, IoPeople } from 'react-icons/io5';
 export function ToolBar() {
     return (
         <div className="ToolBar">
@@ -21,7 +21,7 @@ export function ToolBar() {
                 </div>
                 <div className="ToolUnic3">
                    <a href="/painel/novoimovel">
-                    <IoHome /><p>Imóveis</p>
+                    <IoCarSport /><p>Autos</p>
                     </a>
                 </div>
                 <div className="ToolUnic">

@@ -93,6 +93,11 @@
     color: var(--Paragraph);
     margin:5px 10px;
 }
+.Property .main .data .propertyUnic .text .description {
+    font-weight: 400;
+    color: var(--Paragraph);
+    margin:5px 10px;
+}
 .Property .main .data .propertyUnic .text h3 {
     color: var(--Gray);
     font-weight: 700;
@@ -140,14 +145,13 @@
 }
 
 .Property .main .data .propertyUnic .text .icons .iconUnic {
-    width: 90px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
     padding: 5px;
-    margin: 5px;
+    margin: 5px 10px;
     color: var(--Gray);
 }
 
@@ -170,14 +174,45 @@
     margin-right: 10px;
     color: var(--Gray);
 }
+.Property .main .data .propertyUnic .text .icons .iconUnic .simbol img {
+    width: 18px;
+    margin-right: 10px;
+}
 
-.Property .main .data .propertyUnic .text .characteristics {
+.Property .main .data .propertyUnic .text .informationsDocs {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.Property .main .data .propertyUnic .text .informationsDocs .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    margin: 5px;
+    color: var(--Paragraph);
+}
+.Property .main .data .propertyUnic .text .informationsDocs .item svg {
+    color: var(--Secondary);
+    margin-right: 3px;
+}
+.Property .main .data .propertyUnic .text .informationsDocs .item p {
+    color: var(--Paragraph);
+    font-weight: 700;
+}
+.Property .main .data .propertyUnic .text .characteristics {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px 0 20px 0;
     flex-wrap: wrap;
 }
 

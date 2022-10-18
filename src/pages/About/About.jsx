@@ -1,7 +1,7 @@
 ﻿import "./about.css"
 import Navbar2 from "../../components/Nav/Navbar";
 import { Footer } from "../../components/Footer/Footer";
-import {IoPlayCircle, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
+import {IoPlayCircle, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline, IoCarSport,
         IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoMailOpenOutline, IoCallOutline, IoCloseOutline} from "react-icons/io5"
 import { Plains } from "../../components/Plains/Plains";
 import SmartPhone from "../../assets/images/iphone.png";
@@ -35,7 +35,7 @@ export function About() {
                     </div>
                 </div>
                 <div className="textAbout">
-                    <h1>Seja-bem vindo ao <br /> <span>Sua Chave Auto</span></h1>
+                    <h1>Seja-bem vindo.<br /> <span>O Sua Chave Auto é para você</span></h1>
                     <h3>Fomos criados para agência e consultores, <br />
                     com foco em conectar seus automóveis a seus clientes.</h3>
 
@@ -114,9 +114,9 @@ export function About() {
 
     <div className="howItWorks">
         <h1>Como funciona o Sua Chave Auto?</h1>
-        <h4>Somos um marketplace para imobiliárias e corretores, com foco em conectar seus imóveis a clientes interessados
+        <h4>Somos um marketplace para agências de automóveis e consultores, com foco em conectar suas motos e automóveis a clientes interessados.
             <br />
-        Utilizando ferramentas de marketing, geolocalização e integrações trazemos mais objetividade nas ofertas de propriedades</h4>
+        Utilizando ferramentas de marketing, geolocalização e integrações. trazendo mais objetividade nas ofertas de motos e automóveis.</h4>
         <div className="iconsWorks">
             <div className="iconWork">
                 <IoIdCardOutline />
@@ -129,9 +129,9 @@ export function About() {
                 <h4>Escolha o pacote que mais se adequa ao momento atual de seu negócio</h4>
             </div>
             <div className="iconWork">
-                <IoHome />
-                <h3>Adicione seus imóveis</h3>
-                <h4>Cadastre seus imóveis e aproveite nossas ferramentas para alcancar mais clientes</h4>
+                <IoCarSport />
+                <h3>Adicione seus Autos</h3>
+                <h4>Cadastre suas motos e automóveis e aproveite nossas ferramentas para alcancar mais clientes</h4>
             </div>
         </div>
     </div>
@@ -141,7 +141,7 @@ export function About() {
     </div>
         <Plains />
         <div className="textPricing">
-        <h1><span>Fale conosco</span></h1>
+        <h1>Fale <span>conosco</span></h1>
         <h4>Entre em contato conosco, estamos prontos para atendê-lo.</h4>
     </div>
         <div className="BlocksContact">

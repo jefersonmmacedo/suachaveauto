@@ -85,14 +85,13 @@
 }
 
 .each-slide-effect .imageTop .blockSlider .icons .iconUnic {
-  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   text-align: center;
-  padding: 5px;
-  margin: 2px;
+  padding: 6px;
+  margin: 5px;
   color: var(--Gray);
 }
 
@@ -111,9 +110,13 @@
 }
 
 .each-slide-effect .imageTop .blockSlider .icons .iconUnic .simbol svg {
-  font-size: 18px;
-  margin-right: 10px;
+  font-size: 16px;
+  margin-right: 5px;
   color: var(--Gray);
+}
+.each-slide-effect .imageTop .blockSlider .icons .iconUnic .simbol img {
+  width: 16px;
+  margin-right: 5px;
 }
 .each-slide-effect .imageTop .blockSlider .pricing {
   width: 100%;

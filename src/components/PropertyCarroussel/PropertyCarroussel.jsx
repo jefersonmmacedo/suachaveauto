@@ -1,6 +1,6 @@
 ﻿import "./propertyCarroussel.css";
 import {FaBed, FaShower, FaCar} from 'react-icons/fa';
-import {IoHeart, IoLocationOutline} from 'react-icons/io5';
+import {IoHeart, IoLocationOutline, IoCalendar, IoCalendarClearOutline} from 'react-icons/io5';
 import ImageHouse from "../../assets/images/house.jpg";
 import ImageHouse1 from "../../assets/images/house1.jpg";
 import ImageHouse2 from "../../assets/images/house2.jpg";
@@ -9,6 +9,8 @@ import ImageHouse4 from "../../assets/images/house4.jpg";
 import ImageHouse5 from "../../assets/images/house5.jpg";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import km from "../../assets/images/icons/km.png";  
+import marcha2 from "../../assets/images/icons/marcha2.png";  
 
 export function PropertyCarroussel() {
     const buttonStyle = {
@@ -76,25 +78,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -125,25 +127,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -174,25 +176,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -223,25 +225,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -272,25 +274,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -321,25 +323,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -370,25 +372,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -419,25 +421,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -468,25 +470,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -517,25 +519,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -566,25 +568,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>
@@ -615,25 +617,25 @@ export function PropertyCarroussel() {
                         </a>
                     <h6><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h6>
                     <div className="icons">
-                        <div className="iconUnic">
-                            <p>Quartos</p>
+                    <div className="iconUnic">
+                            <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
+                            </div>
+                            </div>                        
+                    <div className="iconUnic">
+                            <p>Km</p>
+                            <div className="simbol">
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
-                            <p>Banheiro</p>
+                            <p>Câmbio</p>
                             <div className="simbol">
-                                <FaShower />
-                                <p>3</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Garagem</p>
-                            <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                     </div>

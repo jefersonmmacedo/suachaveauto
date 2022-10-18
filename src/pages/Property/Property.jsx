@@ -1,13 +1,21 @@
 ﻿import "./property.css"
 import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
-import { FaBed, FaCar, FaShower, FaBath } from "react-icons/fa";
-import { IoCrop, IoHeart, IoMove, IoCheckmarkSharp, IoLocationOutline } from "react-icons/io5";
+import { FaBed, FaCar, FaShower, FaBath, FaCalendar} from "react-icons/fa";
+import { IoCrop, IoHeart, IoCalendarClearOutline, IoCheckmarkSharp, IoLocationOutline } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
 import { Rent } from "../../components/Rent/Rent";
 import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
 import { NewMessageProperty } from "../../components/NewMessageProperty/NewMessageProperty";
+import km from "../../assets/images/icons/km.png";  
+import marcha2 from "../../assets/images/icons/marcha2.png";  
+import volante from "../../assets/images/icons/volante.png";  
+import gasolina from "../../assets/images/icons/gasolina.png";  
+import marcha from "../../assets/images/icons/marcha.png";  
+import placa from "../../assets/images/icons/placa.png";  
+import porta from "../../assets/images/icons/porta.png";   
+import cor from "../../assets/images/icons/cor.png";  
 
 
 
@@ -41,88 +49,87 @@ export function Property() {
                     <div className="status">
                         <p>Aceita financiamento</p>
                     </div>
-                    <h4>Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.</h4>
+                    <h4 className="description">Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec. Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.</h4>
 
                     <div className="icons">
                         <div className="iconUnic">
                             <p>Ano</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <IoCalendarClearOutline />
+                                <p>14/15</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Km</p>
                             <div className="simbol">
-                                <FaBed />
-                                <p>3</p>
+                                <img src={km} alt="" />
+                                <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Combustível</p>
                             <div className="simbol">
-                                <FaBath />
-                                <p>3</p>
+                            <img src={gasolina} alt="" />
+                                <p>Gasolina</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Câmbio</p>
                             <div className="simbol">
-                                <FaCar />
-                                <p>3</p>
+                            <img src={marcha2} alt="" />
+                                <p>Manual</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Portas</p>
                             <div className="simbol">
-                                <IoMove />
-                                <p>300 M2</p>
+                            <img src={porta} alt="" />
+                                <p>4</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Cor</p>
                             <div className="simbol">
-                                <IoCrop />
-                                <p>150 M2</p>
+                            <img src={cor} alt="" />
+                                <p>Azul</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Carroceria</p>
                             <div className="simbol">
-                                <IoCrop />
-                                <p>150 M2</p>
+                                <FaCar />
+                                <p>Sedan</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Final de placa</p>
                             <div className="simbol">
-                                <IoCrop />
-                                <p>150 M2</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>IPVA pago</p>
-                            <div className="simbol">
-                                <IoCrop />
-                                <p>150 M2</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Licenciado</p>
-                            <div className="simbol">
-                                <IoCrop />
-                                <p>150 M2</p>
-                            </div>
-                        </div>
-                        <div className="iconUnic">
-                            <p>Único dono</p>
-                            <div className="simbol">
-                                <IoCrop />
-                                <p>150 M2</p>
+                            <img src={placa} alt="" />
+                                <p>6</p>
                             </div>
                         </div>
                     </div>
 
+                    <div className="informationsDocs">
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>IPVA pago</p> 
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Licenciado</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Único dono</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Aceita troca</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Todas as revisões feitas pela concessionária</p>
+                        </div>
+                        <div className="item">
+                            <IoCheckmarkSharp /> <p>Garantia de fábrica</p>
+                        </div>
+                    </div>
                     <div className="characteristics">
                         <div className="item">
                             <IoCheckmarkSharp /> <p>Direção Hidráulica</p> 

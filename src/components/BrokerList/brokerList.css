@@ -39,7 +39,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 20px;
+    margin: 0 20px 40px 20px;
 }
 
 .BrokerList .listBroker .BrokerUnicFavorite {
@@ -260,7 +260,7 @@
     @media (max-width: 800px) {
         .BrokerList .listBroker {
             width: 97%;
-            margin: 0 20px;
+            margin: 0 20px 40px 20px;
         }
 
         @media (max-width: 711px) {

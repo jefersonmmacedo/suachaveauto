@@ -159,15 +159,15 @@ export function SearchProperty() {
                     </select> */}
                      <button onClick={handleSearchProfessional}>Buscar</button>
             </div>
-            {userCity !== null || userCity !== undefined || userCity !== "" ? 
-            <div className="textLocation">
-                <h4><IoLocationOutline /> {city} - {uf}</h4> 
-                <button>Alterar</button>
-            </div>
-             : 
+            {userCity === null || userCity === undefined || userCity === "" ? 
             <div className="textLocation">
                 <button>Definir cidade</button>
             </div>
+             : 
+             <div className="textLocation">
+             <h4><IoLocationOutline /> {city} - {uf}</h4> 
+             <button>Alterar</button>
+         </div>
              }
             {/* <div className="icons">
                 <div className="unic">
