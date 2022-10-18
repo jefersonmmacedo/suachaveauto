@@ -145,14 +145,17 @@
 }
 
 .Property .main .data .propertyUnic .text .icons .iconUnic {
+    width: 95px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
     padding: 5px;
-    margin: 5px 10px;
+    margin: 5px;
     color: var(--Gray);
+    background-color: var(--BorderHover);
+    border-radius: 6px;
 }
 
 .Property .main .data .propertyUnic .text .icons .iconUnic p {

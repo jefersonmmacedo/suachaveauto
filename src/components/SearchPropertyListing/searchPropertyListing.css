@@ -9,6 +9,42 @@
     padding: 15px;
     border-radius: 6px;
 }
+
+.SearchPropertyListing .textLocation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.SearchPropertyListing .textLocation h5 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Gray);
+}
+
+.SearchPropertyListing .textLocation button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    Background-color: rgba(0,0,0,0.6);
+    color: var(--White);
+    font-weight: 500;
+    border: none;
+    margin: 5px;
+    border-radius: 25px;
+}
+
+
+
 .SearchPropertyListing .search {
     display: flex;
     flex-direction: column;

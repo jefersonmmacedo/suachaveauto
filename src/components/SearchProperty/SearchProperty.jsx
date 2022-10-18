@@ -13,6 +13,8 @@ export function SearchProperty() {
     const [city, setCity] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.city);
     const [districtAll, setDistrictAll] = useState([]);
     const [professional, setProfessional] = useState("");
+    const [code, setCode] = useState(false);
+    const [status, setStatus] = useState("carro");
 
 
     console.log(uf)
@@ -62,14 +64,20 @@ export function SearchProperty() {
 
         localStorage.setItem("suachavecity", JSON.stringify(suachave));
       }
+
+      function handleActiveCode(data, status) {
+        setCode(data)
+        setStatus(status)
+      }
+
     return (
         <div className="SearchProperty">
             <div className="selectButtons">
-            <button className="btn"><FaCar /></button>
-            <button><FaMotorcycle /></button>
-            <button><FaTruck /></button>
-            <button><FaBus /></button>
-            <button><FaTractor /></button>
+            <button className={status === "carro" ? "btn" : ""} onClick={() => handleActiveCode(false, "carro")}><FaCar /></button>
+            <button className={status === "moto" ? "btn" : ""} onClick={() => handleActiveCode(false, "moto")}><FaMotorcycle /></button>
+            <button className={status === "caminhao" ? "btn" : ""} onClick={() => handleActiveCode(false, "caminhao")}><FaTruck /></button>
+            <button className={status === "onibus" ? "btn" : ""} onClick={() => handleActiveCode(false, "onibus")}><FaBus /></button>
+            <button className={status === "trator" ? "btn" : ""} onClick={() => handleActiveCode(false, "trator")}><FaTractor /></button>
                 </div>   
             <div className="search">
                 <input type="text" className="primary" placeholder="Digite Marca ou modelo" />

@@ -3,7 +3,7 @@ import { IoCalendar, IoCloseOutline, IoLocationOutline, IoBusinessOutline } from
 import Modal from 'react-modal';
 import { useState } from "react";
 import ImageHouse1 from "../../assets/images/house.jpg";
-import volante from "../../assets/images/icons/volante.png";  
+import volante from "../../assets/images/icons/volante3.png";  
 
 export function NewScheduling() {
     const [isOpenModal, setIsOpenModa] = useState(false);

@@ -105,7 +105,9 @@
 }
 
 .CompanyInfo .buttonsContact .btn-whats {
-    background-color: var(--Aproved);
+    border: 1px solid var(--Delete);
+    background-color: var(--White);
+    color: var(--Delete);
 }
 .CompanyInfo .buttonsContact .btn-call {
     background-color: var(--Secondary);

@@ -456,8 +456,29 @@
         
         .About .MainAbout .bloco {
             border-radius: 0 0 150px 0;
-            padding: 100px 20px 50px 20px;
+            padding: 100px 5px 50px 5px;
             flex-direction: column;
+        }
+
+        .About .MainAbout .bloco .textAbout {
+            align-items: flex-start;
+            width: 100%;
+            padding: 20px 10px;
+            margin-bottom: -50px;
+        }
+        .About .MainAbout .bloco .textAbout h1 {
+            text-align: left;
+            font-size: 40px;
+        }
+        .About .MainAbout .bloco .textAbout h1 span{
+            font-size: 40px;
+        }
+        .About .MainAbout .bloco .textAbout h3 {
+            text-align: left;
+        }
+        
+        .About .MainAbout .bloco .textAbout .buttonsText {
+            align-items: flex-start;
         }
 
         .About .MainAbout .bloco .imageAbout svg {

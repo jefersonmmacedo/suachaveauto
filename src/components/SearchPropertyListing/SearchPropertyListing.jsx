@@ -3,9 +3,10 @@ import { useState } from "react";
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import {FaTractor, FaCar, FaMotorcycle, FaBus, FaTruck} from "react-icons/fa";
+import { IoLocationOutline } from "react-icons/io5";
 
 export function SearchPropertyListing() {
-    const LocalCity = localStorage.getItem("suachavecity");
+    const LocalCity = localStorage.getItem("suachaveautocity");
     const userCity = JSON.parse(LocalCity);
     const [uf, setUf] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.uf);
     const [city, setCity] = useState(userCity === null || userCity === undefined || userCity === ""? "" : userCity.city);
@@ -58,6 +59,19 @@ export function SearchPropertyListing() {
       }
     return (
         <div className="SearchPropertyListing">
+
+        {userCity === null || userCity === undefined || userCity === "" ? 
+        <div className="textLocation">
+            <button>Definir cidade</button>
+        </div>
+         : 
+         <div className="textLocation">
+         <h5><IoLocationOutline /> {city} - {uf}</h5> 
+         <button>Alterar</button>
+         </div>
+         }
+
+
             <div className="selectButtonsStatus">
             <button className="btn"><FaCar /></button>
             <button><FaMotorcycle /></button>
