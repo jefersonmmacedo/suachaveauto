@@ -40,7 +40,7 @@
     width: 100%;
     overflow:auto; 
     max-height: 500px;
-    margin: 20px 10px;
+    padding: 20px;
 }
 
 .content-modal .itensModal .dataProperty {
@@ -229,7 +229,7 @@ object-fit: cover;
   }
 
 
-  @media (max-width: 500px) {
+  @media (max-width: 50px) {
     .content-modal .itensModal .dataProperty {
         width: 100%;
     }

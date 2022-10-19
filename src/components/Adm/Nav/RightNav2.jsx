@@ -51,7 +51,7 @@ const UlAdm = styled.ul`
     align-items: center;
     justify-content: center;
     padding: 5px 10px;
-    background-color: var(--Primary);
+    background: rgba(170,0,0);
     border-radius: 6px;
     margin: 5px 0;
     color: var(--White);
@@ -98,7 +98,7 @@ const UlAdm = styled.ul`
 
   @media (max-width: 900px) {
     flex-flow: column nowrap;
-    background: rgba(237, 50, 55, 0.95);
+    background: rgba(170,0,0, 0.9);
     backdrop-filter: blur(4px);
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};

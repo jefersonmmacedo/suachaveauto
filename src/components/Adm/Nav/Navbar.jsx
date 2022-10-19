@@ -18,7 +18,7 @@ const Nav = styled.nav`
   position: fixed;
   top: 0;
   z-index: 97;
-  background-color: #d51942;
+  background-color: rgba(170,0,0);
   backdrop-filter: blur(4px);
   font-size: 14px;
   color: var(--Description)
