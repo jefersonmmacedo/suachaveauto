@@ -8,7 +8,7 @@ export function Plains() {
             <div className="plain">
                 <h3>Plano Básico</h3>
                 <div className="title">
-                <h1>R$ 199,99</h1>
+                <h1>R$ 149,99</h1>
                 <h4>/ mês</h4>
                 </div>
                 <div className="text">
@@ -24,7 +24,7 @@ export function Plains() {
             <div className="plain2">
                 <h3>Plano Web</h3>
                 <div className="title">
-                <h1>R$ 299,99</h1>
+                <h1>R$ 249,99</h1>
                 <h4>/ mês</h4>
                 </div>
                 <div className="text">
@@ -43,7 +43,7 @@ export function Plains() {
             <div className="plain3">
                 <h3>Plano WebApp [Breve]</h3>
                 <div className="title">
-                <h1>R$ 449,99</h1>
+                <h1>R$ 399,99</h1>
                 <h4>/ mês</h4>
                 </div>
                 <div className="text">
