@@ -13,7 +13,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     margin: 5px;
     border-radius: 10px;
     background-color: var(--BorderInput);
@@ -65,7 +65,7 @@
 
 
 .Plains .plain .text svg {
-    color: var(--Aproved);
+    color: var(--AprovedHover);
     font-size: 16px;
     margin-right: 5px;
 }
@@ -93,7 +93,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 30px;
+    padding: 10px;
     margin: 5px;
     border-radius: 10px;
     background-color: var(--Primary);
@@ -102,11 +102,11 @@
 
 .Plains .plain2 h3 {
     font-weight: 700;
-    color: var(--BorderHover);
+    color: var(--White);
 }
 .Plains .plain2 p{
     font-weight: 700;
-    color: var(--BorderHover);
+    color: var(--White);
 }
 
 .Plains .plain2 .title {
@@ -119,11 +119,11 @@
 
 .Plains .plain2 .title h1 {
     font-weight: 700;
-    color: var(--BorderHover);
+    color: var(--White);
 }
 .Plains .plain2 .title h4 {
     font-weight: 700;
-    color: var(--BorderHover);
+    color: var(--White);
 }
 
 .Plains .plain2 .text {
@@ -144,13 +144,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    color: var(--BorderHover);
+    color: var(--White);
     text-align: left;
 }
 
 
 .Plains .plain2 .text svg {
-    color: var(--Aproved);
+    color: var(--AprovedHover);
     font-size: 16px;
     margin-right: 5px;
 }
@@ -162,7 +162,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: var(--BorderHover);
+    background-color: var(--White);
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
@@ -178,7 +178,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     margin: 5px;
     border-radius: 10px;
     background-color: var(--Primary);
@@ -187,7 +187,7 @@
 
 .Plains .plain3 h3 {
     font-weight: 700;
-    color: var(--BorderHover);
+    color: var(--White);
 }
 
 .Plains .plain3 .title {
@@ -200,11 +200,11 @@
 
 .Plains .plain3 .title h1 {
     font-weight: 700;
-    color: var(--BorderHover);
+    color: var(--White);
 }
 .Plains .plain3 .title h4 {
     font-weight: 700;
-    color: var(--BorderHover);
+    color: var(--White);
 }
 
 .Plains .plain3 .text {
@@ -225,13 +225,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    color: var(--BorderHover);
+    color: var(--White);
     text-align: left;
 }
 
 
 .Plains .plain3 .text svg {
-    color: var(--Aproved);
+    color: var(--AprovedHover);
     font-size: 16px;
     margin-right: 5px;
 }
@@ -243,7 +243,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: var(--BorderHover);
+    background-color: var(--White);
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
