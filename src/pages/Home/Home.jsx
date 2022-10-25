@@ -16,6 +16,8 @@ import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import { ToHire } from "../../components/ToHire/ToHire";
 import { BrandCarroussel } from "../../components/BrandCarroussel/BrandCarroussel";
+import { ModelCarroussel } from "../../components/ModelCarroussel/ModelCarroussel";
+import { Fipe } from "../../components/Fipe/Fipe";
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachaveautocity");
@@ -123,25 +125,29 @@ export function Home() {
             <BrandCarroussel />
             </div>
             <div className="textFeature">
-            <h2>Recomendados para você</h2>
+            <h3>Recomendados para você</h3>
             </div>
             <div className="carroussel">
             <PropertyCarroussel />
             </div>
             {/* <div className="textHome">
-            <h2>Imóveis para alugar</h2>
+            <h3>Imóveis para alugar</h3>
+          </div> */}
+            <Fipe />
+            <div className="textFeature2">
+            <h3>Mais procurados</h3>
             </div>
-            <div className="carroussel">
-            <PropertyCarroussel />
+            <div className="carroussel2">
+            <ModelCarroussel />
             </div>
-            <div className="textHome">
+            {/* <div className="textHome">
             <h2>Imóveis à venda</h2>
             </div>
             <div className="carroussel">
             <PropertyCarroussel />
-            </div> */}
-            <ExploreIconsProperties />
-            <Cities />
+          </div> */}
+            {/* <ExploreIconsProperties />
+            <Cities /> */}
             <ToHire />
             {/* <DownloadApp /> */}
             <Footer />

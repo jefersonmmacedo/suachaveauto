@@ -16,6 +16,8 @@ import nissan from "../../assets/images/logos/nissan.png";
 import peugeot from "../../assets/images/logos/peugeot.png";
 import scania from "../../assets/images/logos/scania.png";
 import tesla from "../../assets/images/logos/tesla.png";
+import honda from "../../assets/images/logos/honda.png";
+import kia from "../../assets/images/logos/kia.png";
 
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
@@ -138,6 +140,13 @@ export function BrandCarroussel() {
             <div className="logoBrand">
                     <div className="image">
                         <a href="/imovel">
+                    <img src={honda} alt="" />
+                        </a>
+                    </div>
+                </div>
+            <div className="logoBrand">
+                    <div className="image">
+                        <a href="/imovel">
                     <img src={jeep} alt="" />
                         </a>
                     </div>
@@ -160,6 +169,13 @@ export function BrandCarroussel() {
                     <div className="image">
                         <a href="/imovel">
                     <img src={volvo} alt="" />
+                        </a>
+                    </div>
+                </div>
+            <div className="logoBrand">
+                    <div className="image">
+                        <a href="/imovel">
+                    <img src={kia} alt="" />
                         </a>
                     </div>
                 </div>
