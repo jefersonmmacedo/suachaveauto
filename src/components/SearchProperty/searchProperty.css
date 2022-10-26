@@ -9,13 +9,16 @@
     z-index: 10;
     position: absolute;
 }
+.SearchProperty .btnSearchModal {
+    display: none;
+}
 .SearchProperty .search {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 950px;
-    border-radius: 6px;
+    border-radius: 0 6px 6px 6px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     background-color: var(--White);
     padding:7px;
@@ -63,41 +66,89 @@
 }
 
 .SearchProperty .selectButtons {
+    width: 950px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .SearchProperty .selectButtons button {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 120px;
-    padding: 15px 30px;
-    Background-color: rgba(0,0,0,0.6);
-    color: var(--White);
-    font-weight: 500;
-    border: none;
-    margin: 5px;
-    border-radius: 25px;
+    width: 130px;
+    padding: 15px 20px;
+    Background-color: var(--White);
+    color: var(--Paragraph);
+    font-weight: 700;
+    border: 2px solid var(--White);
 }
 .SearchProperty .selectButtons button:hover {
     background-color: var(--Primary);
+    color: var(--White);
 }
-.SearchProperty .selectButtons .btn {
+.SearchProperty .selectButtons button svg {
+   margin-right: 5px;
+}
+.SearchProperty .selectButtons .btn1 {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    width: 120px;
-    padding: 15px 30px;
+    padding: 15px 20px;
+    Background-color: var(--White);
+    color: var(--Paragraph);
+    font-weight: 700;
+    border-radius: 6px 0 0 0;
+    border: 2px solid var(--White);
+}
+.SearchProperty .selectButtons .btn {
+    border: 2px solid var(--White);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 15px 20px;
     Background-color: var(--Primary);
     color: var(--White);
-    font-weight: 500;
-    border: none;
-    margin: 5px;
-    border-radius: 25px;
+    font-weight: 700;
+    border-radius: 6px 0 0 0;
+}
+.SearchProperty .selectButtons .btn2 {
+    border: 2px solid var(--White);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 15px 20px;
+    Background-color: var(--Primary);
+    color: var(--White);
+    font-weight: 700;
+}
+.SearchProperty .selectButtons .btn3 {
+        border: 2px solid var(--White);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 15px 20px;
+    Background-color: var(--Primary);
+    color: var(--White);
+    font-weight: 700;
+    border-radius: 0 6px 0 0;
+}
+.SearchProperty .selectButtons .btn4 {
+        border: 2px solid var(--White);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 15px 20px;
+    Background-color: var(--White);
+    color: var(--Paragraph);
+    font-weight: 700;
+    border-radius: 0 6px 0 0;
 }
 
 .SearchProperty .textLocation {
@@ -166,18 +217,18 @@
 
 
 @media (max-width: 1200px) {
-    .SearchProperty .search {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        border-radius: 6px;
-    }
 
     @media (max-width: 1000px) {
         .SearchProperty .search {
             width: 90%;
-            border-radius: 6px;
+        }
+
+        .SearchProperty .selectButtons {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
         }
 
     @media (max-width: 900px) {
@@ -187,27 +238,83 @@
             align-items: center;
             justify-content: center;
             width: 90%;
-            border-radius: 6px;
+        }
+
+
+        .SearchProperty .selectButtons {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
         }
     
-        @media (max-width: 750px) {   
+        @media (max-width: 880px) {  
+            .SearchProperty .selectButtons button {
+                width: 100%;
+            }
+
+            .SearchProperty .search {
+                border-radius: 0 0 6px 6px;
+            }
+
+            @media (max-width: 750px) {
+
+                .SearchProperty {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: -25px;
+                    z-index: 10;
+                    position: absolute;
+                }
+                .SearchProperty .btnSearchModal {
+                    border: 3px solid var(--White);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px 20px;
+                    Background-color: var(--Primary);
+                    color: var(--White);
+                    font-weight: 700;
+                    border-radius: 6px;
+                    width: 70%;
+                    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+                }
+
+                .SearchProperty .btnSearchModal svg {
+                    margin-right: 5px;
+                    font-size: 16px;
+                }
+
+                .SearchProperty .selectButtons {
+                    display: none;
+                }
+    
+                .SearchProperty .search {
+                    display: none;
+                }
+            }
+            
+        /* @media (max-width: 750px) {   
 
             .SearchProperty {
                 margin-top: 20px;
-            }
-          
+            }    
             .SearchProperty .search {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: fle-start;
+                justify-content: flex-start;
                 width: 70%;
                 height: 100%;
                 border: none;
                 background: none;
                 box-shadow: none;
             }
-
             .SearchProperty .search h3 {
                 display:block;
                 font-weight: bold;
@@ -225,14 +332,12 @@
                 width: 100%;
                 border: 1px solid var(--White);
                 border: 1px solid var(--Border);
-            }
-            
+            }           
             .SearchProperty .search select {
                 width: 100%;
                 border: 1px solid var(--White);
                 border: 1px solid var(--Border);
             }
-            
             .SearchProperty .search input::placeholder {
                 font-weight: 700;
             }
@@ -245,14 +350,12 @@
                 justify-content: center;
                 border-radius: 0 0 6px 6px;
             }
-
             .SearchProperty .selectButtons .btn {
                 width: 100%;
             }
             .SearchProperty .selectButtons .btn2 {
                 width: 100%;
             }
-
             .SearchProperty .selectButtons {
                 width: 70%;
                 justify-content: space-evenly;
@@ -275,11 +378,9 @@
                 border-radius: 50%;
                 font-size: 18px;
             }
-
             .SearchProperty .icons .unic {
                 font-size: 14px;
             }
-
             @media (max-width: 550px) {
                 .SearchProperty .search {
                     display: flex;
@@ -292,7 +393,8 @@
                     width: 90%;
                 }
             }
-        }
+        } */
     }
     }
+}
 }

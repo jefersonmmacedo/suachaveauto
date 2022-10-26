@@ -166,12 +166,18 @@ export function Property() {
                         </div>
                     </div>
                     <div className="pricing">
+                        <div className="PricingClient">
                         <h5>À venda por:</h5>
                         <h2>R$ 123.900,00</h2>
+                        </div>
+                        <div className="PricingFipe">
+                        <h5>Tabela Fipe:</h5>
+                        <h2>R$ 123.900,00</h2>
+                        </div>
                     </div>
 
                     <div className="video">
-                    <iframe width="100%" height="300" src="https://www.youtube-nocookie.com/embed/1UXGxXvhO3U" title="YouTube video player" frameBorder="0"
+                    <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/1UXGxXvhO3U" title="YouTube video player" frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 

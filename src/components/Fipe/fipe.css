@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    width: 1250px;
+    width: 1200px;
     margin: 20px auto;
 }
 
@@ -19,6 +19,10 @@
     border-radius: 6px;
     color: var(--White);
     width: 100%;
+}
+
+.Fipe .simulation:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 .Fipe .simulation svg {
@@ -57,8 +61,11 @@
     padding: 30px;
     margin: 20px;
     border-radius: 6px;
-    color: var(--Description);
+    color: var(--Paragraph);
     width: 100%;
+}
+.Fipe .fipeValue:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 .Fipe .fipeValue svg {
@@ -88,7 +95,7 @@
     font-weight: 700;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1200px) {
     .Fipe  {
         width: 100%;
     }

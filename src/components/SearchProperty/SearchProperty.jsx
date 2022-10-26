@@ -3,7 +3,7 @@ import { useState } from "react";
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import {FaHome, FaBuilding, FaStore, FaTractor, FaCar, FaMotorcycle, FaBus, FaTruck} from "react-icons/fa";
-import {IoBusiness, IoLocationOutline} from "react-icons/io5";
+import {IoBusiness, IoLocationOutline, IoSearch} from "react-icons/io5";
 import {GiFarmTractor} from "react-icons/gi";
 
 export function SearchProperty() {
@@ -72,12 +72,13 @@ export function SearchProperty() {
 
     return (
         <div className="SearchProperty">
+            <button className="btnSearchModal"><IoSearch /> Buscar Autos</button>
             <div className="selectButtons">
-            <button className={status === "carro" ? "btn" : ""} onClick={() => handleActiveCode(false, "carro")}><FaCar /></button>
-            <button className={status === "moto" ? "btn" : ""} onClick={() => handleActiveCode(false, "moto")}><FaMotorcycle /></button>
-            <button className={status === "caminhao" ? "btn" : ""} onClick={() => handleActiveCode(false, "caminhao")}><FaTruck /></button>
-            <button className={status === "onibus" ? "btn" : ""} onClick={() => handleActiveCode(false, "onibus")}><FaBus /></button>
-            <button className={status === "trator" ? "btn" : ""} onClick={() => handleActiveCode(false, "trator")}><FaTractor /></button>
+            <button className={status === "carro" ? "btn" : "btn1"} onClick={() => handleActiveCode(false, "carro")}><FaCar /> Carro</button>
+            <button className={status === "moto" ? "btn2" : ""} onClick={() => handleActiveCode(false, "moto")}><FaMotorcycle /> Moto</button>
+            <button className={status === "caminhao" ? "btn2" : ""} onClick={() => handleActiveCode(false, "caminhao")}><FaTruck /> Caminhão</button>
+            <button className={status === "onibus" ? "btn2" : ""} onClick={() => handleActiveCode(false, "onibus")}><FaBus /> Ônibus</button>
+            <button className={status === "trator" ? "btn3" : "btn4"} onClick={() => handleActiveCode(false, "trator")}><FaTractor /> Trator</button>
                 </div>   
             <div className="search">
                 <input type="text" className="primary" placeholder="Digite Marca ou modelo" />

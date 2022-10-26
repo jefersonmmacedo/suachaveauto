@@ -241,19 +241,46 @@
 .Property .main .data .propertyUnic .text .pricing {
     width: 100%;
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: var(--Black2);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.Property .main .data .propertyUnic .text .pricing .PricingClient {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    text-align: flex-start;
+}
+.Property .main .data .propertyUnic .text .pricing .PricingFipe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
-.Property .main .data .propertyUnic .text .pricing h5 {
-    color: var(--Paragraph);
+.Property .main .data .propertyUnic .text .pricing .PricingClient h5 {
+    color: var(--Gray);
     font-weight: 700;
     margin: 5px 10px;
 }
-.Property .main .data .propertyUnic .text .pricing h2 {
-    color: var(--Primary);
+.Property .main .data .propertyUnic .text .pricing .PricingClient h2 {
+    color: var(--White);
+    font-weight: 700;
+    margin: 0 10px;
+}
+.Property .main .data .propertyUnic .text .pricing .PricingFipe h5 {
+    color: var(--Gray);
+    font-weight: 700;
+    margin: 5px 10px;
+}
+.Property .main .data .propertyUnic .text .pricing .PricingFipe h2 {
+    color: var(--White);
     font-weight: 700;
     margin: 0 10px;
 }
@@ -293,7 +320,36 @@
     .Property .main .data {
         padding: 0px;
     }
-
+@media (max-width: 480px) {
+    .Property .main .data .propertyUnic .text .pricing {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: var(--Black2);
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
+    .Property .main .data .propertyUnic .text .pricing .PricingClient {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 5px 0;
+    }
+    .Property .main .data .propertyUnic .text .pricing .PricingFipe {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 5px 0;
+    }
+    
+}
 }
 
 }

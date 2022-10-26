@@ -9,7 +9,7 @@ export function Fipe() {
             <IoDesktopOutline />
             <h2>Deseja financiar?</h2>
             <h4> Simule um valor de entrada e descubra quanto vão custar as parcelas do seu próximo veículo.</h4>
-            <a href="/simulador">Avalie seu veículo</a>
+            <a href="/simulador">Faça uma simulação</a>
             </div>
             <div className="fipeValue">
             <FaHandshake />
