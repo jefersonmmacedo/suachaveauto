@@ -32,12 +32,17 @@ export function Footer() {
                             <h5><a href="/privacidade">Política de privacidade</a></h5>
                             <h5><a href="/faleconosco">Fale conosco</a></h5>
                             <br />
-                            <h3><b>ATENDIMENTO</b></h3>
+                            {/* <h3><b>ATENDIMENTO</b></h3>
                             <h5><IoCallOutline />(21) 2222-2222</h5>
                             <h5><IoLogoWhatsapp />(21) 99999-9999</h5>
-                            <h5><IoMailOutline />contato@suachave.com.br</h5>
+                            <h5><IoMailOutline />contato@suachave.com.br</h5> */}
                         </div>
                         <div className="sectionUnic">
+                        <h3><b>ATENDIMENTO</b></h3>
+                            <h5><IoCallOutline />(21) 99742-9585</h5>
+                            <h5><IoLogoWhatsapp />(21) 99742-9585</h5>
+                            <h5><IoMailOutline />contato@suachaveauto.com.br</h5>
+                            <br />
                             <h3><b> SIGA-NOS</b></h3>
                             <div className="network">
                                 <button className="networkButton"><IoLogoFacebook/></button>
@@ -46,7 +51,7 @@ export function Footer() {
                                 <button className="networkButton"><IoLogoLinkedin/></button>
                                 <button className="networkButton"><IoLogoYoutube/></button>
                             </div>
-                            <h3><b>BAIXE AGORA:</b></h3>
+                            {/* <h3><b>BAIXE AGORA:</b></h3>
                             <div className="apps">
                                 <div className="app">
                                 <h5>Clientes</h5>
@@ -62,7 +67,7 @@ export function Footer() {
                                 <a href="/"><img src={apple} alt="" /></a>         
                                 </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                 </div>
                 <div className="copy">

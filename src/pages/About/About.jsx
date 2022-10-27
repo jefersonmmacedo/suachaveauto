@@ -153,13 +153,13 @@ export function About() {
                 </div>
                 <div className="blockContact">
                         <h3><IoCallOutline  /> Telefone</h3>
-                        <h5>21 97168-4632</h5>
+                        <h5>21 99742-9585</h5>
 
                         <button>Ligar</button>
                 </div>
                 <div className="blockContact">
                     <h3><IoPhonePortraitOutline /> Whatsapp </h3>
-                    <h5>21 97168-4632</h5>
+                    <h5>21 99742-9585</h5>
                     <button>Enviar mensagem</button>
                 </div>
             </div> 
