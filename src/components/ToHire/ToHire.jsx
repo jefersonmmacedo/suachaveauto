@@ -1,5 +1,5 @@
 ﻿import ImageContract from "../../assets/images/background8.jpg";
-import {IoMegaphoneOutline} from "react-icons/io5"
+import {IoCarOutline, IoCalendarOutline, IoChatboxEllipsesOutline, IoOptionsOutline} from "react-icons/io5"
 import "./toHire.css";
 export function ToHire() {
     return (
@@ -10,8 +10,25 @@ export function ToHire() {
                 </div>
             </div>
             <div className="textToHire">
-                <h1>Anuncie com a gente!</h1>
-                <h3>Saiba tudo sobre nossos planos para agências e consultores</h3>
+                <h3>Veja o que podemos fazer pela sua agência:</h3>
+                <div className="itensToHire">
+                    <div className="ToHireUnic">
+                    <IoCarOutline />
+                        <h5>Anúncios ilimitados</h5>
+                    </div>
+                    <div className="ToHireUnic">
+                    <IoCalendarOutline />
+                        <h5>Agenda de test drive</h5>
+                    </div>
+                    <div className="ToHireUnic">
+                        <IoOptionsOutline />
+                        <h5>Controle de vendas</h5>
+                    </div>
+                    <div className="ToHireUnic">
+                    <IoChatboxEllipsesOutline />
+                        <h5>Chat único por anúncio</h5>
+                    </div>
+                </div>
 
                 <a href="/sobre">Quero anunciar</a>
             </div>
