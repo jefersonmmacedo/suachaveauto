@@ -13,12 +13,12 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 10px;
-    margin: 5px;
+    padding: 20px;
+    margin: 10px;
     border-radius: 10px;
     background-color: var(--BorderInput);
     color: var(--Description);
-    width: 270px;
+    width: 300px;
 }
 
 .Plains .plain h3 {
@@ -39,6 +39,7 @@
 
 .Plains .plain .title h4 {
     font-weight: 700;
+    margin-left: 5px;
 }
 
 .Plains .plain .text {
@@ -53,7 +54,7 @@
 
 .Plains .plain .text p {
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     margin: 2px 0;
     display: flex;
     align-items: center;
@@ -93,11 +94,11 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 10px;
-    margin: 5px;
+    padding: 20px;
+    margin: 10px;
     border-radius: 10px;
     background-color: var(--Primary);
-    width: 270px;
+    width: 300px;
 }
 
 .Plains .plain2 h3 {
@@ -105,7 +106,7 @@
     color: var(--White);
 }
 .Plains .plain2 p{
-    font-weight: 700;
+    font-weight: 500;
     color: var(--White);
 }
 
@@ -124,6 +125,7 @@
 .Plains .plain2 .title h4 {
     font-weight: 700;
     color: var(--White);
+    margin-left: 5px;
 }
 
 .Plains .plain2 .text {
@@ -137,8 +139,8 @@
 }
 
 .Plains .plain2 .text p {
+    font-weight: 600;
     font-size: 12px;
-    font-weight: 700;
     margin: 2px 0;
     display: flex;
     align-items: center;
@@ -178,11 +180,11 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 10px;
+    padding: 00px;
     margin: 5px;
     border-radius: 10px;
     background-color: var(--Primary);
-    width: 270px;
+    width: 300px;
 }
 
 .Plains .plain3 h3 {

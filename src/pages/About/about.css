@@ -35,7 +35,7 @@
 .About .MainAbout .bloco .textAbout h1 {
     font-size: 45px;
     font-weight: 800;
-    color: var(--Paragraph);
+    color: var(--Black2);
     text-align: left;
     margin-bottom: 10px;
 }
@@ -60,15 +60,59 @@
 
 .About .MainAbout .bloco .textAbout .buttonsText button {
     background-color: var(--Primary);
+    width: 350px;
     padding: 15px 20px;
     font-size: 16px;
-    border: none;
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    color: var(--White);
+    margin: 5px;
+    font-weight: 700;
+}
+.About .MainAbout .buttonsPlainsAbout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.About .MainAbout .buttonsPlainsAbout a {
+    background-color: var(--Primary);
+    width: 350px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid var(--Primary);
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     color: var(--White);
+    font-weight: 700;
+    text-decoration:none;
+}
+.About .MainAbout .buttonsPlainsAbout a svg {
+    margin-right: 10px;
+}
+.About .MainAbout .bloco .textAbout .buttonsText .btn {
+    background-color: var(--White);
+    width: 350px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    color: var(--Primary);
     margin: 5px;
     font-weight: 700;
 }
@@ -89,7 +133,7 @@
     flex-direction: column;
     width: 400px;
     height: 400px;
-    background-color: rgba(170,0,0);
+    background-color: var(--Black2);
 }
 .About .MainAbout .bloco .imageAbout .imgBlock {
     display: flex;
@@ -193,7 +237,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    background-color: var(--Primary);
+    background-color: var(--Black2);
     padding: 50px 20px;
 }
 .About .MainAbout .howItWorks h1 {
@@ -298,6 +342,7 @@
 
 .About .MainAbout .BlocksContact .blockContact h3 svg {
     margin-right: 5px;
+    color: var(--Primary);
 }
 
 .About .MainAbout .BlocksContact .blockContact h5 {
@@ -315,7 +360,7 @@
     flex-direction: row;
     align-itens: center;
     justify-content: center;
-    border: none;
+    border: 1px solid var(--Primary);
     background-color: var(--Primary);
     color: var(--White);
     font-weight: 700;
@@ -326,7 +371,85 @@
 .About .MainAbout .BlocksContact .blockContact button:hover {
     background-color: var(--White);
     color: var(--Primary);
+    border: 1px solid var(--Primary);
 }
+
+.About .MainAbout .beneficies{
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 20px;
+    background-color: var(--BorderInput);
+}
+.About .MainAbout .beneficies .imageDashboard{
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+    justify-content: flex-end;
+    width: 50%;
+    padding: 1px;
+}
+
+.About .MainAbout .beneficies .imageDashboard img {
+    width: 500px;
+}
+.About .MainAbout .beneficies .textDashboardAbout{
+    display: flex;
+    flex-direction: column;
+    align-itens: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+    padding: 10px 40px;
+}
+
+
+
+.About .MainAbout .beneficies .textDashboardAbout .itensToHireAbout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.About .MainAbout .beneficies .textDashboardAbout .itensToHireAbout .ToHireUnicAbout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 5px;
+    color: var(--Primary);
+}
+
+.About .MainAbout .beneficies .textDashboardAbout .itensToHireAbout .ToHireUnicAbout h4 {
+    font-weight: 700;
+    color: var(--Paragraph);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    text-align: left;
+    /* padding: 10px 20px;
+    border-radius: 30px; */
+}
+
+.About .MainAbout .beneficies .textDashboardAbout .itensToHireAbout .ToHireUnicAbout svg {
+    margin-right: 5px;
+    font-size: 22px;
+}
+
+.About .MainAbout .beneficies .textDashboardAbout h2 {
+    font-weight: 800;
+    color: var(--Black2);
+    margin:10px 0;
+    text-align: left;
+}
+.About .MainAbout .beneficies .textDashboardAbout h2 span {
+    color: var(--Primary);
+}
+
 
 @media (max-width: 1160px) {
     .About .MainAbout .bloco {
@@ -370,6 +493,43 @@
     }
 
 
+    @media (max-width: 950px) {
+        .About .MainAbout .beneficies{
+            display: flex;
+            flex-direction: column-reverse;
+            align-itens: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .About .MainAbout .beneficies .imageDashboard{
+            width: 100%;
+            padding: 20px 1px;
+            justify-content: center;
+        }
+        
+        .About .MainAbout .beneficies .imageDashboard img {
+            width: 550px;
+        }
+        .About .MainAbout .beneficies .textDashboardAbout{
+            width: 100%;
+            display: flex;
+            align-itens: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .About .MainAbout .beneficies .textDashboardAbout h2{
+            text-align: center;
+        }
+
+        .About .MainAbout .beneficies .textDashboardAbout .itensToHireAbout .ToHireUnicAbout {
+            width: 100%;
+            display: flex;
+            align-itens: center;
+            justify-content: center;
+            flex-direction: row;
+            text-align: center;
+        }
     @media (max-width: 920px) {
         .About .MainAbout .bloco {
             padding: 100px 10px 10px 10px;
@@ -406,6 +566,7 @@
         .About .MainAbout .textPricing{
             padding: 0 20px 0 20px;
         }
+
 
         @media (max-width: 842px) {
             .About .MainAbout .WhyChoose .WhyChooseImage {
@@ -444,7 +605,13 @@
                 font-size: 34px;
                 color: var(--Primary);
             }
-            
+
+            .About .MainAbout .beneficies .imageDashboard img {
+                width: 100%;
+            }
+            .About .MainAbout .beneficies .textDashboardAbout{
+                padding: 40px 5px;
+            }
 
     @media (max-width: 550px) {
         .About .MainAbout{
@@ -476,10 +643,11 @@
         .About .MainAbout .bloco .textAbout h3 {
             text-align: left;
         }
-        
+
         .About .MainAbout .bloco .textAbout .buttonsText {
             align-items: flex-start;
         }
+        
 
         .About .MainAbout .bloco .imageAbout svg {
             font-size: 80px;
@@ -489,5 +657,6 @@
     }
     }
     }
+}
 }
 }

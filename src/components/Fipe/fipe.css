@@ -57,11 +57,11 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background-color: var(--BorderInput);
+    background-color: var(--Black2);
     padding: 30px;
     margin: 20px;
     border-radius: 6px;
-    color: var(--Paragraph);
+    color: var(--White);
     width: 100%;
 }
 .Fipe .fipeValue:hover {

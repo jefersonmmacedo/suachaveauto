@@ -10,7 +10,7 @@ export function ToHire() {
                 </div>
             </div>
             <div className="textToHire">
-                <h3>Veja o que podemos fazer pela sua agência:</h3>
+                <h3>Veja o que podemos fazer pela <span>sua agência:</span></h3>
                 <div className="itensToHire">
                     <div className="ToHireUnic">
                     <IoCarOutline />
@@ -22,7 +22,7 @@ export function ToHire() {
                     </div>
                     <div className="ToHireUnic">
                         <IoOptionsOutline />
-                        <h5>Controle de vendas</h5>
+                        <h5>Controle de compra e venda</h5>
                     </div>
                     <div className="ToHireUnic">
                     <IoChatboxEllipsesOutline />

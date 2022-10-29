@@ -53,7 +53,7 @@
     justify-content: center;
     width: 100%;
     border-radius: 8px;
-    background-color: #BB0000;
+    background-color: var(--Black);
 }
 .content-modal-home .itensModalHome {
     display: flex;

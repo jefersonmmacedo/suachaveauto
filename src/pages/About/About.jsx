@@ -2,12 +2,13 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import { Footer } from "../../components/Footer/Footer";
 import {IoPlayCircle, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline, IoCarSport,
-        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoMailOpenOutline, IoCallOutline, IoCloseOutline} from "react-icons/io5"
+        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoMailOpenOutline, IoCallOutline, IoCloseOutline, IoHomeOutline, IoCalendarOutline, IoLogoWhatsapp, IoOptionsOutline, IoChatboxEllipsesOutline, IoCarSportOutline} from "react-icons/io5"
 import { Plains } from "../../components/Plains/Plains";
 import SmartPhone from "../../assets/images/iphone.png";
 import Modal from 'react-modal';
 import { useState } from "react";
-import imgFamily from "../../assets/images/background2.jpg"
+import imgFamily from "../../assets/images/background2.jpg";
+import Mackbook from "../../assets/images/Mockup.png";
 
 export function About() {
     const [isOpenModal, setIsOpenModa] = useState(false);
@@ -40,7 +41,8 @@ export function About() {
                     com foco em conectar seus automóveis a seus clientes.</h3>
 
                     <div className="buttonsText">
-                        <button onClick={handleOpenModal}><IoPlayCircle /> dê um play na nossa história</button>
+                        {/* <button onClick={handleOpenModal}><IoPlayCircle /> dê um play na nossa história</button> */}
+                        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Entre em contato com nossa equipe</button>
                     </div>
                 </div>
         </div>
@@ -135,11 +137,52 @@ export function About() {
             </div>
         </div>
     </div>
+
+    <div className="beneficies">
+        <div className="imageDashboard">
+            <img src={Mackbook} alt="" />
+        </div>
+        <div className="textDashboardAbout">
+        <h2>Controle <span>completo</span> <br /> para sua <span>imobiliária</span>:</h2>
+                <div className="itensToHireAbout">
+                    <div className="ToHireUnicAbout">
+                    <IoCarSportOutline />
+                        <h4>Anúncios ilimitados</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                    <IoCalendarOutline />
+                        <h4>Agenda de test drive</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                        <IoOptionsOutline />
+                        <h4>Controle de compra e venda</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                        <IoCarSportOutline />
+                        <h4>Autos para avaliação</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                    <IoChatboxEllipsesOutline />
+                        <h4>Chat único por anúncio</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                    <IoLaptopOutline />
+                        <h4>Controle do site e app</h4>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
     <div className="textPricing">
         <h1>Escolha o <span>plano ideal</span> para o seu negócio</h1>
         <h4>Cada plano atende a uma necessidade, de acordo com as ferramentas oferecidas. <br/>Você poderá alterar a qualquer momento.</h4>
     </div>
-        <Plains />
+        
+    <div className="buttonsPlainsAbout">
+        <a href="/planos"><IoQrCodeOutline /> Conheça nossos planos</a>
+    </div>
+
         <div className="textPricing">
         <h1>Fale <span>conosco</span></h1>
         <h4>Entre em contato conosco, estamos prontos para atendê-lo.</h4>

@@ -11,10 +11,11 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
     font-weight: 700;
+    color: var(--White)
   }
   li a{
     text-decoration: none;
-    color: var(--Description)
+    color: var(--White)
     font-weight: 700;
   }
   li a:hover{
@@ -73,7 +74,7 @@ const Ul = styled.ul`
 
   @media (max-width: 900px) {
     flex-flow: column nowrap;
-    background: rgba(237, 50, 55, 0.95);
+    background-color: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(4px);
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -118,7 +119,7 @@ const Ul = styled.ul`
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      background-color:  rgba(237, 50, 55, 0.1);
+      background-color:  rgba(237, 50, 55, 0.8);
       margin-left: 10px;
       margin-right: 10px;
       padding: 10px 0;

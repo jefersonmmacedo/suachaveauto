@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Burger from './Burger';
-import LogoImg from '../../assets/images/Logo.png'
+import LogoImg from '../../assets/images/Logo2.png'
 import LogoSimbol from '../../assets/images/Simbol.png'
 import {IoCarSportOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
   IoLogOutOutline, IoSpeedometerOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline} from 'react-icons/io5'
@@ -11,7 +11,7 @@ import ReactTooltip from 'react-tooltip';
 const Nav = styled.nav`
   width: 100%;
   height: 65px;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #000000;
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -19,10 +19,10 @@ const Nav = styled.nav`
   position: fixed;
   top: 0;
   z-index: 97;
-  background: rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(4px);
   font-size: 14px;
-  color: var(--Description)
+  color: var(--White);
 
 
 
@@ -52,14 +52,15 @@ const Nav = styled.nav`
     padding: 18px 10px;
     font-weight: 700;
     text-decoration: none;
+    color: var(--White);
   }
   .account li a{
     text-decoration: none;
-    color: var(--Primary)
+  color: var(--White);
     font-weight: 700;
   }
   .account li a:hover{
-    color: var(--Primary);
+  color: var(--Primary);
   }
 
   .account button {
@@ -82,9 +83,9 @@ const Nav = styled.nav`
     border: none;
     border-radius: 50%;
     padding: 10px;
-    background-color: rgba(238,238,238,0.5);
+    background-color: rgba(170,0,0,0.9);
     font-weight:600;
-    color: var(--Primary);
+    color: var(--White);
     font-size:18px;
     margin:5px 5px;
 }
@@ -96,9 +97,9 @@ const Nav = styled.nav`
     border: none;
     border-radius: 50%;
     padding: 10px;
-    background-color: rgba(238,238,238,0.5);
+    background-color: rgba(170,0,0,0.9);
     font-weight:600;
-    color: var(--Primary);
+    color: var(--White);
     font-size:18px;
     margin:5px 5px;
 }
