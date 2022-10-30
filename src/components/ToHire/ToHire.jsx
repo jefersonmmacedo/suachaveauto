@@ -10,7 +10,7 @@ export function ToHire() {
                 </div>
             </div>
             <div className="textToHire">
-                <h3>Veja o que podemos fazer pela <span>sua agência:</span></h3>
+                <h2>Veja o que podemos fazer pela <span>sua agência:</span></h2>
                 <div className="itensToHire">
                     <div className="ToHireUnic">
                     <IoCarOutline />
