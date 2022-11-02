@@ -1,21 +1,15 @@
 import {Route, Routes, Navigate} from 'react-router-dom';
-import { Budgets } from '../pages/Budgets/Budgets';
 import { Favorites } from '../pages/Favorites/Favorites';
 import { Home } from '../pages/Home/Home';
-import { MyProposals } from '../pages/MyProposals/MyProposals';
 import { Notifications } from '../pages/Notifications/Notifications';
 import { Pricing } from '../pages/Pricing/Pricing';
-import { Profesisonals } from '../pages/Profesisonals/Profesisonals';
 import { SignIn } from '../pages/SignIn/SignIn';
 import { ChooseYourAccount } from '../pages/ChooseYourAccount/ChooseYourAccount';
 import { SignUpClient } from '../pages/SignUpClient/SignUpClient';
 import { SignUpProfessional } from '../pages/SignUpProfessional/SignUpProfessional';
 import { PrivacyPolicy } from '../pages/PrivacyPolicy/PrivacyPolicy';
 import { TermsOfUse } from '../pages/TermsOfUse/TermsOfUse';
-import { ProposalPage } from '../pages/ProposalPage/ProposalPage';
-import { BudgetPage } from '../pages/BudgetPage/BudgetPage';
 import { Message } from '../pages/Message/Message';
-import { BudgetNew } from '../pages/BudgetNew/BudgetNew';
 import { Properties } from '../pages/Properties/Properties';
 import { Property } from '../pages/Property/Property';
 import { About } from '../pages/About/About';
@@ -68,19 +62,12 @@ function PrivateRoute({children} ) {
             <Route path="/caminhao/:status" element={<Properties />}/>
             <Route path="/onibus/:status" element={<Properties />}/>
             <Route path="/trator/:status" element={<Properties />}/>
-            <Route path="/minhas-propostas" element={<MyProposals />}/>
-            <Route path="/orcamentos" element={<Budgets />}/>
-            <Route path="/profissionais" element={<Profesisonals />}/>
             <Route path="/privacidade" element={<PrivacyPolicy />}/>
             <Route path="/termos" element={<TermsOfUse />}/>
-            <Route path="/proposta" element={<ProposalPage />}/>
-            <Route path="/orcamento" element={<BudgetPage />}/>
-            <Route path="/novo-orcamento" element={<BudgetNew />}/>
             <Route path="/imovel" element={<Property />}/>
             <Route path="/imobiliarias" element={<Companies />}/>
             <Route path="/imobiliaria" element={<Company />}/>
             <Route path="/corretores" element={<Brokers />}/>
-            <Route path="/test" element={<About />}/>
             <Route path="/simulador" element={<Simulator />}/>
             <Route path="/sobre" element={<About />}/>
             <Route path="/planos" element={<Pricing />}/>

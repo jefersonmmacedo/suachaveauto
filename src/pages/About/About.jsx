@@ -36,9 +36,9 @@ export function About() {
                     </div>
                 </div>
                 <div className="textAbout">
-                    <h1>Seja bem-vindo.<br /> <span>O Sua Chave Auto é para você</span></h1>
-                    <h3>Fomos criados para agência e consultores, <br />
-                    com foco em conectar seus automóveis a seus clientes.</h3>
+                    <h1>Seja bem-vindo.<br /> <span>O Sua Chave Auto é para você!</span></h1>
+                    <h3>Somos uma start-up criada para agências e consultores, <br />
+                    com foco em conectar seus autos a novos clientes.</h3>
 
                     <div className="buttonsText">
                         {/* <button onClick={handleOpenModal}><IoPlayCircle /> dê um play na nossa história</button> */}
@@ -76,7 +76,7 @@ export function About() {
                     </div>
                     <div className="IconsWhyText">
                     <h2>Design responsivo</h2>
-                    <h4>Você e seu cliente acessa o nosso marketplace de qualquer dispositivo facilmente</h4>
+                    <h4>Você e seu cliente acessa o nosso site de qualquer dispositivo facilmente</h4>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@ export function About() {
                     </div>
                     <div className="IconsWhyText">
                         <h2>Aplicativo Administrativo</h2>
-                        <h4>Controle seu negócio de qualquer lugar a qualquer hora</h4>
+                        <h4>Controle seu negócio de qualquer lugar a qualquer hora [breve]</h4>
                     </div>
                 </div>
                 <div className="IconsWhyChooseUnic">
@@ -99,7 +99,7 @@ export function About() {
                     </div>
                     <div className="IconsWhyText">
                     <h2>Site para o seu negócio</h2>
-                    <h4>Tenha o site do seu negócio totalmente integrado ao nosso marketplace</h4>
+                    <h4>Tenha o site do seu negócio totalmente integrado ao nosso sisterma</h4>
                     </div>
                 </div>
                 <div className="IconsWhyChooseUnic">
@@ -108,7 +108,7 @@ export function About() {
                     </div>
                     <div className="IconsWhyText">
                     <h2>Aplicatico para o seu negócio</h2>
-                    <h4>Tenha o Aplicativo do seu negócio totalmente integrado ao nosso marketplace</h4>
+                    <h4>Tenha o Aplicativo do seu negócio totalmente integrado ao nosso site [breve]</h4>
                     </div>
                 </div>
             </div>
@@ -116,14 +116,14 @@ export function About() {
 
     <div className="howItWorks">
         <h1>Como funciona o Sua Chave Auto?</h1>
-        <h4>Somos um marketplace para agências de automóveis e consultores, com foco em conectar suas motos e automóveis a clientes interessados.
+        <h4>Somos um marketplace e sisterma de gerenciamento para agências de automóveis e consultores, com foco em conectar suas automóveis a clientes interessados.
             <br />
-        Utilizando ferramentas de marketing, geolocalização e integrações. trazendo mais objetividade nas ofertas de motos e automóveis.</h4>
+        Utilizando ferramentas de marketing, geolocalização e integrações. trazendo mais objetividade nas ofertas de automóveis.</h4>
         <div className="iconsWorks">
             <div className="iconWork">
                 <IoIdCardOutline />
                 <h3>Cadastre-se</h3>
-                <h4>Realize seu cadastro para imobiliária ou corretor de forma rápida e objetiva.</h4>
+                <h4>Realize seu cadastro para agências ou consultores de forma rápida e objetiva.</h4>
             </div>
             <div className="iconWork">
                 <IoQrCodeOutline />

@@ -13,7 +13,7 @@ export function Footer() {
                 <div className="sections">
                         <div className="sectionUnic">
                         <a href="/"><img src={logo} alt="" /></a>
-                            <h5>Nós temos a chave do seu sonho!</h5>
+                            <h5>Encontre Automóveis, carros, motos, agência de veículos em poucos cliques!</h5>
                         </div>
                         <div className="sectionUnic">
                             <h3><b>SUA CHAVE</b></h3>
