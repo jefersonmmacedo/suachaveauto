@@ -234,8 +234,8 @@ export function SearchProperty() {
                           <option value="2023">2023</option>      
                     </select>
                     <select> 
-                            <option value="">Ano Mínimo</option>   
-                            <option value="1960">1960</option>
+                          <option value="">Ano Mínimo</option>   
+                          <option value="1960">1960</option>
                           <option value="1961">1961</option>
                           <option value="1962">1962</option>
                           <option value="1963">1963</option>

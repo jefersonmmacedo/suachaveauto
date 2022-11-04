@@ -21,16 +21,16 @@
 }
 
 .ComingSoon .coming {
-    width: 330px;
-    padding: 10px;
+    padding: 10px 60px;
     border: 3px solid var(--White);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 10px;
+    border-radius: 50px;
 }
-.ComingSoon .coming h3 {
+.ComingSoon .coming h4 {
     text-align: center;
     color: var(--White);
     font-weight: 900;
