@@ -67,7 +67,7 @@
     border-radius: 6px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: row;
     color: var(--White);
     margin: 5px;
@@ -110,7 +110,7 @@
     border-radius: 6px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: row;
     color: var(--Primary);
     margin: 5px;
@@ -312,6 +312,31 @@
     flex-wrap: wrap;
 }
 
+.About .MainAbout .BlocksContact .btn {
+    background-color: var(--White);
+    width: 350px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid var(--Primary);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: var(--Primary);
+    font-weight: 700;
+}
+.About .MainAbout .BlocksContact button:hover {
+    background-color: var(--Primary);
+    color: var(--White);
+}
+
+.About .MainAbout .BlocksContact button svg {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+
 .About .MainAbout .BlocksContact .blockContact {
     width: 300px;
     display: flex;
@@ -393,7 +418,7 @@
 }
 
 .About .MainAbout .beneficies .imageDashboard img {
-    width: 500px;
+    height: 300px;
 }
 .About .MainAbout .beneficies .textDashboardAbout{
     display: flex;
@@ -413,6 +438,21 @@
     flex-direction: column;
     width: 100%;
     flex-wrap: wrap;
+}
+.About .MainAbout .beneficies .textDashboardAbout .itensToHireAbout a {
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+    justify-content: center;
+    border: 1px solid var(--Primary);
+    background-color: var(--Primary);
+    color: var(--White);
+    font-weight: 700;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
 }
 .About .MainAbout .beneficies .textDashboardAbout .itensToHireAbout .ToHireUnicAbout {
     display: flex;
@@ -507,9 +547,7 @@
             justify-content: center;
         }
         
-        .About .MainAbout .beneficies .imageDashboard img {
-            width: 550px;
-        }
+
         .About .MainAbout .beneficies .textDashboardAbout{
             width: 100%;
             display: flex;
@@ -520,6 +558,9 @@
         }
         .About .MainAbout .beneficies .textDashboardAbout h2{
             text-align: center;
+        }
+        .About .MainAbout .beneficies .textDashboardAbout .itensToHireAbout a  {
+            margin: 10px auto;
         }
 
         .About .MainAbout .beneficies .textDashboardAbout .itensToHireAbout .ToHireUnicAbout {
@@ -606,9 +647,7 @@
                 color: var(--Primary);
             }
 
-            .About .MainAbout .beneficies .imageDashboard img {
-                width: 100%;
-            }
+
             .About .MainAbout .beneficies .textDashboardAbout{
                 padding: 40px 5px;
             }
@@ -627,6 +666,14 @@
             flex-direction: column;
         }
 
+        .About .MainAbout .bloco .textAbout .buttonsText button {
+            width: 100%;
+            font-size: 14px;
+        }
+        .About .MainAbout .bloco .textAbout .buttonsText .btn {
+            width: 100%;
+            font-size: 14px;
+        }
         .About .MainAbout .bloco .textAbout {
             align-items: flex-start;
             width: 100%;
@@ -652,6 +699,10 @@
         .About .MainAbout .bloco .imageAbout svg {
             font-size: 80px;
             margin-top: 30px;
+        }
+
+        .About .MainAbout .beneficies .imageDashboard img {
+            height: 200px;
         }
     }
     }

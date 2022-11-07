@@ -42,7 +42,7 @@ export function About() {
 
                     <div className="buttonsText">
                         {/* <button onClick={handleOpenModal}><IoPlayCircle /> dê um play na nossa história</button> */}
-                        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Entre em contato com nossa equipe</button>
+                        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Falar com time Comercial</button>
                     </div>
                 </div>
         </div>
@@ -89,7 +89,7 @@ export function About() {
                         <IoPhonePortraitOutline />
                     </div>
                     <div className="IconsWhyText">
-                        <h2>Aplicativo Administrativo</h2>
+                        <h2>Aplicativo administrativo</h2>
                         <h4>Controle seu negócio de qualquer lugar a qualquer hora [breve]</h4>
                     </div>
                 </div>
@@ -107,8 +107,8 @@ export function About() {
                         <IoPhonePortraitOutline />
                     </div>
                     <div className="IconsWhyText">
-                    <h2>Aplicatico para o seu negócio</h2>
-                    <h4>Tenha o Aplicativo do seu negócio totalmente integrado ao nosso site [breve]</h4>
+                    <h2>Aplicativo para o seu negócio</h2>
+                    <h4>Tenha o aplicativo do seu negócio totalmente integrado ao nosso site [breve]</h4>
                     </div>
                 </div>
             </div>
@@ -165,10 +165,7 @@ export function About() {
                     <IoChatboxEllipsesOutline />
                         <h4>Chat único por anúncio</h4>
                     </div>
-                    <div className="ToHireUnicAbout">
-                    <IoLaptopOutline />
-                        <h4>Controle do site e app</h4>
-                    </div>
+                    <a href="/cadastro-profissional">Quero digitalizar minha imobiliária</a>
                 </div>
         </div>
     </div>
@@ -176,7 +173,7 @@ export function About() {
 
     <div className="textPricing">
         <h1>Escolha o <span>plano ideal</span> para o seu negócio</h1>
-        <h4>Cada plano atende a uma necessidade, de acordo com as ferramentas oferecidas. <br/>Você poderá alterar a qualquer momento.</h4>
+        <h4>Temos um plano cara cada momento do seu negócio. Acesse o link a abaixo e confira:</h4>
     </div>
         
     <div className="buttonsPlainsAbout">
@@ -187,24 +184,9 @@ export function About() {
         <h1>Fale <span>conosco</span></h1>
         <h4>Entre em contato conosco, estamos prontos para atendê-lo.</h4>
     </div>
-        <div className="BlocksContact">
-                <div className="blockContact">
-                        <h3><IoMailOpenOutline /> Email</h3>
-                        <h5>contato@suachaveauto.com.br</h5>
 
-                        <button>Enviar e-mail</button>
-                </div>
-                <div className="blockContact">
-                        <h3><IoCallOutline  /> Telefone</h3>
-                        <h5>21 99742-9585</h5>
-
-                        <button>Ligar</button>
-                </div>
-                <div className="blockContact">
-                    <h3><IoPhonePortraitOutline /> Whatsapp </h3>
-                    <h5>21 99742-9585</h5>
-                    <button>Enviar mensagem</button>
-                </div>
+    <div className="BlocksContact">
+        <button className="btn" onClick={handleOpenModal}><IoLogoWhatsapp /> Falar com time Comercial</button>
             </div> 
     </div>
     <Footer />

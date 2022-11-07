@@ -20,24 +20,13 @@ import { Schedules } from '../pages/Schedules/Schedules';
 import { MessagesProperty } from '../pages/MessagesProperty/MessagesProperty';
 import { Simulator } from '../pages/Simulator/Simulator';
 import { SignInCompany } from '../pages/SignInCompany/SignInCompany';
-import { Dashboard } from '../pages/Adm/Dashboard/Dashboard';
-import { NewProperty } from '../pages/Adm/NewProperty/NewProperty';
 import { MyAccount } from '../pages/MyAccount/MyAccount';
-import { PlainsAdm } from '../pages/Adm/PlainsAdm/PlainsAdm';
-import { ChatAdm } from '../pages/Adm/ChatAdm/ChatAdm';
-import { NotificationsAdm } from '../pages/Adm/NotificationsAdm/NotificationsAdm';
-import { SchedulesAdm } from '../pages/Adm/SchedulesAdm/SchedulesAdm';
-import { BrokersAdm } from '../pages/Adm/BrokersAdm/BrokersAdm';
-import { MyAccountAdm } from '../pages/Adm/MyAccountAdm/MyAccountAdm';
-import { MenuAdm } from '../pages/Adm/MenuAdm/MenuAdm';
 import { Scheduling } from '../pages/Scheduling/Scheduling';
-import { SchedulingAdm } from '../pages/Adm/SchedulingAdm/SchedulingAdm';
 import { ComingSoon } from '../pages/CommingSoom/ComingSoon';
 import { Checkout } from '../pages/Checkout/Checkout';
 import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
 import { Contact } from '../pages/Contact/Contact';
 import { Faq } from '../pages/Faq/Faq';
-import { WebApp } from '../pages/Adm/WebApp/WebApp';
 
 function Router () {
 const Local = localStorage.getItem("suachave");
@@ -88,32 +77,13 @@ function PrivateRoute({children} ) {
                     element={ <PrivateRoute> <Schedules /> </PrivateRoute>} />
             <Route path="agendamento/unico"
                     element={ <PrivateRoute> <Scheduling /> </PrivateRoute>} />
-            <Route path="/painel"
-                    element={ <PrivateRoute> <Dashboard /> </PrivateRoute>} />
-            <Route path="/painel/novoimovel"
-                    element={ <PrivateRoute> <NewProperty /> </PrivateRoute>} />
+         
             <Route path="/plano"
                     element={ <PrivateRoute> <Checkout /> </PrivateRoute>} />
-            <Route path="/painel/planos"
-                    element={ <PrivateRoute> <PlainsAdm /> </PrivateRoute>} />
+          
             <Route path="/pagamentofinalizado"
                     element={ <PrivateRoute> <PaymentCompleted /> </PrivateRoute>} />
-            <Route path="/painel/chat"
-                    element={ <PrivateRoute> <ChatAdm /> </PrivateRoute>} />
-            <Route path="/painel/notificacoes"
-                    element={ <PrivateRoute> <NotificationsAdm /> </PrivateRoute>} />
-            <Route path="/painel/agendamentos"
-                    element={ <PrivateRoute> <SchedulesAdm /> </PrivateRoute>} />
-           <Route path="/painel/agendamento/unico"
-                   element={ <PrivateRoute> <SchedulingAdm /> </PrivateRoute>} />
-            <Route path="/painel/corretores"
-                    element={ <PrivateRoute> <BrokersAdm /> </PrivateRoute>} />
-            <Route path="/painel/minhaconta"
-                    element={ <PrivateRoute> <MyAccountAdm /> </PrivateRoute>} />
-            <Route path="/painel/web"
-                    element={ <PrivateRoute> <WebApp /> </PrivateRoute>} />
-            <Route path="/painel/menu"
-                    element={ <PrivateRoute> <MenuAdm /> </PrivateRoute>} />
+           
             </Routes>
            
     )
