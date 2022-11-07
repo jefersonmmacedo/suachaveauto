@@ -12,7 +12,6 @@ import { useEffect } from 'react';
 function App() {
 
 
-  // const suachave = ""
   const {logout} = useContext(AuthContext);
 
   return (

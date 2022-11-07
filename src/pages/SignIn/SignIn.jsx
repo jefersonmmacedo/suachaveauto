@@ -15,7 +15,7 @@ export function SignIn() {
     }
     function handleRedirectToPage(e) {
         e.preventDefault();
-        window.open("/entrar-empresa", "_self")
+        window.open("https://adm.suachaveauto.com.br/")
     }
     return (
         <div className="SignIn">
@@ -40,7 +40,7 @@ export function SignIn() {
                     </>
                     :
                     <>
-                    <button className="buttonCompany" onClick={handleRedirectToPage}>Entrar como imobiliária / Corretor</button>
+                    <button className="buttonCompany" onClick={handleRedirectToPage}>Entrar como Agência / Consultor</button>
                     <a href="/cadastrar">Cadastre-se aqui!</a>
                     </>
                 }

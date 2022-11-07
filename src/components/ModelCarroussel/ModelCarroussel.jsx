@@ -63,14 +63,14 @@ export function ModelCarroussel() {
             }
         },
         {
-            breakpoint: 610,
+            breakpoint: 660,
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 1
             }
         },
         {
-            breakpoint: 470,
+            breakpoint: 485,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1
