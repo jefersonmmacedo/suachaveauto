@@ -6,9 +6,6 @@ import { SearchProperty } from "../../components/SearchProperty/SearchProperty";
 import { Footer } from "../../components/Footer/Footer";
 import { SliderHome } from "../../components/SliderHome/SliderHome";
 import {  PropertyCarroussel } from "../../components/PropertyCarroussel/PropertyCarroussel";
-import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
-import { Cities } from "../../components/Cities/Cities";
-import { ExploreIconsProperties } from "../../components/ExploreIconsProperties/ExploreIconsProperties";
 import { IoCloseOutline } from "react-icons/io5";
 import { useEffect } from "react";
 import LogoImg from '../../assets/images/Logo2.png';
@@ -18,6 +15,7 @@ import { ToHire } from "../../components/ToHire/ToHire";
 import { BrandCarroussel } from "../../components/BrandCarroussel/BrandCarroussel";
 import { ModelCarroussel } from "../../components/ModelCarroussel/ModelCarroussel";
 import { Fipe } from "../../components/Fipe/Fipe";
+import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachaveautocity");
@@ -149,7 +147,7 @@ export function Home() {
             {/* <ExploreIconsProperties />
             <Cities /> */}
             <ToHire />
-            {/* <DownloadApp /> */}
+            <DownloadApp />
             <Footer />
 
 

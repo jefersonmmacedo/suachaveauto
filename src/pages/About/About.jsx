@@ -2,7 +2,7 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import { Footer } from "../../components/Footer/Footer";
 import {IoPlayCircle, IoLogoWhatsapp, IoHome, IoQrCodeOutline, IoIdCardOutline, IoPhonePortraitOutline,
-        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoPlayOutline, IoCallOutline, IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline, IoPersonAddOutline, IoCheckboxOutline} from "react-icons/io5"
+        IoLayersOutline, IoChatbubblesOutline, IoCropOutline, IoLaptopOutline, IoPlayOutline, IoCallOutline, IoCloseOutline, IoCalendarOutline, IoHomeOutline, IoOptionsOutline, IoChatboxEllipsesOutline, IoPersonAddOutline, IoCheckboxOutline, IoCarSport, IoFunnelOutline, IoCarSportOutline} from "react-icons/io5"
 import { Plains } from "../../components/Plains/Plains";
 import SmartPhone from "../../assets/images/iphone.png";
 import Modal from 'react-modal';
@@ -38,9 +38,9 @@ export function About() {
                     </div>
                 </div>
                 <div className="textAbout">
-                    <h1>Seja bem-vindo.<br /><span>O Sua Chave é para você!</span></h1>
-                    <h3>Somos uma start-up criada para imobiliárias e corretores, <br />
-                    com foco em conectar seus imóveis a novos clientes.</h3>
+                    <h1>Seja bem-vindo.<br /><span>O Sua Chave Auto é para você!</span></h1>
+                    <h3>Somos uma start-up criada para Agências e consultores, <br />
+                    com foco em conectar seus autos a novos clientes.</h3>
 
                     <div className="buttonsText">
                         <button ><IoLogoWhatsapp /> Falar com time comercial</button>
@@ -50,7 +50,7 @@ export function About() {
         </div>
         <div className="movie">
         <div className="textPricing">
-        <h2>Um <span>novo conceito </span>de vender e alugar imóveis</h2>
+        <h2>Um <span>novo conceito </span>de vender seus autos</h2>
         <h4>Assista e veja o que temos preparado para você.</h4>
     </div>
             <div className="moviePlay">
@@ -62,7 +62,7 @@ export function About() {
             </div>
         </div>
         <div className="textPricing">
-        <h2>Porque escolher o <span>Sua Chave</span>?</h2>
+        <h2>Porque escolher o <span>Sua Chave Auto</span>?</h2>
         <h4>Veja os motivos que faz nossos clientes nos escolherem e o que podemos agregar ao seu negócio.</h4>
     </div>
         <div className="WhyChoose">
@@ -138,17 +138,17 @@ export function About() {
             <div className="iconWork">
                 <IoIdCardOutline />
                 <h3>Cadastre-se</h3>
-                <h4>Realize seu cadastro para imobiliária ou corretor de forma rápida e objetiva.</h4>
+                <h4>Realize seu cadastro para agência ou consultor de forma rápida e objetiva.</h4>
             </div>
             <div className="iconWork">
                 <IoQrCodeOutline />
                 <h3>Escolha seu plano</h3>
-                <h4>Escolha o pacote que mais se adequa ao momento atual de seu negócio</h4>
+                <h4>Escolha o pacote que mais se adequa ao momento atual de seu negócio.</h4>
             </div>
             <div className="iconWork">
-                <IoHome />
-                <h3>Adicione seus imóveis</h3>
-                <h4>Cadastre seus imóveis e aproveite nossas ferramentas para alcancar mais clientes </h4>
+                <IoCarSport />
+                <h3>Adicione seus autos</h3>
+                <h4>Cadastre seus autos e aproveite nossas ferramentas para alcancar mais clientes.</h4>
             </div>
         </div>
     </div>
@@ -158,10 +158,10 @@ export function About() {
             <img src={Mackbook} alt="" />
         </div>
         <div className="textDashboardAbout">
-        <h2>Controle <span>completo</span> <br /> para sua <span>imobiliária</span>:</h2>
+        <h2>Gerencia sua <span>agência</span>:</h2>
                 <div className="itensToHireAbout">
                     <div className="ToHireUnicAbout">
-                    <IoHomeOutline />
+                    <IoCarSportOutline />
                         <h4>Anúncios ilimitados</h4>
                     </div>
                     <div className="ToHireUnicAbout">
@@ -170,18 +170,22 @@ export function About() {
                     </div>
                     <div className="ToHireUnicAbout">
                         <IoOptionsOutline />
-                        <h4>Controle de alugueis e vendas</h4>
+                        <h4>Controle de compra e vendas</h4>
                     </div>
                     <div className="ToHireUnicAbout">
-                        <IoHomeOutline />
-                        <h4>Imóveis para avaliação</h4>
+                        <IoFunnelOutline />
+                        <h4>Geração e captação de leads</h4>
+                    </div>
+                    <div className="ToHireUnicAbout">
+                        <IoCarSportOutline />
+                        <h4>Autos para avaliação</h4>
                     </div>
                     <div className="ToHireUnicAbout">
                     <IoChatboxEllipsesOutline />
                         <h4>Chat único por anúncio</h4>
                     </div>
 
-                    <a href="/cadastro-profissional">Quero digitalizar minha imobiliária</a>
+                    <a href="/cadastro-profissional">Quero digitalizar minha agência</a>
                 </div>
         </div>
     </div>

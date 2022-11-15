@@ -8,7 +8,7 @@ export function Brokers() {
         <div className="Brokers">
             <Navbar2 />
 
-            <h2>Corretores</h2>
+            <h2>Consultores</h2>
 
             <BrokerList />
             <Footer />

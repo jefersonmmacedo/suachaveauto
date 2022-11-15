@@ -8,7 +8,7 @@ export function Companies() {
         <div className="Companies">
             <Navbar2 />
 
-            <h2>Imobiliárias</h2>
+            <h2>Agências</h2>
 
             <CompanyList />
             <Footer />

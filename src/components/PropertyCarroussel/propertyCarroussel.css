@@ -106,9 +106,12 @@
     margin: 20px 10px 5px 10px;
 }
 .block .text h3 {
-    color: var(--Primary);
+    color: var(--Paragraph);
     font-weight: 700;
     margin: 10px 10px 0px 10px;
+}
+.block .text h3 span {
+    color: var(--Primary);
 }
 
 .block .text a {
