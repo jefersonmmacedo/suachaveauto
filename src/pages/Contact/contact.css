@@ -44,24 +44,24 @@
 }
 
 .Contact .form .inputsContact input {
-    border: none;
-    background-color: var(--BorderInput);
+    border: 1px solid var(--Border);
+    background-color: var(--BorderHover);
     width: 265px;
     margin: 5px;
     padding: 10px 20px;
     border-radius: 6px;
 }
 .Contact .form select {
-    border: none;
-    background-color: var(--BorderInput);
+    border: 1px solid var(--Border);
+    background-color: var(--BorderHover);
     width: 98%;
     margin: 5px;
     padding: 10px 20px;
     border-radius: 6px;
 }
 .Contact .form textarea {
-    border: none;
-    background-color: var(--BorderInput);
+    border: 1px solid var(--Border);
+    background-color: var(--BorderHover);
     width: 98%;
     margin: 5px;
     padding: 10px 20px;
@@ -99,7 +99,7 @@
     text-align: center;
     align-itens: center;
     justify-content: flex-start;
-    background-color: var(--BorderInput);
+    background-color: var(--BorderHover);
     padding: 20px;
     border-radius: 6px;
     margin: 10px;
@@ -112,16 +112,18 @@
 .Contact .BlocksContact .blockContact h3 {
     display: flex;
     flex-direction: row;
-    align-itens: center;
+    align-itens: flex-end;
     justify-content: center;
     font-weight: 700;
-    color: var(--Paragraph);
-    margin:5px;
+    color: var(--Paragraph);;
     text-align: center;
 }
 
 .Contact .BlocksContact .blockContact h3 svg {
     margin-right: 5px;
+    margin-top: -3px;
+    color: var(--Primary);
+    font-size: 24px;
 }
 
 .Contact .BlocksContact .blockContact h5 {
@@ -129,9 +131,10 @@
     flex-direction: row;
     align-itens: center;
     justify-content: center;
-    font-weight: 700;
-    color: var(--Paragraph);
+    font-weight: 400;
+    color: var(--Gray);
     text-align: center;
+    margin: 5px 0;
 }
 
 .Contact .BlocksContact .blockContact button {

@@ -37,19 +37,14 @@ export function Contact() {
                 <div className="blockContact">
                         <h3><IoMailOpenOutline /> Email</h3>
                         <h5>contato@suachaveauto.com.br</h5>
-
-                        <button>Enviar e-mail</button>
                 </div>
                 <div className="blockContact">
                         <h3><IoCallOutline  /> Telefone</h3>
                         <h5>21 99742-9585</h5>
-
-                        <button>Ligar</button>
                 </div>
                 <div className="blockContact">
                     <h3><IoPhonePortraitOutline /> Whatsapp </h3>
                     <h5>21 99742-9585</h5>
-                    <button>Enviar mensagem</button>
                 </div>
             </div> 
 

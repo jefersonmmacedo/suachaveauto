@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: -80px;
+    margin-top: -70px;
     z-index: 10;
     position: absolute;
 }
@@ -71,6 +71,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    
 }
 .SearchProperty .selectButtons button {
     display: flex;
@@ -83,6 +84,7 @@
     color: var(--Paragraph);
     font-weight: 700;
     border: 2px solid var(--White);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .SearchProperty .selectButtons button:hover {
     background-color: var(--Primary);

@@ -19,7 +19,7 @@ export function ChooseYourAccount() {
             </div>
             <div className="professional">
             <div className="block">
-                    <button onClick={handleRedirect}>SOU CORRETOR/IMOBILIÁRIA</button>
+                    <button onClick={handleRedirect}>SOU AGÊNCIA/CONSULTOR</button>
                 </div>
             </div>
         </div>

@@ -44,7 +44,7 @@
     font-weight:700;
 }
 .Footer .sections .sectionUnic h5 {
-    font-weight:700;
+    font-weight:500;
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -53,12 +53,12 @@
     margin-bottom: 5px;
 }
 .Footer .sections .sectionUnic h5 a {
-    font-weight:700;
+    font-weight:400;
     text-decoration: none;
     color: var(--White);
 }
 .Footer .sections .sectionUnic h5 svg {
-    font-weight:700;
+    font-weight:400;
     margin-right: 5px;
     color: var(--White);
 }

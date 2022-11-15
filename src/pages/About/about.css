@@ -23,7 +23,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 0 0 300px 0;
-    padding: 100px 40px 20px 40px;
+    padding: 100px 40px 0 40px;
 }
 .About .MainAbout .bloco .textAbout {
     display: flex;
@@ -33,7 +33,7 @@
     width: 500px;
 }
 .About .MainAbout .bloco .textAbout h1 {
-    font-size: 45px;
+    font-size: 38px;
     font-weight: 800;
     color: var(--Black2);
     text-align: left;
@@ -67,7 +67,7 @@
     border-radius: 6px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     color: var(--White);
     margin: 5px;
@@ -97,6 +97,7 @@
     color: var(--White);
     font-weight: 700;
     text-decoration:none;
+    margin-bottom: 80px;
 }
 .About .MainAbout .buttonsPlainsAbout a svg {
     margin-right: 10px;
@@ -104,17 +105,19 @@
 .About .MainAbout .bloco .textAbout .buttonsText .btn {
     background-color: var(--White);
     width: 350px;
-    padding: 15px 20px;
+    padding: 13px 20px;
     font-size: 16px;
     border: 1px solid var(--Primary);
     border-radius: 6px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     color: var(--Primary);
     margin: 5px;
     font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
 }
 .About .MainAbout .bloco .textAbout .buttonsText button:hover {
     background-color: var(--PrimaryHover);
@@ -122,7 +125,16 @@
 }
 
 .About .MainAbout .bloco .textAbout .buttonsText button svg {
-    font-size: 24px;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.About .MainAbout .bloco .textAbout .buttonsText .btn:hover {
+    background-color: var(--PrimaryHover);
+    color: var(--White);
+}
+
+.About .MainAbout .bloco .textAbout .buttonsText .btn svg {
+    font-size: 20px;
     margin-right: 5px;
 }
 
@@ -133,7 +145,7 @@
     flex-direction: column;
     width: 400px;
     height: 400px;
-    background-color: var(--Black2);
+    background-color: rgba(170,0,0);
 }
 .About .MainAbout .bloco .imageAbout .imgBlock {
     display: flex;
@@ -165,6 +177,86 @@
 .About .MainAbout .bloco .imageAbout svg:hover {
     color: var(--Border);
 }
+
+.About .MainAbout .movie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 60px 0 10px 0;
+}
+.About .MainAbout .movie .textMovie {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+}
+
+.About .MainAbout .movie .textMovie h2 {
+    margin-bottom: 5px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--Primary);
+}
+
+.About .MainAbout .movie .textMovie h4 {
+    text-align: left;
+    margin: 5px 0;
+    color: var(--Paragraph);
+}
+.About .MainAbout .movie .moviePlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 80px 0 60px 0;
+}
+.About .MainAbout .movie .moviePlay .box1 {
+    width: 350px;
+    height: 150px;
+    background-color: var(--Primary);
+    position: absolute;
+    margin-top: -500px;
+    left: 0;
+}
+.About .MainAbout .movie .moviePlay .play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 80%;
+    height: 550px;
+    background-image: url("../../assets/images/background13.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    position: relative;
+}
+
+.About .MainAbout .movie .moviePlay .play svg {
+    color: rgba(255, 255, 255,0.7);
+    font-size: 100px;
+    cursor: pointer;
+}
+.About .MainAbout .movie .moviePlay .play svg:hover {
+    color: rgba(255, 255, 255,0.3);
+}
+.About .MainAbout .movie .moviePlay .box2 {
+    width: 350px;
+    height: 150px;
+    background-color: var(--Primary);
+    position: absolute;
+    margin-top: 500px;
+    right: 0;
+}
+
+
+
 
 .About .MainAbout .WhyChoose {
     display: flex;
@@ -237,10 +329,10 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    background-color: var(--Black2);
+    background-color: var(--Primary);
     padding: 50px 20px;
 }
-.About .MainAbout .howItWorks h1 {
+.About .MainAbout .howItWorks h2 {
     margin-bottom: 5px;
     font-weight: 900;
     text-align: center;
@@ -285,12 +377,12 @@
 .About .MainAbout .textPricing{
     padding: 20px 20px 0 20px;
 }
-.About .MainAbout .textPricing h1 {
+.About .MainAbout .textPricing h2 {
     margin-top: 80px;
     font-weight: 800;
     text-align: center;
 }
-.About .MainAbout .textPricing h1 span {
+.About .MainAbout .textPricing h2 span {
     color: var(--Primary);
 }
 .About .MainAbout .textPricing h4 {
@@ -405,8 +497,8 @@
     align-itens: center;
     justify-content: center;
     width: 100%;
-    padding: 40px 20px;
-    background-color: var(--BorderInput);
+    padding: 60px 20px;
+    background-color: var(--BorderHover);
 }
 .About .MainAbout .beneficies .imageDashboard{
     display: flex;
@@ -613,6 +705,23 @@
             .About .MainAbout .WhyChoose .WhyChooseImage {
                 display: none;
             }
+
+            .About .MainAbout .movie  {
+                margin: 0px 0 10px 0;
+            }
+
+
+            .About .MainAbout .movie .moviePlay .box1 {
+                width: 30%;
+            }
+            .About .MainAbout .movie .moviePlay .play {
+                width: 90%;
+            }
+            
+            .About .MainAbout .movie .moviePlay .box2 {
+                width: 30%;
+            }
+            
         @media (max-width: 625px) {
             .About .MainAbout .WhyChoose {
                 display: flex;
@@ -704,6 +813,18 @@
         .About .MainAbout .beneficies .imageDashboard img {
             height: 200px;
         }
+
+        .About .MainAbout .movie .moviePlay .box1 {
+            width: 50%;
+        }
+        .About .MainAbout .movie .moviePlay .play {
+            width: 95%;
+        }
+        
+        .About .MainAbout .movie .moviePlay .box2 {
+            width: 50%;
+        }
+        
     }
     }
     }

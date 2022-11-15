@@ -25,7 +25,7 @@ function SliderHome() {
 const buttonStyle = {
   padding: '10px',
   borderRadius: '50%',
-  background: 'rgba(0,0,0, 0.7)',
+  background: 'rgba(237,50,55, 0.5)',
   color: '#fff',
   border: '0px',
   margin: '10px'

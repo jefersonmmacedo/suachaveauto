@@ -42,6 +42,19 @@
     margin: 3px 5px;
     border-radius: 25px;
 }
+.ToolBarClient .ToolsClient .ToolUnicClient3 {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 3px 5px;
+    border-radius: 25px;
+}
+
+.ToolBarClient .ToolsClient .ToolUnicClient2 {
+    display: none;
+}
 .ToolBarClient .ToolsClient .ToolUnicClient a {
     display: flex;
     flex-direction: row;
@@ -52,20 +65,48 @@
     padding: 10px 20px;
     width: 100%;
     font-size: 16px;
-    color: var(--Black2);
+    color: var(--Primary);
+    border-radius: 25px;
+}
+.ToolBarClient .ToolsClient .ToolUnicClient3 a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    background-color: var(--Border);
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 16px;
+    color: var(--Primary);
     border-radius: 25px;
 }
 .ToolBarClient .ToolsClient .ToolUnicClient a:hover {
     background-color: var(--BorderHover);
-    color: var(--Primary);
+    color: var(--Paragraph);
 }
 
 .ToolBarClient .ToolsClient .ToolUnicClient a p {
     font-size: 14px;
     font-weight: 700;
+    color: var(--Paragraph);
 }
 
 .ToolBarClient .ToolsClient .ToolUnicClient a svg {
+    margin: 0 10px 0 0;
+}
+.ToolBarClient .ToolsClient .ToolUnicClient3 a:hover {
+    background-color: var(--BorderHover);
+    color: var(--Paragraph);
+}
+
+.ToolBarClient .ToolsClient .ToolUnicClient3 a p {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--Paragraph);
+}
+
+.ToolBarClient .ToolsClient .ToolUnicClient3 a svg {
     margin: 0 10px 0 0;
 }
 
@@ -108,55 +149,108 @@
 
 
 @media (max-width: 700px) {
-    .ToolBarClient {
-        display: none;
-    }
-    /* .ToolBarClient {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 0px;
-        background-color: none;
-    } */
 
-    /* .ToolBarClient .image {
-        display: none;
-    }
+  .ToolBarClient {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    padding: 13px 0px;
+    border: none;
+    border-top: 1px solid var(--Border);
+    background-color: rgba(255, 255, 255 );
+    z-index: 1;
+    margin: 0px;
+    border-radius: 0px;
+    } 
 
+    
+   .ToolBarClient .image {
+    display: none
+    }
     .ToolBarClient .ToolsClient {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 5px 0;
         width: 100%;
-        flex-wrap: wrap;
     }
 
     .ToolBarClient .ToolsClient .ToolUnicClient {
-width: 150px;
+        width: 100%;
+        height: 50px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 3px;
-        border-radius: 25px;
+        margin: 0 3px;
+        border-radius: 6px;
+    }
+    .ToolBarClient .ToolsClient .ToolUnicClient2 {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 3px;
+        border-radius: 6px;
+        background-color: var(--White);
+    }
+    .ToolBarClient .ToolsClient .ToolUnicClient3 {
+        display: none;
+    }
+    .ToolBarClient .ToolsClient .ToolUnicClient2 .image2 {
+            width: 60px;
+            height: 60px;
+        margin: 0 3px;
+        border-radius: 6px;
+        object-fit: cover;
+        background-color: var(--White);
+    }
+    .ToolBarClient .ToolsClient .ToolUnicClient2 .image2 img {
+        width: 100%;
+        height: 50px;
+        margin: 0 3px;
+        border-radius: 6px;
+        object-fit: cover;
+        background-color: var(--White);
     }
 
     .ToolBarClient .ToolsClient .ToolUnicClient a {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         text-decoration: none;
-        background-color: var(--Border);
-        padding: 10px 20px;
-width: 150px;
+        background-color: var(--BorderInput2);
+        padding: 5px;
+        width: 100%;
+        height: 50px;
         font-size: 16px;
-        color: var(--Black2);
-        border-radius: 25px;
+        color: var(--Primary);
+        border-radius: 6px;
     }
+    .ToolBarClient .ToolsClient .ToolUnicClient2 a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        background-color: var(--White);
+        padding: 5px;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        color: var(--Primary);
+        border-radius: 6px;
+    }
+
 
     .ToolBarClient .ToolsClient .ToolUnicClient a svg {
         margin: 0 0 3px 0;
@@ -168,5 +262,54 @@ width: 150px;
 
     .ToolBarClient .ToolsClient button {
         display: none; 
-    } */
+    } 
+
+    @media (max-width: 450px) {
+
+
+        .ToolBarClient .ToolsClient {
+            justify-content: center;
+        }
+    
+        .ToolBarClient .ToolsClient .ToolUnicClient {
+            width: 60px;
+            height: 60px;
+            
+            margin: 0 5px;
+        }
+        .ToolBarClient .ToolsClient .ToolUnicClient2 {
+            width: 60px;
+            height: 60px;
+            
+            margin: 0 5px;
+        }
+        .ToolBarClient .ToolsClient .ToolUnicClient2 .image2 {
+            width: 60px;
+            height: 60px;
+            
+        }
+        .ToolBarClient .ToolsClient .ToolUnicClient2 .image2 img {
+            width: 60px;
+            height: 60px;
+            
+        }
+    
+    
+        .ToolBarClient .ToolsClient .ToolUnicClient a {
+            width: 60px;
+            height: 60px;
+            
+
+        }
+
+        .ToolBarClient .ToolsClient .ToolUnicClient a svg {
+            font-size: 18px;
+        }
+
+        .ToolBarClient .ToolsClient .ToolUnicClient a p {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--Paragraph);
+        }
+    }
 }

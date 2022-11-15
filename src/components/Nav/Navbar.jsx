@@ -1,28 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import Burger from './Burger';
-import LogoImg from '../../assets/images/Logo2.png'
+import LogoImg from '../../assets/images/Logo.png'
 import LogoSimbol from '../../assets/images/Simbol.png'
-import {IoCarSportOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
-  IoLogOutOutline, IoSpeedometerOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline} from 'react-icons/io5'
+import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
+  IoLogOutOutline, IoSpeedometerOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline, IoPersonCircleOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 
 const Nav = styled.nav`
   width: 100%;
   height: 65px;
-  border-bottom: 1px solid #000000;
-  padding: 0 20px;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
   top: 0;
   z-index: 97;
-  background-color: rgba(0, 0, 0, 0.95);
+  // background: rgba(255, 255, 255);
+  background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(4px);
   font-size: 14px;
-  color: var(--White);
+  color: var(--Description)
 
 
 
@@ -46,21 +47,33 @@ const Nav = styled.nav`
     color: var(--Text2);
     text-decoration: none;
     list-style: none;
+
   }
 
   .account li {
     padding: 18px 10px;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
-    color: var(--White);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Paragraph);
   }
   .account li a{
     text-decoration: none;
-  color: var(--White);
-    font-weight: 700;
+    color: var(--Gray)
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .account li a svg{
+    margin-right: 2px;
   }
   .account li a:hover{
-  color: var(--Primary);
+    color: var(--Primary);
   }
 
   .account button {
@@ -70,10 +83,11 @@ const Nav = styled.nav`
     justify-content: center;
     border: none;
     border-radius: 6px;
-    padding: 10px 20px;
-    background-color: var(--Button);
+    padding: 9px 19px;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--Primary);
     font-weight:600;
-    color: var(--White);
+    color: var(--Primary);
 }
   .account .iconUnic {
     display: flex;
@@ -83,12 +97,31 @@ const Nav = styled.nav`
     border: none;
     border-radius: 50%;
     padding: 10px;
-    background-color: rgba(170,0,0,0.9);
+    background-color: rgba(238,238,238,0.5);
     font-weight:600;
-    color: var(--White);
+    color: var(--Primary);
     font-size:18px;
     margin:5px 5px;
 }
+  .account .iconUnicAdm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: var(--Primary);
+    font-weight:600;
+    color: var(--White);
+    font-size:14px;
+    margin:5px 5px;
+}
+
+.account .iconUnicAdm svg {
+  margin-right: 5px;
+}
+
   .account .iconOut {
     display: flex;
     flex-direction: row;
@@ -97,9 +130,9 @@ const Nav = styled.nav`
     border: none;
     border-radius: 50%;
     padding: 10px;
-    background-color: rgba(170,0,0,0.9);
+    background-color: rgba(238,238,238,0.5);
     font-weight:600;
-    color: var(--White);
+    color: var(--Primary);
     font-size:18px;
     margin:5px 5px;
 }
@@ -108,9 +141,9 @@ const Nav = styled.nav`
 @media (max-width: 900px) {
   padding: 0 10px;
   .account {
-    margin-right: 110px;
-    width: 20%;
-    justify-content: center;
+    margin-right:40px;
+    width: 100%;
+    justify-content: flex-end;
   }
 
 
@@ -122,9 +155,8 @@ const Nav = styled.nav`
 
   @media (max-width: 600px) {
     .account {
-      margin-right: 110px;
-      width: 15%;
-      justify-content: center;
+      width: 100%;
+      justify-content: flex-end;
     }
     .account .iconOut {
       display: none;
@@ -138,6 +170,9 @@ const Nav = styled.nav`
 
 function HandleOpenLink(data) {
   window.open(`${data}`, "_self")
+}
+function HandleOpenLink2(data) {
+  window.open(`${data}`)
 }
 
 
@@ -156,10 +191,10 @@ const Navbar2 = () => {
       <div className="account">
         {user === "" || user === null || user === undefined ?
         <>
-                <button onClick={() => HandleOpenLink("/entrar")}>Entrar</button>
+                <button onClick={() => HandleOpenLink("/sobre")}>Anunciar</button>
                 <li className='nav-item'>
-                  <Link to='/cadastrar' >
-                  Cadastrar
+                  <Link to='/entrar' >
+                  <IoPersonCircleOutline /> Entrar
                   </Link>
                 </li>
                 
@@ -169,29 +204,7 @@ const Navbar2 = () => {
 
 {user.type === "company" && user !== null && user !== undefined && user !== "" ?
                 <>
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/novoimovel")} data-tip data-for='Autos'><IoCarSportOutline/></button>
-                <ReactTooltip id='Autos' place="bottom" type="dark" effect="solid">
-                     <span>Autos</span>
-                </ReactTooltip>
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/agendamentos")} data-tip data-for='Agendamentos'><IoCalendarOutline/></button>
-                <ReactTooltip id='Agendamentos' place="bottom" type="dark" effect="solid">
-                     <span>Agendamentos</span>
-                </ReactTooltip>
-
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/chat")} data-tip data-for='Chat'><IoChatboxEllipsesOutline/></button>
-                <ReactTooltip id='Chat' place="bottom" type="dark" effect="solid">
-                     <span>Chat</span>
-                </ReactTooltip>
-
-                <button className='iconUnic' onClick={() => HandleOpenLink("/painel/notificacoes")} data-tip data-for='Notificações'><IoNotificationsOutline/></button>
-                <ReactTooltip id='Notificações' place="bottom" type="dark" effect="solid">
-                     <span>Notificações</span>
-                </ReactTooltip>
-
-                {/* <button className='iconUnic' onClick={() => HandleOpenLink("/painel")} data-tip data-for='Painel'><IoSpeedometerOutline /></button>
-                <ReactTooltip id='Painel' place="bottom" type="dark" effect="solid">
-                     <span>Painel</span>
-                </ReactTooltip> */}
+                <button className='iconUnicAdm' onClick={() => HandleOpenLink2("https://adm.suachave.com.br/")}><IoSpeedometerOutline/> Acessar o painel</button>
                 </>
 :
                <>

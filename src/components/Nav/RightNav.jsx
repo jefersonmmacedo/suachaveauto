@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoCarSportOutline, IoSpeedometerOutline, IoCalendarOutline } from 'react-icons/io5';
+import {IoPersonCircleOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoSpeedometerOutline, IoCalendarOutline } from 'react-icons/io5';
 
 const Ul = styled.ul`
   list-style: none;
@@ -10,13 +10,13 @@ const Ul = styled.ul`
 
   li {
     padding: 18px 10px;
-    font-weight: 700;
-    color: var(--White)
+    font-weight: 500;
+    font-size: 14px;
   }
   li a{
     text-decoration: none;
-    color: var(--White)
-    font-weight: 700;
+    color: var(--Description)
+    font-weight: 500;
   }
   li a:hover{
     color: var(--Primary);
@@ -74,7 +74,7 @@ const Ul = styled.ul`
 
   @media (max-width: 900px) {
     flex-flow: column nowrap;
-    background-color: rgba(0, 0, 0, 0.95);
+    background: rgba(237, 50, 55, 0.95);
     backdrop-filter: blur(4px);
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -119,7 +119,7 @@ const Ul = styled.ul`
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      background-color:  rgba(237, 50, 55, 0.8);
+      background-color:  rgba(237, 50, 55, 0.1);
       margin-left: 10px;
       margin-right: 10px;
       padding: 10px 0;
@@ -152,29 +152,29 @@ const RightNav = ({ open }) => {
               Imóveis
             </Link>
           </li> */}
-       <li className='nav-item'>
-            <Link to='/carro/all'>
+          <li className='nav-item'>
+            <Link to='/carro/all' >
             Carros
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/moto/all' >
+       <li className='nav-item'>
+            <Link to='/moto/all'>
             Motos
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/imobiliarias' >
+            <Link to='/agencias' >
             Agências
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/corretores' >
+            <Link to='/consultores' >
             Consultores
             </Link>
           </li>
           <li className='nav-item'>
-            <Link to='/simulador' >
-            Simulador
+            <Link to='/financiamento' >
+            Financiamento
             </Link>
           </li>
           {user === "" || user === null || user === undefined ? 
@@ -191,7 +191,7 @@ const RightNav = ({ open }) => {
           {user.type === "company" && user !== null && user !== undefined && user !== "" ?
           <>
                     <button className='btn' onClick={() => HandleOpenLink("/painel/novoimovel")}>
-            <IoCarSportOutline /> &nbsp; Imóveis
+            <IoHomeOutline /> &nbsp; Imóveis
           </button>
           <button className='btn' onClick={() => HandleOpenLink("/painel/chat")}>
             <IoChatboxEllipsesOutline /> &nbsp; Mensagens

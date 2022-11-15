@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FiUpload } from 'react-icons/fi';
 
 export function SignUpProfessional() {
-    const [account, setAccount] = useState("imobiliária")
+    const [account, setAccount] = useState("agencia")
     const [data, setData] = useState("1");
     const [avatarUrl, setAvatarUrl] = useState(null);
     const [imageAvatar, setImageAvatar] = useState('');
@@ -47,10 +47,10 @@ export function SignUpProfessional() {
                         {data === "1" ?
                         <>
                         <select value={account} onChange={handleSelectAccount}>
-                            <option value="imobiliária">Sou Imobiliária</option>
-                            <option value="corretor">Sou Corretor</option>
+                            <option value="agencia">Sou Agência</option>
+                            <option value="consultor">Sou Consultor</option>
                         </select>
-                        {account === "imobiliária" ?
+                        {account === "agencia" ?
                         <>
                         <input type="text" placeholder="CNPJ" />
                         <input type="text" placeholder="Razão Social" />

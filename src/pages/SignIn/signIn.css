@@ -195,7 +195,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: rgba(237, 50, 55, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .SignIn .professional .block button {

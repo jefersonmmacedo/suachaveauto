@@ -54,10 +54,10 @@ function PrivateRoute({children} ) {
             <Route path="/privacidade" element={<PrivacyPolicy />}/>
             <Route path="/termos" element={<TermsOfUse />}/>
             <Route path="/imovel" element={<Property />}/>
-            <Route path="/imobiliarias" element={<Companies />}/>
-            <Route path="/imobiliaria" element={<Company />}/>
-            <Route path="/corretores" element={<Brokers />}/>
-            <Route path="/simulador" element={<Simulator />}/>
+            <Route path="/agencias" element={<Companies />}/>
+            <Route path="/agencia" element={<Company />}/>
+            <Route path="/consultores" element={<Brokers />}/>
+            <Route path="/financiamento" element={<Simulator />}/>
             <Route path="/sobre" element={<About />}/>
             <Route path="/planos" element={<Pricing />}/>
             <Route path="/faleconosco" element={<Contact />}/>
