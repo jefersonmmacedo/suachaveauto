@@ -73,13 +73,12 @@ export function SearchProperty() {
 
     return (
         <div className="SearchProperty">
-            <button className="btnSearchModal"><IoSearch /> Buscar Autos</button>
             <div className="selectButtons">
-            <button className={status === "carro" ? "btn" : "btn1"} onClick={() => handleActiveCode(false, "carro")}><FaCar /> Carro</button>
-            <button className={status === "moto" ? "btn2" : ""} onClick={() => handleActiveCode(false, "moto")}><FaMotorcycle /> Moto</button>
-            <button className={status === "caminhao" ? "btn2" : ""} onClick={() => handleActiveCode(false, "caminhao")}><FaTruck /> Caminhão</button>
-            <button className={status === "onibus" ? "btn2" : ""} onClick={() => handleActiveCode(false, "onibus")}><FaBus /> Ônibus</button>
-            <button className={status === "trator" ? "btn3" : "btn4"} onClick={() => handleActiveCode(false, "trator")}><FaTractor /> Trator</button>
+            <button className={status === "carro" ? "btn" : "btn1"} onClick={() => handleActiveCode(false, "carro")}><FaCar /> <p>Carro</p></button>
+            <button className={status === "moto" ? "btn2" : ""} onClick={() => handleActiveCode(false, "moto")}><FaMotorcycle /> <p>Moto</p></button>
+            <button className={status === "caminhao" ? "btn2" : ""} onClick={() => handleActiveCode(false, "caminhao")}><FaTruck /> <p>Caminhão</p></button>
+            <button className={status === "onibus" ? "btn2" : ""} onClick={() => handleActiveCode(false, "onibus")}><FaBus /> <p>Ônibus</p></button>
+            <button className={status === "trator" ? "btn3" : "btn4"} onClick={() => handleActiveCode(false, "trator")}><FaTractor /> <p>Trator</p></button>
                 </div>   
             <div className="search">
                 <input type="text" className="primary" placeholder="Digite Marca ou modelo" />

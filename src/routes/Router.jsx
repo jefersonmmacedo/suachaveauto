@@ -53,7 +53,7 @@ function PrivateRoute({children} ) {
             <Route path="/trator/:status" element={<Properties />}/>
             <Route path="/privacidade" element={<PrivacyPolicy />}/>
             <Route path="/termos" element={<TermsOfUse />}/>
-            <Route path="/imovel" element={<Property />}/>
+            <Route path="/auto" element={<Property />}/>
             <Route path="/agencias" element={<Companies />}/>
             <Route path="/agencia" element={<Company />}/>
             <Route path="/consultores" element={<Brokers />}/>

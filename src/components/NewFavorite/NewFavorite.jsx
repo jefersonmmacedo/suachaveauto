@@ -1,9 +1,9 @@
-﻿import "./newMessageProperty.css"
+﻿import "./newFavorite.css"
 import { IoChatboxEllipses, IoCloseOutline, IoHeart } from "react-icons/io5";
 import { useState } from "react";
 import Modal from 'react-modal';
 
-export function NewMessageProperty() {
+export function NewFavorite() {
     const [isOpenModal, setIsOpenModa] = useState(false);
     function handleOpenModal(e) {
         e.preventDefault();
@@ -20,7 +20,7 @@ export function NewMessageProperty() {
 
     return (
         <>
-        <button className="buttonMessage" onClick={handleOpenModal}><IoChatboxEllipses/> Envar mensagem</button>
+        <div className="NewFavorite" ><IoHeart onClick={handleOpenModal}/></div>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
@@ -30,12 +30,12 @@ export function NewMessageProperty() {
             </button>
             <div className="content-modal-Favorite">
             <div className="itensModalFavorite">
-                    <IoChatboxEllipses />
+                    <IoHeart />
 
-                    <h1>Oba! <br />
-                    Vamos conversar.</h1>
+                    <h1>Opa! <br />
+                    Temos um favorito.</h1>
 
-                    <h4>Entre em sua conta ou cadastre-se para para poder mandar mensagens e ter mais detalhes sobre os anúncios.</h4>
+                    <h4>Entre em sua conta ou cadastre-se para acessar seus favoritos e acompanhar os anuncios que mais gostar.</h4>
 
                     <a href="/entrar">Fazer login</a>
 

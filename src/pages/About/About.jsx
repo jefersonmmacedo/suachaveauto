@@ -131,7 +131,7 @@ export function About() {
 
     <div className="howItWorks">
         <h2>Como funciona o Sua Chave ?</h2>
-        <h4>Nossos serviços tem como foco conectar os imóveis de nossos parceiros a clientes interessados.
+        <h4>Nossos serviços tem como foco conectar os autos de nossos parceiros a clientes interessados.
             <br />
         Utilizando ferramentas de marketing, geolocalização e integrações, trazendo mais objetividade nas ofertas de propriedades.</h4>
         <div className="iconsWorks">

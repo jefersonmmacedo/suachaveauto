@@ -3,8 +3,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--Primary);
     background-color: var(--White);
+    border: 1px solid var(--Primary);
     color: var(--Primary);
     border-radius: 6px;
     padding: 10px 20px;
@@ -14,13 +14,10 @@
 .buttonScheduling svg {
     margin-right: 10px;
 }
-.buttonScheduling img {
-    width: 18px;
-    margin-right: 10px;
-}
 
 .buttonScheduling:hover {
-    background-color: var(--BorderHover);
+    background-color: var(--Primary);
+    color: var(--White);
 }
 
 
@@ -31,6 +28,7 @@
     justify-content: center;
     width: 100%;
     border-radius: 8px;
+
 }
 .content-modal .itensModal {
     display: flex;
@@ -229,7 +227,7 @@ object-fit: cover;
   }
 
 
-  @media (max-width: 50px) {
+  @media (max-width: 550px) {
     .content-modal .itensModal .dataProperty {
         width: 100%;
     }

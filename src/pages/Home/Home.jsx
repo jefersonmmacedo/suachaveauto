@@ -6,7 +6,7 @@ import { SearchProperty } from "../../components/SearchProperty/SearchProperty";
 import { Footer } from "../../components/Footer/Footer";
 import { SliderHome } from "../../components/SliderHome/SliderHome";
 import {  PropertyCarroussel } from "../../components/PropertyCarroussel/PropertyCarroussel";
-import { IoCloseOutline } from "react-icons/io5";
+import { IoCloseOutline, IoSearch } from "react-icons/io5";
 import { useEffect } from "react";
 import LogoImg from '../../assets/images/Logo2.png';
 import buscaDistrito from '../../services/api-buscaDistrito';
@@ -24,6 +24,7 @@ export function Home() {
     const user = JSON.parse(Local);
 
     const [isOpenModal, setIsOpenModa] = useState(false);
+    const [isOpenModalSearchProperty, setIsOpenModaSearchProperty] = useState(false);
     const [timer, setTimes] = useState(false);
 
     const [city, setCity] = useState("");
@@ -110,6 +111,18 @@ export function Home() {
         handleSearchDistrict(e.target.value)
       }
 
+      function handleOpenModalSearchProperty(e) {
+        e.preventDefault();
+        console.log("Olá")
+          setIsOpenModaSearchProperty(true)
+        }
+      
+        function handleCloseModalSearchProperty(e) {
+          e.preventDefault();
+          setIsOpenModaSearchProperty(false);
+        }
+  
+
 
 
     Modal.setAppElement('#root');
@@ -118,7 +131,12 @@ export function Home() {
         <div className="Home">
             <Navbar2 />
             <SliderHome />
-            <SearchProperty />
+            <div className="searchView">
+            <SearchProperty openModal={handleOpenModal}/>
+            </div>
+            <div className="searchViewButton">
+            <button onClick={handleOpenModalSearchProperty}><IoSearch />Buscar Imóveis</button>
+            </div>
               <div className="carrousselBrabd">
             <BrandCarroussel />
             </div>
@@ -214,6 +232,20 @@ export function Home() {
                     <a href="/entrar">Ja possuo conta</a>
                     <a href="/cadastrar">Cadastrar</a>
                 </div>
+            </div>
+            </div>
+            </Modal>
+
+
+            <Modal isOpen={isOpenModalSearchProperty} onRequestClose={handleCloseModalSearchProperty}
+            overlayClassName="react-modal-overlay"
+            className="react-modal-content">
+            <button type="button" className="react-modal-button" onClick={handleCloseModalSearchProperty}>
+            <IoCloseOutline /> 
+            </button>
+            <div className="content-modal-home-Search">
+            <div className="itensModalHome-Search">
+                <SearchProperty />
             </div>
             </div>
             </Modal>

@@ -16,6 +16,7 @@ import marcha from "../../assets/images/icons/marcha.png";
 import placa from "../../assets/images/icons/placa.png";  
 import porta from "../../assets/images/icons/porta.png";   
 import cor from "../../assets/images/icons/cor.png";  
+import { NewFavorite } from "../../components/NewFavorite/NewFavorite";
 
 
 
@@ -37,7 +38,7 @@ export function Property() {
                     <NewMessageProperty />
                     <NewScheduling />
                      <div className="heart">
-                    <IoHeart />
+                    <NewFavorite />
                     </div>
             </div>
                 <div className="text">

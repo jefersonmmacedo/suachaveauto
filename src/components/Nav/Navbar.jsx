@@ -38,7 +38,6 @@ const Nav = styled.nav`
   }
 
   .account {
-    width: 240px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -142,7 +141,6 @@ const Nav = styled.nav`
   padding: 0 10px;
   .account {
     margin-right:40px;
-    width: 100%;
     justify-content: flex-end;
   }
 
@@ -155,7 +153,6 @@ const Nav = styled.nav`
 
   @media (max-width: 600px) {
     .account {
-      width: 100%;
       justify-content: flex-end;
     }
     .account .iconOut {

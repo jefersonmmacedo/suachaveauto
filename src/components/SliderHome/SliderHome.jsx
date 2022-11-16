@@ -41,7 +41,7 @@ const properties = {
           <div className="each-slide-effect">
           <div className="imageTop">
             <div className="image">
-                <a href="/imovel">
+                <a href="/auto">
                     <img src={images[0]} alt="" />
                 </a>
             </div>
@@ -49,7 +49,7 @@ const properties = {
                     <div className="featured">
                         <p>Novo</p>
                     </div>
-                    <a href="/imovel">
+                    <a href="/auto">
                     <h3>VOLKSWAGEN <span>GOLF</span></h3>
                     <h4>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h4>
                     </a>
@@ -107,7 +107,7 @@ const properties = {
           <div className="each-slide-effect">
           <div className="imageTop">
           <div className="image">
-            <a href="/imovel">
+            <a href="/auto">
                     <img src={images[1]} alt="" />
             </a>
             </div>
@@ -115,7 +115,7 @@ const properties = {
                     <div className="featured">
                         <p>Novo</p>
                     </div>
-                    <a href="/imovel">
+                    <a href="/auto">
                     <h3>VOLKSWAGEN <span>GOLF</span></h3>
                     <h4>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h4>
                     </a>
@@ -173,7 +173,7 @@ const properties = {
           <div className="each-slide-effect">
           <div className="imageTop">
           <div className="image">
-            <a href="/imovel">
+            <a href="/auto">
                     <img src={images[2]} alt="" />
             </a>
             </div>
@@ -181,7 +181,7 @@ const properties = {
                     <div className="featured">
                         <p>Novo</p>
                     </div>
-                    <a href="/imovel">
+                    <a href="/auto">
                     <h3>VOLKSWAGEN <span>GOLF</span></h3>
                     <h4>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h4>
                     </a>
@@ -239,7 +239,7 @@ const properties = {
           <div className="each-slide-effect">
           <div className="imageTop">
           <div className="image">
-            <a href="/imovel">
+            <a href="/auto">
                     <img src={images[3]} alt="" />
             </a>
             </div>
@@ -247,7 +247,7 @@ const properties = {
                     <div className="featured">
                         <p>Novo</p>
                     </div>
-                    <a href="/imovel">
+                    <a href="/auto">
                     <h3>VOLKSWAGEN <span>GOLF</span></h3>
                     <h4>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h4>
                     </a>
