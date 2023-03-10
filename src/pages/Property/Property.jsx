@@ -1,23 +1,20 @@
 ﻿import "./property.css"
 import { SliderImages } from '../../components/SliderImages/SliderImages';
 import Navbar2 from "../../components/Nav/Navbar";
-import { FaBed, FaCar, FaShower, FaBath, FaCalendar} from "react-icons/fa";
-import { IoCrop, IoHeart, IoCalendarClearOutline, IoCheckmarkSharp, IoLocationOutline } from "react-icons/io5";
+import { FaCar, } from "react-icons/fa";
+import { IoColorFillOutline, IoCalendarOutline, IoCheckmarkSharp, IoLocationOutline, IoCarSportOutline } from "react-icons/io5";
+import {FaRoad} from 'react-icons/fa';
+import {MdOutlineLocalGasStation} from 'react-icons/md';
+import {RiGasStationLine} from 'react-icons/ri';
+import {TbRoad, TbGasStation} from 'react-icons/tb';
+import {TiSortNumerically} from 'react-icons/ti';
+import {GiGearStickPattern, GiCarDoor, GiSteeringWheel, GiGasPump } from 'react-icons/gi';
 import { Footer } from "../../components/Footer/Footer";
 import { CompanyInfo } from "../../components/CompanyInfo/CompanyInfo";
 import { Rent } from "../../components/Rent/Rent";
 import { NewScheduling } from "../../components/NewScheduling/NewScheduling";
 import { NewMessageProperty } from "../../components/NewMessageProperty/NewMessageProperty";
-import km from "../../assets/images/icons/km.png";  
-import marcha2 from "../../assets/images/icons/marcha2.png";  
-import volante from "../../assets/images/icons/volante.png";  
-import gasolina from "../../assets/images/icons/gasolina.png";  
-import marcha from "../../assets/images/icons/marcha.png";  
-import placa from "../../assets/images/icons/placa.png";  
-import porta from "../../assets/images/icons/porta.png";   
-import cor from "../../assets/images/icons/cor.png";  
 import { NewFavorite } from "../../components/NewFavorite/NewFavorite";
-
 
 
 export function Property() {
@@ -45,7 +42,6 @@ export function Property() {
                     <h2>VOLKSWAGEN <span>GOLF</span></h2>
                     <h3>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h3>
                     <h5><IoLocationOutline />Centro - Rio Bonito - Rio de Janeiro</h5>
-                    {/* <h4>ID: 9fcb1vbb</h4> */}
                     <h4>ID: AUTO-{data.getFullYear()}{data.getMonth()+1}{data.getDate()}{data.getHours()}{data.getMinutes()}</h4>
                     <div className="status">
                         <p>Aceita financiamento</p>
@@ -56,56 +52,65 @@ export function Property() {
                         <div className="iconUnic">
                             <p>Ano</p>
                             <div className="simbol">
-                                <IoCalendarClearOutline />
+                                <IoCalendarOutline />
                                 <p>14/15</p>
                             </div>
                         </div>
+                        
+
                         <div className="iconUnic">
                             <p>Km</p>
                             <div className="simbol">
-                                <img src={km} alt="" />
+                                <TbRoad />
                                 <p>194.000</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Combustível</p>
                             <div className="simbol">
-                            <img src={gasolina} alt="" />
+                            <TbGasStation />
                                 <p>Gasolina</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Câmbio</p>
                             <div className="simbol">
-                            <img src={marcha2} alt="" />
+                            <GiGearStickPattern />
                                 <p>Manual</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Portas</p>
                             <div className="simbol">
-                            <img src={porta} alt="" />
-                                <p>4</p>
+                            <GiCarDoor />
+                                <p>4 portas</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Cor</p>
                             <div className="simbol">
-                            <img src={cor} alt="" />
+                            <IoColorFillOutline />
                                 <p>Azul</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Carroceria</p>
                             <div className="simbol">
-                                <FaCar />
+                                <IoCarSportOutline />
                                 <p>Sedan</p>
+                            </div>
+                        </div>
+                        <div className="iconUnic">
+                            <p>Direção</p>
+                            <div className="simbol">
+                            <GiSteeringWheel />
+                                <p>Hidráulica</p>
                             </div>
                         </div>
                         <div className="iconUnic">
                             <p>Final de placa</p>
                             <div className="simbol">
-                            <img src={placa} alt="" />
+                            <TiSortNumerically />
                                 <p>6</p>
                             </div>
                         </div>

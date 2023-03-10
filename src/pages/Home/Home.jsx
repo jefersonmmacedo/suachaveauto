@@ -9,6 +9,7 @@ import {  PropertyCarroussel } from "../../components/PropertyCarroussel/Propert
 import { IoCloseOutline, IoSearch } from "react-icons/io5";
 import { useEffect } from "react";
 import LogoImg from '../../assets/images/Logo2.png';
+import propaganda from '../../assets/images/propaganda.png';
 import buscaDistrito from '../../services/api-buscaDistrito';
 import { toast } from 'react-toastify';
 import { ToHire } from "../../components/ToHire/ToHire";
@@ -31,21 +32,21 @@ export function Home() {
     const [districtAll, setDistrictAll] = useState([]);
     const [uf, setUf] = useState("");
 
-    useEffect(() => {
-        function initialTime() {
-            if(user !== null && user !== undefined && user !== "") {
-                return
-            }
-            if(userCity !== null && userCity !== undefined && userCity !== "") {
-                return
-            }
-            setTimeout(() => {
-                setIsOpenModa(true)
-              }, "10000")
+    // useEffect(() => {
+    //     function initialTime() {
+    //         if(user !== null && user !== undefined && user !== "") {
+    //             return
+    //         }
+    //         if(userCity !== null && userCity !== undefined && userCity !== "") {
+    //             return
+    //         }
+    //         setTimeout(() => {
+    //             setIsOpenModa(true)
+    //           }, "10000")
         
-        }
-        initialTime()
-    }, [])
+    //     }
+    //     initialTime()
+    // }, [])
 
     function HandleNewClientBrowser() {
         if(uf === "" && city === "") {
@@ -165,7 +166,10 @@ export function Home() {
             {/* <ExploreIconsProperties />
             <Cities /> */}
             <ToHire />
-            <DownloadApp />
+            {/* <DownloadApp /> */}
+            <div className="propaganda">
+              <img src={propaganda} alt="Imagem de propaganda de patrocinador" />
+            </div>
             <Footer />
 
 

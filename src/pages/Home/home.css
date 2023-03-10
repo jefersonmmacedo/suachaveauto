@@ -49,6 +49,15 @@
     width: 1000px;
     margin: 100px auto 0px auto;
 }
+.Home .propaganda {
+    width: 1200px;
+    margin: 40px auto;
+}
+
+.Home .propaganda img {
+    width: 100%;
+    margin: 10px auto;
+}
 
 
 .content-modal-home {
@@ -191,6 +200,15 @@
     
 
 
+@media (max-width: 1200px) {
+
+    .Home .propaganda {
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    
+
 @media (max-width: 1030px) {
 
     .Home .carrousselBrabd {
@@ -233,6 +251,11 @@
         }
 
         @media (max-width: 750px) {
+
+            .Home .propaganda {
+                width: 100%;
+                padding: 0 20px;
+            }
 
             .Home .searchView {
                 display: none;
@@ -280,6 +303,11 @@
             }
 
             @media (max-width: 555px) {
+
+                .Home .propaganda {
+                    width: 100%;
+                    padding: 0 10px;
+                }
                 .Home .textFeature {
                     width: 100%;
                     text-align: center;
@@ -307,5 +335,6 @@
  
     }
     
+}
 }
 }

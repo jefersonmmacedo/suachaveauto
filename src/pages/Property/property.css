@@ -175,7 +175,7 @@
 .Property .main .data .propertyUnic .text .icons .iconUnic .simbol svg {
     font-size: 18px;
     margin-right: 10px;
-    color: var(--Gray);
+    color: var(--Primary);
 }
 .Property .main .data .propertyUnic .text .icons .iconUnic .simbol img {
     width: 18px;
