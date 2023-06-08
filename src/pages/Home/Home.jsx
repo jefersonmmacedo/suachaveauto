@@ -16,7 +16,9 @@ import { ToHire } from "../../components/ToHire/ToHire";
 import { BrandCarroussel } from "../../components/BrandCarroussel/BrandCarroussel";
 import { ModelCarroussel } from "../../components/ModelCarroussel/ModelCarroussel";
 import { Fipe } from "../../components/Fipe/Fipe";
-import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
+import { Finance } from "../../components/Finance/Finance";
+import { NewSearchClient } from "../../components/NewSearchClient/NewSearchClient";
+import { TopHeadHomeV3 } from "../../components/TopHeadHomeV3/TopHeadHomeV3";
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachaveautocity");
@@ -131,10 +133,10 @@ export function Home() {
     return (
         <div className="Home">
             <Navbar2 />
-            <SliderHome />
-            <div className="searchView">
+            <TopHeadHomeV3 />
+            {/* <div className="searchView">
             <SearchProperty openModal={handleOpenModal}/>
-            </div>
+            </div> */}
             <div className="searchViewButton">
             <button onClick={handleOpenModalSearchProperty}><IoSearch />Buscar Imóveis</button>
             </div>
@@ -150,7 +152,7 @@ export function Home() {
             {/* <div className="textHome">
             <h3>Imóveis para alugar</h3>
           </div> */}
-            <Fipe />
+
             <div className="textFeature2">
             <h3>Mais procurados</h3>
             </div>
@@ -165,15 +167,14 @@ export function Home() {
           </div> */}
             {/* <ExploreIconsProperties />
             <Cities /> */}
-            <ToHire />
             {/* <DownloadApp /> */}
-            <div className="propaganda">
-              <img src={propaganda} alt="Imagem de propaganda de patrocinador" />
-            </div>
+
+            <Finance />
+            <NewSearchClient />
             <Footer />
 
 
-            <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
+            {/* <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
             className="react-modal-content">
             <button type="button" className="react-modal-button" onClick={handleCloseModal}>
@@ -252,7 +253,7 @@ export function Home() {
                 <SearchProperty />
             </div>
             </div>
-            </Modal>
+            </Modal> */}
 
         </div>
     )

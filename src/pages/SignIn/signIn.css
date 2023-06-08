@@ -53,7 +53,7 @@
     justify-content: center;
     background-color: var(--Border);
     border: none;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 20px 20px 0;
     padding: 10px 20px;
     color: var(--Paragraph);
     font-weight: 700;
@@ -67,7 +67,7 @@
     justify-content: center;
     background-color: var(--Primary);
     border: none;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 20px 20px 0;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
@@ -81,7 +81,7 @@
     justify-content: center;
     background-color: var(--Button);
     border: none;
-    border-radius: 6px 0 0 6px;
+    border-radius: 20px 0 0 20px;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
@@ -95,7 +95,7 @@
     justify-content: center;
     background-color: var(--Border);
     border: none;
-    border-radius: 6px 0 0 6px;
+    border-radius: 20px 0 0 20px;
     padding: 10px 20px;
     color: var(--Paragraph);
     font-weight: 700;
@@ -137,7 +137,7 @@
     justify-content: center;
     background-color: var(--Button);
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
@@ -151,7 +151,7 @@
     justify-content: center;
     background-color: var(--Secondary);
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
@@ -165,7 +165,7 @@
     justify-content: center;
     background-color: var(--Wite);
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     color: var(--Gray);
     font-weight: 700;
@@ -207,7 +207,7 @@
     background-color: var(--Button);
     color: var(--White);
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     font-weight: 700;
     margin: 20px 0;
@@ -245,7 +245,7 @@
         justify-content: center;
         background-color: var(--Button);
         border: none;
-        border-radius: 6px;
+        border-radius: 20px;
         padding: 10px 20px;
         color: var(--White);
         font-weight: 700;
@@ -316,7 +316,7 @@
             justify-content: center;
             background-color: var(--Button);
             border: none;
-            border-radius: 6px;
+            border-radius: 20px;
             padding: 10px 20px;
             color: var(--White);
             font-weight: 700;

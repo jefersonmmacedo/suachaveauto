@@ -96,7 +96,7 @@
     justify-content: center;
     background-color: var(--Button);
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
@@ -110,7 +110,7 @@
     justify-content: center;
     background-color: var(--Secondary);
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     color: var(--White);
     font-weight: 700;
@@ -187,7 +187,7 @@
     background-color: var(--Button);
     color: var(--White);
     border: none;
-    border-radius: 6px;
+    border-radius: 20px;
     padding: 10px 20px;
     font-weight: 700;
     margin: 10px 0;

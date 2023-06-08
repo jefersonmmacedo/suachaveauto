@@ -31,6 +31,7 @@
   --Aproved: #00a859;
   --AprovedHover: #09b859;
   --Loading: #00afef;
+  --PortoSeguros: #00A1FC;
 }
 
 html {
@@ -47,7 +48,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Archivo', sans-serif;
-  background: var(--Background2);
+  background: var(--BorderHover);
 }
 
 .content {

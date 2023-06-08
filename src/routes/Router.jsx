@@ -1,6 +1,7 @@
 import {Route, Routes, Navigate} from 'react-router-dom';
 import { Favorites } from '../pages/Favorites/Favorites';
 import { Home } from '../pages/Home/Home';
+import { NotFound } from '../pages/NotFound/NotFound';
 import { Notifications } from '../pages/Notifications/Notifications';
 import { Pricing } from '../pages/Pricing/Pricing';
 import { SignIn } from '../pages/SignIn/SignIn';
@@ -11,13 +12,13 @@ import { PrivacyPolicy } from '../pages/PrivacyPolicy/PrivacyPolicy';
 import { TermsOfUse } from '../pages/TermsOfUse/TermsOfUse';
 import { Message } from '../pages/Message/Message';
 import { Properties } from '../pages/Properties/Properties';
-import { Property } from '../pages/Property/Property';
+import { Autos } from '../pages/Autos/Autos';
 import { About } from '../pages/About/About';
 import { Companies } from '../pages/Companies/Companies';
 import { Brokers } from '../pages/Brokers/Brokers';
 import { Company } from '../pages/Company/Company';
 import { Schedules } from '../pages/Schedules/Schedules';
-import { MessagesProperty } from '../pages/MessagesProperty/MessagesProperty';
+import { MessagesAutos } from '../pages/MessagesAutos/MessagesAutos';
 import { Simulator } from '../pages/Simulator/Simulator';
 import { SignInCompany } from '../pages/SignInCompany/SignInCompany';
 import { MyAccount } from '../pages/MyAccount/MyAccount';
@@ -29,7 +30,7 @@ import { Contact } from '../pages/Contact/Contact';
 import { Faq } from '../pages/Faq/Faq';
 
 function Router () {
-const Local = localStorage.getItem("suachave");
+const Local = localStorage.getItem("suachaveauto");
 const userLocal = JSON.parse(Local)
 
 function PrivateRoute({children} ) {
@@ -39,6 +40,7 @@ function PrivateRoute({children} ) {
     return (
             <Routes>
             {/* Rotas abertas */}
+            <Route path="*" element={<NotFound />}/>
             <Route path="/" element={<ComingSoon />}/>
             <Route path="/home" element={<Home />}/>
             <Route path="/entrar" element={<SignIn />}/>
@@ -53,7 +55,7 @@ function PrivateRoute({children} ) {
             <Route path="/trator/:status" element={<Properties />}/>
             <Route path="/privacidade" element={<PrivacyPolicy />}/>
             <Route path="/termos" element={<TermsOfUse />}/>
-            <Route path="/auto" element={<Property />}/>
+            <Route path="/auto" element={<Autos />}/>
             <Route path="/agencias" element={<Companies />}/>
             <Route path="/agencia" element={<Company />}/>
             <Route path="/consultores" element={<Brokers />}/>
@@ -68,7 +70,7 @@ function PrivateRoute({children} ) {
             <Route path="/minhaconta"
                     element={ <PrivateRoute> <MyAccount /> </PrivateRoute>} />
             <Route path="/mensagens"
-                    element={ <PrivateRoute> <MessagesProperty /> </PrivateRoute>} />
+                    element={ <PrivateRoute> <MessagesAutos /> </PrivateRoute>} />
             <Route path="/favoritos"
                     element={ <PrivateRoute> <Favorites /> </PrivateRoute>} />
             <Route path="/notificacoes"

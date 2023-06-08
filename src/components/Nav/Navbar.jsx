@@ -20,7 +20,7 @@ const Nav = styled.nav`
   top: 0;
   z-index: 97;
   // background: rgba(255, 255, 255);
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(4px);
   font-size: 14px;
   color: var(--Description)
@@ -180,7 +180,7 @@ const Navbar2 = () => {
   return (
     <Nav>
       <div className="logo">
-        <a href="/home">
+        <a href="/">
       <img src={LogoImg} alt="Logo CPA Educacional" />
         </a>
       </div>

@@ -17,13 +17,12 @@ import "./sliderImages.css"
   export function SliderImages() {
     const [isOpenModal, setIsOpenModa] = useState(false);
 
-    function handleOpenModal(e) {
-      e.preventDefault();
+    function handleOpenModal() {
         setIsOpenModa(true)
+        return;
       }
     
-      function handleCloseModal(e) {
-        e.preventDefault();
+      function handleCloseModal() {
         setIsOpenModa(false)
         window.location.reload();
       }
@@ -129,7 +128,7 @@ import "./sliderImages.css"
 
             {fadeImages.map((image) => {
                 return (
-                    <img src={image.url} width="100%" height="100%" onClick={handleOpenModal}/>
+                    <img src={image.url} width="100%" height="100%" onClick={() => handleOpenModal()}/>
                 )
             })}
 

@@ -25,7 +25,7 @@ export function SignIn() {
                     <div className="data">
                 <div className="buttons">
                     <button className={company === false ? "btn" : "btn2"} onClick={handleSelectClient}>Cliente</button>
-                    <button className={company === false ? "button1" : "button2"} onClick={handleSelectCompany}>Imobiliária</button>
+                    <button className={company === false ? "button1" : "button2"} onClick={handleSelectCompany}>Agência/Consultor</button>
                 </div>
 
                 {company === false ?

@@ -1,29 +1,45 @@
 ﻿.PropertyUnicBlock {
     width: 230px;
+    height: 260px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     background-color: var(--White);
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+    border: 1px solid var(--Border);
+    border-radius: 15px;
     margin: 20px auto;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
-.PropertyUnicBlock .image {
-    width: 100%; 
-    height: 150px;
-    border-radius: 6px 6px 0 0;
-    object-fit: cover;
-}
-.PropertyUnicBlock .image img {
-    width: 100%; 
-    height: 150px;
-    border-radius: 6px 6px 0 0;
+
+
+.PropertyUnicBlock .imageSlider {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 110px;
+      border-radius: 6px 6px 0 0;
+    background-color: var(--BorderInput2);
     object-fit: cover;
 }
 
+.PropertyUnicBlock .imageSlider a {
+    width: 100%;
+    color: var(--Primary);
+    text-decoration: none;
+  }
+  
+  
+  .PropertyUnicBlock .imageSlider a img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+      border-radius: 15px 15px 0 0;
+  }
+  
 
 .PropertyUnicBlock .featured {
     display: flex;
@@ -43,52 +59,88 @@
     font-weight: 700;
 }
 
-.PropertyUnicBlock .status {
+
+
+.PropertyUnicBlock .infosPropertyButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 5px;
+    margin-top: -40px;
+    z-index:10;
+}
+
+.PropertyUnicBlock .infosPropertyButtons .status {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: var(--Secondary);
-    border-radius: 6px;
-    position: absolute;
-    margin-top: 110px;
-    margin-left: 10px;
-    padding: 10px 20px;
+    background-color: rgba(224, 40, 47, 0.7);
+    border-radius: 20px;
+    padding: 7px;
 }
 
-.PropertyUnicBlock .status p {
+.PropertyUnicBlock .infosPropertyButtons .status a {
+    color: var(--White);
+    font-weight: 700;
+    text-decoration: none;
+}
+.PropertyUnicBlock .infosPropertyButtons .status p {
     color: var(--White);
     font-weight: 700;
 }
-
-.PropertyUnicBlock .heart {
-    position: absolute;
-    margin-top: 115px;
-    margin-left: 265px;
+.PropertyUnicBlock .infosPropertyButtons .status .image {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: var(--White);
+    margin-right: 3px;
+}
+.PropertyUnicBlock .infosPropertyButtons .status .image img {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: contain;
 }
 
-.PropertyUnicBlock .heart svg {
-    color: var(--White);
+.PropertyUnicBlock .infosPropertyButtons .infosButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.PropertyUnicBlock .infosPropertyButtons .infosButtons .heart2 {
+
+}
+
+.PropertyUnicBlock .infosPropertyButtons .infosButtons .heart2 svg {
+    color: var(--Primary);
     font-size: 24px;
     cursor: pointer;
 }
-.PropertyUnicBlock .heart svg:hover {
-    color: var(--Primary);
-}
-.PropertyUnicBlock .heart2 {
-    position: absolute;
-    margin-top: 115px;
-    margin-left: 200px;
+.PropertyUnicBlock .infosPropertyButtons .infosButtons .share {
+margin-top: -20px;
 }
 
-.PropertyUnicBlock .heart2 svg {
-    color: var(--Primary);
-    font-size: 24px;
+.PropertyUnicBlock .infosPropertyButtons .infosButtons .share svg {
+    color: var(--Border);
+    font-size: 20px;
     cursor: pointer;
 }
-.PropertyUnicBlock .heart svg:hover {
-    color: var(--Primary);
-}
+
 
 
 
@@ -97,91 +149,100 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.PropertyUnicBlock .text .textInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
 }
-.PropertyUnicBlock .text h2 {
-    color: var(--Primary);
+.PropertyUnicBlock .text .textInfos h2 {
+    color: var(--Paragraph);
     font-weight: 700;
     margin: 20px 10px 5px 10px;
 }
-.PropertyUnicBlock .text h3 {
+.PropertyUnicBlock .text .textInfos h3 {
     color: var(--Paragraph);
     font-weight: 700;
-    margin: 10px 10px 0px 10px;
-}
-.PropertyUnicBlock .text h3 span {
-    color: var(--Primary);
+    margin: 10px 10px 5px 10px;
 }
 
-.PropertyUnicBlock .text a {
+.PropertyUnicBlock .text .textInfos a {
     text-decoration: none;
+    
 }
-.PropertyUnicBlock .text h4 {
-    color: var(--Gray);
-    margin: 0 10px;
+.PropertyUnicBlock .text .textInfos h4 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 10px 9px 0px 9px;
 }
-.PropertyUnicBlock .text h5 {
+.PropertyUnicBlock .text .textInfos h5 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     color: var(--Gray);
-    margin: 0 10px 5px 10px;
+    margin: 2px 9px;
+    font-weight: 500;
+}
+.PropertyUnicBlock .text .textInfos h6 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: var(--Gray);
+    margin: 2px 8px 2px 8px; 
     font-weight: 700;
 }
-.PropertyUnicBlock .text h6 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    color: var(--Gray);
-    margin: 0 10px;
-}
-.PropertyUnicBlock .text .icons {
+.PropertyUnicBlock .text .iconsBox {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
+    margin: 10px 0px; 
+    flex-wrap: wrap;
+
 }
 
-.PropertyUnicBlock .text .icons .iconUnic {
-    width: 33%;
+.PropertyUnicBlock .text .iconsBox .iconUnicBox {
+    width:32%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
-    padding: 5px;
-    margin: 5px;
+    padding: 0px 5px;
+    margin: 0px 1px;
     color: var(--Gray);
 }
-
-.PropertyUnicBlock .text .icons .iconUnic p {
-    color: var(--Paragraph);
-    font-weight: 800;
-    font-size: 10px;
+.PropertyUnicBlock .text .iconsBox .iconUnicBox svg {
+    font-size: 16px;
+    margin-right: 10px;
+    color: var(--Primary);
 }
-.PropertyUnicBlock .text .icons .iconUnic .simbol {
+
+.PropertyUnicBlock .text .iconsBox .iconUnicBox .simbolBox {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    margin-top: 2px;
+    margin-top: 1px;
+}
+.PropertyUnicBlock .text .iconsBox .iconUnicBox .simbolBox  p {
+    color: var(--Gray);
+    font-weight: 600;
+    font-size: 10px;
 }
 
-.PropertyUnicBlock .text .icons .iconUnic .simbol svg {
-    font-size: 14px;
-    margin-right: 5px;
-    color: var(--Gray);
-}
-.PropertyUnicBlock .text .icons .iconUnic .simbol img {
-    width: 14px;
-    margin-right: 3px;
-}
 .PropertyUnicBlock .text .pricing {
     width: 100%;
     display: flex;
@@ -189,29 +250,378 @@
     align-items: flex-start;
     justify-content: flex-start;
     text-align: flex-start;
+    margin-top: 5px;
 }
 
-.PropertyUnicBlock .text .pricing h5 {
+.PropertyUnicBlock .text .pricing h6 {
+    color: var(--Gray);
+    font-weight: 800;
+    margin: 0 10px;
+}
+.PropertyUnicBlock .text .pricing h6 span {
+    font-weight: 500;
+    color: var(--Gray);
+}
+.PropertyUnicBlock .text .pricing h3 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 2px 10px 2px 10px;
+}
+.PropertyUnicBlock .text .pricing span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
+.PropertyUnicBlock .text .pricing h4 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 0px 0px 0px 10px;
+}
+.PropertyUnicBlock .text .pricing h4 span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
+
+
+
+.PropertyUnicEmphasis {
+    width: 255px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--PrimaryEnphasis);
+    border: 1px solid var(--Primary);
+    border-radius: 15px;
+    margin: 20px auto;
+    padding-bottom: 5px;
+}
+
+
+
+.PropertyUnicEmphasis .imageSliderEmphasis {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 130px;
+      border-radius: 15px 15px 0 0;
+    background-color: var(--BorderInput2);
+    object-fit: cover;
+}
+
+.PropertyUnicEmphasis .imageSliderEmphasis a {
+    width: 100%;
+  }
+  
+  
+  .PropertyUnicEmphasis .imageSliderEmphasis a img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      
+  }
+  
+
+.PropertyUnicEmphasis .featured {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Primary);
+    border-radius: 20px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 10px;
+    padding: 10px 40px;
+}
+
+.PropertyUnicEmphasis .featured p {
+    color: var(--White);
+    font-weight: 700;
+}
+
+
+
+.PropertyUnicEmphasis .infosPropertyButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 5px;
+    margin-top: -40px;
+    z-index:10;
+}
+
+.PropertyUnicEmphasis .infosPropertyButtons .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(224, 40, 47, 0.7);
+    border-radius: 20px;
+    padding: 7px;
+}
+
+.PropertyUnicEmphasis .infosPropertyButtons .status a {
+    color: var(--White);
+    font-weight: 700;
+    text-decoration: none;
+}
+.PropertyUnicEmphasis .infosPropertyButtons .status p {
+    color: var(--White);
+    font-weight: 700;
+}
+.PropertyUnicEmphasis .infosPropertyButtons .status .image {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: var(--White);
+    margin-right: 3px;
+}
+.PropertyUnicEmphasis .infosPropertyButtons .status .image img {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.PropertyUnicEmphasis .infosPropertyButtons .infosButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.PropertyUnicEmphasis .infosPropertyButtons .infosButtons .heart2 {
+
+}
+
+.PropertyUnicEmphasis .infosPropertyButtons .infosButtons .heart2 svg {
+    color: var(--Primary);
+    font-size: 24px;
+    cursor: pointer;
+}
+.PropertyUnicEmphasis .infosPropertyButtons .infosButtons .share {
+margin-top: -20px;
+}
+
+.PropertyUnicEmphasis .infosPropertyButtons .infosButtons .share svg {
+    color: var(--Border);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+.PropertyUnicEmphasis .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.PropertyUnicEmphasis .text .textInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.PropertyUnicEmphasis .text .textInfos h2 {
     color: var(--Paragraph);
     font-weight: 700;
-    margin: 5px 10px;
+    margin: 20px 10px 5px 10px;
 }
-.PropertyUnicBlock .text .pricing h2 {
-    color: var(--Primary);
+.PropertyUnicEmphasis .text .textInfos h3 {
+    color: var(--Paragraph);
     font-weight: 700;
+    margin: 10px 10px 5px 10px;
+}
+
+.PropertyUnicEmphasis .text .textInfos a {
+    text-decoration: none;
+    
+}
+.PropertyUnicEmphasis .text .textInfos h4 {
+    color: var(--Paragraph);
+    font-weight: 700;
+    margin: 10px 9px 0px 9px;
+}
+.PropertyUnicEmphasis .text .textInfos h5 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: var(--Gray);
+    margin: 2px 9px;
+    font-weight: 500;
+}
+.PropertyUnicEmphasis .text .textInfos h6 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: var(--Gray);
+    margin: 2px 8px 5px 8px; 
+    font-weight: 700;
+}
+.PropertyUnicEmphasis .text .iconsBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 5px 0px; 
+    flex-wrap: wrap;
+
+}
+
+.PropertyUnicEmphasis .text .iconsBox .iconUnicBox {
+    width: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 5px;
+    margin: 0px 5px;
+    color: var(--Gray2);
+}
+.PropertyUnicEmphasis .text .iconsBox .iconUnicBox svg {
+    font-size: 16px;
+    margin-right: 10px;
+    color: var(--Primary);
+}
+
+.PropertyUnicEmphasis .text .iconsBox .iconUnicBox .simbolBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 1px;
+}
+.PropertyUnicEmphasis .text .iconsBox .iconUnicBox .simbolBox  p {
+    color: var(--Gray2);
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.PropertyUnicEmphasis .text .pricing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: flex-start;
+    margin-top: 5px;
+}
+
+.PropertyUnicEmphasis .text .pricing h6 {
+    color: var(--Gray);
+    font-weight: 800;
     margin: 0 10px;
-    font-size: 22px;
+}
+.PropertyUnicEmphasis .text .pricing h6 span {
+    font-weight: 500;
+    color: var(--Gray);
+}
+.PropertyUnicEmphasis .text .pricing h3 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 2px 10px 2px 10px;
+}
+.PropertyUnicEmphasis .text .pricing span {
+    color: var(--Paragraph);
+    font-weight: 800;
 }
 
 
+@media (max-width: 1090px) {
+    .PropertyUnicBlock {
+        /* margin: 20px 0px; */
+    }
+    
+@media (max-width: 950px) {
+    .PropertyUnicBlock {
+        /* margin: 20px auto; */
+    }
+    
 @media (max-width: 750px) {
     .Featured {
         margin: 350px 0 50px 0;
     }
 
-    @media (max-width: 550px) {
+    @media (max-width: 572px) {
         .Featured {
             margin: 400px 0 50px 0;
         }
+
+        .PropertyUnicBlock {
+            width: 80%;
+        }
+       
+        .PropertyUnicBlock .text .iconsBox .iconUnicBox {
+            width: 20%;
+        }
+
+        .PropertyUnicEmphasis {
+            width: 80%;
+        }
+       
+        .PropertyUnicEmphasis .text .iconsBox .iconUnicBox {
+            width: 20%;
+        }
+
+        @media (max-width: 450px) {
+
+        .PropertyUnicBlock {
+            width: 95%;
+        }
+
+        .PropertyUnicBlock .text .iconsBox .iconUnicBox {
+            width: 30%;
+        }
+        .PropertyUnicEmphasis {
+            width: 95%;
+        }
+
+        .PropertyUnicEmphasis .text .iconsBox .iconUnicBox {
+            width: 30%;
+        }
     }
+
+    @media (max-width: 350px) {
+        .PropertyUnicBlock {
+            width: 90%;
+            height: 390px;
+        }
+        .PropertyUnicEmphasis {
+            width: 90%;
+            height: 390px;
+        }
+    }
+}
+}
+}
 }
