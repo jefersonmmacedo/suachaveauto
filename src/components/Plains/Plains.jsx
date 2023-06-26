@@ -1,109 +1,138 @@
-﻿import "./plains.css"
-import {IoCheckmarkOutline} from "react-icons/io5";
+import "./plains.css"
+import {IoArrowBackOutline, IoArrowForwardOutline, IoCheckmarkOutline} from "react-icons/io5";
+import { useFetch } from "../../hooks/useFetch";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
+
 
 export function Plains() {
+
+    const { data } = useFetch("/plains");
+
+
+    if(!data) {
+        return (
+            <div className="loader">
+           carregando...
+            </div>
+        )
+    }
+
+    const buttonStyle = {
+        display:'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row',
+        backgroundColor: 'var(--PrimaryHover)',
+        border: '2px solid var(--White)',
+        color: 'var(--White)',
+        borderRadius: '100px',
+        padding: '7px',
+        width: '35px',
+        height: '35px',
+    };
+    
+    const properties = {
+        prevArrow: <button style={{ ...buttonStyle }}><IoArrowBackOutline /></button>,
+        nextArrow: <button style={{ ...buttonStyle }}><IoArrowForwardOutline /></button>
+    }
+
+    const responsiveSettings = [
+        {
+            breakpoint: 1210,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 930,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
+        {
+            breakpoint: 630,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 250,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+
+    const plainsFilter = data.filter((plains) => plains.status !== "Inativo" )
+
     return (
         <div className="Plains">
+            <Slide slidesToScroll={1} slidesToShow={1} indicators={true} autoplay={false} {...properties} responsive={responsiveSettings}>
+            {plainsFilter?.map((plain) => {
+                return (
+                    <div className={plain?.name === "Lite" ? "plain2" : "plain"} key={plain?.id}>
+  
+                    <h3>{plain?.name}</h3>
+                    {plain?.valueNew === "" ?
+                    <>
+                        <div className="title">
+                        <h1>R$ {plain?.value}</h1>
+                        <h4>/mês</h4>
+                        </div>
+                    </>
+                    :
+                    <>
+                        <div className="title2">
+                        <h1>R$ {plain?.value}</h1>
+                        <h6>/mês</h6>
+                        </div>
+                        <div className="title">
+                        <h1>R$ {plain?.valueNew}</h1>
+                        <h4>/mês</h4>
+                        </div>
+                    </>
 
-            <div className="plain">
-                <h3>Plano Consultor</h3>
-                <div className="title">
-                <h1>R$ 99,99</h1>
-                <h4>/mês</h4>
-                </div>
-                <div className="text">
-                    <p><IoCheckmarkOutline /> Anúncios ilimitados</p>
-                    <p><IoCheckmarkOutline /> Agendamento de visitas</p>
-                    <p><IoCheckmarkOutline /> Chat único por anúncio</p>
-                    <p><IoCheckmarkOutline /> Contato via ligação e whatsapp</p>
-                    <p><IoCheckmarkOutline /> Área administrativa - CRM</p>
-                    <p><IoCheckmarkOutline /> Envio e recebimento de documentos</p>
-                    <p><IoCheckmarkOutline /> Processo de compra e venda online</p>
-                    <p><IoCheckmarkOutline /> Captação de leads</p>
-                    <p><IoCheckmarkOutline /> Plano sem fidelidade</p>
-                </div>
-                <a href="/cadastro-profissional">Contratar plano</a>
-                <p>* Plano destinado a consultores independentes.</p>
-            </div>
+                    }
+                    {/* <div className="title">
+                    <h3>Entre em contato</h3>
+                    </div> */}
+                    <div className="text">
+                    {plain?.infos.map((info) => {
+                        return (
+                            <p><IoCheckmarkOutline /> {info.info}</p>
+                        )
+                    })}
+                    </div>
+                    <div className="aditionalUser">
+                        {/* <h5>Acesso: <span>3 Usuários</span></h5> */}
+                        {/* <h5>Usuários adicionais: <span>R$ 29,90</span></h5> */}
+                        {/* <h5>Usuários adicionais: <span>Em Breve</span></h5> */}
+                    </div>
+                    {/* {myPlain?.idPlain === plain?.id ?
+                    <a href="http://adm.suachave.com.br/planos" target="_blank">Seu plano atual</a>
+                    :
+                    <a href={user !== null && user?.type === "Imobiliária" || user !== null && user?.type === "Corretor" ? `/plano/${plain?.id}` : "/cadastro-profissional"}>Contratar plano</a>
+                } */}
 
-            <div className="plain">
-                <h3>Plano Básico</h3>
-                <div className="title">
-                <h1>R$ 149,99</h1>
-                <h4>/mês</h4>
-                </div>
-                <div className="text">
-                    <p><IoCheckmarkOutline /> Anúncios ilimitados</p>
-                    <p><IoCheckmarkOutline /> Agendamento de visitas</p>
-                    <p><IoCheckmarkOutline /> Chat único por anúncio</p>
-                    <p><IoCheckmarkOutline /> Contato via ligação e whatsapp</p>
-                    <p><IoCheckmarkOutline /> Cadastre seus vendedores</p>
-                    <p><IoCheckmarkOutline /> Área administrativa - CRM</p>
-                    <p><IoCheckmarkOutline /> Envio e recebimento de documentos</p>
-                    <p><IoCheckmarkOutline /> Processo de compra e venda online</p>
-                    <p><IoCheckmarkOutline /> Captação de leads</p>
-                    <p><IoCheckmarkOutline /> Plano sem fidelidade</p>
-                </div>
-                <a href="/cadastro-profissional">Contratar plano</a>
-            </div>
+                <a href={`https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre o plano ${plain?.name} e os serviços que a Sua Chave pode me oferecer`}>Falar com time comercial</a>
+                {/* <a href={`https://adm.suachave.com.br/cadastro/novocadastro`} target="_blank" rel="noreferrer">Teste por 7 dias grátis</a> */}
+                {/* <a href={`http://adm.suachave.com.br/cadastrar/${plain?.id}`} target="_blank" rel="noreferrer">Contratar</a> */}
 
-            <div className="plain">
-                <h3>Plano Web</h3>
-                <div className="title">
-                <h1>R$ 199,99</h1>
-                <h4>/mês</h4>
+                    <p>{plain?.note}</p>
+                    {plain?.name === "Lite" ? 
+                        <div className="featured">
+                            <h5>Mais Procurado</h5>
+                        </div>
+                         : ""}
                 </div>
-                <div className="text">
-                <p><IoCheckmarkOutline /> Anúncios ilimitados</p>
-                    <p><IoCheckmarkOutline /> Agendamento de visitas</p>
-                    <p><IoCheckmarkOutline /> Chat único por anúncio</p>
-                    <p><IoCheckmarkOutline /> Contato via ligação e whatsapp</p>
-                    <p><IoCheckmarkOutline /> Cadastre seus vendedores</p>
-                    <p><IoCheckmarkOutline /> Área administrativa - CRM</p>
-                    <p><IoCheckmarkOutline /> Envio e recebimento de documentos</p>
-                    <p><IoCheckmarkOutline /> Processo de compra e venda online</p>
-                    <p><IoCheckmarkOutline /> Solicitação para avaliação de veículos</p>
-                    <p><IoCheckmarkOutline /> Site individual para sua empresa</p>
-                    <p><IoCheckmarkOutline /> Captação de leads</p>
-                    <p><IoCheckmarkOutline /> Sem custo de integração**</p>
-                    <p><IoCheckmarkOutline /> Plano sem fidelidade</p>
-                </div>
-                <a href="/cadastro-profissional">Contratar plano</a>
-                <p>** Integração grátis por tempo limitado.</p>
-            </div>
-
-            {/* <div className="plain2">
-                <h3>Plano WebApp</h3>
-                <div className="title">
-                <h1>Em Breve</h1>
-                <h1>R$ 329,99</h1>
-                <h4>/mês</h4>
-                </div>
-                <div className="text">
-                <p><IoCheckmarkOutline /> Anúncios ilimitados</p>
-                    <p><IoCheckmarkOutline /> Agendamento de visitas</p>
-                    <p><IoCheckmarkOutline /> Chat único por anúncio</p>
-                    <p><IoCheckmarkOutline /> Contato via whatsapp</p>
-                    <p><IoCheckmarkOutline /> Contato via ligação</p>
-                    <p><IoCheckmarkOutline /> Site responsivo</p>
-                    <p><IoCheckmarkOutline /> Cadastre seus vendedores</p>
-                    <p><IoCheckmarkOutline /> Área administrativa - CRM</p>
-                    <p><IoCheckmarkOutline /> Processo de compra online.</p>
-                    <p><IoCheckmarkOutline /> Envio e recebimento de documentos</p>
-                    <p><IoCheckmarkOutline /> Processo de compra e venda online</p>
-                    <p><IoCheckmarkOutline /> Recebe solicitação para avaliação*</p>
-                    <p><IoCheckmarkOutline /> App administrativo</p>
-                    <p><IoCheckmarkOutline /> Site individual e responsivo para sua empresa</p>
-                    <p><IoCheckmarkOutline /> App individual Android e IOS para sua empresa</p>
-                    <p><IoCheckmarkOutline /> Relatório Mensal do Google Analytics</p>
-                    <p><IoCheckmarkOutline /> Site individual integrado ao sua chave</p>
-                    <p><IoCheckmarkOutline /> Anúncios no seu site e no sua chave</p>
-                    <p><IoCheckmarkOutline /> Anúncios no app Sua Chave</p>
-                    <p><IoCheckmarkOutline /> Plano sem fidelidade</p>
-                </div>
-                <a href="/plano">Contratar plano</a>
-                <p>* Receba imóveis de clientes para avaliação aumentando seu catálogo de anúncios. <br /> (No site e app individual).</p>
-            </div> */}
+                )
+            })}
+            </Slide>
 
         </div>
     )

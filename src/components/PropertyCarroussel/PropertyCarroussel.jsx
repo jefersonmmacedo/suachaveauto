@@ -13,17 +13,15 @@ import km from "../../assets/images/icons/km.png";
 import marcha2 from "../../assets/images/icons/marcha2.png";  
 import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
 import { useFetch } from "../../hooks/useFetch";
+import { PropertyUnicBlockLoader } from "../PropertyUnicBlockLoader/PropertyUnicBlockLoader";
 
-export function PropertyCarroussel() {
+export function PropertyCarroussel({type}) {
 
-    const {data} = useFetch(`/autos/typecar/${"Carros"}`);
+    const {data} = useFetch(`/autos/typecar/${type}`);
 
-    if(!data) {
-        return (
-            <div className="loader">
-<h6>Carregando</h6>
-            </div>
-        )
+
+    if(data) {
+       console.log(data)
     }
     const buttonStyle = {
         display:'none'
@@ -65,12 +63,39 @@ export function PropertyCarroussel() {
         }
     ]
 
+    if(data?.length === 0) {
+        return (
+            <div>
+                <Slide slidesToScroll={3} slidesToShow={3} indicators={true} {...properties} responsive={responsiveSettings}>
+                            <PropertyUnicBlockLoader />
+                            <PropertyUnicBlockLoader />
+                            <PropertyUnicBlockLoader />
+                            <PropertyUnicBlockLoader />
+
+                </Slide>
+            </div>
+        )
+    }
+    if(!data) {
+        return (
+            <div>
+                <Slide slidesToScroll={3} slidesToShow={3} indicators={true} {...properties} responsive={responsiveSettings}>
+                            <PropertyUnicBlockLoader />
+                            <PropertyUnicBlockLoader />
+                            <PropertyUnicBlockLoader />
+                            <PropertyUnicBlockLoader />
+
+                </Slide>
+            </div>
+        )
+    }
+
     return (
         <div>
             <Slide slidesToScroll={3} slidesToShow={3} indicators={true} {...properties} responsive={responsiveSettings}>
                 {data?.map((auto) => {
                     return (
-                        <PropertyUnicBlock id={auto.id}/>
+                       <PropertyUnicBlock id={auto.id}/>
                     )
                 })}
             </Slide>

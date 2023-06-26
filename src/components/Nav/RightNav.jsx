@@ -164,17 +164,17 @@ const RightNav = ({ open }) => {
           </li>
           <li className='nav-item'>
             <Link to='/agencias' >
-            Agências
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link to='/consultores' >
-            Consultores
+            Agências e consultores
             </Link>
           </li>
           <li className='nav-item'>
             <Link to='/financiamento' >
             Financiamento
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/planos' >
+            Planos
             </Link>
           </li>
           {user === "" || user === null || user === undefined ? 

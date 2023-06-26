@@ -37,6 +37,7 @@ export function Home() {
     const [city, setCity] = useState("");
     const [districtAll, setDistrictAll] = useState([]);
     const [uf, setUf] = useState("");
+    const [typeCar, setTypeCar] = useState("Carros");
 
     // useEffect(() => {
     //     function initialTime() {
@@ -129,7 +130,9 @@ export function Home() {
           setIsOpenModaSearchProperty(false);
         }
   
-
+        function handleTypeCar(data) {
+          setTypeCar(data)
+        }
 
 
     Modal.setAppElement('#root');
@@ -151,27 +154,27 @@ export function Home() {
             <h3>Recomendados para você</h3>
 
             <div className="buttonsAutos">
-            <button> <IoCarSport /> </button>
-            <button> <FaMotorcycle /> </button>
-            <button> <HiTruck />  </button>
-            <button> <FaTruckMoving />  </button>
-            <button> <FaBusAlt />  </button>
-            <button> <MdElectricCar />  </button>
+            <button onClick={() => handleTypeCar("Carros")}> <IoCarSport /> </button>
+            <button onClick={() => handleTypeCar("Motos")}> <FaMotorcycle /> </button>
+            <button onClick={() => handleTypeCar("Utilitários")}> <HiTruck />  </button>
+            <button onClick={() => handleTypeCar("Caminhões")}> <FaTruckMoving />  </button>
+            <button onClick={() => handleTypeCar("Onibus")}> <FaBusAlt />  </button>
+            <button onClick={() => handleTypeCar("Eletricos")}> <MdElectricCar />  </button>
                 </div>   
             </div>
             <div className="carroussel">
-            <PropertyCarroussel />
+            <PropertyCarroussel type={typeCar}/>
             </div>
             <div className="textFeature2">
             <h3>Modelos</h3>
           </div>
-            <AutosModel />
+            <AutosModel type={typeCar}/>
 
             <div className="textFeature2">
             <h3>Mais procurados</h3>
             </div>
             <div className="carroussel2">
-            <ModelCarroussel />
+            <ModelCarroussel type={typeCar}/>
             </div>
             {/* <div className="textHome">
             <h2>Imóveis à venda</h2>
@@ -188,86 +191,7 @@ export function Home() {
             <Footer />
 
 
-            {/* <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
-            overlayClassName="react-modal-overlay"
-            className="react-modal-content">
-            <button type="button" className="react-modal-button" onClick={handleCloseModal}>
-            <IoCloseOutline /> 
-            </button>
-            <div className="content-modal-home">
-            <div className="itensModalHome">
-                <img src={LogoImg} alt="" />
-                <form action="">
-                    <h3>Escolha seu estado e cidade</h3>
-                    <select value={uf} onChange={handleSetectUf}> 
-                            <option value="">Escolha seu estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>     
-                    </select>
-                    <select value={city} onChange={handleSetectCity}> 
-                    {districtAll.length === 0 ?
-                    <option value={city}>{city}</option>
-                    :
-                    <>
-                    <option value="">Escolha sua cidade</option>
-                    {districtAll?.map((district) => {
-                            return (
-                                <option autocomplete="off" key={district.id} value={district.nome}>{district.nome}</option>
-                            )
-                        })}
-                    </>
-                    }     
-                    </select>
-
-                    <button onClick={HandleNewClientBrowser}>Definir localização</button>
-                </form>
-                <div className="loginAccount">
-                    <a href="/entrar">Ja possuo conta</a>
-                    <a href="/cadastrar">Cadastrar</a>
-                </div>
-            </div>
-            </div>
-            </Modal>
-
-
-            <Modal isOpen={isOpenModalSearchProperty} onRequestClose={handleCloseModalSearchProperty}
-            overlayClassName="react-modal-overlay"
-            className="react-modal-content">
-            <button type="button" className="react-modal-button" onClick={handleCloseModalSearchProperty}>
-            <IoCloseOutline /> 
-            </button>
-            <div className="content-modal-home-Search">
-            <div className="itensModalHome-Search">
-                <SearchProperty />
-            </div>
-            </div>
-            </Modal> */}
+        
 
         </div>
     )

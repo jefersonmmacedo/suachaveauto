@@ -9,7 +9,7 @@ export function Footer() {
                 <div className="sections">
                         <div className="sectionUnic">
                         <a href="/"><img src={logo} alt="" /></a>
-                            <h5> <b>Encontre Carros e motos em poucos cliques!</b> </h5>
+                            <h5> <b>Encontre Carros e motos e outros véculos em poucos cliques!</b> </h5>
                             <br />
                             <div className="network">
                                 <a href="https://www.facebook.com/suachaveauto.br" target="_blank" rel="noreferrer" className="networkButton"><IoLogoFacebook/></a>
@@ -19,7 +19,7 @@ export function Footer() {
                             </div>
                         </div>
                         <div className="sectionUnic">
-                            <h3>SUA CHAVE</h3>
+                            <h3>SUA CHAVE AUTO</h3>
                                 <h5><a href="/sobre">Sobre nós</a></h5>
                                 <h5><a href="/planos">Planos</a></h5>
                                 <h5><a href="/anunciar">Para agências</a></h5>
