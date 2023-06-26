@@ -6,7 +6,7 @@ import { SearchProperty } from "../../components/SearchProperty/SearchProperty";
 import { Footer } from "../../components/Footer/Footer";
 import { SliderHome } from "../../components/SliderHome/SliderHome";
 import {  PropertyCarroussel } from "../../components/PropertyCarroussel/PropertyCarroussel";
-import { IoCloseOutline, IoSearch } from "react-icons/io5";
+import { IoCarSport, IoCloseOutline, IoSearch } from "react-icons/io5";
 import { useEffect } from "react";
 import LogoImg from '../../assets/images/Logo2.png';
 import propaganda from '../../assets/images/propaganda.png';
@@ -19,6 +19,10 @@ import { Fipe } from "../../components/Fipe/Fipe";
 import { Finance } from "../../components/Finance/Finance";
 import { NewSearchClient } from "../../components/NewSearchClient/NewSearchClient";
 import { TopHeadHomeV3 } from "../../components/TopHeadHomeV3/TopHeadHomeV3";
+import { AutosModel } from "../../components/AutosModel/AutosModel";
+import { FaBusAlt, FaMotorcycle, FaTruckMoving } from "react-icons/fa";
+import { HiTruck } from "react-icons/hi";
+import { MdElectricCar } from "react-icons/md";
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachaveautocity");
@@ -137,21 +141,31 @@ export function Home() {
             {/* <div className="searchView">
             <SearchProperty openModal={handleOpenModal}/>
             </div> */}
-            <div className="searchViewButton">
+            {/* <div className="searchViewButton">
             <button onClick={handleOpenModalSearchProperty}><IoSearch />Buscar Imóveis</button>
-            </div>
+            </div> */}
               <div className="carrousselBrabd">
             <BrandCarroussel />
             </div>
             <div className="textFeature">
             <h3>Recomendados para você</h3>
+
+            <div className="buttonsAutos">
+            <button> <IoCarSport /> </button>
+            <button> <FaMotorcycle /> </button>
+            <button> <HiTruck />  </button>
+            <button> <FaTruckMoving />  </button>
+            <button> <FaBusAlt />  </button>
+            <button> <MdElectricCar />  </button>
+                </div>   
             </div>
             <div className="carroussel">
             <PropertyCarroussel />
             </div>
-            {/* <div className="textHome">
-            <h3>Imóveis para alugar</h3>
-          </div> */}
+            <div className="textFeature2">
+            <h3>Modelos</h3>
+          </div>
+            <AutosModel />
 
             <div className="textFeature2">
             <h3>Mais procurados</h3>

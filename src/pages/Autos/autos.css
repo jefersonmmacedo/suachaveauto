@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--White);
 }
 .Autos .main {
     width: 100%;
@@ -30,9 +31,9 @@
     align-items: flex-start;
     justify-content: flex-start;
     background-color: var(--White);
-    border-radius: 6px;
+    border-radius: 20px;
     margin: 20px;
-    padding-bottom: 20px;
+    padding: 5px 5px 5px 20px;
 }
 
 .Autos .main .data .AutosUnic .targets {
@@ -133,54 +134,85 @@
     margin: 10px;
 }
 
-.Autos .main .data .AutosUnic .text .icons {
+.Autos .main .data .AutosUnic .text .iconsBox {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
-    margin: 10px 0;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
     flex-wrap: wrap;
     border: none;
     border-top: 1px solid var(--Border);
+    padding-top: 0px;
 }
 
-.Autos .main .data .AutosUnic .text .icons .iconUnic {
-    width: 95px;
+.Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox {
+    width: 27%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
-    padding: 5px;
-    margin: 5px;
-    color: var(--Gray);
-    background-color: var(--BorderHover);
-    border-radius: 6px;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 5px;
+    color: var(--Paragraph);
+
+    border-radius: 10px;
 }
 
-.Autos .main .data .AutosUnic .text .icons .iconUnic p {
-    color: var(--Paragraph);
+.Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox p {
+    color: var(--Gray2);
     font-weight: 700;
-}
-.Autos .main .data .AutosUnic .text .icons .iconUnic .simbol {
-    width: 100%;
+    font-size: 14px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox p sup {
+    vertical-align: top;
+    font-size: 10px;
+    margin-top: -7px;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+.Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox svg {
+    font-size: 22px;
+    margin-right: 10px;
+    color: var(--Paragraph);
+}
+
+
+.Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox .simbolBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
     justify-content: flex-start;
     text-align: center;
     margin-top: 5px;
 }
 
-.Autos .main .data .AutosUnic .text .icons .iconUnic .simbol svg {
-    font-size: 18px;
-    margin-right: 10px;
-    color: var(--Primary);
+.Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox .simbolBox svg {
+    font-size: 20px;
+    margin-right: 5px;
+    color: var(--Description);
 }
-.Autos .main .data .AutosUnic .text .icons .iconUnic .simbol img {
-    width: 18px;
-    margin-right: 10px;
+
+
+.Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox .simbolBox p {
+    color: var(--Description);
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .Autos .main .data .AutosUnic .text .informationsDocs {
@@ -296,6 +328,84 @@
     border-radius: 6px;
 }
 
+
+.Autos .main .data .AutosUnic .text .infosCompanyMobile {
+    width: 100%;
+    display: none;
+    border-radius: 20px;
+    border: 1px solid var(--Border);
+    margin: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.Autos .main .data .AutosUnic .text .infosCompanyMobile .pricingInfos h3 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 5px 10px 10px 10px;
+}
+.Autos .main .data .AutosUnic .text .infosCompanyMobile .pricingInfos h3 span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
+
+.Autos .main .data .AutosUnic .text .infosCompanyMobile .pricingInfos h5 {
+    color: var(--Gray);
+    font-weight: 800;
+    margin: 0px 10px;
+}
+.Autos .main .data .AutosUnic .text .infosCompanyMobile .pricingInfos h5 span {
+    font-weight: 500;
+}
+
+.Autos .main .data .infosCompanyAuto {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--White);
+    border-radius: 20px;
+    border: 1px solid var(--Border);
+    margin: 20px ;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.Autos .main .data .infosCompanyAuto .pricingInfos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: flex-start;
+}
+
+.Autos .main .data .infosCompanyAuto .pricingInfos h5 {
+    color: var(--Gray);
+    font-weight: 800;
+    margin: 0px 10px;
+}
+.Autos .main .data .infosCompanyAuto .pricingInfos h5 span {
+    font-weight: 500;
+}
+.Autos .main .data .infosCompanyAuto .pricingInfos h2 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 0 10px;
+}
+.Autos .main .data .infosCompanyAuto .pricingInfos h2 span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
+.Autos .main .data .infosCompanyAuto .pricingInfos h3 {
+    color: var(--Paragraph);
+    font-weight: 400;
+    margin: 5px 10px 10px 10px;
+}
+.Autos .main .data .infosCompanyAuto .pricingInfos h3 span {
+    color: var(--Paragraph);
+    font-weight: 800;
+}
 
 @media (max-width: 950px) {
     .Autos .main .data {

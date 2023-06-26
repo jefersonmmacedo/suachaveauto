@@ -10,7 +10,7 @@ export function NewShare({idProperty, title}) {
         data={{
           text: `${title}`,
           image: `https://img.freepik.com/fotos-gratis/bela-praia-tropical-mar-e-mar-com-palmeira-de-coco-na-hora-do-nascer-do-sol_74190-7454.jpg?w=2000`,
-          url: `https://www.suachave.com.br/imovel/${idProperty}`,
+          url: `https://www.suachaveauto.com.br/auto/${idProperty}`,
           title: `${title}`,
         }}
         onClick={() => console.log("shared successfully!")}

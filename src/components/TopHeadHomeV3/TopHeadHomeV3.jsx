@@ -8,7 +8,7 @@ export function TopHeadHomeV3() {
             <div className="SearchText">
                 <div className="TextTopSearch">
                 <h1>Temos a <span>chave</span> do seu novo <span>auto!</span></h1>
-                {/* <h4>Mais de 5000 autos disponíveis para você!</h4> */}
+                <h4>Encontre carros, utilitários, motos, caminhões, ônibus e carros elétricos</h4>
                 <h4></h4>
                 </div>
 

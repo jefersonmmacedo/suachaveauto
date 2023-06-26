@@ -9,6 +9,7 @@
   --PrimaryHover: #d51942;
   --Secondary: #00afef;
   --SecondaryHover: #37b2e6;
+  --BlackOpacity: rgba(0, 0, 0, 0.3);
   --Description: #302f2f;
   --Paragraph: #4D4D4D;
   --Background: #EEEEEE;
@@ -17,7 +18,7 @@
   --Border: #E6E7E8;
   --BorderInput: #F1F1F1;
   --BorderInput2: #F4F4F4;
-  --BorderHover: #FBFBFB;
+  --BorderHover: #F9F9F9;
   --Link: #f91942;
   --LinkHover: #d51942;
   --Black: #000000;
@@ -166,6 +167,36 @@ button {
   margin: 15px;
   border: none;
 }
+
+.react-modal-button-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--Black);
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 15px;
+  border: 1px solid var(--Border);
+  padding: 6px;
+  font-size: 12px;
+  color: var(--White);
+  border-radius: 6px;
+}
+
+.react-modal-slider {
+  width: 100%;
+  max-width: 750px;
+  background-color: var(--BlackOpacity);
+  position: relative;
+  border-radius: 8px;
+  border: none;
+}
+
+.react-modal-slider:focus{
+  outline: none;
+  }
+
 
 @media(max-width: 900px) {
   .container {

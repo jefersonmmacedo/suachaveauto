@@ -1,4 +1,5 @@
 ﻿import "./propertyUnicBlock.css"
+import slugify from 'react-slugify';
 import { FaBed, FaCar, FaShower } from "react-icons/fa";
 import profile from "../../assets/images/profile.png";
 import km from "../../assets/images/icons/km.png";  
@@ -9,23 +10,53 @@ import {GiGearStickPattern, GiRoad} from 'react-icons/gi';
 import { NewFavorite } from "../NewFavorite/NewFavorite";
 import { NewShareBox } from "../NewShareBox/NewShareBox";
 import { TbRoad } from "react-icons/tb";
+import { useEffect } from "react";
+import { useState } from "react";
+import api from "../../services/api";
 
-export function PropertyUnicBlock({image}) {
-    console.log(image)
+export function PropertyUnicBlock({id, style}) {
+
+    const [autos, setAutos] = useState([]);
+
+    useEffect(() => {
+        async function loadAutos() {
+            await api.get(`/autos/unicauto/${id}`).then((res) => {
+                setAutos(res.data[0])
+                console.log(res.data)
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+        loadAutos()
+    },[id])
+
+    const company = `${autos?.nameCompany}`
+    const nameSlug = slugify(autos?.nameCompany);
+    const titleModel = `${autos?.model}`
+    
     return (
             <div className="PropertyUnicBlock">
-                            <div className="imageSlider">
-                                <a href="/auto">
-                            <img src={image} alt="" />
-                                </a>
-                            </div>
-                    <div className="featured">
-                        <p>Novo</p>
+                    <div className={style === "Emphasis" ? "imageSliderEmphasis": "imageSlider"}>
+                    <a href={`/auto/${autos?.id}`}>
+                    {/* <SliderBox images={autos?.images} idProperty={autos?.id} imageDestaque={autos?.featuredImage}/> */}
+
+                    <img 
+                        src={autos?.featuredImage}
+                        onError={({ currentTarget }) => {
+                            currentTarget.onerror = null; // previne loop
+                            currentTarget.src="https://firebasestorage.googleapis.com/v0/b/suachave-4bcbe.appspot.com/o/default.png?alt=media&token=6b8adb0b-f3ac-40ef-a0fb-7e5408245b03";
+                        }}
+                        alt={autos?.title === "" ? "Imagem propriedade" : autos?.title}
+                        />
+
+                    {/* <img src={imageDefault} alt={autos?.title} /> */}
+                </a>
                     </div>
 
-                            {/* {new Date(property?.created_at).getDate() === new Date().getDate() &&
-                    new Date(property?.created_at).getMonth() === new Date().getMonth() &&
-                    new Date(property?.created_at).getFullYear() === new Date().getFullYear()
+                            {/* {new Date(autos?.created_at).getDate() === new Date().getDate() &&
+                    new Date(autos?.created_at).getMonth() === new Date().getMonth() &&
+                    new Date(autos?.created_at).getFullYear() === new Date().getFullYear()
                     ?
                     <div className="featured">
                         <p>Novo</p>
@@ -34,61 +65,65 @@ export function PropertyUnicBlock({image}) {
                     }  */}
                     <div className="infosPropertyButtons">
                         <div className="status">
-                        <a href={`/imobiliaria/{nameSlug}`}>
+                        <a href={`/agencia/${nameSlug}`}>
                             <div className="image">
-                                <img src="{property?.avatarCompany}" alt="{property?.nameCompany}" />
+                                <img src={autos?.avatarCompany} alt={autos?.nameCompany} />
                             </div>
                             </a>
-                            <a href={`/imobiliaria/{nameSlug}`}>
-                            {/* <p>{company !== undefined ? company.slice(0,23) : company}</p> */}
-                            <p>Agencia de carros</p>
+                            <a href={`/agencia/${nameSlug}`}>
+                            <p>{company !== undefined ? company.slice(0,23) : company}</p>
                             </a>
                         </div>
                     <div className="infosButtons">
                   
                     <div className="share">
-                    <NewShareBox idProperty="{property?.id}" title="{property?.title}"/>
+                    <NewShareBox idProperty={autos?.id} title={autos?.title}/>
                     </div>
                     <div className="heart2">
-                    <NewFavorite idProperty="{property?.id}" idCompany="{property?.idCompany}" page={"not"}/>
+                    <NewFavorite idProperty={autos?.id} idCompany={autos?.idCompany} page={"not"}/>
                     </div>
                     </div>
                     </div>
                             <div className="text">
                             <div className="textInfos">
-                    <a href={`/imovel/{property?.id}`}>
-                    <h4>VOLKSWAGEN <span>GOLF</span></h4>
+                    <a href={`/auto/${autos?.id}`}>
+                    <h4>{autos?.brand}  <span>{titleModel.slice(0,15)}</span></h4>
                         </a>
                     {/* <h5>{StatusProperty}</h5> */}
-                    <h6>2.0 TSI GTI 16V TURBO GASOLINA 4P AUTOMÁTICO</h6>
-                    <h6><IoLocationOutline />Centro - Rio Bonito - RJ</h6>
+                    <h6>{autos?.version}</h6>
                     </div>
 
                             <div className="iconsBox">
-                            <div className="iconUnicBox">
-                                    
+
+                            {autos?.year === "" && autos?.yearModel === ""? "" :
+                                <div className="iconUnicBox">
                                         <IoCalendarOutline />
                                     <div className="simbolBox">
-                                        <p>2014/2015</p>
+                                    <p>{autos?.year}/{autos?.yearModel}</p>
                                     </div>
-                                    </div>                        
-                            <div className="iconUnicBox">
-                                    
+                                </div>
+                            }
+                            {autos?.mileage === "" ? "" :
+                                <div className="iconUnicBox">
                                         <TbRoad />
                                     <div className="simbolBox">
-                                        <p>194.000 Km</p>
+                                    <p>{autos?.mileage} Km</p>
                                     </div>
                                 </div>
+                            }
+                            {autos?.march === "" ? "" :
                                 <div className="iconUnicBox">
-                                    
-                                    <GiGearStickPattern />
+                                        <GiGearStickPattern />
                                     <div className="simbolBox">
-                                        <p>Automático</p>
+                                    <p>{autos?.march}</p>
                                     </div>
                                 </div>
+                            }
+
                             </div>
                             <div className="pricing">
-                                <h3>R$ <span>139.000,00</span></h3>
+                                <h6>{autos?.city} - {autos?.uf}</h6>
+                                <h4>R$ <span>{autos?.value}</span></h4>
                             </div>
                             </div>
             </div>

@@ -75,136 +75,98 @@ export function BrandCarroussel() {
             <Slide slidesToScroll={3} slidesToShow={3} autoplay={false} indicators={true} {...properties} responsive={responsiveSettings}>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={volkswagen} alt="" />
-                        </a>
                     </div>
                 </div>
                 
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={fiat} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={ford} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={chevrolet} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={peugeot} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={hondamoto} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={hyundai} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={toyota} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={citroen} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={honda} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={jeep} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={nissan} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={audi} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={volvo} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={kia} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={scania} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={tesla} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={bmw} alt="" />
-                        </a>
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                        <a href="/imovel">
                     <img src={mini} alt="" />
-                        </a>
                     </div>
                 </div>
 

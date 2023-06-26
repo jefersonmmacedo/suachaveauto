@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh; 
-    background-image: url("../../assets/images/backgroundCar.jpg"); /* The image used */
+    background-image: url("../../assets/images/backgroundCar2.jpg"); /* The image used */
     background-color: #cccccc; /* Used if the image is unavailable */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -18,11 +18,12 @@
     align-items: center;
     justify-content: center;
     height: 100%; 
-    background: linear-gradient(148deg, rgba(0,0,0,0.6) 50%, rgba(237,50,55,0.6) 100%);
+    background: rgba(0,0,0,0.7);
     backdrop-filter: blur(3px);
     padding: 10px;
-    border-bottom: 1px solid var(--Border);
+    border-bottom: 2px solid var(--Border);
   }
+  /* background: linear-gradient(148deg, rgba(0,0,0,0.7) 50%, rgba(237,50,55,0.7) 100%); */
 .TopHeadHomeV3 .blockTop .SearchText{
     width: 1000px;
     display: flex;

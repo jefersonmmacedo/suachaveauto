@@ -12,8 +12,19 @@ import 'react-slideshow-image/dist/styles.css';
 import km from "../../assets/images/icons/km.png";  
 import marcha2 from "../../assets/images/icons/marcha2.png";  
 import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
+import { useFetch } from "../../hooks/useFetch";
 
 export function PropertyCarroussel() {
+
+    const {data} = useFetch(`/autos/typecar/${"Carros"}`);
+
+    if(!data) {
+        return (
+            <div className="loader">
+<h6>Carregando</h6>
+            </div>
+        )
+    }
     const buttonStyle = {
         display:'none'
     };
@@ -57,18 +68,11 @@ export function PropertyCarroussel() {
     return (
         <div>
             <Slide slidesToScroll={3} slidesToShow={3} indicators={true} {...properties} responsive={responsiveSettings}>
-            <PropertyUnicBlock image={ImageHouse}/>
-            <PropertyUnicBlock image={ImageHouse1}/>
-            <PropertyUnicBlock image={ImageHouse2}/>
-            <PropertyUnicBlock image={ImageHouse3}/>
-            <PropertyUnicBlock image={ImageHouse4}/>
-            <PropertyUnicBlock image={ImageHouse5}/>
-            <PropertyUnicBlock image={ImageHouse}/>
-            <PropertyUnicBlock image={ImageHouse1}/>
-            <PropertyUnicBlock image={ImageHouse2}/>
-            <PropertyUnicBlock image={ImageHouse3}/>
-            <PropertyUnicBlock image={ImageHouse4}/>
-            <PropertyUnicBlock image={ImageHouse5}/>
+                {data?.map((auto) => {
+                    return (
+                        <PropertyUnicBlock id={auto.id}/>
+                    )
+                })}
             </Slide>
         </div>
     )

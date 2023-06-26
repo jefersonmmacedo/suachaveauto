@@ -16,11 +16,11 @@ import { Autos } from '../pages/Autos/Autos';
 import { About } from '../pages/About/About';
 import { Companies } from '../pages/Companies/Companies';
 import { Brokers } from '../pages/Brokers/Brokers';
-import { Company } from '../pages/Company/Company';
 import { Schedules } from '../pages/Schedules/Schedules';
 import { MessagesAutos } from '../pages/MessagesAutos/MessagesAutos';
 import { Simulator } from '../pages/Simulator/Simulator';
 import { SignInCompany } from '../pages/SignInCompany/SignInCompany';
+import { Company } from '../pages/Company/Company';
 import { MyAccount } from '../pages/MyAccount/MyAccount';
 import { Scheduling } from '../pages/Scheduling/Scheduling';
 import { ComingSoon } from '../pages/CommingSoom/ComingSoon';
@@ -55,9 +55,9 @@ function PrivateRoute({children} ) {
             <Route path="/trator/:status" element={<Properties />}/>
             <Route path="/privacidade" element={<PrivacyPolicy />}/>
             <Route path="/termos" element={<TermsOfUse />}/>
-            <Route path="/auto" element={<Autos />}/>
+            <Route path="/auto/:id" element={<Autos />}/>
             <Route path="/agencias" element={<Companies />}/>
-            <Route path="/agencia" element={<Company />}/>
+            <Route path="/agencia/:nameSlug" element={<Company />}/>
             <Route path="/consultores" element={<Brokers />}/>
             <Route path="/financiamento" element={<Simulator />}/>
             <Route path="/sobre" element={<About />}/>
