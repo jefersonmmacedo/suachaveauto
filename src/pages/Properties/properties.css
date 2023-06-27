@@ -11,10 +11,10 @@
 .Properties .listPage {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding:60px 20px;
+    padding:20px 0px;
 }
 
 
@@ -38,14 +38,165 @@
     width: 40px;
     height: 40px;
     position: fixed;
-    top: 650px;
+    bottom: 25px;
     right: 25px;
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    z-index: 90;
   }
+
+  .Properties .listPage .ListProperty {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Properties .listPage .ListProperty .topList {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+
+.Properties .listPage .ListProperty .topList .textItens {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.Properties .listPage .ListProperty .MainAbout{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.Properties .listPage .ListProperty .sentinela{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-itens: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.Properties .listPage .ListProperty .sentinela .itens {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.Properties .listPage .ListProperty .MainAbout img {
+    width: 550px;
+    margin: 40px auto;
+}
+
+.Properties .listPage .ListProperty .MainAbout h3 {
+    font-weight: 600;
+    text-align: center;
+    color: var(--Paragraph);
+    margin: 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .Properties .listPage .ListProperty .MainAbout img {
+        width: 60%;
+        margin: 40px auto 0 auto;
+    }
+
+    .Properties .listPage .ListProperty .MainAbout h3 {
+        margin: 40px;
+    }
+    
+
+    @media (max-width: 550px) {
+        .Properties .listPage .ListProperty .MainAbout img {
+            width: 70%;
+        }
+    }
+}
+
+
+
+
+
+.Properties .listPage .ListProperty .itens {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+@media (max-width: 980px) {
+
+    .Properties .listPage .ListProperty {
+        width: 100%;
+    }
+    .Properties .listPage .ListProperty .itens {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+
+@media (max-width: 670px) {
+
+
+@media (max-width: 600px) {
+    .Properties .listPage .ListProperty .itens {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+@media (max-width: 450px) {
+    .Properties .listPage .ListProperty .topList .textItens{
+        margin: 10px 0;
+    }
+
+    .Properties .listPage .ListProperty {
+    width: 100%;
+    margin-top: 0px;
+}
+
+
+}
+}
+}
+}
 
 @media (max-width: 880px)  {
     .Properties .listPage {
-        padding:60px 1px;
+        padding:40px 0px;
 }
 
 .Properties .listPage .topScroll {
@@ -57,7 +208,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding:30px 10px;
+        padding:10px 0;
     }
 
     .Properties .listPage .SearchView {
@@ -91,6 +242,17 @@
     .Properties .listPage .ButtomView button svg {
         margin-right: 5px;
         font-size: 16px;
+    }
+
+    @media (max-width: 550px) {
+        .Properties .listPage .ListProperty .topList {
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
     }
 }
 }

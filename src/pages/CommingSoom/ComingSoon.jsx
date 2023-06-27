@@ -1,25 +1,20 @@
 ﻿import "./comingSoon.css"
 import Logo from "../../assets/images/Logo2.png";
-import Notebook from "../../assets/images/Laptop.png";
 
 export function ComingSoon() {
     return(
         <div className="ComingSoon">
-            <div className="logo">
-              <img src={Logo} alt="Logo sua chave" />
-            </div>
-            
-            <h1>Encontre carros, motos e <br />agências em poucos cliques!</h1>
-
-            <img src={Notebook} alt="Notebook" />
-
-
-            <div className="coming">
-            <h4>Lançamento em 2023</h4>
-            </div>
-            
-
+            <div className="blockComing">
+                <div className="logo">
+                <img src={Logo} alt="Logo sua chave" />
+                </div>
                 
+                <h1>Encontre carros, motos e outros veículos em poucos cliques!</h1>
+
+                <div className="coming">
+                <h4>Lançamento em Julho de 2023</h4>
+                </div>
+            </div>
         </div>
     )
 }

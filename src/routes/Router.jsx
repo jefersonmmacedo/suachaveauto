@@ -41,18 +41,14 @@ function PrivateRoute({children} ) {
             <Routes>
             {/* Rotas abertas */}
             <Route path="*" element={<NotFound />}/>
-            <Route path="/home" element={<ComingSoon />}/>
-            <Route path="/" element={<Home />}/>
+            <Route path="/" element={<ComingSoon />}/>
+            <Route path="/home" element={<Home />}/>
             <Route path="/entrar" element={<SignIn />}/>
             <Route path="/entrar-empresa" element={<SignInCompany />}/>
             <Route path="/cadastrar" element={<ChooseYourAccount />}/>
             <Route path="/cadastro-profissional" element={<SignUpProfessional />}/>
             <Route path="/cadastro-cliente" element={<SignUpClient />}/>
-            <Route path="/carro/:status" element={<Properties />}/>
-            <Route path="/moto/:status" element={<Properties />}/>
-            <Route path="/caminhao/:status" element={<Properties />}/>
-            <Route path="/onibus/:status" element={<Properties />}/>
-            <Route path="/trator/:status" element={<Properties />}/>
+            <Route path="/autos" element={<Properties />}/>
             <Route path="/privacidade" element={<PrivacyPolicy />}/>
             <Route path="/termos" element={<TermsOfUse />}/>
             <Route path="/auto/:id" element={<Autos />}/>

@@ -1,19 +1,23 @@
 import { useState } from "react";
 import { IoClose, IoSearchOutline } from "react-icons/io5";
 import { TbBone, TbSofa } from "react-icons/tb";
+import { IoCarSport, IoCloseOutline, IoSearch } from "react-icons/io5";
+import { FaBusAlt, FaMotorcycle, FaTruckMoving } from "react-icons/fa";
+import { HiTruck } from "react-icons/hi";
+import { MdElectricCar } from "react-icons/md";
 import { useFetch } from "../../hooks/useFetch";
 import "./filterPropertiesList.css"
 import { useEffect } from "react";
 import api from "../../services/api";
 
-export function FilterPropertiesList({status, typeProperty, subTypeProperty, district, city, uf, quarto, banheiro, suítes, garagem}) {
-    console.log({status, district, city, uf, quarto, banheiro, suítes, garagem})
+export function FilterPropertiesList({status, typeProperty, brandAuto, modelAuto, district, city, uf, quarto, banheiro, suítes, doorsAuto}) {
+    console.log({status, district, city, uf, quarto, banheiro, suítes, doorsAuto})
     const [filter, setFilter] = useState(false);
     const [data, setData] = useState([]);
     const [type, setType] = useState(typeProperty === "" ? "" : typeProperty);
-    const [subType, setSubType] = useState(subTypeProperty === "" ? "" : subTypeProperty);
-    const [bedroom, setBedroom] = useState(quarto === "0" ? "0" : quarto);
-    const [garage, setGarage] = useState(garagem === "0" ? "0" : garagem);
+    const [brand, setBrand] = useState(brandAuto === "" ? "" : brandAuto);
+    const [model, setModel] = useState(modelAuto === "" ? "" : modelAuto);
+    const [doors, setDoors] = useState(doorsAuto === "0" ? "0" : doorsAuto);
     const [suite, setSuite] = useState(suítes === "0" ? "0" : suítes);
     const [restroom, setRestroom] = useState(banheiro === "0" ? "0" : banheiro);
     const [statusProperty, setStatusProperty] = useState(status);
@@ -25,17 +29,15 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
     console.log({city, uf, district});
     const [AdressSelected, setAdressSelected] = useState(city !== null && district === null ? `${city} - ${uf}` : city !== null && district !== null ? `${district} - ${city} - ${uf}` :  "");
     const dataAdress = AdressSelected.split(" - ");
-  //  console.log(dataAdress);
     const districtNew = dataAdress.length === 3 ? dataAdress[0] : ""
     const cityNew = dataAdress.length === 3 ? dataAdress[1] : dataAdress[0]
     const ufNew = dataAdress.length === 3 ? dataAdress[2] : dataAdress.length !== 3 ? dataAdress[1] : ""
 
-   // console.log({districtNew, cityNew, ufNew})
 
     const availability = "Disponível";
     useEffect(() => {
         async function loadProperty() {
-            await api.get(`/property/AllProperties/${availability}`).then((res) => {
+            await api.get(`/autos/allcars/${availability}`).then((res) => {
                 setData(res.data);
             }).catch((error) => {
                 console.log(error)
@@ -46,32 +48,23 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
     }, [])
 
 
-    var districtList = [];
-    var subTypeList = [];
+
+    var brandModel = [];
+
 
     data?.forEach((item) => {
-        var duplicated  = districtList.findIndex(redItem => {
-            return item.district === redItem.district && item.city === redItem.city;
+        var duplicated  = brandModel.findIndex(redItem => {
+            return item.brand === redItem.brand && item.model === redItem.model;
         }) > -1;
     
         if(!duplicated) {
-            districtList.push(item);
+            brandModel.push(item);
         }
     });
 
-    data?.forEach((item) => {
-        var duplicated  = subTypeList.findIndex(redItem => {
-            return item.type === redItem.type && item.subType === redItem.subType;
-        }) > -1;
-    
-        if(!duplicated) {
-            subTypeList.push(item);
-        }
-    });
-
-    if(districtList) {
-        districtList.sort(function(a,b) {
-            if(a.uf < b.uf ) {
+    if(brandModel) {
+        brandModel.sort(function(a,b) {
+            if(a.brand < b.brand ) {
                 return -1
             } else {
                 return true
@@ -79,23 +72,16 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
         })
         }
 
-        if(subTypeList) {
-            subTypeList.sort(function(a,b) {
-                if(a.uf < b.uf ) {
-                    return -1
-                } else {
-                    return true
-                }
-            })
-            }
+  
+        const searchFilter = brandModel?.filter((cars) => cars.brand.toLowerCase().includes(searchLower)
+                                                            || cars.model.toLowerCase().includes(searchLower))
 
+        console.log("searchFilter")
+        console.log(searchFilter)
 
-            const searchFilter = districtList?.filter((address) => address.district.toLowerCase().includes(searchLower)
-                                                                || address.city.toLowerCase().includes(searchLower)
-                                                                || address.uf.toLowerCase().includes(searchLower))
-
-        function handleSelectAddress(data) {
-            setAdressSelected(data)
+        function handleSelectAddress(brand, model) {
+            setBrand(brand)
+            setModel(model)
             console.log(data)    
           }
     
@@ -108,7 +94,7 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
 
     function handleNewSearchProperty(e) {
         e.preventDefault();
-        window.open(`/imoveis/${statusProperty}?uf=${ufNew === undefined ? "" : ufNew}&city=${cityNew}&district=${districtNew}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}`,"_self");
+        //window.open(`/imoveis/${statusProperty}?uf=${ufNew === undefined ? "" : ufNew}&city=${cityNew}&district=${districtNew}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}`,"_self");
       //  window.open(`/imoveis/${statusProperty}?uf=${ufNew === undefined ? "" : ufNew}&city=${cityNew}&district=${districtNew}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}&pets=${pets}&furnished=${furnished}`,"_self");
     }
 
@@ -136,15 +122,11 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
     // }
     function handleType(e) {
         setType(e.target.value)
-        setSubType("")
         console.log(e.target.value)
     }
-    function handleSubType(e) {
-        setSubType(e.target.value)
-        console.log(e.target.value)
-    }
-    function handleBedroom(e) {
-        setBedroom(e.target.value)
+
+    function handleDoors(e) {
+        setDoors(e.target.value)
         console.log(e.target.value)
     }
     function handleRestroom(e) {
@@ -155,25 +137,19 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
         setSuite(e.target.value)
         console.log(e.target.value)
     }
-    function handleGarage(e) {
-        setGarage(e.target.value)
-        console.log(e.target.value)
-    }
+
 
     function handleClearItens(e) {
         e.preventDefault();
         setStatusProperty(status)
         setType("")
-        setSubType("")
-        setBedroom("0")
         setSuite("0")
         setRestroom("0")
-        setGarage("0")
     }
 
     function handleClearAdress() {
-        setAdressSelected("")
-        setSearch("")
+        setBrand("")
+        setModel("")
       }
     
 
@@ -189,27 +165,31 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
             <div className="dataSearchOptions">
             
             <div className="dataSelectsButtons">
-             <button className={statusSelected === "Aluguel" ? "" : "btn"} onClick={() => handleNewStatus("Aluguel")}>Para Alugar</button>
-             <button className={statusSelected === "Venda" ? "" : "btn"} onClick={() => handleNewStatus("Venda")}>À venda</button>
+            <button className={statusSelected === "Carros" ? "" : "btn"} onClick={() => handleNewStatus("Carros")}> <IoCarSport /> </button>
+            <button className={statusSelected === "Motos" ? "" : "btn"} onClick={() => handleNewStatus("Motos")}> <FaMotorcycle /> </button>
+            <button className={statusSelected === "Utilitários" ? "" : "btn"} onClick={() => handleNewStatus("Utilitários")}> <HiTruck />  </button>
+            <button className={statusSelected === "Caminhões" ? "" : "btn"} onClick={() => handleNewStatus("Caminhões")}> <FaTruckMoving />  </button>
+            <button className={statusSelected === "Onibus" ? "" : "btn"} onClick={() => handleNewStatus("Onibus")}> <FaBusAlt />  </button>
+            <button className={statusSelected === "Eletricos" ? "" : "btn"} onClick={() => handleNewStatus("Eletricos")}> <MdElectricCar />  </button>
              </div>
              
             
              <div className="dataSelects2">
                 <div className="search">
-             <input type="text" placeholder="Digite bairro, cidade ou estado" value={AdressSelected === "" ? search : AdressSelected} onChange={e => setSearch(e.target.value)} />
-                    {AdressSelected === "" ? "" :
+             <input type="text" placeholder="Digite bairro, cidade ou estado" value={brand === "" ? search : `${brand} - ${model}`} onChange={e => setSearch(e.target.value)} />
+                    {brand === "" ? "" :
                     <button onClick={handleClearAdress} className="btnClear"><IoClose /></button>
                     }
                 </div>
 
-                    {search === "" || searchFilter.length === 0 || AdressSelected !== "" ? "" :
+                    {search === "" || searchFilter.length === 0 || brand !== "" ? "" :
                         <div className="search3">
                             <div className="listAdress">
-                                {searchFilter.map((adress) => {
-                                    return (
-                                        <h6 key={adress.id} onClick={() => handleSelectAddress(`${adress.district} - ${adress.city} - ${adress.uf}`)}>{adress.district} - {adress.city} - {adress.uf}</h6>
-                                    )
-                                })}      
+                            {searchFilter.map((autos) => {
+                                            return (
+                                                <h6 key={autos.id} onClick={() => handleSelectAddress(autos.brand, autos.model)}>{autos.brand} - {autos.model}</h6>
+                                            )
+                                        })}     
                             </div>
                         </div>
                     }
@@ -227,39 +207,22 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
             </select>
             </div>
              
-             <div className="dataSelects">
-             <h4>Subtipo:</h4>
-             <select value={subType} onChange={handleSubType} className={subType === "" ? "" : "select"}>
-                       {type === "" ?
-                       <option value="">Escolha o tipo de imóvel</option>
-                       :
-                       <>
-                        <option value="">Selecione</option>
-                        {subTypeList.map((list) => {
-                            return (
-                                list.type !== type ? "" :
-                                <option value={list.subType}>{list.subType}</option>
-                            )
-                        })}
-                       </>
-                        }
-                    </select>
-            </div>
+         
             
             <div className="dataSelects">
-                <h4>Quartos: </h4>
-            <select value={bedroom} onChange={handleBedroom} className={bedroom === "0" ? "" : "select"}>
-                <option value="0">Quartos</option>
-                <option value="1">1 ou + Quartos</option>
-                <option value="2">2 ou + Quartos</option>
-                <option value="3">3 ou + Quartos</option>
-                <option value="4">4 ou + Quartos</option>
-                <option value="5">5 ou + Quartos</option>
-                <option value="6">6 ou + Quartos</option>
-                <option value="7">7 ou + Quartos</option>
-                <option value="8">8 ou + Quartos</option>
-                <option value="9">9 ou + Quartos</option>
-                <option value="10">10 ou + Quartos</option>
+                <h4>Portas: </h4>
+            <select value={doors} onChange={handleDoors} className={doors === "0" ? "" : "select"}>
+                <option value="0">Portas</option>
+                <option value="1">1 ou + Portas</option>
+                <option value="2">2 ou + Portas</option>
+                <option value="3">3 ou + Portas</option>
+                <option value="4">4 ou + Portas</option>
+                <option value="5">5 ou + Portas</option>
+                <option value="6">6 ou + Portas</option>
+                <option value="7">7 ou + Portas</option>
+                <option value="8">8 ou + Portas</option>
+                <option value="9">9 ou + Portas</option>
+                <option value="10">10 ou + Portas</option>
             </select>
             </div>
 
@@ -296,24 +259,7 @@ export function FilterPropertiesList({status, typeProperty, subTypeProperty, dis
                 <option value="10">10 ou + Banheiros</option>
             </select>
             </div>
-                               
-            <div className="dataSelects">
-            <h4>Garagem: </h4>
-            <select value={garage} onChange={handleGarage} className={garage === "0" ? "" : "select"}>
-                <option value="0">Vagas de garagem</option>
-                <option value="1">1 ou + Vagas de garagem</option>
-                <option value="2">2 ou + Vagas de garagem</option>
-                <option value="3">3 ou + Vagas de garagem</option>
-                <option value="4">4 ou + Vagas de garagem</option>
-                <option value="5">5 ou + Vagas de garagem</option>
-                <option value="6">6 ou + Vagas de garagem</option>
-                <option value="7">7 ou + Vagas de garagem</option>
-                <option value="8">8 ou + Vagas de garagem</option>
-                <option value="9">9 ou + Vagas de garagem</option>
-                <option value="10">10 ou + Vagas de garagem</option>
-            </select>
-            </div>
-            
+
     
             {/* <div className="dataSelectsButtons">
              <button className={pets === "sim" ? "" : "btn"} onClick={handleNewPets}><TbBone />Aceita Pets</button>

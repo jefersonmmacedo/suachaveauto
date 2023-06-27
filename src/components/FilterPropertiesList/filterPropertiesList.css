@@ -286,9 +286,13 @@
     border: 1px solid var(--Primary);
     border-radius: 30px;
     color: var(--Primary);
-    font-size: 14px;
-    width: 50%;
+    font-size: 16px;
+    /* width: 50%; */
     margin: 5px;
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons button svg {
+    margin: 0px;
 }
 .FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelectsButtons .btn {
     background-color: var(--White);
@@ -300,8 +304,8 @@
     border: 1px solid var(--Gray2);
     border-radius: 30px;
     color: var(--Paragraph);
-    font-size: 14px;
-    width: 50%;
+    font-size: 16px;
+    /* width: 50%; */
     margin: 5px;
 }
 .FilterPropertiesList .searchItens .searchOptions .dataSearchOptions .dataSelectsButtonsAction {
