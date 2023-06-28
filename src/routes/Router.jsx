@@ -28,6 +28,7 @@ import { Checkout } from '../pages/Checkout/Checkout';
 import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
 import { Contact } from '../pages/Contact/Contact';
 import { Faq } from '../pages/Faq/Faq';
+import { Announce } from '../pages/Announce/Announce';
 
 function Router () {
 const Local = localStorage.getItem("suachaveauto");
@@ -41,8 +42,8 @@ function PrivateRoute({children} ) {
             <Routes>
             {/* Rotas abertas */}
             <Route path="*" element={<NotFound />}/>
-            <Route path="/" element={<ComingSoon />}/>
-            <Route path="/home" element={<Home />}/>
+            <Route path="/home" element={<ComingSoon />}/>
+            <Route path="/" element={<Home />}/>
             <Route path="/entrar" element={<SignIn />}/>
             <Route path="/entrar-empresa" element={<SignInCompany />}/>
             <Route path="/cadastrar" element={<ChooseYourAccount />}/>
@@ -57,6 +58,7 @@ function PrivateRoute({children} ) {
             <Route path="/consultores" element={<Brokers />}/>
             <Route path="/financiamento" element={<Simulator />}/>
             <Route path="/sobre" element={<About />}/>
+            <Route path="/anunciar" element={<Announce />}/>
             <Route path="/planos" element={<Pricing />}/>
             <Route path="/faleconosco" element={<Contact />}/>
             <Route path="/faq" element={<Faq />}/>

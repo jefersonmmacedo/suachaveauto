@@ -151,24 +151,32 @@ export function Home() {
             <BrandCarroussel />
             </div>
             <div className="textFeature">
-            <h3>Recomendados para você</h3>
+            <h3>Carros mais recentes</h3>
 
-            <div className="buttonsAutos">
+            {/* <div className="buttonsAutos">
             <button onClick={() => handleTypeCar("Carros")}> <IoCarSport /> </button>
             <button onClick={() => handleTypeCar("Motos")}> <FaMotorcycle /> </button>
             <button onClick={() => handleTypeCar("Utilitários")}> <HiTruck />  </button>
             <button onClick={() => handleTypeCar("Caminhões")}> <FaTruckMoving />  </button>
             <button onClick={() => handleTypeCar("Onibus")}> <FaBusAlt />  </button>
             <button onClick={() => handleTypeCar("Eletricos")}> <MdElectricCar />  </button>
-                </div>   
+                </div>    */}
             </div>
             <div className="carroussel">
-            <PropertyCarroussel type={typeCar}/>
+            <PropertyCarroussel type={"Carros"}/>
             </div>
+            <div className="textFeature">
+            <h3>Motos mais recentes</h3>
+            </div>
+            <div className="carroussel">
+            <PropertyCarroussel type={"Motos"}/>
+            </div>
+
+            {/*
             <div className="textFeature2">
             <h3>Modelos</h3>
           </div>
-            <AutosModel type={typeCar}/>
+             <AutosModel type={typeCar}/> */}
 
             <div className="textFeature2">
             <h3>Mais procurados</h3>

@@ -163,6 +163,11 @@ const RightNav = ({ open }) => {
             </Link>
           </li>
           <li className='nav-item'>
+            <Link to='/anunciar' >
+            Para agências
+            </Link>
+          </li>
+          <li className='nav-item'>
             <Link to='/financiamento' >
             Financiamento
             </Link>
