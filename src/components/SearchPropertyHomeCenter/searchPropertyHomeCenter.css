@@ -138,6 +138,7 @@
     background-color: var(--Border);
     padding: 3px;
     color: var(--Gray2);
+    margin: 0 10px;
 }
 
 
@@ -175,10 +176,9 @@
     width: 98%;
     margin: 3px;
     padding: 5px 10px;
-    background-color: var(--BorderHover);
     font-size: 14px;
     border-radius: 20px;
-    color: var(--Gray2);
+    color: var(--Paragraph);
     font-weight: 700;
     cursor: pointer;
 }
@@ -565,10 +565,9 @@
                 width: 95%;
                 margin: 3px;
                 padding: 5px 10px;
-                background-color: var(--BorderHover);
                 font-size: 14px;
                 border-radius: 20px;
-                color: var(--Gray2);
+                color: var(--Paragraph);
                 font-weight: 700;
                 cursor: pointer;
             }

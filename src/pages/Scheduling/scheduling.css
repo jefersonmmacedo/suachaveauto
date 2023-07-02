@@ -15,7 +15,7 @@
     align-items: flex-start;
     justify-content: center;
 }
-.Scheduling .main .text {
+.Scheduling .main .textScheduling {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@
     flex-direction: column;
     margin: 10px;
 }
-.Scheduling .main .SchedulingProperty h2 {
+.Scheduling .main .SchedulingProperty .h2 {
         margin-bottom: 5px;
         font-weight: bold;
         text-align: center;
@@ -47,7 +47,7 @@
         flex-direction: row;
     }
 
-    .Scheduling .main .SchedulingProperty h2 svg {
+    .Scheduling .main .SchedulingProperty .h2 svg {
         margin-right: 5px;
       }
 
@@ -59,7 +59,7 @@
     flex-direction: row;
     margin-bottom: 10px;
     }
-.Scheduling .main .SchedulingProperty .textDataHours h5 {
+.Scheduling .main .SchedulingProperty .textDataHours .h5 {
         margin: 5px;
         font-weight: bold;
         text-align: left;
@@ -71,7 +71,7 @@
         flex-wrap: wrap;
     }
 
-    .Scheduling .main .SchedulingProperty .textDataHours h5 svg {
+    .Scheduling .main .SchedulingProperty .textDataHours .h5 svg {
         margin-right: 5px;
       }
 
@@ -86,7 +86,7 @@
     border-radius: 6px;
     padding: 5px;
     }
-.Scheduling .main .SchedulingProperty .dataInfos .infoUnicScheduling p {
+.Scheduling .main .SchedulingProperty .dataInfos .infoUnicScheduling .p {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -98,14 +98,14 @@
     }
 
 
-.Scheduling .main .SchedulingProperty h4 {
+.Scheduling .main .SchedulingProperty .h4 {
         margin-top: 15px;
         font-weight: bold;
         text-align: center;
         color: var(--Description);
     }
 .Scheduling .main .SchedulingProperty .listPropertiesScheduling {
-    width: 100%;
+    width: 400px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -114,62 +114,6 @@
     }
 
 
-.Scheduling .main .SchedulingProperty .property{
-    border-radius: 10px;
-    background-color: var(--BorderInput);
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    margin: 10px;
-}
-.Scheduling .main .SchedulingProperty .property .image{
-    border-radius: 10px;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;    
-}
-.Scheduling .main .SchedulingProperty .property .image img{
-    border-radius: 10px;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;    
-}
-
-
-.Scheduling .main .SchedulingProperty .textProperty{
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    margin: 10px;
-    text-align:left;
-}
-.Scheduling .main .SchedulingProperty .textProperty h3 {
-    color: var(--Primary);
-    font-weight: 900;
-    margin: 0 10px;
-    text-align:left;
-  }
-
-  .Scheduling .main .SchedulingProperty .textProperty h5 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    color: var(--Paragraph);
-    margin: 3px 8px;
-    text-align:left;
-    font-weight: 700;
-  }
-
-  .Scheduling .main .SchedulingProperty .textProperty h6 {
-    color: var(--Gray);
-    margin: 5px 10px 0 10px;
-    text-align:left;
-    font-weight: 700;
-  }
 
 @media (max-width: 800px) {
     .Scheduling .main .SchedulingProperty{

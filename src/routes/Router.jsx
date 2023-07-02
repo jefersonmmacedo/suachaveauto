@@ -10,12 +10,10 @@ import { SignUpClient } from '../pages/SignUpClient/SignUpClient';
 import { SignUpProfessional } from '../pages/SignUpProfessional/SignUpProfessional';
 import { PrivacyPolicy } from '../pages/PrivacyPolicy/PrivacyPolicy';
 import { TermsOfUse } from '../pages/TermsOfUse/TermsOfUse';
-import { Message } from '../pages/Message/Message';
 import { Properties } from '../pages/Properties/Properties';
 import { Autos } from '../pages/Autos/Autos';
 import { About } from '../pages/About/About';
 import { Companies } from '../pages/Companies/Companies';
-import { Brokers } from '../pages/Brokers/Brokers';
 import { Schedules } from '../pages/Schedules/Schedules';
 import { MessagesAutos } from '../pages/MessagesAutos/MessagesAutos';
 import { Simulator } from '../pages/Simulator/Simulator';
@@ -29,6 +27,12 @@ import { PaymentCompleted } from '../pages/PaymentCompleted/PaymentCompleted';
 import { Contact } from '../pages/Contact/Contact';
 import { Faq } from '../pages/Faq/Faq';
 import { Announce } from '../pages/Announce/Announce';
+import { FipeCar } from '../pages/FipeCar/FipeCar';
+import { FipeCarData } from '../pages/FipeCarData/FipeCarData';
+import { ConfirmedAccount } from '../pages/ConfirmedAccount/ConfirmedAccount';
+import { ChatMessage } from '../pages/ChatMessage/ChatMessage';
+import { Negociations } from '../pages/Negociations/Negociations';
+import { UpdateAccount } from '../pages/UpdateAccount/UpdateAccount';
 
 function Router () {
 const Local = localStorage.getItem("suachaveauto");
@@ -55,35 +59,39 @@ function PrivateRoute({children} ) {
             <Route path="/auto/:id" element={<Autos />}/>
             <Route path="/agencias" element={<Companies />}/>
             <Route path="/agencia/:nameSlug" element={<Company />}/>
-            <Route path="/consultores" element={<Brokers />}/>
+            <Route path="/consultar" element={<FipeCar />}/>
+            <Route path="/consulta-placa/:placa" element={<FipeCarData />}/>
             <Route path="/financiamento" element={<Simulator />}/>
             <Route path="/sobre" element={<About />}/>
             <Route path="/anunciar" element={<Announce />}/>
             <Route path="/planos" element={<Pricing />}/>
             <Route path="/faleconosco" element={<Contact />}/>
             <Route path="/faq" element={<Faq />}/>
-            <Route path="/conversa" element={<Message />}/>
+            <Route path="/confirmacao" element={<ConfirmedAccount />}/>
             
-            /* Rotas fechadas/login */
-            <Route path="/minhaconta"
+            /* Rotas fechadas/login */           
+           <Route path="/minhaconta"
                     element={ <PrivateRoute> <MyAccount /> </PrivateRoute>} />
+            <Route path="/meusdados"
+                    element={ <PrivateRoute> <UpdateAccount /> </PrivateRoute>} />
             <Route path="/mensagens"
                     element={ <PrivateRoute> <MessagesAutos /> </PrivateRoute>} />
+            <Route path="/chat/:room/:idAuto/:idCompany/:idClient"
+                    element={ <PrivateRoute> <ChatMessage /> </PrivateRoute>} />
             <Route path="/favoritos"
                     element={ <PrivateRoute> <Favorites /> </PrivateRoute>} />
             <Route path="/notificacoes"
                     element={ <PrivateRoute> <Notifications /> </PrivateRoute>} />
+            <Route path="/meusimoveis"
+                    element={ <PrivateRoute> <Negociations /> </PrivateRoute>} />
             <Route path="/agendamentos"
                     element={ <PrivateRoute> <Schedules /> </PrivateRoute>} />
-            <Route path="agendamento/unico"
+            <Route path="/agendamento/:id"
                     element={ <PrivateRoute> <Scheduling /> </PrivateRoute>} />
-         
-            <Route path="/plano"
+            <Route path="/plano/:id"
                     element={ <PrivateRoute> <Checkout /> </PrivateRoute>} />
-          
             <Route path="/pagamentofinalizado"
                     element={ <PrivateRoute> <PaymentCompleted /> </PrivateRoute>} />
-           
             </Routes>
            
     )

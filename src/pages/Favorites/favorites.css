@@ -16,9 +16,9 @@
     align-items: flex-start;
     justify-content: center;
 }
-.Favorites .main .text {
+.Favorites .main .aside {
     width: 80%;
-    padding: 20px 40px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,42 +27,72 @@
     margin: 10px;
 }
 
-.Favorites .main .text h2 {
+.Favorites .main .aside .textTop {
+    width: 90%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    fle-wrap: wrap;
+}
+
+.Favorites .main .aside .textTop h3 {
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.Favorites .main .aside .textTop button {
+    border: none;
+    color: var(--ButtonDisabled);
+    background-color: var(--White);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.Favorites .main .aside .textTop button svg {
+    margin-right: 3px;
+    font-weight: bold;
+}
+
+
+.Favorites .main .aside h2 {
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
 }
 
-.Favorites .main .text h3 {
-    font-weight: 700;
-    color: var(--Paragraph);
-    text-align: center;
-}
-.Favorites .main .text h3 svg{
-    font-size: 45px;
-    font-weight: 900;
-    color: var(--Primary)
-}
-.Favorites .main .text a{
-    border-radius: 6px;
-    background-color: var(--Primary);
-    color: var(--White);
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin: 20px 0;
-}
+.viewFooter {
+    width: 100%;
+ }
+
 
 @media (max-width: 700px) {
     .Favorites .main {
+        width: 100%;
         margin-top: 50px;
+        margin-bottom: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
+        padding: 5px;
+    }
+    .Favorites .main .aside {
+        width: 100%;
+    }
+
+    .Favorites .main .aside .textTop {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .viewFooter {
+       display: none;
     }
 }

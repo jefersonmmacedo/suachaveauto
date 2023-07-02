@@ -42,7 +42,7 @@ export function Company() {
     
     if(data) {
        async function loadProperties() {
-        await api.get(`property/company/${data[0].id}`).then((res) => {
+        await api.get(`autos/company/${data[0].id}`).then((res) => {
             setProperty(res.data)
         }).catch((error) => {
             console.log(error)
@@ -133,7 +133,6 @@ export function Company() {
                         </div>
                         <div className="textTitle">
                     <h2>{data[0].fantasyName}</h2>
-                    <h5><HiOutlineIdentification /> CRECI: {data[0].creci}</h5>
                     {data[0].viewAddress === false ? "" :
                     <h5><IoLocationOutline /> {data[0].road}, Nº {data[0].number} - {data[0].district} - {data[0].city} - {data[0].uf}</h5>
                     }
@@ -197,36 +196,9 @@ export function Company() {
                 </div>
 
                 <div className="textProperties">
-                     <h3>Veja os imoveis de {data[0].fantasyName}</h3>
+                     <h3>Veja os anúncios de {data[0].fantasyName}</h3>
                 </div>
-                <div className="buttonsProperties">
-                <button className={type === "" ? "select" : ""}  onClick={() => handleSetType("")}>Todos</button>
-                <button className={type === "Residencial" ? "select" : ""}  onClick={() => handleSetType("Residencial")}><MdOutlineMapsHomeWork />Residencial</button>
-                <button className={type === "Comercial" ? "select" : ""}  onClick={() => handleSetType("Comercial")}><RiStore2Line />Comercial</button>
-                <button className={type === "Industrial" ? "select" : ""}  onClick={() => handleSetType("Industrial")}><TbTractor />Industrial</button>
-                <button className={type === "Rural" ? "select" : ""}  onClick={() => handleSetType("Rural")}><TbBuildingFactory />Rural</button>
-                <button className={type === "Terrenos e Lotes" ? "select" : ""}  onClick={() => handleSetType("Terrenos e Lotes")}><TbMap2 />Terrenos e Lotes</button>
-                </div>
-                <div className="buttonsProperties">
-                <button className={status === "" ? "select" : ""}  onClick={() => handleSetStatus("")}>Aluguel/Venda</button>
-                <button className={status === "Venda" ? "select" : ""}  onClick={() => handleSetStatus("Venda")}>Venda</button>
-                <button className={status === "Aluguel" ? "select" : ""}  onClick={() => handleSetStatus("Aluguel")}>Aluguel</button>
-                </div>
-                <div className="buttonsProperties">
-                    <select value={type} onChange={handleSelectType}>
-                        <option value="">Todos</option>
-                        <option value="Residencial"><MdOutlineMapsHomeWork />Residencial</option>
-                        <option value="Comercial"><RiStore2Line />Comercial</option>
-                        <option value="Industrial"><TbTractor />Industrial</option>
-                        <option value="Rural"><TbBuildingFactory />Rural</option>
-                        <option value="Terrenos e Lotes"><TbMap2 />Terrenos e Lotes</option>
-                    </select>
-                    <select value={status} onChange={handleSelectStatus}>
-                        <option value="">Aluguel/Venda</option>
-                        <option value="Venda">Venda</option>
-                        <option value="Aluguel">Aluguel</option>
-                    </select>
-                </div>
+
                 {filterData?.length > 0 ?
          <div className="itens">
             {filterData?.map((properties) => {

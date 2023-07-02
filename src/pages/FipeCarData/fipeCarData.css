@@ -1,0 +1,143 @@
+.FipeCarData {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--White);
+    padding: 80px 0;
+}
+.FipeCarData .car {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 550px;
+    background-color: var(--White);
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.FipeCarData .car h4 {
+    font-weight: 700;
+    margin: 1px 0;
+    color: var(--Primary);
+}
+.FipeCarData .car h4 span {
+    font-weight: 500;
+    color: var(--Gray2);
+}
+
+
+.FipeCarData .versions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 80%;
+    background-color: var(--White);
+    margin: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.FipeCarData .versions .versionUnic {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    background-color: var(--Primary);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px solid var(--Primary);
+    color: var(--White);
+}
+
+.FipeCarData .versions .versionUnic h5 {
+    font-weight: 700;
+    margin: 2px 0;
+}
+.FipeCarData .versions .versionUnic h5 span {
+    font-weight: 500
+}
+
+
+.FipeCarData .versions .versionUnic .value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width:100%;
+    color: var(--White);
+    margin-top: 5px;
+    padding-top: 5px;
+}
+.FipeCarData .versions .versionUnic .value h4 {
+    font-weight: 700;
+}
+
+.FipeCarData  h3 {
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--Primary);
+}
+
+
+.FipeCarData .searchPlaca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.FipeCarData .searchPlaca input {
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--Border);
+    color: var(--Paragraph);
+    margin: 5px;
+}
+
+.FipeCarData .searchPlaca button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--Primary);
+    color: var(--White);
+    margin: 5px;
+}
+
+.FipeCarData .msgError {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    margin: 40px 0;
+    background-color: var(--BorderHover);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+@media (max-width: 500px) {
+    .FipeCarData .searchPlaca {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    
+    .FipeCarData .searchPlaca button {
+        width: 300px;
+    }
+
+    .FipeCarData .msgError {
+        width: 90%;
+    }
+}

@@ -1,15 +1,21 @@
 ﻿import "./notification.css";
 import { IoFolderOpenOutline } from "react-icons/io5";
 
-export function Notification() {
+export function Notification({text, link}) {
+
     return (
         <div className="Notification">
+
             <div className="infos">
                 <div className="text">
-                <h5>Texto da notificação</h5>
+                <h5>{text}</h5>
                 </div>
             </div>
-            <IoFolderOpenOutline />
+            {link === "" ? "" :
+            <a href={`${link}`}>
+                <IoFolderOpenOutline />
+            </a>
+            } 
         </div>
     )
 }

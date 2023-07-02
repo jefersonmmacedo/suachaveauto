@@ -53,7 +53,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Archivo', sans-serif;
-  background: var(--BorderHover);
+  background: var(--White);
 }
 
 .content {

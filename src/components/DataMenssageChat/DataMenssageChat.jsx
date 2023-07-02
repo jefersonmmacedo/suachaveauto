@@ -5,12 +5,12 @@ import { TextMessagesChat } from "../TextMessagesChat/TextMessagesChat";
 import { TitleMessagesChat } from "../TitleMessagesChat/TitleMessagesChat";
 import "./dataMenssageChat.css";
 
-export function DataMenssageChat({idProperty, room}) {
+export function DataMenssageChat({idAuto, room}) {
 
     return (
         <div className="DataMenssageChat">
              <div className="textChat">
-                        <TitleMessagesChat idProperty={idProperty}/>
+                        <TitleMessagesChat idAuto={idAuto}/>
                         <TextMessagesChat room={room}/>
                         </div>
         </div>

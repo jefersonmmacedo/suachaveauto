@@ -2,6 +2,9 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import bv from "../../assets/images/financiamento/bv.png";
 import santander from "../../assets/images/financiamento/santander.png";
+import itau from "../../assets/images/financiamento/itau.png";
+import bradesco from "../../assets/images/financiamento/bradesco.png";
+import brasil from "../../assets/images/financiamento/brasil.png";
 import porto from "../../assets/images/financiamento/porto.png";
 import "./simulator.css";
 import {FiDollarSign} from "react-icons/fi";
@@ -112,16 +115,40 @@ export function Simulator() {
                 <h2>Escolha um banco para a simulação</h2>
                 <h4>Estamos trabalhando para trazer as simulações direto em nosso site.</h4>
                 <div className="logosBank">
+                    <a href="https://www.bv.com.br/simular?gclid=Cj0KCQjwnf-kBhCnARIsAFlg493jhIc8ZoUhy2nX2GM5CbTxbwSXk7Gogv48tpF6UMOoFlegkhak8qcaAoQIEALw_wcB#/veiculo?idcmp=T01%7CC04%7CV03%7CF08%7CP206%7CP%7C567370709703%7Cbv_financeira%7Cfv_midia_google_conversao_branding_search_062021" target="_blank" rel="noreferrer">
                     <div className="logoUnicBank">
                         <img src={bv} alt="" className="imageBank"/>
                     </div>
+                    </a>
+                    <a href="https://financeiraportoseguro.com.br/auto/" target="_blank" rel="noreferrer">
                     <div className="logoUnicBank">
                         <img src={porto} alt="" className="imageBank"/>
                     </div>
+                    </a>
+                    <a href="https://www.cliente.santanderfinanciamentos.com.br/originacaocliente/?ori=SF&int_source=pagina-C2C&mathts=paid&_ga=2.56788394.1229877082.1688260105-1101877022.1688260105&_gac=1.225309288.1688260105.Cj0KCQjwnf-kBhCnARIsAFlg493psD5CpM0ITVIezaYXNoUg7ii5xcXtyN5h5d0oEmn8mCFloQK6Wh4aAukGEALw_wcB#/dados-pessoais" target="_blank" rel="noreferrer">
                     <div className="logoUnicBank">
                         <img src={santander} alt="" className="imageBank"/>
                     </div>
+                    </a>
+                    <a href="https://www.itau.com.br/emprestimos-financiamentos/veiculos/simulacao/" target="_blank" rel="noreferrer">
+                    <div className="logoUnicBank">
+                        <img src={itau} alt="" className="imageBank"/>
+                    </div>
+                    </a>
+                    <a href="https://banco.bradesco/html/classic/produtos-servicos/emprestimo-e-financiamento/financiamento-veiculos.shtm" target="_blank" rel="noreferrer">
+                    <div className="logoUnicBank">
+                        <img src={bradesco} alt="" className="imageBank"/>
+                    </div>
+                    </a>
+                    <a href="https://www.bb.com.br/site/pra-voce/financiamentos/financiamento-de-carro/" target="_blank" rel="noreferrer">
+                    <div className="logoUnicBank">
+                        <img src={brasil} alt="" className="imageBank"/>
+                    </div>
+                    </a>
                 </div>
+
+                <h6>*Não somos responáveis pelas informações solicitadas e informadas pelos sites acima. Apenas disponibilizamos os links dos sites para que nossos clientem tenham acesso a várias opções de simulação de financiamento</h6>
+               
                 </div>
                 </div>
                 <Footer />

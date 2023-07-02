@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import {IoPersonCircleOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline, IoLogOutOutline, IoChatboxEllipsesOutline, IoHomeOutline, IoSpeedometerOutline, IoCalendarOutline } from 'react-icons/io5';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/Auth';
 
 const Ul = styled.ul`
   list-style: none;
@@ -143,39 +145,46 @@ function HandleOpenLink(data) {
 
 
 const RightNav = ({ open }) => {
-  const Local = localStorage.getItem("suachave");
+  const { logout } = useContext(AuthContext);
+
+  const Local = localStorage.getItem("suachaveauto");
   const user = JSON.parse(Local);
+
+  function handleLogOut() {
+    logout()
+  }
+
   return (
     <Ul open={open}>
        {/* <li className='nav-item'>
-            <Link to='/imoveis/all'>
+            <a href='/imoveis/all'>
               Imóveis
-            </Link>
+            </a>
           </li> */}
           <li className='nav-item'>
-            <Link to='/autos' >
+            <a href='/autos' >
             Autos
-            </Link>
+            </a>
           </li>
           <li className='nav-item'>
-            <Link to='/agencias' >
+            <a href='/agencias' >
             Agências e consultores
-            </Link>
+            </a>
           </li>
           <li className='nav-item'>
-            <Link to='/anunciar' >
+            <a href='/anunciar' >
             Para agências
-            </Link>
+            </a>
           </li>
           <li className='nav-item'>
-            <Link to='/financiamento' >
+            <a href='/financiamento' >
             Financiamento
-            </Link>
+            </a>
           </li>
           <li className='nav-item'>
-            <Link to='/planos' >
+            <a href='/planos' >
             Planos
-            </Link>
+            </a>
           </li>
           {user === "" || user === null || user === undefined ? 
             <>
@@ -202,7 +211,7 @@ const RightNav = ({ open }) => {
           <button className='btn' onClick={() => HandleOpenLink("/painel")}>
             <IoSpeedometerOutline /> &nbsp; Painel
           </button> 
-          <button onClick={() => HandleOpenLink("/entrar")}>
+          <button onClick={handleLogOut}>
             <IoLogOutOutline /> &nbsp; Sair
           </button>
           </>
@@ -223,7 +232,7 @@ const RightNav = ({ open }) => {
           <button className='btn' onClick={() => HandleOpenLink("/minhaconta")}>
             <IoPersonOutline /> &nbsp; Minha conta
           </button> 
-          <button onClick={() => HandleOpenLink("/entrar")}>
+          <button onClick={handleLogOut}>
             <IoLogOutOutline /> &nbsp; Sair
           </button>
           </>

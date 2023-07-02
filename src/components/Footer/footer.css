@@ -6,7 +6,7 @@
     width: 100%;
     padding: 20px;
     border: none;
-    background-color: var(--BorderInput2);
+    background-color: var(--BorderHover);
     color: var(--Paragraph);
 }
 

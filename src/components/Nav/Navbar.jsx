@@ -7,6 +7,8 @@ import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsO
   IoLogOutOutline, IoSpeedometerOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline, IoPersonCircleOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/Auth';
 
 const Nav = styled.nav`
   width: 100%;
@@ -81,7 +83,7 @@ const Nav = styled.nav`
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 6px;
+    border-radius: 25px;
     padding: 9px 19px;
     background-color: rgba(255, 255, 255, 0.01);
     border: 1px solid var(--Primary);
@@ -108,7 +110,7 @@ const Nav = styled.nav`
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 6px;
+    border-radius: 25px;
     padding: 10px;
     background-color: var(--Primary);
     font-weight:600;
@@ -174,14 +176,21 @@ function HandleOpenLink2(data) {
 
 
 const Navbar2 = () => {
-  const Local = localStorage.getItem("suachave");
+  const Local = localStorage.getItem("suachaveauto");
   const user = JSON.parse(Local);
+
+  const { logout } = useContext(AuthContext);
+
+  function handleLogOut() {
+    logout()
+  }
+
 
   return (
     <Nav>
       <div className="logo">
         <a href="/">
-      <img src={LogoImg} alt="Logo CPA Educacional" />
+      <img src={LogoImg} alt="Logo Sua Chave Auto" />
         </a>
       </div>
       <Burger />
@@ -231,7 +240,7 @@ const Navbar2 = () => {
                </>
                   }
 
-                <button className='iconOut' onClick={() => HandleOpenLink("/entrar")}><IoLogOutOutline /></button>
+                <button className='iconOut' onClick={handleLogOut}><IoLogOutOutline /></button>
         </>
         : ""
     }

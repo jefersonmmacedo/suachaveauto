@@ -27,6 +27,41 @@
     margin: 10px;
 }
 
+.MyAccount .main .text .textTop {
+    width: 80%;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.MyAccount .main .text .textTop h3 {
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.MyAccount .main .text .textTop button {
+    border: none;
+    color: var(--White);
+    background-color: var(--ButtonDisabled);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+.MyAccount .main .text .textTop button svg {
+    margin-right: 3px;
+    font-weight: bold;
+}
+
 .MyAccount .main .text h2 {
     margin-bottom: 20px;
     font-weight: bold;
@@ -43,96 +78,62 @@
     font-weight: 900;
     color: var(--Primary)
 }
-.MyAccount .main .text form{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-
-
-.MyAccount .main .text form .label-avatar{
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-    margin: 20px 0;
-}
-
-.MyAccount .main .text form .label-avatar input {
-    display: none;
-}
-
-.MyAccount .main .text form .label-avatar span {
-    z-index: 99;
-    position: absolute;
-    opacity: 0.7;
-    transition: all .5s;
-}
-
-.MyAccount .main .text form .label-avatar span:hover{
-    opacity: 1;
-    transform: scale(1.4);
-}
-
-.MyAccount .main .text form .label-avatar img{
-    margin-bottom: 1em;
-    border-radius: 10px;
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-}
-
-
-
-.MyAccount .main .text form .dataInputs{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 15px 0;
-}
-.MyAccount .main .text form input{
+.MyAccount .main .text .indicators{
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 6px;
-    background-color: var(--BorderInput);
-    border: none;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.MyAccount .main .text form button{
-    width: 100%;
-    padding: 10px 20px;
+.MyAccount .main .text .indicators a {
+text-decoration: none;
+}
+
+.MyAccount .main .text .indicators .indicatorUnic{
+    width: 200px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    margin: 5px 0;
+    justify-content: space-between;
+    background-color: var(--BorderInput2);
+    padding: 20px;
+    margin: 10px;
     border-radius: 6px;
-    background-color: var(--Primary);
-    border: none;
-    color: var(--White);
-    font-weight: 700;
+    color: var(--Gray);
 }
+
+.MyAccount .main .text .indicators .indicatorUnic svg {
+    font-size: 28px;
+    color: var(--Primary);
+}
+.MyAccount .main .text .indicators .indicatorUnic .textIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.MyAccount .main .text .indicators .indicatorUnic .textIndicator h3 {
+    color: var(--Gray);
+}
+
+
 @media (max-width: 700px) {
     .MyAccount .main {
         margin-top: 50px;
+        margin-bottom: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
     }
+
+    .MyAccount .main .text .textTop {
+        width: 100%;
+        justify-content: center;
+    }
+    
 
     .MyAccount .main .text form{
         width: 100%;

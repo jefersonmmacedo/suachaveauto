@@ -37,15 +37,22 @@ export function Autos() {
           <div className="data">
           <div className="AutosUnic">
             <div className="targets">
+
+            {new Date(data[0]?.created_at).getDate() === new Date().getDate() &&
+                new Date(data[0]?.created_at).getMonth() === new Date().getMonth() &&
+                new Date(data[0]?.created_at).getFullYear() === new Date().getFullYear()
+                ? 
             <div className="featured">
                         <p>Novo</p>
                     </div>
+                    : ""
+             }
 
-                    <NewMessageAutos />
-                    <NewScheduling />
-                    <NewShare idProperty={data[0]?.id} title={`${data[0]?.brand} - ${data[0]?.model} (${data[0]?.city} / ${data[0]?.uf})`}/>
+                    {/* <NewMessageAutos idAuto={data[0]?.id} idCompany={data[0]?.idCompany} imageAuto={data[0]?.featuredImage}/> */}
+                    <NewScheduling idAuto={data[0]?.id} idCompany={data[0]?.idCompany} image={data[0]?.featuredImage} brand={data[0]?.brand}  model={data[0]?.model} />
+                    <NewShare idAuto={data[0]?.id} title={`${data[0]?.brand} - ${data[0]?.model} (${data[0]?.city} / ${data[0]?.uf})`}/>
                      <div className="heart">
-                    <NewFavorite />
+                    <NewFavorite idAuto={data[0]?.id} idCompany={data[0]?.idCompany} page={"yes"}/>
                     </div>
             </div>
                 <div className="text">
@@ -95,7 +102,7 @@ export function Autos() {
                             <GiCarDoor />
                             <p>Portas</p>
                             </div>
-                                <p>{data[0]?.doors} portas</p>
+                                <p>{data[0]?.doors}</p>
                         </div>
                         <div className="iconUnicBox">
                             <div className="simbolBox">
@@ -183,7 +190,7 @@ export function Autos() {
                      <h5>À venda por:</h5>
                      <h3>R$ <span>{data[0]?.value} </span></h3>
                  </div>
-                    <CompanyInfo idProperty={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName}/>
+                    <CompanyInfo idAuto={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName}/>
                 </div>
 
              
@@ -195,7 +202,7 @@ export function Autos() {
                      <h5>À venda por:</h5>
                      <h3>R$ <span>{data[0]?.value} </span></h3>
                      </div>
-                <CompanyInfo idProperty={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName}/>
+                <CompanyInfo idAuto={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName}/>
                 </div>
 
 

@@ -18,6 +18,12 @@ import scania from "../../assets/images/logos/scania.png";
 import tesla from "../../assets/images/logos/tesla.png";
 import honda from "../../assets/images/logos/honda.png";
 import kia from "../../assets/images/logos/kia.png";
+import suzuki from "../../assets/images/logos/suzuki.png";
+import harleyDavidson from "../../assets/images/logos/harley-davidson.png";
+import yamaha from "../../assets/images/logos/yamaha.png";
+import ducati from "../../assets/images/logos/ducati.png";
+import kawasaki from "../../assets/images/logos/kawasaki.png";
+
 
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
@@ -37,42 +43,42 @@ export function BrandCarroussel() {
             breakpoint: 800,
             settings: {
                 slidesToShow: 10,
-                slidesToScroll: 10,
+                slidesToScroll: 1,
             }
         },
         {
             breakpoint: 610,
             settings: {
                 slidesToShow: 8,
-                slidesToScroll: 8
+                slidesToScroll: 1,
             }
         },
         {
             breakpoint: 500,
             settings: {
                 slidesToShow: 6,
-                slidesToScroll: 6
+                slidesToScroll: 1,
             }
         },
         {
             breakpoint: 400,
             settings: {
                 slidesToShow: 5,
-                slidesToScroll: 5
+                slidesToScroll: 1,
             }
         },
         {
             breakpoint: 250,
             settings: {
                 slidesToShow: 4,
-                slidesToScroll: 4
+                slidesToScroll: 1,
             }
         },
     ]
 
     return (
         <div>
-            <Slide slidesToScroll={3} slidesToShow={3} autoplay={false} indicators={true} {...properties} responsive={responsiveSettings}>
+            <Slide slidesToScroll={3} slidesToShow={3} autoplay={true} indicators={false} {...properties} responsive={responsiveSettings}>
             <div className="logoBrand">
                     <div className="image">
                     <img src={volkswagen} alt="" />
@@ -85,6 +91,13 @@ export function BrandCarroussel() {
                     </div>
                 </div>
             <div className="logoBrand">
+                    <div className="image2">
+                    <img src={suzuki} alt="" />
+                    </div>
+                </div>
+                
+
+            <div className="logoBrand">
                     <div className="image">
                     <img src={ford} alt="" />
                     </div>
@@ -96,12 +109,14 @@ export function BrandCarroussel() {
                 </div>
             <div className="logoBrand">
                     <div className="image">
-                    <img src={peugeot} alt="" />
+                    <img src={harleyDavidson} alt="" />
                     </div>
                 </div>
+                
+
             <div className="logoBrand">
                     <div className="image">
-                    <img src={hondamoto} alt="" />
+                    <img src={peugeot} alt="" />
                     </div>
                 </div>
             <div className="logoBrand">
@@ -109,6 +124,13 @@ export function BrandCarroussel() {
                     <img src={hyundai} alt="" />
                     </div>
                 </div>
+
+            <div className="logoBrand">
+                    <div className="image">
+                    <img src={hondamoto} alt="" />
+                    </div>
+                </div>
+
             <div className="logoBrand">
                     <div className="image">
                     <img src={toyota} alt="" />
@@ -121,6 +143,14 @@ export function BrandCarroussel() {
                 </div>
             <div className="logoBrand">
                     <div className="image">
+                    <img src={yamaha} alt="" />
+                    </div>
+                </div>
+
+                
+
+            <div className="logoBrand">
+                    <div className="image">
                     <img src={honda} alt="" />
                     </div>
                 </div>
@@ -131,12 +161,25 @@ export function BrandCarroussel() {
                 </div>
             <div className="logoBrand">
                     <div className="image">
+                    <img src={ducati} alt="" />
+                    </div>
+                </div>
+
+                
+
+            <div className="logoBrand">
+                    <div className="image">
                     <img src={nissan} alt="" />
                     </div>
                 </div>
             <div className="logoBrand">
                     <div className="image">
                     <img src={audi} alt="" />
+                    </div>
+                </div>
+            <div className="logoBrand">
+                    <div className="image">
+                    <img src={kawasaki} alt="" />
                     </div>
                 </div>
             <div className="logoBrand">

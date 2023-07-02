@@ -120,7 +120,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--Secondary);
-    border-radius: 6px;
+    border-radius: 25px;
     padding: 10px 20px;
     margin: 5px;
 }
@@ -407,6 +407,28 @@ sup {
     font-weight: 800;
 }
 
+
+
+
+
+
+@media (max-width: 1200px) {
+    .Autos .main .data .data {
+        width: 95%;
+    }
+
+    @media (max-width: 1000px) {
+
+        .Autos .main .data .data .AutosUnic {
+            width:100%;
+        }
+    
+        .Autos .main .data .data .infosCompany {
+            max-width: 310px;
+            min-width: 310px;
+    
+        }
+        
 @media (max-width: 950px) {
     .Autos .main .data {
         width: 100%;
@@ -418,12 +440,13 @@ sup {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        margin: 20px 0;
-        padding: 0 40px;
+        margin: 0px;
+        padding: 0px;
     }
     
     .Autos .main .data .AutosUnic {
-        width: 90%;
+        width: 95%;
+        padding: 5px;
     }
 }
 
@@ -431,36 +454,35 @@ sup {
     .Autos .main .data {
         padding: 0px;
     }
-@media (max-width: 480px) {
-    .Autos .main .data .AutosUnic .text .pricing {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background-color: var(--Black2);
-        padding: 15px;
-        border-radius: 6px;
-        margin-bottom: 20px;
-    }
-    .Autos .main .data .AutosUnic .text .pricing .PricingClient {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin: 5px 0;
-    }
-    .Autos .main .data .AutosUnic .text .pricing .PricingFipe {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin: 5px 0;
-    }
-    
+
+    @media (max-width: 750px) {
+        .Autos .main .data .AutosUnic .text .otherPrincings {
+            width: 100%;
+        }
+        
+        .Autos .main .data .AutosUnic .text .pricingTotal {
+            width: 100%;
+        }
+
+        @media (max-width: 550px) {
+            .Autos .main .data .AutosUnic .targets {
+                width: 100%;
+                padding: 0px;
+                flex-wrap: wrap;
+            }
+
+            
+            .Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox {
+                width: 48%;
+            }
+        }
+        
+        
+
+
 }
 }
 
+}
+}
 }

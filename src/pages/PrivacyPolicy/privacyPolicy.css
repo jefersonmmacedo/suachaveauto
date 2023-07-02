@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 60px 0px 0xpx 0px;
+    padding: 60px 0px 0px 0px;
 }
 
 .PrivacyPolicy h2 {
@@ -25,11 +25,11 @@
 }
 .PrivacyPolicy .text h4 {
     font-weight: 700;
-    margin: 10px 0;
-    color: var(--Primary)
+    margin: 15px 0 5px 0;
+    color: var(--Primary);
 }
 .PrivacyPolicy .text p {
     font-weight: 500;
-    margin: 5px 0;
-    color: var(--Paragraph))
+    margin: 2px 0;
+    color: var(--Paragraph);
 }

@@ -12,11 +12,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 20px 40px 20px;
+    margin:0 20px 40px 20px;
+}
+.CompanyList .listProperties .empyt{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.CompanyList .listProperties .empyt img {
+    height: 250px;
+}
+
+.CompanyList .listProperties .empyt h4 {
+    color: var(--Gray);
+    margin: 10px 0;
+    text-align: center;
 }
 
 .CompanyList .searchCompanies {
-    width: 700px;
+    width: 600px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -25,46 +43,53 @@
 }
 
 .CompanyList .searchCompanies input {
-    width: 100%;
+    width: 50%;
     height: 40px;
     padding: 10px 20px;
     border: 1px solid var(--Border);
-    border-radius: 6px;
+    border-radius: 20px;
     margin: 2px;
 }
 .CompanyList .searchCompanies select {
-    width: 100%;
+    width: 50%;
     height: 40px;
     padding: 10px 20px;
     border: 1px solid var(--Border);
-    border-radius: 6px;
+    border-radius: 20px;
     margin: 2px;
 }
 
 .CompanyList .listProperties .propertyUnicFavorite {
-    width: 700px;
+    width: 600px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     background-color: var(--White);
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    margin: 10px 20px;
-    height: 150px;
+    border-radius: 50px;
+    margin:5px;
+    border: 1px solid var(--Border);
+    padding: 10px;
 }
 
 .CompanyList .listProperties .propertyUnicFavorite .image {
-    width: 150px; 
-    height: 150px;
-    border-radius: 6px 0 0 6px;
+    width:90px; 
+    height:90px;
+    border-radius: 50px;
     object-fit: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--Border);
+    background-color: var(--White);
 }
 .CompanyList .listProperties .propertyUnicFavorite .image img {
-    width: 150px; 
-    height: 150px;
-    border-radius: 6px 0 0 6px;
-    object-fit: cover;
+    width: 85px; 
+    height: 85px;
+    border-radius: 50px;
+    object-fit: contain;
+    margin: 3px;
 }
 
 
@@ -92,7 +117,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--Secondary);
-    border-radius: 6px;
+    border-radius: 20px;
     position: absolute;
     margin-top: 160px;
     margin-left: 5px;
@@ -161,22 +186,57 @@
     color: var(--Primary);
 }
 
-.CompanyList .listProperties .propertyUnicFavorite .text h3 {
+.CompanyList .listProperties .propertyUnicFavorite .text a {
+    text-decoration: none;
+}
+.CompanyList .listProperties .propertyUnicFavorite .text h4 {
     color: var(--Primary);
     font-weight: 700;
-    margin: 5px 10px;
+    margin: 5px 10px 0px 10px;
+}
+.CompanyList .listProperties .propertyUnicFavorite .text h6 {
+    color: var(--Gray);
+    margin: 2px 10px;
+    font-weight: 700;
+}
+.CompanyList .listProperties .propertyUnicFavorite .text h6 svg{
+    margin-right: 3px;
 }
 .CompanyList .listProperties .propertyUnicFavorite .text h5 {
     color: var(--Gray);
-    margin: 0 10px;
+    margin:2px 10px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
+
+.CompanyList .listProperties .propertyUnicFavorite .text h5 svg {
+    margin-right: 5px;
+}
+.CompanyList .listProperties .propertyUnicFavorite .text .LinkCompany {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    border-radius: 20px;
+    background-color: var(--White);
+    border: none;
+    margin: 10px 10px 10px 10px;
+    color: var(--Primary);
+    font-size: 12px;
+}
+
+
 .CompanyList .listProperties .propertyUnicFavorite .text .icons {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 5px 0;
+    margin: 7px 0;
     flex-wrap: wrap;
 }
 
@@ -234,38 +294,48 @@
 }
 
 @media (max-width: 900px) {
-    .CompanyList .listProperties .propertyUnicFavorite {
-        width: 90%;
-    }
 
     @media (max-width: 800px) {
         .CompanyList .listProperties {
             width: 97%;
-            margin: 0 20px 40px 20px;
+            margin: 0 20px;
         }
 
         @media (max-width: 711px) {
-            .CompanyList .listProperties .propertyUnicFavorite {
-                width: 100%;
-            }
-
-            .CompanyList .searchCompanies {
-                width: 100%;
-            }
-
-
-            @media (max-width: 585px) {
+            
+            @media (max-width: 615px) {
+                .CompanyList .searchCompanies {
+                    width: 98%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 10px 0;
+                }
+                .CompanyList .listProperties .propertyUnicFavorite {
+                    width: 100%;
+                }
                 .CompanyList .listProperties .propertyUnicFavorite .text .icons .iconUnic {
                     width: 100%;
                 }
 
-                .CompanyList .listProperties .propertyUnicFavorite .image {
-                    width: 100px; 
-                    height: 150px;
+                /* .CompanyList .listProperties .propertyUnicFavorite .image {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 100%; 
+                    height: 50px;
                 }
                 .CompanyList .listProperties .propertyUnicFavorite .image img {
-                    width: 100px; 
-                    height: 150px;
+                    height: 50px;
+                    margin: 0px 15px -15px 15px;
+                } */
+
+                .CompanyList .listProperties .propertyUnicFavorite .text h4 {
+                    color: var(--Primary);
+                    font-weight: 700;
+                    margin: 0px 10px 0px 10px;
                 }
 
                 .CompanyList .listProperties .propertyUnicFavorite .text2 .heartFavorite2 svg {
@@ -286,7 +356,29 @@
                         justify-content: center;
                         margin: 10px 0;
                     }
+
+                    .CompanyList .searchCompanies input {
+                        width: 100%;
+                    }
+                    .CompanyList .searchCompanies select {
+                        width: 100%;
+                    }
                     
+
+                    /* .CompanyList .listProperties .propertyUnicFavorite  {
+                        width: 98%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                    }
+                    .CompanyList .listProperties .propertyUnicFavorite .text {
+                        justify-content: flex-start;
+                        padding: 10px 5px;
+                    }
+
+
                     .CompanyList .listProperties .propertyUnicFavorite .text {
                         justify-content: flex-start;
                     }
@@ -298,20 +390,17 @@
 
                     .CompanyList .listProperties .propertyUnicFavorite .text h2 {
                         font-size: 24px;
-                    }
+                    } */
+
 
                     @media (max-width: 450px) {
                         .CompanyList .listProperties .propertyUnicFavorite .text h2 {
                             font-size: 20px;
                         }
-                        .CompanyList .listProperties .propertyUnicFavorite .text h4 {
-                            font-size: 14px;
-                        }
+    
 
                         @media (max-width: 450px) {
-                            .CompanyList .listProperties .propertyUnicFavorite .text h4 {
-                                font-size: 12px;
-                            }                            
+                      
                             
                             .CompanyList .listProperties .propertyUnicFavorite .text .icons .iconUnic p {
                                 font-size: 12px;
@@ -329,109 +418,3 @@
         }
     }
 
-
-
-/* 
-
-@media (max-width: 880px) {
-    .CompanyList .listProperties {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 5px;
-        flex-wrap: wrap;
-    }
-    
-    .CompanyList .listProperties .propertyUnicFavorite {
-        width: 250px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background-color: var(--White);
-        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 6px;
-        margin:20px;
-        padding-bottom: 20px;
-    }
-
-    .CompanyList .listProperties .propertyUnicFavorite .image {
-        width: 100%; 
-        height: 150px;
-        border-radius: 6px 6px 0 0;
-    }
-    .CompanyList .listProperties .propertyUnicFavorite .image img {
-        width: 100%; 
-        height: 150px;
-        border-radius: 6px 6px 0 0;
-    }
-    
-    
-.CompanyList .listProperties .propertyUnicFavorite .featured {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Primary);
-    border-radius: 20px;
-    position: absolute;
-    margin-top: -15px;
-    margin-left: 10px;
-    padding: 10px 40px;
-}
-
-.CompanyList .listProperties .propertyUnicFavorite .featured p {
-    color: var(--White);
-    font-weight: 700;
-}
-
-.CompanyList .listProperties .propertyUnicFavorite .status {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Secondary);
-    border-radius: 6px;
-    position: absolute;
-    margin-top: 110px;
-    margin-left: 10px;
-    padding: 10px 20px;
-}
-
-.CompanyList .listProperties .propertyUnicFavorite .status p {
-    color: var(--White);
-    font-weight: 700;
-}
-
-.CompanyList .listProperties .propertyUnicFavorite .heartFavorite {
-    position: absolute;
-    margin-top: 115px;
-    margin-left: 215px;
-}
-
-.CompanyList .listProperties .propertyUnicFavorite .heartFavorite svg {
-    color: var(--White);
-    font-size: 24px;
-    cursor: pointer;
-}
-.CompanyList .listProperties .propertyUnicFavorite .heartFavorite svg:hover {
-    color: var(--Primary);
-}
-.CompanyList .listProperties .propertyUnicFavorite .heartFavorite2 {
-    position: absolute;
-    margin-top: 115px;
-    margin-left: 215px;
-}
-
-.CompanyList .listProperties .propertyUnicFavorite .heartFavorite2 svg {
-    color: var(--Primary);
-    font-size: 24px;
-    cursor: pointer;
-}
-.CompanyList .listProperties .propertyUnicFavorite .heartFavorite svg:hover {
-    color: var(--Primary);
-}
-
-} */

@@ -1,32 +1,54 @@
 ﻿import { Footer } from "../../components/Footer/Footer";
 import Navbar2 from "../../components/Nav/Navbar";
 import "./myAccount.css";
-import {IoCloseCircle} from 'react-icons/io5';
 import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
+import { IoCalendarOutline, IoChatboxEllipsesOutline, IoChatboxOutline, IoCloseSharp, IoHeartOutline, IoHomeOutline, IoPersonOutline} from "react-icons/io5"
+import api from "../../services/api";
+import { useEffect } from "react";
 import { useState } from "react";
-import { FiUpload } from "react-icons/fi";
+
 
 export function MyAccount() {
-    const [avatarUrl, setAvatarUrl] = useState(null);
-    const [imageAvatar, setImageAvatar] = useState('');
-    const profile = "https://firebasestorage.googleapis.com/v0/b/foursome4-b925c.appspot.com/o/avatar.png?alt=media&token=f3b1f0bc-3885-4296-8363-ec1c3d43e240"
+    const LocalCity = localStorage.getItem("suachaveauto");
+    const user = JSON.parse(LocalCity);
 
-    function handleFile(e) {
-        // console.log(e.target.files[0])
-        if(e.target.files[0]){
-            const image = e.target.files[0];
-            if(image.type === 'image/jpeg' || image.type === 'image/jpg' || image.type === 'image/png') {
-                setImageAvatar(image);
-                setAvatarUrl(URL.createObjectURL(e.target.files[0]));
-                console.log(avatarUrl);
-             } else {
-                 console.log('Tipo dearquivo não aceito. Envie uma imagem dos tipos: .jpg, .jpeg, .png');
-                 setImageAvatar(null);
-                 return null;
-             }
-         }
-     }
+    const [favorite, setFavorite] = useState()
+    const [scheduling, setScheduling] = useState()
+    const [chats, setChats] = useState()
 
+    useEffect(() => {
+        async function loadFavorites() {
+            const idClient = user.id
+            await api.get(`/favorite/client/${idClient}`).then((res) => {
+                setFavorite(res.data.length)
+                console.log(res.data)
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+        loadFavorites()
+        async function loadScheduling() {
+            await api.get(`/scheduling/client/${user.id}`).then((res) => {
+                setScheduling(res.data.length)
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+        loadScheduling()
+
+        async function loadChats() {
+            await api.get(`/rooms/client/${user.id}`).then((res) => {
+                setChats(res.data.length)
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+
+        loadChats()
+    }, [])
+     
     return (
         <div className="MyAccount">
             <Navbar2 />
@@ -34,42 +56,73 @@ export function MyAccount() {
                 <div className="main">
                 <ToolBarClient />
                 <div className="text">
-                <h2>Minha Conta</h2>
-                    <form action="">
-
-                    <label className="label-avatar">
-                            <span><FiUpload color="#f65" size={25} /></span>
-                            <input type="file" accept="image/*" onChange={handleFile} required/><br />
-                            <img src={avatarUrl === null ? profile : avatarUrl} alt="Avatar" height={100} width={100}/>
-                        </label>
-
-                        <div className="dataInputs">               
-                        <input type="text" placeholder="Nome completo" />
-                        <input type="email" placeholder="E-mail" />
-                        <input type="text" placeholder="Telefone" />
-                        <input type="text" placeholder="Whatsapp" />
+                <div className="textTop">
+                <h3>Seja bem-vindo, {user.name}</h3>
+                <button><IoCloseSharp /> Deletar minha conta</button>
+                </div>
+                    <div className="indicators">
+                        <a href="/mensagens">
+                        <div className="indicatorUnic">
+                            <IoChatboxEllipsesOutline />
+                            <div className="textIndicator">
+                                <h3>{chats}</h3>
+                                <h4>Conversas</h4>
+                            </div>
                         </div>
-
-                        <div className="dataInputs">               
-                        <input type="text" placeholder="CEP" />
-                        <input type="text" placeholder="Bairro" />
-                        <input type="text" placeholder="Cidade" />
-                        <input type="text" placeholder="UF" />
+                        </a>
+                        <a href="/favoritos">
+                        <div className="indicatorUnic">
+                            <IoHeartOutline />
+                            <div className="textIndicator">
+                                <h3>{favorite}</h3>
+                                <h4>Favoritos</h4>
+                            </div>
                         </div>
-
-                        <button>Atualizar Dados</button>
-
-                        <div className="dataInputs">               
-                        <input type="password" placeholder="Senha Atual" />
-                        <input type="password" placeholder="Nova senha" />
-                        <input type="password" placeholder="Confirmar nova senha" />
+                        </a>
+                        <a href="/agendamentos">
+                        <div className="indicatorUnic">
+                            <IoCalendarOutline />
+                            <div className="textIndicator">
+                                <h3>{scheduling}</h3>
+                                <h4>Agendamentos</h4>
+                            </div>
                         </div>
+                        </a>
+                        <a href="/meusdados">
+                        <div className="indicatorUnic">
+                            <IoPersonOutline />
+                            <div className="textIndicator">
+                                <h3>Acessar</h3>
+                                <h4>Minha conta</h4>
+                            </div>
+                        </div>
+                        </a> 
+                        {/* <a href="/minhaconta">
+                        <div className="indicatorUnic">
+                            <IoPersonOutline />
+                            <div className="textIndicator">
+                                <h3>&nbsp;</h3>
+                                <h4>Minha conta</h4>
+                            </div>
+                        </div>
+                        </a> 
+                        <a href="/meusimoveis">
+                        <div className="indicatorUnic">
+                            <IoHomeOutline />
+                            <div className="textIndicator">
+                                <h3>0</h3>
+                                <h4>Imóveis</h4>
+                            </div>
+                        </div>
+                        </a>
+                        */}
 
-                        <button>Atualizar Senha</button>
-                    </form>
+                    </div>
                 </div>
             </div>
-                <Footer />
+            <div className="viewFooter">
+            <Footer />
+        </div>
         </div>
     )
-}
+}       

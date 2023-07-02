@@ -23,8 +23,8 @@ export function Finance() {
                 </div>
 
             <h2>Quer vender?</h2>
-            <h4> Cadastre seu imóvel, escolha uma de nossas imobiliárias para uma avaliação profissional!</h4>
-            <a href="/avaliacao">Avaliar meu imóvel</a>
+            <h4> Vai trocar ou vender? Veja as informações e o valor atual do seu modelo na tabela fipe</h4>
+            <a href="/consultar">Avaliar meu veículo</a>
                 </div>
             </div>
         </div>
