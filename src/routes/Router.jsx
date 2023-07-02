@@ -35,6 +35,7 @@ import { Negociations } from '../pages/Negociations/Negociations';
 import { UpdateAccount } from '../pages/UpdateAccount/UpdateAccount';
 
 function Router () {
+        
 const Local = localStorage.getItem("suachaveauto");
 const userLocal = JSON.parse(Local)
 
