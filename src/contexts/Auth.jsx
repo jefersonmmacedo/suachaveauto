@@ -334,10 +334,10 @@ async function newVisit(idAccount, username, idFriend) {
     }
 
     async function newScheduling({
-        idClient, idAuto, idCompany, titleAuto, imageAuto, email, phone, whatsapp, status, meet, nameClient,
+        idClient, idAuto, idCompany, dataCar, imageAuto, email, phone, whatsapp, status, meet, nameClient,
       day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted, type
     }) {
-        const data = {idClient, idAuto, idCompany, titleAuto, imageAuto, email, phone, whatsapp, status, meet, nameClient,
+        const data = {idClient, idAuto, idCompany, dataCar, imageAuto, email, phone, whatsapp, status, meet, nameClient,
             day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted, type}
 
         await api.post("/scheduling/", data).then((res) => {

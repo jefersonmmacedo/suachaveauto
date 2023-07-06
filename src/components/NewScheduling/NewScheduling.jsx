@@ -9,8 +9,9 @@ import {IoArrowBackOutline, IoArrowForwardOutline} from "react-icons/io5";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
-export function NewScheduling({idAuto, idCompany, title, image, brand, model}) {
-    const Local = localStorage.getItem("suachave");
+export function NewScheduling({idAuto, idCompany, image, brand, model, version, year, plate}) {
+  console.log({idAuto, idCompany, image, brand, model})
+    const Local = localStorage.getItem("suachaveauto");
     const user = JSON.parse(Local);
 
     const [view, setView] = useState("")
@@ -30,7 +31,7 @@ export function NewScheduling({idAuto, idCompany, title, image, brand, model}) {
     const [ownACar, setOwnACar] = useState();
     const [similarProperties, setSimilarProperties] = useState();
     const [amountOfPeople, setAmountOfPeople] = useState();
-    const [meet, setMeet] = useState();
+    const [meet, setMeet] = useState("Agência");
 
     const [auto, setAuto] = useState();
     const [company, setCompany] = useState();
@@ -463,12 +464,13 @@ export function NewScheduling({idAuto, idCompany, title, image, brand, model}) {
 
     function handleNewScheduling() {
         const status = "Pendente"
+        const data = {brand, model, version, year, plate}
         newScheduling({
-            idClient: user.id, idAuto, idCompany, titleAuto: title, imageAuto: image, email: user.email, phone: user.phone,
+            idClient: user.id, idAuto, idCompany, dataCar: data, imageAuto: image, email: user.email, phone: user.phone,
             whatsapp: user.whatsapp, status, meet, nameClient: user.name, type: "Visita no imóvel",
             day: new Date(dateSelected).getDate(), month: new Date(dateSelected).getMonth()+1, year: new Date(dateSelected).getFullYear(),
-            shift, hour, ownACar, location: meet === "Imobiliária" ? company.fantasyName : "No local do imóvel",
-            address: meet === "Imobiliária" ? `${company.road} - Nº ${company.number} - ${company.district} - ${company.city} - ${company.uf}` : `${auto.road} - ${auto.district} - ${auto.city} - ${auto.uf}`,
+            shift, hour, ownACar, location: meet === "Agência" ? company.fantasyName : "No local do imóvel",
+            address: meet === "Agência" ? `${company.road} - Nº ${company.number} - ${company.district} - ${company.city} - ${company.uf}` : `${auto.road} - ${auto.district} - ${auto.city} - ${auto.uf}`,
             amountOfPeople,
             similarProperties, dateCompleted: new Date(dateSelected)
         })
@@ -618,7 +620,7 @@ export function NewScheduling({idAuto, idCompany, title, image, brand, model}) {
             <div className="content-modal-scheduling">
             <div className="itensModal-scheduling">
                <div className="textTitle">
-              <h2 className="title">  Novo agendamento</h2>
+              <h2 className="title"> Agendar Test Drive</h2>
               </div>
                 {/* <Calendar onChange={onChange} value={value} /> */}
 
@@ -715,17 +717,17 @@ export function NewScheduling({idAuto, idCompany, title, image, brand, model}) {
                     <div className="data">
                     <div className="infosData">
                   <div className="textModal-scheduling">
-                      <p>Local de encontro</p>
+                      <p>Possui CNH?</p>
                   </div>
-                  <select style={{borderRadius: 25}}  value={meet} onChange={handleMeet}>
-                      <option value="Escolha">Local de encontro</option>
-                      <option value="Imobiliária">Imobiliária</option>
-                      <option value="Endereço do imóvel">Endereço do imóvel</option>
-                  </select>
+                  <select style={{borderRadius: 25}}  value={ownACar} onChange={handleOwnACar}>
+                    <option value="Escolha">Escolha</option>
+                    <option value="Não">Não</option>
+                    <option value="Sim">Sim</option>
+                </select>
                   </div>
                   <div className="infosData">
                   <div className="textModal-scheduling">
-                        <p>Deseja ver imóveis similares da imobiliária?</p>
+                        <p>Deseja ver outros modelos?</p>
                     </div>
                  <select style={{borderRadius: 25}}  value={similarProperties} onChange={handleSimilarProperties}>
                     <option>Escolha</option>
@@ -741,7 +743,7 @@ export function NewScheduling({idAuto, idCompany, title, image, brand, model}) {
 <div className="textModal-scheduling">
                         <p>Endereço de encontro</p>
                     </div>
-                  {meet === "Imobiliária" ?
+                  {meet === "Agência" ?
                 <div className="address">
                     <p><IoBusinessOutline />{company?.fantasyName}</p>
                     <p><IoLocationOutline />{company?.road} - Nº {company?.number} - {company?.district} - {company?.city} - {company?.uf}</p>
@@ -806,7 +808,7 @@ export function NewScheduling({idAuto, idCompany, title, image, brand, model}) {
                         {loading === true ? "" :
                          <div className="message">
                          <h5><IoAlertCircleOutline /> Email/Id ou senha incorretos.</h5>
-                         <h5> Caso sua conta seja empresarial, clique no botão Imobiliária acima.</h5>
+                         <h5> Caso sua conta seja empresarial, clique no botão Agência acima.</h5>
                        </div>
                         }
 

@@ -49,7 +49,8 @@ export function Autos() {
              }
 
                     {/* <NewMessageAutos idAuto={data[0]?.id} idCompany={data[0]?.idCompany} imageAuto={data[0]?.featuredImage}/> */}
-                    <NewScheduling idAuto={data[0]?.id} idCompany={data[0]?.idCompany} image={data[0]?.featuredImage} brand={data[0]?.brand}  model={data[0]?.model} />
+                    <NewScheduling idAuto={data[0]?.id} idCompany={data[0]?.idCompany} image={data[0]?.featuredImage} brand={data[0]?.brand}  model={data[0]?.model}
+                        version={data[0]?.version} year={`${data[0]?.year}/${data[0]?.yearModel}`} plate={data[0]?.plate}/>
                     <NewShare idAuto={data[0]?.id} title={`${data[0]?.brand} - ${data[0]?.model} (${data[0]?.city} / ${data[0]?.uf})`}/>
                      <div className="heart">
                     <NewFavorite idAuto={data[0]?.id} idCompany={data[0]?.idCompany} page={"yes"}/>
@@ -128,7 +129,7 @@ export function Autos() {
                         <div className="iconUnicBox">
                             <div className="simbolBox">
                             <TiSortNumerically />
-                            <p>Final de placa</p>
+                            <p>Final/Placa</p>
                             </div>
                             <p>{data[0]?.endOfBoard}</p>
                         </div>

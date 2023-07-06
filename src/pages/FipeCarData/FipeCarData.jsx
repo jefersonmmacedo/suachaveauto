@@ -3,12 +3,13 @@ import "./fipeCarData.css";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import Navbar2 from "../../components/Nav/Navbar";
+import { mask as masker, unMask } from "remask";
 
 export function FipeCarData() {
     const {placa} = useParams()
 
     const [carsFipe, setCarsFipe] = useState([])
-    const [newPlaca, setNewPlaca] = useState(placa)
+    const [newPlaca, setNewPlaca] = useState("")
 
     useEffect(() => {
         async function loadFipeCarData() {
@@ -37,13 +38,23 @@ export function FipeCarData() {
         window.open(`/consulta-placa/${newPlaca}`, "_self");
         }
 
+        
+    function ChangeMaskPlate(e) {
+        const originalValue = unMask(e.target.value);
+        const maskedValue = masker(originalValue, [
+          "SSS-SSSS",
+        ]);
+    
+        setNewPlaca(maskedValue)
+      }
+
 
     return (
         <div className="FipeCarData">
             <Navbar2 />
             {carsFipe?.length === 0 || carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ? "" :
             <div className="car">
-           <h4>Marca/Modelo:<span> {carsFipe?.informacoes_veiculo?.marca} - {carsFipe?.informacoes_veiculo?.modelo}</span></h4>
+           <h2>{carsFipe?.informacoes_veiculo?.marca} - {carsFipe?.informacoes_veiculo?.modelo}</h2>
            <h4>Cor:<span> {carsFipe?.informacoes_veiculo?.cor}</span></h4>
            <h4>Ano Modelo:<span> {carsFipe?.informacoes_veiculo?.ano}/{carsFipe?.informacoes_veiculo?.ano_modelo}</span></h4>
            <h4>Cidade/Estado(UF):<span> {carsFipe?.informacoes_veiculo?.municipio}/{carsFipe?.informacoes_veiculo?.uf}</span></h4>
@@ -71,11 +82,14 @@ export function FipeCarData() {
              </div>
              }
 
+             <div className="new">
 <h3>Nova consulta:</h3>
 <div className="searchPlaca">
-                <input type="text" value={newPlaca} onChange={e => setNewPlaca(e.target.value)}/>
+                <input type="text" placeholder="Digite a placa" value={newPlaca?.toUpperCase()} onChange={ChangeMaskPlate}/>
                 <button onClick={loadFipeDataCar}>Buscar</button>
             </div>
+             </div>
+
 
             {carsFipe?.length === 0 || carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ?
             <div className="msgError">

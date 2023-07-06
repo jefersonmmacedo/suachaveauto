@@ -187,7 +187,7 @@ export function Properties(){
             <h3>{status === "Venda" ? `Imóveis à ${status}` : `Imóveis para ${status}`} {city !== "" && district !== "" ? `em ${district}, ${city} - ${uf}` : city !== "" && district === "" ? `em ${city} - ${uf}` : ""}</h3>
             }
             </div>
-        <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage}/>
+        {/* <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage}/> */}
         {/* <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage} petsProperty={pets} furnishedProperty={furnished}/> */}
         </div>
 
