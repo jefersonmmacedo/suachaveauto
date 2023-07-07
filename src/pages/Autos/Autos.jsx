@@ -26,9 +26,22 @@ export function Autos() {
         )
     }
 
-
-
+    
+    const Referência = new Date(data[0]?.created_at).getMonth() === 0 ? "Janeiro"
+                    : new Date(data[0]?.created_at).getMonth() === 1 ? "Fevereiro"
+                    : new Date(data[0]?.created_at).getMonth() === 2 ? "Março"
+                    : new Date(data[0]?.created_at).getMonth() === 3 ? "Abril"
+                    : new Date(data[0]?.created_at).getMonth() === 4 ? "Maio"
+                    : new Date(data[0]?.created_at).getMonth() === 5 ? "Junho"
+                    : new Date(data[0]?.created_at).getMonth() === 6 ? "Julho"
+                    : new Date(data[0]?.created_at).getMonth() === 7 ? "Agosto"
+                    : new Date(data[0]?.created_at).getMonth() === 8 ? "Setembro"
+                    : new Date(data[0]?.created_at).getMonth() === 9 ? "Outubro"
+                    : new Date(data[0]?.created_at).getMonth() === 10 ? "Novembro"
+                    : new Date(data[0]?.created_at).getMonth() === 11 ? "Dezembro"
+                    : ""
    
+    const textReferência = `${Referência}/${new Date(data[0]?.created_at).getFullYear()}`
     return (
        <div className="Autos">
         <Navbar2 />
@@ -48,6 +61,14 @@ export function Autos() {
                     : ""
              }
 
+                    <div className="featured">
+                        <p>Novo</p>
+                    </div>
+
+
+                    <div className="ref">
+                        <p>REF.: {data[0]?.id?.toUpperCase()}</p>
+                    </div>
                     {/* <NewMessageAutos idAuto={data[0]?.id} idCompany={data[0]?.idCompany} imageAuto={data[0]?.featuredImage}/> */}
                     <NewScheduling idAuto={data[0]?.id} idCompany={data[0]?.idCompany} image={data[0]?.featuredImage} brand={data[0]?.brand}  model={data[0]?.model}
                         version={data[0]?.version} year={`${data[0]?.year}/${data[0]?.yearModel}`} plate={data[0]?.plate}/>
@@ -60,7 +81,7 @@ export function Autos() {
                     <h2>{data[0]?.brand} <span>{data[0]?.model}</span></h2>
                     <h3>{data[0]?.version}</h3>
                     <h5><IoLocationOutline />{data[0]?.city} - {data[0]?.uf}</h5>
-                    <h4>ID: {data[0]?.id}</h4>
+                    {/* <h4>ID: {data[0]?.id}</h4> */}
                     <div className="status">
                         <p>Aceita financiamento</p>
                     </div>
@@ -161,11 +182,13 @@ export function Autos() {
                         <h2>R$ {data[0]?.value}</h2>
                         </div>
                         <div className="PricingFipe">
-                        <h5>Tabela Fipe:</h5>
+                        <h5>Fipe - Ref.:{textReferência}</h5>
                         <h2>R$ {data[0]?.valueFipe}</h2>
+                       <a href={`/consulta-placa/${data[0]?.plate}`}>Ver Fipe atualizada</a>
                         </div>
+                       
                     </div>
-
+                    {/* /consulta-placa/LXK-0783 */}
 
                     {data[0]?.video === "" ? "" :
                     <div className="video">

@@ -55,7 +55,7 @@ export function SignIn() {
                             <p> <a className="link" href="/recuperar">Recuperar senha</a></p>
                         </div>
                         <button onClick={handleLogin}>Entrar</button>
-                        <a href="/escolha-sua-conta">Cadastre-se aqui!</a>
+                        <a href="/cadastrar">Cadastre-se aqui!</a>
                     </>
                     :
                     <>

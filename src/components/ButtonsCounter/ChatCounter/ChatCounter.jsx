@@ -6,7 +6,7 @@ import api from "../../../services/api";
 import { useEffect, useState } from "react";
 
 export function ChatCounter() {
-  const Local = localStorage.getItem("suachave");
+  const Local = localStorage.getItem("suachaveauto");
   const user = JSON.parse(Local);
 
   const [dateReadyMessages, setDateReadyMessages] = useState([]);

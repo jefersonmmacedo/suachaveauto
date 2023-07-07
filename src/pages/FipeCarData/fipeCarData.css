@@ -39,7 +39,7 @@
     color: var(--Paragraph);
 }
 .FipeCarData .car h4 span {
-    font-weight: 500;
+    font-weight: 400;
     color: var(--Gray2);
 }
 
@@ -60,20 +60,25 @@
     justify-content: center;
     flex-direction: column;
     width: 32%;
-    background-color: var(--Primary);
+    background-color: var(--BorderInput);
     margin: 5px;
     padding: 10px;
     border-radius: 16px;
-    border: 1px solid var(--Primary);
-    color: var(--White);
+    border: 1px solid var(--BorderInput);
+    color: var(--Description);
 }
 
+.FipeCarData .versions .versionUnic h4 {
+    font-weight: 700;
+    margin: 2px 0;
+    color: var(--Primary);
+}
 .FipeCarData .versions .versionUnic h5 {
     font-weight: 700;
     margin: 2px 0;
 }
 .FipeCarData .versions .versionUnic h5 span {
-    font-weight: 500
+    font-weight: 400
 }
 
 

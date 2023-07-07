@@ -16,20 +16,6 @@ export function CompanyList() {
     const [districtAll, setDistrictAll] = useState([]);
     const [search, setSearch] = useState("");
     const searchLower = search.toLowerCase();
-    const type = "Imobiliária";
-
-    // useEffect(() => {
-    //     async function companiesLoad() {
-    //         await api.get(`/company/all`).then((res) => {
-    //             console.log(res.data);
-    //             setCompanies(res.data);
-    //         }).catch((error) => {
-    //             console.log(error)
-    //         })
-    //     }
-
-    //     companiesLoad()
-    // },[])
 
     const { data } = useFetch(`/company/all`)
     if(!data) {

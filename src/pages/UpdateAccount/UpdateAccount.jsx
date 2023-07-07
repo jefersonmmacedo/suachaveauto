@@ -6,12 +6,14 @@ import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
 import { useState } from "react";
 import { FiUpload } from "react-icons/fi";
 import { mask as masker, unMask } from "remask";
+import { MyButtonComponent } from "../../components/UploadFiles/UploadFiles";
 
 export function UpdateAccount() {
     const LocalCity = localStorage.getItem("suachaveauto");
     const user = JSON.parse(LocalCity);
     const [avatarUrl, setAvatarUrl] = useState(null);
     const [imageAvatar, setImageAvatar] = useState('');
+    const [avatarClient, setAvatarClient] = useState("");
     const profile = user.avatar;
 
     const [name, setName] = useState("");
@@ -24,21 +26,10 @@ export function UpdateAccount() {
     const [city, setCity] = useState("");
     const [uf, setUf] = useState("");
 
-    function handleFile(e) {
-        // console.log(e.target.files[0])
-        if(e.target.files[0]){
-            const image = e.target.files[0];
-            if(image.type === 'image/jpeg' || image.type === 'image/jpg' || image.type === 'image/png') {
-                setImageAvatar(image);
-                setAvatarUrl(URL.createObjectURL(e.target.files[0]));
-                console.log(avatarUrl);
-             } else {
-                 console.log('Tipo dearquivo não aceito. Envie uma imagem dos tipos: .jpg, .jpeg, .png');
-                 setImageAvatar(null);
-                 return null;
-             }
-         }
-     }
+    function uploadFiles2(data) {
+        setAvatarClient(data)
+    }
+
 
 
      
@@ -74,11 +65,11 @@ export function UpdateAccount() {
                 </div>
                     <form action="">
 
-                    <label className="label-avatar">
-                            <span><FiUpload color="#f65" size={25} /></span>
-                            <input type="file" accept="image/*" onChange={handleFile} required/><br />
-                            <img src={avatarUrl === null ? profile : avatarUrl} alt="Avatar" height={100} width={100}/>
-                        </label>
+                    <div className="image">
+                            <img src={avatarClient === "" ? user.avatar : avatarClient} alt="Avatar" height={100} width={100}/>
+                        <MyButtonComponent uploadFiles2={uploadFiles2} text={avatarClient === "" ? "Adicionar imagem" : "Alterar imagem"} nameClient={name}/>
+                        </div>
+
 
                         <div className="dataInputs">
                             <div className="textSpan">

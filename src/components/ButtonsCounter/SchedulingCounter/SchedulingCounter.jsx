@@ -4,7 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import { useFetch } from "../../../hooks/useFetch";
 
 export function SchedulingCounter() {
-  const LocalCity = localStorage.getItem("suachave");
+  const LocalCity = localStorage.getItem("suachaveauto");
   const user = JSON.parse(LocalCity);
 
   const {data} = useFetch(`/scheduling/client/${user.id}`)

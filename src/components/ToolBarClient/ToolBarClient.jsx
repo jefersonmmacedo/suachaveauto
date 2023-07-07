@@ -24,15 +24,15 @@ export function ToolBarClient() {
             <div className="ToolUnicClient2">
                    <a href="/minhaconta">
                    <div className="image2">
-                      <img src={LogoImg} alt="" />
+                      <img src={user.avatar} alt="" />
                     </div>  
                     </a>
                 </div>
-                <div className="ToolUnicClient">
+                {/* <div className="ToolUnicClient">
                    <a href="/mensagens">
                     <IoChatboxEllipsesOutline /><p>Chat</p>
                     </a>
-                </div>
+                </div> */}
                 <div className="ToolUnicClient">
                    <a href="/agendamentos">
                     <IoCalendarOutline /><p>Agenda</p>

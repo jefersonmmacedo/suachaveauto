@@ -55,7 +55,7 @@ export function FipeCarData() {
             {carsFipe?.length === 0 || carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ? "" :
             <div className="car">
            <h2>{carsFipe?.informacoes_veiculo?.marca} - {carsFipe?.informacoes_veiculo?.modelo}</h2>
-           <h4>Cor:<span> {carsFipe?.informacoes_veiculo?.cor}</span></h4>
+           <h4>Cor:<span> {carsFipe?.informacoes_veiculo?.cor?.toUpperCase()}</span></h4>
            <h4>Ano Modelo:<span> {carsFipe?.informacoes_veiculo?.ano}/{carsFipe?.informacoes_veiculo?.ano_modelo}</span></h4>
            <h4>Cidade/Estado(UF):<span> {carsFipe?.informacoes_veiculo?.municipio}/{carsFipe?.informacoes_veiculo?.uf}</span></h4>
            <h4>Seguimento:<span> {carsFipe?.informacoes_veiculo?.segmento}/{carsFipe?.informacoes_veiculo?.sub_segmento}</span></h4>
@@ -67,10 +67,10 @@ export function FipeCarData() {
                {carsFipe?.fipe?.map((car) => {
                 return (
                     <div className="versionUnic">
-                    <h5>Versão: <span>{car.modelo}</span></h5>
+                    <h4>{car.modelo}</h4>
                     <h5>Ano Modelo: <span>{car.ano_modelo}</span></h5>
                     <h5>Cód. Fipe: <span>{car.codigo_fipe}</span></h5>
-                    <h5>Mês referência: <span>{car.mes_referencia}</span></h5>
+                    <h5>Mês referência: <span>{car.mes_referencia?.toUpperCase()}</span></h5>
                     <h5>Combustível: <span>{car.combustivel}</span></h5>
 
                     <div className="value">
@@ -82,6 +82,14 @@ export function FipeCarData() {
              </div>
              }
 
+{carsFipe?.length === 0 || carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ?
+            <div className="msgError">
+                <h3>Falha na busca das informações</h3>
+                <h4>Desculpe. Ocorreu um erro ao buscar as informações do veículo. Tente novamente em alguns instantes</h4>
+            </div>
+                : ""
+               }
+
              <div className="new">
 <h3>Nova consulta:</h3>
 <div className="searchPlaca">
@@ -91,13 +99,7 @@ export function FipeCarData() {
              </div>
 
 
-            {carsFipe?.length === 0 || carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ?
-            <div className="msgError">
-                <h3>Falha na busca das informações</h3>
-                <h4>Desculpe. Ocorreu um erro ao buscar as informações do veículo. Tente novamente em alguns instantes</h4>
-            </div>
-                : ""
-               }
+
         </div>
     )
 }

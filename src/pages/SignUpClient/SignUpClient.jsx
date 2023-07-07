@@ -160,10 +160,10 @@ export function SignUpClient() {
 
                         <div className="image">
                             <img src={avatarClient === "" ? profile : avatarClient} alt="Avatar" height={100} width={100}/>
+                        <MyButtonComponent uploadFiles2={uploadFiles2} text={avatarClient === "" ? "Adicionar imagem" : "Alterar imagem"} nameClient={name}/>
                         </div>
 
 
-                        <MyButtonComponent uploadFiles2={uploadFiles2} text={avatarClient === "" ? "Adicionar imagem" : "Alterar imagem"} nameClient={name}/>
 
                          <select value={uf} onChange={handleSetectUf}> 
                             <option value="">Escolha seu estado</option>

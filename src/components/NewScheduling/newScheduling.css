@@ -13,7 +13,7 @@
 }
 
 .buttonScheduling svg {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .buttonScheduling:hover {
@@ -163,8 +163,9 @@
     border: none;
     padding: 10px 20px;
     background-color: var(--White);
-    border: 1px solid var(--Border);
+    border: 1px solid var(--Gray2);
     border-radius: 25px;
+    color: var(--Gray2);
 }
 
 .content-modal-scheduling .itensModal-scheduling .form select {
@@ -176,7 +177,7 @@
     border: none;
     padding: 10px 20px;
     background-color: var(--White);
-    border: 1px solid var(--Border);
+    border: 1px solid var(--Gray2);
     border-radius: 25px;
     color: var(--Gray2);
 }

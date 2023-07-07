@@ -28,7 +28,8 @@ export function Schedules() {
 
     const filterNext = data?.filter((filterData) => new Date(filterData.created_at) > new Date())
 
-    const filterPassed = data?.filter((filterData) => new Date(filterData.created_at) < new Date())
+    const filterPassed = data?.filter((filterData) => new Date(filterData.created_at).getDate() < new Date().getDate()
+                                                      && new Date(filterData.created_at).getMonth()+1  < new Date().getMonth()+1)
 
 
     function realoadPage() {
@@ -57,15 +58,15 @@ export function Schedules() {
                 {filterNow?.map((sheduling) => {
                     return (
                         <div className="chat" key={sheduling.id}>
-                            <a href={`/agendamento/${sheduling.id}`}>
+                            {/* <a href={`/agendamento/${sheduling.id}`}> */}
                         <div className="image">
-                            <img src={sheduling.imageProperty} alt="" />
+                            <img src={sheduling.imageAuto} alt="" />
                         </div>
-                        </a>
+                        {/* </a> */}
                         <div className="textChat">
-                        <a href={`/agendamento/${sheduling.id}`}>
-                        <h5>{sheduling.titleProperty}</h5>
-                        </a>
+                        {/* <a href={`/agendamento/${sheduling.id}`}> */}
+                        <h5>{sheduling.dataCar?.brand} - {sheduling.dataCar?.model}</h5>
+                        {/* </a> */}
                         <h5><IoCalendarOutline />{sheduling.day}/{sheduling.month}/{sheduling.year} - {sheduling.hour}</h5>
                         <h6><IoBusinessOutline />{sheduling.location}</h6>
                         <h6><IoLocationOutline />{sheduling.address}</h6>
@@ -88,12 +89,12 @@ export function Schedules() {
                         <div className="chat" key={sheduling.id}>
                             <a href={`/agendamento/${sheduling.id}`}>
                         <div className="image">
-                            <img src={sheduling.imageProperty} alt="" />
+                            <img src={sheduling.imageAuto} alt="" />
                         </div>
                         </a>
                         <div className="textChat">
                         <a href={`/agendamento/${sheduling.id}`}>
-                        <h4>{sheduling.titleProperty}</h4>
+                        <h4>{sheduling.titleAuto}</h4>
                         </a>
                         <h5><IoCalendarOutline />{sheduling.day}/{sheduling.month}/{sheduling.year} - {sheduling.hour}</h5>
                         <h6><IoBusinessOutline />{sheduling.location}</h6>
@@ -116,12 +117,12 @@ export function Schedules() {
                         <div className="chat" key={sheduling.id}>
                             <a href={`/agendamento/${sheduling.id}`}>
                         <div className="image">
-                            <img src={sheduling.imageProperty} alt="" />
+                            <img src={sheduling.imageAuto} alt="" />
                         </div>
                         </a>
                         <div className="textChat">
                         <a href={`/agendamento/${sheduling.id}`}>
-                        <h4>{sheduling.titleProperty}</h4>
+                        <h4>{sheduling.titleAuto}</h4>
                         </a>
                         <h5><IoCalendarOutline />{sheduling.day}/{sheduling.month}/{sheduling.year} - {sheduling.hour}</h5>
                         <h6><IoBusinessOutline />{sheduling.location}</h6>

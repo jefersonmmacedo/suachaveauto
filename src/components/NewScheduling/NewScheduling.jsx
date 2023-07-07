@@ -36,14 +36,13 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
     const [auto, setAuto] = useState();
     const [company, setCompany] = useState();
   
-    const [nameNew, setNameNew] = useState("");
-    const [whatsappNew, setWhatsappNew] = useState("");
+    const [nameNew, setNameNew] = useState(user === null ? "" : user.name);
+    const [whatsappNew, setWhatsappNew] = useState(user === null ? "" : user.whatsapp);
 
     const [latitude, setLatitude] = useState("")
     const [longitude, setLongitude] = useState("")
 
     const [days, setDays] = useState([]);
-
 
 
 
@@ -609,7 +608,7 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
     Modal.setAppElement('#root');
     return (
         <>
-        <button className="buttonScheduling" onClick={user === null ? handleOpenModalLogin : handleOpenModal}><IoCalendarOutline/> Agendar visita</button>
+        <button className="buttonScheduling" onClick={handleOpenModal}><IoCalendarOutline/> Agendar visita</button>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
@@ -675,44 +674,6 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
                     </div>
 
                 </div>
-                {/* <div className="data">
-
-                    <div className="infosData">
-                    <div className="textModal-scheduling">
-                        <p>Possúi carro?</p>
-                    </div>
-                 <select style={{borderRadius: 25}}  value={ownACar} onChange={handleOwnACar}>
-                    <option value="Escolha">Escolha</option>
-                    <option value="Não">Não</option>
-                    <option value="Sim">Sim</option>
-                </select>
-                    </div>
-
-                    <div className="infosData">
-                    <div className="textModal-scheduling">
-                        <p>Quantidade de pessoas</p>
-                    </div>
-                     <select style={{borderRadius: 25}}  value={amountOfPeople} onChange={handleAmountOfPeople}>
-                        {ownACar === "Sim" ?
-                        <>
-                        <option value="Escolha">Escolha</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option></>
-                        :
-                        <>
-                        <option value="Escolha">Escolha</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        </>}
-                </select>
-                    </div>
-
-                </div> */}
-
 
                     <div className="data">
                     <div className="infosData">
@@ -734,14 +695,24 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
                     <option value="Sim">Sim</option>
                     <option value="Não">Não</option>
                 </select>
-
-</div>
-
-
-
-</div>
-<div className="textModal-scheduling">
-                        <p>Endereço de encontro</p>
+            </div>
+        </div>
+        <div className="data">
+        <div className="infosData">
+                  <div className="textModal-scheduling">
+                        <p>Nome</p>
+                    </div>
+                <input type="text" value={nameNew} onChange={e => setNameNew(e.target.value)} />
+            </div>
+                  <div className="infosData">
+                  <div className="textModal-scheduling">
+                        <p>Whatsapp</p>
+                    </div>
+                <input type="text" value={whatsappNew} onChange={e => setWhatsappNew(e.target.value)}/>
+            </div>
+        </div>
+        <div className="textModal-scheduling">
+                        <p>Endereço da agência</p>
                     </div>
                   {meet === "Agência" ?
                 <div className="address">
@@ -761,9 +732,8 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
             </div>
             </div>
             </Modal>
-
-            
-        <Modal isOpen={isOpenModalLogin} onRequestClose={handleCloseModalLogin}
+     
+        {/* <Modal isOpen={isOpenModalLogin} onRequestClose={handleCloseModalLogin}
             overlayClassName="react-modal-overlay"
             className="react-modal-content">
             <button type="button" className="react-modal-button" onClick={handleCloseModalLogin}>
@@ -786,10 +756,9 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
 
             </div>
             </div>
-            </Modal>
+            </Modal> */}
 
-
-            <Modal isOpen={isOpenModalLogin2} onRequestClose={handleCloseModalLogin2}
+            {/* <Modal isOpen={isOpenModalLogin2} onRequestClose={handleCloseModalLogin2}
             overlayClassName="react-modal-overlay"
             className="react-modal-content">
             <button type="button" className="react-modal-button" onClick={handleCloseModalLogin2}>
@@ -824,7 +793,7 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
 
             </div>
             </div>
-            </Modal>
+            </Modal> */}
         </>
     )
 }

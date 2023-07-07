@@ -117,6 +117,9 @@ text-decoration: none;
 .MyAccount .main .text .indicators .indicatorUnic .textIndicator h3 {
     color: var(--Gray);
 }
+.MyAccount .main .text .indicators .indicatorUnic .textIndicator svg {
+    color: var(--Gray);
+}
 
 
 @media (max-width: 700px) {

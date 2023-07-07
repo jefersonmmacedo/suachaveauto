@@ -2,7 +2,7 @@
 import Navbar2 from "../../components/Nav/Navbar";
 import "./myAccount.css";
 import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
-import { IoCalendarOutline, IoChatboxEllipsesOutline, IoChatboxOutline, IoCloseSharp, IoHeartOutline, IoHomeOutline, IoPersonOutline} from "react-icons/io5"
+import { IoArrowBackOutline, IoArrowForwardOutline, IoCalendarOutline, IoChatboxEllipsesOutline, IoChatboxOutline, IoCloseSharp, IoHeartOutline, IoHomeOutline, IoPersonOutline} from "react-icons/io5"
 import api from "../../services/api";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -61,7 +61,7 @@ export function MyAccount() {
                 <button><IoCloseSharp /> Deletar minha conta</button>
                 </div>
                     <div className="indicators">
-                        <a href="/mensagens">
+                        {/* <a href="/mensagens">
                         <div className="indicatorUnic">
                             <IoChatboxEllipsesOutline />
                             <div className="textIndicator">
@@ -69,7 +69,7 @@ export function MyAccount() {
                                 <h4>Conversas</h4>
                             </div>
                         </div>
-                        </a>
+                        </a> */}
                         <a href="/favoritos">
                         <div className="indicatorUnic">
                             <IoHeartOutline />
@@ -92,8 +92,8 @@ export function MyAccount() {
                         <div className="indicatorUnic">
                             <IoPersonOutline />
                             <div className="textIndicator">
-                                <h3>Acessar</h3>
-                                <h4>Minha conta</h4>
+                                <h3><IoArrowForwardOutline/></h3>
+                                <h4>Dados da conta</h4>
                             </div>
                         </div>
                         </a> 

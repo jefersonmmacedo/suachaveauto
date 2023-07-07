@@ -4,7 +4,7 @@ export function ChooseYourAccount() {
 
     function handleRedirect(e) {
         e.preventDefault();
-        window.open("/cadastro-profissional", "_self")
+        window.open("https://adm.suachaveauto.com.br/cadastro/novocadastro")
     }
     function handleRedirectClient(e) {
         e.preventDefault();

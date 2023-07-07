@@ -83,39 +83,18 @@
     justify-content: flex-start;
 }
 
-
-
-.UpdateAccount .main .text form .label-avatar{
+.UpdateAccount .main .text form .image{
     width: 100px;
     height: 100px;
-    border-radius: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    cursor: pointer;
     margin: 20px 0;
 }
 
-.UpdateAccount .main .text form .label-avatar input {
-    display: none;
-}
-
-.UpdateAccount .main .text form .label-avatar span {
-    z-index: 99;
-    position: absolute;
-    opacity: 0.7;
-    transition: all .5s;
-}
-
-.UpdateAccount .main .text form .label-avatar span:hover{
-    opacity: 1;
-    transform: scale(1.4);
-}
-
-.UpdateAccount .main .text form .label-avatar img{
-    margin-bottom: 1em;
-    border-radius: 100px;
+.UpdateAccount .main .text form .image img{
+    border-radius: 50px;
     object-fit: cover;
     width: 100px;
     height: 100px;
@@ -156,6 +135,7 @@
     border-radius:50px;
     background-color: var(--BorderInput);
     border: none;
+    color: var(--Description);
 }
 .UpdateAccount .main .text form select{
     width: 100%;
@@ -168,6 +148,7 @@
     border-radius:50px;
     background-color: var(--BorderInput);
     border: none;
+    color: var(--Description);
 }
 .UpdateAccount .main .text form button{
     width: 100%;

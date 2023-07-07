@@ -61,6 +61,24 @@
     color: var(--White);
     font-weight: 700;
 }
+.Autos .main .data .AutosUnic .targets .ref {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--White);
+    border: 1px solid var(--Gray2);
+    color: var(--Gray2);
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.Autos .main .data .AutosUnic .targets .ref p {
+    color: var(--Gray2);
+    font-weight: 400;
+}
 
 .Autos .main .data .AutosUnic .targets .heart svg {
     color: var(--Border);
@@ -311,11 +329,21 @@ sup {
     color: var(--Gray);
     font-weight: 700;
     margin: 5px 10px;
+    text-align: right;
 }
 .Autos .main .data .AutosUnic .text .pricing .PricingFipe h2 {
     color: var(--White);
     font-weight: 700;
     margin: 0 10px;
+    text-align: right;
+}
+.Autos .main .data .AutosUnic .text .pricing .PricingFipe a {
+    font-size: 14px;
+    color: var(--White);
+    font-weight: 400;
+    margin: 10px;
+    text-decoration: none;
+    text-align: right;
 }
 .Autos .main .data .AutosUnic .text .video {
     width: 100%;
@@ -413,10 +441,10 @@ sup {
 
 
 @media (max-width: 1200px) {
-    .Autos .main .data .data {
-        width: 95%;
+    .Autos .main .data {
+        width: 100%;
     }
-
+    
     @media (max-width: 1000px) {
 
         .Autos .main .data .data .AutosUnic {

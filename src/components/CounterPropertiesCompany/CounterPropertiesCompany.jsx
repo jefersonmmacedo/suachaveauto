@@ -1,11 +1,7 @@
 import { useFetch } from "../../hooks/useFetch";
 
 export function CounterPropertiesCompany({id}) {
-    const {data} = useFetch(`/property/company/${id}`);
-
-    if(data) {
-        console.log(data)
-    }
+    const {data} = useFetch(`/autos/company/${id}`);
 
     return (
         <>

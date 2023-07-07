@@ -7,7 +7,7 @@ import { useState } from "react";
 import { useFetch } from "../../../hooks/useFetch";
 
 export function NotificationCounter() {
-  const Local = localStorage.getItem("suachave");
+  const Local = localStorage.getItem("suachaveauto");
   const user = JSON.parse(Local);
 
   const [dateReadyNotifications, setDateReadyNotifications] = useState([])

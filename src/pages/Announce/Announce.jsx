@@ -205,7 +205,7 @@ export function Announce() {
         </div>
     </div>
 
-    <div className="textPricing">
+    {/* <div className="textPricing">
         <h2>Tenha um <span>site</span> para o <span>seu negócio</span></h2>
         <h4>Site totalmente integrado ao nosso sistema e portal, controle todo o seu site pelo nosso sistema de gestão.</h4>
     </div>
@@ -214,7 +214,7 @@ export function Announce() {
     </div>
     <div className="buttonsPlainsAnnounce">
         <a href="#"> Clique aqui e saiba mais </a>
-    </div>
+    </div> */}
     {/* <div className="textPricing">
         <h2>Temos as <span>melhores ferramentas</span> para o seu dia a dia</h2>
     </div> */}
