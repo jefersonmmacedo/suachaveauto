@@ -10,6 +10,7 @@ export function FipeCarData() {
 
     const [carsFipe, setCarsFipe] = useState([])
     const [newPlaca, setNewPlaca] = useState("")
+    const [failure, setFailure] = useState(0)
 
     useEffect(() => {
         async function loadFipeCarData() {
@@ -48,12 +49,26 @@ export function FipeCarData() {
         setNewPlaca(maskedValue)
       }
 
+      function loadData() {
+        setTimeout(() => {
+            if(carsFipe?.length === 0) {
+                setFailure(1)
+            }
+          }, "5000")
+
+      }
+
+      loadData()
+
+
 
     return (
         <div className="FipeCarData">
             <Navbar2 />
-            {carsFipe?.length === 0 || carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ? "" :
-            <div className="car">
+            {failure === 1 && carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ?
+            ""
+            : carsFipe?.msg?.includes("Veículo não encontrado para a placa") ? ""
+        : <div className="car">
            <h2>{carsFipe?.informacoes_veiculo?.marca} - {carsFipe?.informacoes_veiculo?.modelo}</h2>
            <h4>Cor:<span> {carsFipe?.informacoes_veiculo?.cor?.toUpperCase()}</span></h4>
            <h4>Ano Modelo:<span> {carsFipe?.informacoes_veiculo?.ano}/{carsFipe?.informacoes_veiculo?.ano_modelo}</span></h4>
@@ -68,10 +83,22 @@ export function FipeCarData() {
                 return (
                     <div className="versionUnic">
                     <h4>{car.modelo}</h4>
-                    <h5>Ano Modelo: <span>{car.ano_modelo}</span></h5>
-                    <h5>Cód. Fipe: <span>{car.codigo_fipe}</span></h5>
-                    <h5>Mês referência: <span>{car.mes_referencia?.toUpperCase()}</span></h5>
-                    <h5>Combustível: <span>{car.combustivel}</span></h5>
+                    <div className="text">
+                    <h5>Ano Modelo: </h5>
+                    <h5><span>{car.ano_modelo}</span></h5>
+                    </div>
+                    <div className="text">
+                    <h5>Cód. Fipe: </h5>
+                    <h5> <span>{car.codigo_fipe}</span></h5>
+                    </div>
+                    <div className="text">
+                    <h5>Mês referência:</h5>
+                    <h5><span>{car.mes_referencia?.toUpperCase()}</span></h5>
+                    </div>
+                    <div className="text">
+                    <h5>Combustível:</h5>
+                    <h5><span>{car.combustivel}</span></h5>
+                    </div>
 
                     <div className="value">
                         <h4>Valor: R${car.valor}</h4>
@@ -82,10 +109,16 @@ export function FipeCarData() {
              </div>
              }
 
-{carsFipe?.length === 0 || carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ?
+{
+failure === 1 && carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ?
             <div className="msgError">
                 <h3>Falha na busca das informações</h3>
                 <h4>Desculpe. Ocorreu um erro ao buscar as informações do veículo. Tente novamente em alguns instantes</h4>
+            </div>
+: carsFipe?.msg?.includes("Veículo não encontrado para a placa") ?
+            <div className="msgError">
+                <h3>Falha na busca das informações</h3>
+                <h4>Desculpe. Veículo não encontrado para a placa {placa} </h4>
             </div>
                 : ""
                }

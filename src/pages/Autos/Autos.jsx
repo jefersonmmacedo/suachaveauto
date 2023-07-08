@@ -13,6 +13,7 @@ import { NewFavorite } from "../../components/NewFavorite/NewFavorite";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { NewShare } from "../../components/NewShare/NewShare";
+import { FaMotorcycle } from "react-icons/fa";
 
 
 export function Autos() {
@@ -61,10 +62,6 @@ export function Autos() {
                     : ""
              }
 
-                    <div className="featured">
-                        <p>Novo</p>
-                    </div>
-
 
                     <div className="ref">
                         <p>REF.: {data[0]?.id?.toUpperCase()}</p>
@@ -92,7 +89,7 @@ export function Autos() {
                         <div className="iconUnicBox">
                             <div className="simbolBox">
                                 <IoCalendarOutline />
-                                <p>Ano</p>
+                               
                             </div>
                                 <p>{data[0]?.year}/{data[0]?.yearModel}</p>
                         </div>
@@ -101,52 +98,62 @@ export function Autos() {
                         <div className="iconUnicBox">
                             <div className="simbolBox">
                                 <TbRoad />
-                            <p>Km</p>
+                          
                             </div>
-                                <p>{data[0]?.mileage}</p>
+                                <p>{data[0]?.mileage} Km</p>
                         </div>
                         <div className="iconUnicBox">
                             <div className="simbolBox">
                             <TbGasStation />
-                            <p>Combustível</p>
+                           
                             </div>
                                 <p>{data[0]?.fuel}</p>
                         </div>
+                        {data[0]?.type === "Motos" ? "":
                         <div className="iconUnicBox">
                             <div className="simbolBox">
                             <GiGearStickPattern />
-                            <p>Câmbio</p>
+                           
                             </div>
                                 <p>{data[0]?.march}</p>
                         </div>
+                        }
+                        {data[0]?.type === "Motos" ? "":
                         <div className="iconUnicBox">
                             <div className="simbolBox">
                             <GiCarDoor />
-                            <p>Portas</p>
+                         
                             </div>
                                 <p>{data[0]?.doors}</p>
                         </div>
+                         }
                         <div className="iconUnicBox">
                             <div className="simbolBox">
                             <IoColorFillOutline />
-                            <p>Cor</p>
+                          
                             </div>
                                 <p>{data[0]?.color}</p>
                         </div>
                         <div className="iconUnicBox">
                             <div className="simbolBox">
+                            {data[0]?.type === "Motos" ?
+                                <FaMotorcycle />
+                                :
                                 <IoCarSportOutline />
-                            <p>Carroceria</p>
+                                }
+                              
                             </div>
                                 <p>{data[0]?.bodywork}</p>
                         </div>
+                        {data[0]?.type === "Motos" ? "":
                         <div className="iconUnicBox">
                             <div className="simbolBox">
                             <GiSteeringWheel />
-                            <p>Direção</p>
+                           
                             </div>
                                 <p>{data[0]?.direction}</p>
                         </div>
+                        }
                         <div className="iconUnicBox">
                             <div className="simbolBox">
                             <TiSortNumerically />

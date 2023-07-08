@@ -1,9 +1,8 @@
 ﻿import { Footer } from "../../components/Footer/Footer";
 import Navbar2 from "../../components/Nav/Navbar";
 import "./scheduling.css";
-import {IoCalendar, IoAlarmOutline, IoCalendarOutline, IoLocationOutline, IoBusinessOutline} from 'react-icons/io5';
+import { IoAlarmOutline, IoCalendarOutline, IoLocationOutline, IoBusinessOutline} from 'react-icons/io5';
 import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
-import ImageHouse from "../../assets/images/house.jpg";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { PropertyUnicBlock } from "../../components/PropertyUnicBlock/PropertyUnicBlock";

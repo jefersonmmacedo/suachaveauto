@@ -58,7 +58,7 @@
 }
 
 .SearchPropertyHomeCenter .search input::placeholder {
-    color: var(--Gray);
+    color: var(--Gray2);
     font-weight: 700;
 }
 .SearchPropertyHomeCenter .search datalist {
@@ -304,7 +304,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color: var(--Gray);
+    color: var(--Description);
 }
 
 .SearchPropertyHomeCenter .textLocation .blockInfo select {
@@ -314,7 +314,7 @@
     justify-content: center;
     padding: 5px 10px;
     Background-color:var(--BorderHover);
-    color: var(--Paragraph);
+    color: var(--Description);
     font-weight: 500;
     border: none;
     margin: 5px;
@@ -328,7 +328,7 @@
     justify-content: center;
     padding: 6px 10px;
     Background-color:var(--Border);
-    color: var(--Paragraph);
+    color: var(--Description);
     font-weight: 500;
     border: none;
     margin: 5px 10px;
@@ -350,7 +350,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color: var(--BorderInput);
+    color: var(--Description);
+    font-weight: 700;
 }
 
 .SearchPropertyHomeCenter .textLocation .blockInfo .checkDiv h5 svg {

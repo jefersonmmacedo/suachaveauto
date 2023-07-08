@@ -158,23 +158,22 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
+    padding: 10px 0;
     flex-wrap: wrap;
     border: none;
-    border-top: 1px solid var(--Border);
-    padding-top: 0px;
 }
 
 .Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox {
-    width: 27%;
+    width: 200px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 10px 5px;
+    padding: 5px;
+    margin: 10px 0;
     color: var(--Paragraph);
-
-    border-radius: 10px;
+    border-bottom: 1px solid var(--Border);
 }
 
 .Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox p {
@@ -206,7 +205,7 @@ sup {
 
 
 .Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox .simbolBox {
-    width: 100%;
+    width: 20%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;

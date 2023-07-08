@@ -1,13 +1,8 @@
 ﻿import { Footer } from "../../components/Footer/Footer";
 import Navbar2 from "../../components/Nav/Navbar";
 import "./negociations.css";
-import {IoBusinessOutline, IoCalendarClear, IoCalendarOutline, IoLocationOutline} from 'react-icons/io5';
 import { ToolBarClient } from "../../components/ToolBarClient/ToolBarClient";
-import ImageHouse1 from "../../assets/images/house.jpg";
-import ImageHouse2 from "../../assets/images/house1.jpg";
-import ImageHouse3 from "../../assets/images/house2.jpg";
-import { DateFormat } from "../../components/DateFormat/DateFormat";
-import { useFetch } from "../../hooks/useFetch";
+
 
 export function Negociations() {
 

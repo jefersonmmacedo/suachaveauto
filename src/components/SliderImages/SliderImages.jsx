@@ -1,12 +1,6 @@
-﻿  import Carousel, { slidesToShowPlugin, arrowsPlugin  } from '@brainhubeu/react-carousel';
-  import { IoArrowForwardCircleOutline, IoArrowBackCircleOutline, IoCloseOutline, IoArrowBack, IoArrowForward  } from 'react-icons/io5';
+﻿  import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
+  import { IoCloseOutline, IoArrowBack, IoArrowForward  } from 'react-icons/io5';
   import '@brainhubeu/react-carousel/lib/style.css';
-  import ImageHouse1 from "../../assets/images/house.jpg";
-  import ImageHouse2 from "../../assets/images/house1.jpg";
-  import ImageHouse3 from "../../assets/images/house2.jpg";
-  import ImageHouse4 from "../../assets/images/house4.jpg";
-  import ImageHouse5 from "../../assets/images/house5.jpg";
-  import ImageHouse6 from "../../assets/images/house6.jpg";
 import { SliderImagesModal } from '../SliderImagesModal/SliderImagesModal';
 import Modal from 'react-modal';
 import { useState } from "react";

@@ -1,7 +1,6 @@
 ﻿import { IoCheckbox } from "react-icons/io5";
 import { Footer } from "../../components/Footer/Footer";
 import Navbar2 from "../../components/Nav/Navbar";
-import qrcode from "../../assets/images/qrcode.png";
 import "./checkout.css"
 
 export function Checkout() {
@@ -43,7 +42,7 @@ export function Checkout() {
 
                 <div className="Method">
                 <h4>Escaneie o QR-CODE</h4>
-                <img src={qrcode} alt="" />
+              
 
                 <h4>Chave aleatória</h4>
                 <p>chna415sisjns-5s8dcnnsjs5dwdw5-5d8dw-mdwwd-101kl</p>

@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Burger from './Burger';
 import LogoImg from '../../assets/images/Logo.png'
-import LogoSimbol from '../../assets/images/Simbol.png'
-import {IoDocumentTextOutline, IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
-  IoLogOutOutline, IoSpeedometerOutline, IoHomeOutline, IoChatboxEllipsesOutline, IoCalendarOutline, IoPersonCircleOutline} from 'react-icons/io5'
+import { IoPersonOutline, IoHeartOutline, IoNotificationsOutline,
+  IoLogOutOutline, IoPersonCircleOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 import { AuthContext } from '../../contexts/Auth';
@@ -152,9 +151,6 @@ const Nav = styled.nav`
   }
 }
 `
-
-
-
 
 const Navbar2 = () => {
   const { logout, logout2 } = useContext(AuthContext);

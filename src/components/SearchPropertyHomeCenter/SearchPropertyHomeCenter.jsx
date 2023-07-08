@@ -302,9 +302,7 @@ export function SearchPropertyHomeCenter() {
                                 }
 
 
-
-
-            <div className="textLocation">
+            {/* <div className="textLocation">
                 <div className="blockInfo">
                 <div className="checkDiv">
                     <input type="checkbox" value={pets} onChange={handleSelectPets} checked={isCheckedPets}/>
@@ -325,10 +323,7 @@ export function SearchPropertyHomeCenter() {
                 </div>
                 <button>Alterar</button>
                 </div>
-            </div>
-
-            
-      
+            </div> */}
 
         </div>
     )
