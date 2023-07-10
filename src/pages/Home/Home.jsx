@@ -198,9 +198,6 @@ export function Home() {
             {/* <NewSearchClient /> */}
             <Footer />
 
-
-        
-
         </div>
     )
 }
