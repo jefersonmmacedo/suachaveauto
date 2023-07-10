@@ -195,7 +195,7 @@ export function Home() {
             {/* <DownloadApp /> */}
 
             <Finance />
-            <NewSearchClient />
+            {/* <NewSearchClient /> */}
             <Footer />
 
 

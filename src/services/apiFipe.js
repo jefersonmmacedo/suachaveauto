@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const api = axios.create({
-  baseURL: 'https://api.placafipe.xyz/getplacafipe'
+const apiFipe = axios.create({
+  baseURL: 'https://api-fipe-placa-suachaveauto-2194f08cc15b.herokuapp.com'
 });
 
-export default api;
+export default apiFipe;

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import api from "../../services/api";
 import Navbar2 from "../../components/Nav/Navbar";
 import { mask as masker, unMask } from "remask";
+import apiFipe from "../../services/apiFipe";
 
 export function FipeCarData() {
     const {placa} = useParams()
@@ -17,7 +18,7 @@ export function FipeCarData() {
             const dataPlaca = {
                 "placa": placa
                 }
-            await api.post("/fipe", dataPlaca).then((res) => {
+            await apiFipe.post("/fipe", dataPlaca).then((res) => {
                 setCarsFipe(res.data);
                 console.log(res.data);
                 if(carsFipe.fipe?.length === 0) {
