@@ -117,7 +117,7 @@ export function CompanyInfo({idAuto, idCompany, nameCompany, companyPhone}) {
             :
             <div className="Head">
             <div className="image">
-            <a href={`/imobiliaria/${data[0]?.nameSlug}`}>
+            <a href={`/agencia/${data[0]?.nameSlug}`}>
                 <img src={data[0]?.logo} alt="" />
                 </a>
             </div>
