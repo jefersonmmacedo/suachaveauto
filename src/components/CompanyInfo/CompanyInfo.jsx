@@ -10,7 +10,7 @@ import { AuthContext } from "../../contexts/Auth";
 import { useEffect } from "react";
 import ReactTooltip from 'react-tooltip';
 
-export function CompanyInfo({idAuto, idCompany, nameCompany}) {
+export function CompanyInfo({idAuto, idCompany, nameCompany, companyPhone}) {
     const Local = localStorage.getItem("suachaveauto");
     const user = JSON.parse(Local);
 
@@ -60,16 +60,16 @@ export function CompanyInfo({idAuto, idCompany, nameCompany}) {
 
     function handleNewContactButton(type) {
         newContact({
-        idAuto: idAuto, idCompany: idCompany, nameCompany:nameCompany, idClient: user.id, name: user.name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
+        idAuto: idAuto, idCompany: idCompany, nameCompany:nameCompany, idClient: user.id, name: user.name, whatsappCompany: companyPhone, phoneCompany: companyPhone,
         email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type, origin: "Portal", latitude, longitude,
-        link: `http://www.suachave.com.br/imovel/${idAuto}`})
+        link: `http://www.suachaveauto.com.br/auto/${idAuto}`})
     }
 
     function handleNewContactModal(type) {
         newContact({
-        idAuto: idAuto, idCompany: idCompany, nameCompany:nameCompany, idClient: "User Sem cadastro", name: name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
+        idAuto: idAuto, idCompany: idCompany, nameCompany:nameCompany, idClient: "User Sem cadastro", name: name, whatsappCompany: companyPhone, phoneCompany: companyPhone,
         email: email, phone: phone, whatsapp: phone, type: type, origin: "Portal", latitude, longitude,
-        link: `http://www.suachave.com.br/imovel/${idAuto}`})
+        link: `http://www.suachaveauto.com.br/auto/${idAuto}`})
 
         if(type === "WhatsApp") {
             setIsOpenModa(false)

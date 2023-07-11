@@ -122,7 +122,7 @@ export function PropertyUnicBlock({id, style}) {
 
                             </div>
                             <div className="pricing">
-                                <h6>{autos?.city} - {autos?.uf}</h6>
+                                <h6>{autos?.cityCompany} - {autos?.ufCompany}</h6>
                                 <h4>R$ <span>{autos?.value}</span></h4>
                             </div>
                             </div>

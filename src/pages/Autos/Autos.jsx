@@ -69,7 +69,7 @@ export function Autos() {
                     {/* <NewMessageAutos idAuto={data[0]?.id} idCompany={data[0]?.idCompany} imageAuto={data[0]?.featuredImage}/> */}
                     <NewScheduling idAuto={data[0]?.id} idCompany={data[0]?.idCompany} image={data[0]?.featuredImage} brand={data[0]?.brand}  model={data[0]?.model}
                         version={data[0]?.version} year={`${data[0]?.year}/${data[0]?.yearModel}`} plate={data[0]?.plate}/>
-                    <NewShare idAuto={data[0]?.id} title={`${data[0]?.brand} - ${data[0]?.model} (${data[0]?.city} / ${data[0]?.uf})`}/>
+                    <NewShare idAuto={data[0]?.id} title={`${data[0]?.brand} - ${data[0]?.model} (${data[0]?.cityCompany} / ${data[0]?.ufCompany})`}/>
                      <div className="heart">
                     <NewFavorite idAuto={data[0]?.id} idCompany={data[0]?.idCompany} page={"yes"}/>
                     </div>
@@ -77,7 +77,7 @@ export function Autos() {
                 <div className="text">
                     <h2>{data[0]?.brand} <span>{data[0]?.model}</span></h2>
                     <h3>{data[0]?.version}</h3>
-                    <h5><IoLocationOutline />{data[0]?.city} - {data[0]?.uf}</h5>
+                    <h5><IoLocationOutline />{data[0]?.cityCompany} - {data[0]?.ufCompany}</h5>
                     {/* <h4>ID: {data[0]?.id}</h4> */}
                     <div className="status">
                         <p>Aceita financiamento</p>
@@ -210,7 +210,7 @@ export function Autos() {
                             width="100%" height="300"
                             frameBorder="0" style={{border:"0px", borderRadius: "20px"}} 
                             referrerpolicy="no-referrer-when-downgrade"
-                            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyCZllXD0czNd_oeF0u_o9LUVJ2bCd1K4p8&q=${data[0]?.city} - ${data[0]?.uf}`}
+                            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyCZllXD0czNd_oeF0u_o9LUVJ2bCd1K4p8&q=${data[0]?.cityCompany} - ${data[0]?.ufCompany}`}
                             allowFullScreen>
                             </iframe>
                            <h6> * Endereço aproximado</h6>
@@ -221,7 +221,7 @@ export function Autos() {
                      <h5>À venda por:</h5>
                      <h3>R$ <span>{data[0]?.value} </span></h3>
                  </div>
-                    <CompanyInfo idAuto={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName}/>
+                    <CompanyInfo idAuto={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName} companyPhone={data[0]?.phone}/>
                 </div>
 
              
@@ -233,7 +233,7 @@ export function Autos() {
                      <h5>À venda por:</h5>
                      <h3>R$ <span>{data[0]?.value} </span></h3>
                      </div>
-                <CompanyInfo idAuto={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName}/>
+                    <CompanyInfo idAuto={data[0]?.id} idCompany={data[0]?.idCompany} nameCompany={data[0]?.fantasyName} companyPhone={data[0]?.phone}/>
                 </div>
 
 
