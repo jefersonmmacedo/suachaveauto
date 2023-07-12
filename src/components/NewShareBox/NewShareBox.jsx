@@ -4,7 +4,7 @@ import { RWebShare } from "react-web-share";
 import { FiShare2 } from "react-icons/fi";
 
 
-export function NewShareBox({idAuto, title,image}) {
+export function NewShareBox({idAuto, title, image}) {
     return (
       <div className="buttonShareBox">
       <RWebShare

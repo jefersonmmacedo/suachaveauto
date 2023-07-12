@@ -3,7 +3,7 @@ import { IoShareOutline, } from "react-icons/io5";
 import { RWebShare } from "react-web-share";
 
 
-export function NewShare({idAuto, title}) {
+export function NewShare({idAuto, title, image}) {
     return (
         <>
       <RWebShare
