@@ -77,7 +77,7 @@ export function PropertyUnicBlock({id, style}) {
                     <div className="infosButtons">
                   
                     <div className="share">
-                    <NewShareBox idAuto={autos?.id} title={autos?.title}/>
+                    <NewShareBox idAuto={autos?.id} title={`${autos?.brand} - ${autos?.model} - ${autos?.year}/${autos?.yearModel} | Sua Chave Auto`} image={autos?.featuredImage}/>
                     </div>
                     <div className="heart2">
                     <NewFavorite idAuto={autos?.id} idCompany={autos?.idCompany} page={"not"}/>

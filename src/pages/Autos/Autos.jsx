@@ -69,7 +69,7 @@ export function Autos() {
                     {/* <NewMessageAutos idAuto={data[0]?.id} idCompany={data[0]?.idCompany} imageAuto={data[0]?.featuredImage}/> */}
                     <NewScheduling idAuto={data[0]?.id} idCompany={data[0]?.idCompany} image={data[0]?.featuredImage} brand={data[0]?.brand}  model={data[0]?.model}
                         version={data[0]?.version} year={`${data[0]?.year}/${data[0]?.yearModel}`} plate={data[0]?.plate}/>
-                    <NewShare idAuto={data[0]?.id} title={`${data[0]?.brand} - ${data[0]?.model} (${data[0]?.cityCompany} / ${data[0]?.ufCompany})`}/>
+                    <NewShare idAuto={data[0]?.id} title={`${data[0]?.brand} - ${data[0]?.model} - ${data[0]?.year}/${data[0]?.yearModel} | Sua Chave Auto`} image={data[0]?.featuredImage}/>
                      <div className="heart">
                     <NewFavorite idAuto={data[0]?.id} idCompany={data[0]?.idCompany} page={"yes"}/>
                     </div>
