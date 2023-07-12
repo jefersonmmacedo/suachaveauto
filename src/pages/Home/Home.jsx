@@ -23,6 +23,7 @@ import { IoCarSport, IoCloseOutline, IoSearch } from "react-icons/io5";
 import { FaBusAlt, FaMotorcycle, FaTruckMoving } from "react-icons/fa";
 import { HiTruck } from "react-icons/hi";
 import { MdElectricCar } from "react-icons/md";
+import { BlocckAutosHome } from "../../components/BlocckAutosHome/BlocckAutosHome";
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachaveautocity");
@@ -151,8 +152,7 @@ export function Home() {
             <BrandCarroussel />
             </div>
             <div className="textFeature">
-            <h3>Carros mais recentes</h3>
-
+            <h3>Anúncios mais recentes</h3>
             {/* <div className="buttonsAutos">
             <button onClick={() => handleTypeCar("Carros")}> <IoCarSport /> </button>
             <button onClick={() => handleTypeCar("Motos")}> <FaMotorcycle /> </button>
@@ -160,9 +160,10 @@ export function Home() {
             <button onClick={() => handleTypeCar("Caminhões")}> <FaTruckMoving />  </button>
             <button onClick={() => handleTypeCar("Onibus")}> <FaBusAlt />  </button>
             <button onClick={() => handleTypeCar("Eletricos")}> <MdElectricCar />  </button>
-                </div>    */}
+          </div>    */}
             </div>
-            <div className="carroussel">
+          <BlocckAutosHome />
+            {/* <div className="carroussel">
             <PropertyCarroussel type={"Carros"}/>
             </div>
             <div className="textFeature">
@@ -170,7 +171,7 @@ export function Home() {
             </div>
             <div className="carroussel">
             <PropertyCarroussel type={"Motos"}/>
-            </div>
+            </div> */}
 
             {/*
             <div className="textFeature2">
