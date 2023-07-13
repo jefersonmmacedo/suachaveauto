@@ -194,13 +194,13 @@ export function SearchPropertyHomeCenter() {
                                         <h6>Marca</h6>
                                         {searchFilterBrand.map((autos) => {
                                             return (
-                                                <h6 key={autos.id} className="itemListAdress" onClick={() => handleSelectAddress(`${autos.brand} - ${autos.model}`)}>{autos.brand} - {autos.model}</h6>
+                                                <h6 key={autos.id} className="itemListAdress" onClick={() => handleSelectAddress(autos.brand)}>{autos.brand}</h6>
                                             )
                                         })}     
                                          <h6>Marca - Modelo</h6> 
                                         {searchFilter.map((autos) => {
                                             return (
-                                                <h6 key={autos.id} className="itemListAdress" onClick={() => handleSelectAddress(`${autos.brand} - ${autos.model}`)}>{autos.brand} - {autos.model}</h6>
+                                                <h6 key={autos.id} className="itemListAdress" onClick={() => handleSelectAddress(autos.brand, autos.model)}>{autos.brand} - {autos.model}</h6>
                                             )
                                         })}      
                                     </div>
