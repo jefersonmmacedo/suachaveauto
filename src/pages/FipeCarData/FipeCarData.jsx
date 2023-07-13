@@ -5,11 +5,12 @@ import api from "../../services/api";
 import Navbar2 from "../../components/Nav/Navbar";
 import { mask as masker, unMask } from "remask";
 import apiFipe from "../../services/apiFipe";
+import load from "../../assets/images/gif/loader.gif"
 
 export function FipeCarData() {
     const {placa} = useParams()
 
-    const [carsFipe, setCarsFipe] = useState([])
+    const [carsFipe, setCarsFipe] = useState("")
     const [newPlaca, setNewPlaca] = useState("")
     const [failure, setFailure] = useState(0)
 
@@ -30,7 +31,11 @@ export function FipeCarData() {
             }
 
             loadFipeCarData()
-    }, [])
+    }, []);
+
+    if(carsFipe === "") {
+            console.log("Vazio ainda")
+    }
 
 
     async function loadFipeDataCar() {
@@ -63,10 +68,17 @@ export function FipeCarData() {
 
 
 
+
+
     return (
         <div className="FipeCarData">
             <Navbar2 />
-            {failure === 1 && carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ?
+            {carsFipe === "" ?
+            <div className="loaderImage">
+                <img src={load} alt="" />
+            </div>
+            
+            :failure === 1 && carsFipe?.msg === "Limite diário de consultas atingido. Por favor entre em contato com o suporte através do contato@placafipe.com.br. Limite diário: 50 consultas" ?
             ""
             : carsFipe?.msg?.includes("Veículo não encontrado para a placa") ? ""
         : <div className="car">

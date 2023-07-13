@@ -8,6 +8,19 @@
     background-color: var(--White);
     padding-top: 80px;
 }
+.FipeCarData .loaderImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--White);
+}
+
+.FipeCarData .loaderImage img {
+    width: 50px;
+}
 
 .FipeCarData .car {
     display: flex;
