@@ -73,10 +73,10 @@ export function Properties(){
 
     const dataModel = model.split(" ");
     console.log(dataModel[0]);
-
+//allBrandModelcars
     const {data} = useFetch(
         brand !== "" && model !== "" ?
-        `/autos/allBrandModelcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}`
+        `/autos/allBrandcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}`
         : brand !== "" && model === "" ?
         `/autos/allBrandcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}`
         : brand === "" && model === "" ?
