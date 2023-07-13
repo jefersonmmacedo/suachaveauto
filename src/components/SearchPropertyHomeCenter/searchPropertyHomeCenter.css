@@ -589,7 +589,7 @@
                 cursor: pointer;
             }
 
-            .SSearchPropertyHomeCenter .search  .search3 .listAdress .itemListAdress {
+            .SearchPropertyHomeCenter .search  .search3 .listAdress .itemListAdress {
                 display: flex;
                 flex-direction: row;
                 align-items: center;

@@ -168,12 +168,13 @@
     width: 200px;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items:center;
     justify-content: space-between;
-    padding: 5px;
-    margin: 10px 0;
+    padding: 7px;
+    margin: 5px 0;
+    border-radius: 6px;
     color: var(--Paragraph);
-    border-bottom: 1px solid var(--Border);
+    background-color: var(--BorderHover);
 }
 
 .Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox p {
@@ -208,10 +209,9 @@ sup {
     width: 20%;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-start;
     text-align: center;
-    margin-top: 5px;
 }
 
 .Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox .simbolBox svg {
@@ -465,7 +465,7 @@ sup {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
         margin: 0px;
         padding: 0px;
@@ -492,6 +492,19 @@ sup {
         }
 
         @media (max-width: 550px) {
+
+            .Autos .main .data {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 0px;
+                padding: 0px;
+            }
+    
+            
+
             .Autos .main .data .AutosUnic .targets {
                 width: 100%;
                 padding: 0px;
@@ -501,6 +514,19 @@ sup {
             
             .Autos .main .data .AutosUnic .text .iconsBox .iconUnicBox {
                 width: 48%;
+            }
+
+            .Autos .main .data .infosCompanyAuto {
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                background-color: var(--White);
+                border-radius: 20px;
+                border: 1px solid var(--Border);
+                margin: 20px ;
+                padding: 10px;
             }
         }
         
