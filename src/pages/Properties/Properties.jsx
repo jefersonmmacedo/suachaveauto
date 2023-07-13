@@ -132,6 +132,9 @@ export function Properties(){
             behavior: "smooth"
         })
     }
+    function handleRedirectAutos(e) {
+        window.open("/autos", "_self")
+    }
 
 
 
@@ -148,6 +151,8 @@ export function Properties(){
             </div>
         {/* <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage}/> */}
         {/* <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage} petsProperty={pets} furnishedProperty={furnished}/> */}
+        
+        <button onClick={handleRedirectAutos}>Limpar busca</button>
         </div>
 
         {properties?.length > 0 ?
