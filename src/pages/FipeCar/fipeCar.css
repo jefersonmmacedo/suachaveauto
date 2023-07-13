@@ -43,10 +43,10 @@
     height: 100%;
 }
 
-.FipeCar .blockSearch h3 {
-    font-weight: 600;
-    color: var(--Paragraph);
-    margin: 10px;
+.FipeCar .blockSearch h1 {
+    font-weight: 700;
+    color: var(--Primary);
+    margin: 30px 10px;
 }
 
 .FipeCar .blockSearch input {

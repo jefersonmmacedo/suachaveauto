@@ -31,7 +31,7 @@ export function FipeCar() {
             <div className="imageBlock"></div>
         </div>
         <div className="blockSearch">
-            {/* <h3>Informe a placa:</h3> */}
+            <h1>Consultar tabela fipe:</h1>
             <input type="text" placeholder="Digite a placa" value={placa?.toUpperCase()} onChange={ChangeMaskPlate}/>
             <button onClick={handleRedirect}>Consultar</button>
         </div>

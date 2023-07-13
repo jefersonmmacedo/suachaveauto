@@ -60,7 +60,7 @@ function PrivateRoute({children} ) {
             <Route path="/auto/:id" element={<Autos />}/>
             <Route path="/agencias" element={<Companies />}/>
             <Route path="/agencia/:nameSlug" element={<Company />}/>
-            <Route path="/consultar" element={<FipeCar />}/>
+            <Route path="/fipe" element={<FipeCar />}/>
             <Route path="/consulta-placa/:placa" element={<FipeCarData />}/>
             <Route path="/financiamento" element={<Simulator />}/>
             <Route path="/sobre" element={<About />}/>
