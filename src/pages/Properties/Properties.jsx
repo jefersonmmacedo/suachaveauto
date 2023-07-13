@@ -15,21 +15,14 @@ import api from "../../services/api";
 
 
 export function Properties(){
-    const {status} = useParams();
     const query = useQuery();
 
     const availability = "Disponível";
-    const type = query.get("tipo") === null ? "" : query.get("tipo")
-    const subType = query.get("subtipo") === null ? "" : query.get("subtipo")
-    const bedroom = query.get("quartos") === null ? "0" : query.get("quartos")
-    const garage = query.get("garagem") === null ? "0" : query.get("garagem")
-    const suite = query.get("suites") === null ? "0" : query.get("suites")
-    const restroom = query.get("banheiros") === null ? "0" : query.get("banheiros")
+    const brand = query.get("marca") === null ? "" : query.get("marca")
+    const model = query.get("modelo") === null ? "" : query.get("modelo")
 
-
-    const district = query.get("district") === null ? "" : query.get("district");
-    const city = query.get("city") ;
-    const uf = query.get("uf") ;
+    console.log(brand);
+    console.log(model);
 
     const [propertyNotFound, setPropertyNotFound] = useState(false);
 
@@ -40,11 +33,6 @@ export function Properties(){
     const perPage = 12;
     const perPageEmphasis = 150;
 
-    console.log(type)
-    console.log(subType)
-    console.log(city)
-    console.log(uf)
-    console.log(district)
 
     // useEffect(() => {
     //     async function loadproperties() {
@@ -83,32 +71,15 @@ export function Properties(){
     //     loadproperties()
     // },[])
 
-
+    const dataModel = model.split(" ");
+    console.log(dataModel[0]);
 
     const {data} = useFetch(
-        status !== undefined && subType !== "" && district !== "" && city !== "" && uf !== "" ?
-        `/autos/listsadressfull/${availability}/${status}?type=${type}&subType=${subType}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-        : type !== "" && status !== undefined  && district !== "" && city !== "" && uf !== "" ?
-      `/autos/listsadresscityuf/${availability}/${status}?type=${type}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-        : status !== undefined && subType !== "" && city !== "" && uf !== "" ?
-        `property/listsadress/${availability}/${status}?type=${type}&subType=${subType}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-        :type !== "" && status !== undefined  && city !== "" && uf !== "" ?
-        `/autos/listsadresstype/${availability}/${status}?type=${type}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-        : status !== undefined &&  district !== "" && city !== "" && uf !== "" ?
-        `/autos/listsadressstatuscomplete/${availability}/${status}?district=${district}&city=${city}&uf=${uf}&emphasis=false&page=${currentPage}&limit=${perPage}`
-        : status !== undefined  && city !== "" && uf !== "" ?
-        `/autos/listsadressstatus/${availability}/${status}?city=${city}&uf=${uf}&emphasis=false&page=${currentPage}&limit=${perPage}`
-        : status !== undefined && subType !== "" ?
-        `/autos/listtypesubstatus/${availability}/${status}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-        : subType !== "" ?
-        `/autos/listtypesubtype/${availability}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=false&page=${currentPage}&limit=${perPage}`
-        : status !== undefined && type !== "" ?
-        `/autos/listtypestatus/${availability}/${status}?type=${type}&emphasis=false&page=${currentPage}&limit=${perPage}`
-        : type !== "" ?
-        `property/listtype/${availability}?type=${type}&emphasis=false&page=${currentPage}&limit=${perPage}`
-        : status !== undefined ?
-        `/autos/lists/${availability}/${status}?emphasis=false&page=${currentPage}&limit=${perPage}`
-        : status === undefined ?
+        brand !== "" && model !== "" ?
+        `/autos/allBrandModelcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}`
+        : brand !== "" && model === "" ?
+        `/autos/allBrandcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}`
+        : brand === "" && model === "" ?
         `/autos/allcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}`
         :"");
 
@@ -163,12 +134,6 @@ export function Properties(){
     }
 
 
-    const filterEmphasis = properties?.filter((property) => property.emphasis === "true")
-    const filterNotEmphasis = properties?.filter((property) => property.emphasis !== "true")
-
-    console.log(filterEmphasis)
-    console.log(filterNotEmphasis)
-    console.log(restroom)
 
     return (
         <div className="Properties">
@@ -177,14 +142,8 @@ export function Properties(){
         <div className="ListProperty">
         <div className="topList">
         <div className="textItens">
-            {properties?.length === 0 ?
-                ""                   
-            : properties?.length === 1 ?
-            <h3>{status === "Venda" ? `Imóvel à ${status}` : `Imóvel para ${status}`} {city !== "" && district !== "" ? `em ${district}, ${city} - ${uf}` : city !== "" && district === "" ? `em ${city} - ${uf}` : ""}</h3>
-            : status === undefined ?
-            <h3>Imóveis disponíveis</h3>
-            :
-            <h3>{status === "Venda" ? `Imóveis à ${status}` : `Imóveis para ${status}`} {city !== "" && district !== "" ? `em ${district}, ${city} - ${uf}` : city !== "" && district === "" ? `em ${city} - ${uf}` : ""}</h3>
+            {
+            <h3>Anúncios disponíveis</h3>
             }
             </div>
         {/* <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage}/> */}
