@@ -1,44 +1,26 @@
 import { useState } from "react";
 import { IoClose, IoSearchOutline } from "react-icons/io5";
-import { TbBone, TbSofa } from "react-icons/tb";
-import { IoCarSport, IoCloseOutline, IoSearch } from "react-icons/io5";
-import { FaBusAlt, FaMotorcycle, FaTruckMoving } from "react-icons/fa";
-import { HiTruck } from "react-icons/hi";
-import { MdElectricCar } from "react-icons/md";
-import { useFetch } from "../../hooks/useFetch";
+import { toast } from "react-toastify";
 import "./filterPropertiesList.css"
 import { useEffect } from "react";
 import api from "../../services/api";
 
-export function FilterPropertiesList({status, typeProperty, brandAuto, modelAuto, district, city, uf, quarto, banheiro, suítes, doorsAuto}) {
-    console.log({status, district, city, uf, quarto, banheiro, suítes, doorsAuto})
+export function FilterPropertiesList({marca, modelo}) {
     const [filter, setFilter] = useState(false);
     const [data, setData] = useState([]);
-    const [type, setType] = useState(typeProperty === "" ? "" : typeProperty);
-    const [brand, setBrand] = useState(brandAuto === "" ? "" : brandAuto);
-    const [model, setModel] = useState(modelAuto === "" ? "" : modelAuto);
-    const [doors, setDoors] = useState(doorsAuto === "0" ? "0" : doorsAuto);
-    const [suite, setSuite] = useState(suítes === "0" ? "0" : suítes);
-    const [restroom, setRestroom] = useState(banheiro === "0" ? "0" : banheiro);
-    const [statusProperty, setStatusProperty] = useState(status);
+    const [brandVehicle, setBrandVehicle] = useState(marca === null || marca === undefined ? "" : marca);
+    const [modelVehicle, setModelVehicle] = useState(modelo === null || modelo === undefined ? "" : modelo);
 
     const [search, setSearch] = useState("");
     const searchLower = search.toLowerCase();
 
-    const statusSelected = statusProperty === "" ? status : statusProperty;
-    console.log({city, uf, district});
-    const [AdressSelected, setAdressSelected] = useState(city !== null && district === null ? `${city} - ${uf}` : city !== null && district !== null ? `${district} - ${city} - ${uf}` :  "");
-    const dataAdress = AdressSelected.split(" - ");
-    const districtNew = dataAdress.length === 3 ? dataAdress[0] : ""
-    const cityNew = dataAdress.length === 3 ? dataAdress[1] : dataAdress[0]
-    const ufNew = dataAdress.length === 3 ? dataAdress[2] : dataAdress.length !== 3 ? dataAdress[1] : ""
-
-
     const availability = "Disponível";
+
     useEffect(() => {
         async function loadProperty() {
-            await api.get(`/autos/allcars/${availability}`).then((res) => {
+            await api.get(`/autos/fullData`).then((res) => {
                 setData(res.data);
+                console.log(res.data);
             }).catch((error) => {
                 console.log(error)
             })
@@ -48,10 +30,19 @@ export function FilterPropertiesList({status, typeProperty, brandAuto, modelAuto
     }, [])
 
 
-
     var brandModel = [];
+    var brand = [];
 
 
+    data?.forEach((item) => {
+        var duplicated  = brand.findIndex(redItem => {
+            return item.brand === redItem.brand;
+        }) > -1;
+    
+        if(!duplicated) {
+            brand.push(item);
+        }
+    });
     data?.forEach((item) => {
         var duplicated  = brandModel.findIndex(redItem => {
             return item.brand === redItem.brand && item.model === redItem.model;
@@ -62,6 +53,15 @@ export function FilterPropertiesList({status, typeProperty, brandAuto, modelAuto
         }
     });
 
+    if(brand) {
+        brand.sort(function(a,b) {
+            if(a.brand < b.brand ) {
+                return -1
+            } else {
+                return true
+            }
+        })
+        }
     if(brandModel) {
         brandModel.sort(function(a,b) {
             if(a.brand < b.brand ) {
@@ -71,18 +71,20 @@ export function FilterPropertiesList({status, typeProperty, brandAuto, modelAuto
             }
         })
         }
-
-  
+   
         const searchFilter = brandModel?.filter((cars) => cars.brand.toLowerCase().includes(searchLower)
                                                             || cars.model.toLowerCase().includes(searchLower))
-
-        console.log("searchFilter")
-        console.log(searchFilter)
+        const searchFilterBrand = brand?.filter((cars) => cars.brand.toLowerCase().includes(searchLower)
+                                                        || cars.model.toLowerCase().includes(searchLower))
 
         function handleSelectAddress(brand, model) {
-            setBrand(brand)
-            setModel(model)
-            console.log(data)    
+            if(model !== undefined) {
+                setBrandVehicle(brand)
+                setModelVehicle(model)
+            } else {
+                setBrandVehicle(brand)
+                setModelVehicle("")
+            }    
           }
     
     function handleFiltro(e) {
@@ -92,64 +94,39 @@ export function FilterPropertiesList({status, typeProperty, brandAuto, modelAuto
         console.log(!filter)
     }
 
-    function handleNewSearchProperty(e) {
+    function handleLinkSearchProperty(e) {
         e.preventDefault();
-        //window.open(`/imoveis/${statusProperty}?uf=${ufNew === undefined ? "" : ufNew}&city=${cityNew}&district=${districtNew}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}`,"_self");
-      //  window.open(`/imoveis/${statusProperty}?uf=${ufNew === undefined ? "" : ufNew}&city=${cityNew}&district=${districtNew}&tipo=${type}&subtipo=${subType}&quartos=${bedroom}&suites=${suite}&banheiros=${restroom}&garagem=${garage}&pets=${pets}&furnished=${furnished}`,"_self");
-    }
+      if(brandVehicle === "") {
+          toast.error("Sua busca não pode ser vazia!");
+          return
+      }
 
-    
-    function handleNewStatus(data) {
-        setStatusProperty(data)
-        console.log(data)
-    }
-    // function handleNewPets(e) {
-    //     e.preventDefault();
-    //     if(pets === "não") {
-    //         setPets("sim")
-    //     } else {
-    //         setPets("não")
-    //     }
-    // }
+      if(brandVehicle !== "" && modelVehicle !== "" ) {
+          window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}`,"_self")
+      }
+      if(brandVehicle !== "" && modelVehicle === "" ) {
+          window.open(`/autos?marca=${brandVehicle}`,"_self")
+      }
 
-    // function handleNewFurnished(e) {
-    //     e.preventDefault();
-    //     if(furnished === "não") {
-    //         setFurnished("sim")
-    //     } else {
-    //         setFurnished("não")
-    //     }
-    // }
-    function handleType(e) {
-        setType(e.target.value)
-        console.log(e.target.value)
-    }
+  }
+    function handleLinkAll(e) {
+        e.preventDefault();
+        window.open(`/autos`,"_self")
+  }
 
-    function handleDoors(e) {
-        setDoors(e.target.value)
-        console.log(e.target.value)
-    }
-    function handleRestroom(e) {
-        setRestroom(e.target.value)
-        console.log(e.target.value)
-    }
-    function handleSuite(e) {
-        setSuite(e.target.value)
-        console.log(e.target.value)
-    }
 
 
     function handleClearItens(e) {
         e.preventDefault();
-        setStatusProperty(status)
-        setType("")
-        setSuite("0")
-        setRestroom("0")
+        setSearch("")
+        setBrandVehicle("")
+        setModelVehicle("")
     }
-
     function handleClearAdress() {
-        setBrand("")
-        setModel("")
+        // setAdressSelected("")
+        setSearch("")
+        setBrandVehicle("")
+            setModelVehicle("")
       }
     
 
@@ -163,39 +140,39 @@ export function FilterPropertiesList({status, typeProperty, brandAuto, modelAuto
         </div>
         <div className="searchOptions">
             <div className="dataSearchOptions">
-            
-            <div className="dataSelectsButtons">
-            <button className={statusSelected === "Carros" ? "" : "btn"} onClick={() => handleNewStatus("Carros")}> <IoCarSport /> </button>
-            <button className={statusSelected === "Motos" ? "" : "btn"} onClick={() => handleNewStatus("Motos")}> <FaMotorcycle /> </button>
-            <button className={statusSelected === "Utilitários" ? "" : "btn"} onClick={() => handleNewStatus("Utilitários")}> <HiTruck />  </button>
-            <button className={statusSelected === "Caminhões" ? "" : "btn"} onClick={() => handleNewStatus("Caminhões")}> <FaTruckMoving />  </button>
-            <button className={statusSelected === "Onibus" ? "" : "btn"} onClick={() => handleNewStatus("Onibus")}> <FaBusAlt />  </button>
-            <button className={statusSelected === "Eletricos" ? "" : "btn"} onClick={() => handleNewStatus("Eletricos")}> <MdElectricCar />  </button>
-             </div>
-             
+                   
             
              <div className="dataSelects2">
                 <div className="search">
-             <input type="text" placeholder="Digite bairro, cidade ou estado" value={brand === "" ? search : `${brand} - ${model}`} onChange={e => setSearch(e.target.value)} />
-                    {brand === "" ? "" :
+                <input type="text" placeholder="Busque por marca ou modelo" value={ brandVehicle !== "" && modelVehicle !== "" ?`${brandVehicle} - ${modelVehicle}` 
+                                                            :brandVehicle !== "" ? `${brandVehicle}`
+                                                            : search} onChange={e => setSearch(e.target.value)} />
+                    {search === "" ? "" :
                     <button onClick={handleClearAdress} className="btnClear"><IoClose /></button>
                     }
                 </div>
 
-                    {search === "" || searchFilter.length === 0 || brand !== "" ? "" :
-                        <div className="search3">
-                            <div className="listAdress">
-                            {searchFilter.map((autos) => {
+                {search === "" || searchFilter.length === 0  ? "" :
+                                <div className="search3">
+                                    <div className="listAdress">
+                                        <h6>Marca</h6>
+                                        {searchFilterBrand.map((autos) => {
                                             return (
-                                                <h6 key={autos.id} onClick={() => handleSelectAddress(autos.brand, autos.model)}>{autos.brand} - {autos.model}</h6>
+                                                <h6 key={autos.id} className="itemListAdress" onClick={() => handleSelectAddress(autos.brand)}>{autos.brand}</h6>
                                             )
                                         })}     
-                            </div>
-                        </div>
-                    }
+                                         <h6>Marca - Modelo</h6> 
+                                        {searchFilter.map((autos) => {
+                                            return (
+                                                <h6 key={autos.id} className="itemListAdress" onClick={() => handleSelectAddress(autos.brand, autos.model)}>{autos.brand} - {autos.model}</h6>
+                                            )
+                                        })}      
+                                    </div>
+                                </div>
+                                }
             </div>
              
-             <div className="dataSelects">
+             {/* <div className="dataSelects">
              <h4>Tipo:</h4>
             <select value={type} onChange={handleType} className={type === "" ? "" : "select"}>
                 <option value="">Tipo</option>
@@ -258,7 +235,7 @@ export function FilterPropertiesList({status, typeProperty, brandAuto, modelAuto
                 <option value="9">9 ou + Banheiros</option>
                 <option value="10">10 ou + Banheiros</option>
             </select>
-            </div>
+            </div> */}
 
     
             {/* <div className="dataSelectsButtons">
@@ -267,7 +244,8 @@ export function FilterPropertiesList({status, typeProperty, brandAuto, modelAuto
              </div> */}
 
             <div className="dataSelectsButtonsAction">
-                <button  onClick={handleNewSearchProperty}><IoSearchOutline /> Buscar</button>
+                <button  onClick={handleLinkSearchProperty}><IoSearchOutline /> Buscar</button>
+                <button  onClick={handleLinkAll}><IoSearchOutline /> Todos os veículos</button>
                 <button className="btn" onClick={handleClearItens}><IoClose /> Limpar</button>
         </div>
             </div>

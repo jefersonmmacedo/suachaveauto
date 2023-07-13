@@ -60,18 +60,6 @@
     justify-content: space-between;
 }
 
-.Properties .listPage .ListProperty .topList button {
-    padding: 10px 20px;
-    background-color: var(--Primary);
-    color: var(--White);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    border: none;
-}
-
 
 .Properties .listPage .ListProperty .topList .textItens {
     padding: 10px 0;

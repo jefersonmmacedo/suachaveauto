@@ -76,7 +76,7 @@ export function Properties(){
 //allBrandModelcars
     const {data} = useFetch(
         brand !== "" && model !== "" ?
-        `/autos/allBrandcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}`
+        `/autos/allBrandModelcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}`
         : brand !== "" && model === "" ?
         `/autos/allBrandcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}`
         : brand === "" && model === "" ?
@@ -84,7 +84,10 @@ export function Properties(){
         :"");
 
 
-        
+        const filterCars = data?.filter((car) => car.model.includes(model));
+        console.log(filterCars)
+
+
     if(data) {
         console.log(data)
     }
@@ -149,10 +152,9 @@ export function Properties(){
             <h3>Anúncios disponíveis</h3>
             }
             </div>
-        {/* <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage}/> */}
+        <FilterPropertiesList marca={brand} modelo={model} />
         {/* <FilterPropertiesList status={status} typeProperty={type} subTypeProperty={subType} district={district} city={city} uf={uf} quarto={bedroom} banheiro={restroom} suítes={suite} garagem={garage} petsProperty={pets} furnishedProperty={furnished}/> */}
         
-        <button onClick={handleRedirectAutos}>Limpar busca</button>
         </div>
 
         {properties?.length > 0 ?
