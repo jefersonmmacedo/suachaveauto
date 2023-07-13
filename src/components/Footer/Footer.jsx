@@ -20,9 +20,9 @@ export function Footer() {
                         </div>
                         <div className="sectionUnic">
                             <h3>SUA CHAVE AUTO</h3>
-                                <h5><a href="/sobre">Sobre nós</a></h5>
-                                <h5><a href="/planos">Planos</a></h5>
+                                {/* <h5><a href="/sobre">Sobre nós</a></h5> */}
                                 <h5><a href="/anunciar">Para agências</a></h5>
+                                <h5><a href="/planos">Planos</a></h5>
                                 <h5><a href="#">Site para seu negócio</a></h5>
                                 {/* <h5><a href="#">Integração com portais</a></h5>
                                 <h5><a href="#">Tour Virtual</a></h5> */}
