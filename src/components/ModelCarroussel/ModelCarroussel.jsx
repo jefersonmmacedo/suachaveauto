@@ -106,7 +106,6 @@ export function ModelCarroussel() {
     return (
         <div>
             <Slide slidesToScroll={3} slidesToShow={3} autoplay={false} indicators={false} {...properties} responsive={responsiveSettings}>
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Volkswagen</h3>
@@ -114,10 +113,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={gol} alt="" />
                 </div>
-                        </a>
 
 
-                        <a href="/autos">
             <div className="logoModel2">
                     <div className="Model2">
                         <h3>CG</h3>
@@ -125,9 +122,7 @@ export function ModelCarroussel() {
                     </div>
                     <img src={CGTitan} alt="" />
                 </div>
-                        </a>
                 
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Fiat</h3>
@@ -135,9 +130,7 @@ export function ModelCarroussel() {
                     </div>
                     <img src={palio} alt="" />
                 </div>
-                        </a>
 
-                        <a href="/autos">
             <div className="logoModel2">
                     <div className="Model2">
                         <h3>Honda</h3>
@@ -145,10 +138,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={bros} alt="" />
                 </div>
-                        </a>
 
 
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Ford</h3>
@@ -156,9 +147,7 @@ export function ModelCarroussel() {
                     </div>
                     <img src={fiesta} alt="" />
                 </div>
-                        </a>
 
-                        <a href="/autos">
             <div className="logoModel2">
                     <div className="Model2">
                         <h3>Yamaha</h3>
@@ -166,10 +155,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={YamahaXTZ250} alt="" />
                 </div>
-                        </a>
     
                         
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Chevrolet</h3>
@@ -177,9 +164,7 @@ export function ModelCarroussel() {
                     </div>
                     <img src={onix} alt="" />
                 </div>
-                        </a>
 
-                        <a href="/autos">
             <div className="logoModel2">
                     <div className="Model2">
                         <h3>Yamaha</h3>
@@ -187,12 +172,10 @@ export function ModelCarroussel() {
                     </div>
                     <img src={YamahaYBRFactor150} alt="" />
                 </div>
-                        </a>
 
   
 
 
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Honda</h3>
@@ -200,10 +183,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={civic} alt="" />
                 </div>
-                        </a>
 
 
-                        <a href="/autos">
             <div className="logoModel2">
                     <div className="Model2">
                         <h3>Yamaha</h3>
@@ -211,11 +192,9 @@ export function ModelCarroussel() {
                     </div>
                     <img src={YamahaFazerFZ25} alt="" />
                 </div>
-                        </a>
 
 
 
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Hyndai</h3>
@@ -223,10 +202,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={hb20} alt="" />
                 </div>
-                        </a>
 
 
-                        <a href="/autos">
             <div className="logoModel2">
                     <div className="Model2">
                         <h3>Honda</h3>
@@ -234,11 +211,9 @@ export function ModelCarroussel() {
                     </div>
                     <img src={HondaXRE190} alt="" />
                 </div>
-                        </a>
 
 
 
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Toyota</h3>
@@ -246,9 +221,7 @@ export function ModelCarroussel() {
                     </div>
                     <img src={corolla} alt="" />
                 </div>
-                        </a>
 
-                        <a href="/autos">
             <div className="logoModel2">
                     <div className="Model2">
                         <h3>Honda</h3>
@@ -256,10 +229,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={HondaCB300FTwister} alt="" />
                 </div>
-                        </a>
    
 
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Jeep</h3>
@@ -267,10 +238,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={compass} alt="" />
                 </div>
-                        </a>
 
 
-                        <a href="/autos">
             <div className="logoModel2">
                     <div className="Model2">
                         <h3>Yamaha</h3>
@@ -278,10 +247,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={YamahaLander} alt="" />
                 </div>
-                        </a>
 
 
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Volkswagen</h3>
@@ -289,10 +256,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={jetta} alt="" />
                 </div>
-                        </a>
 
 
-                        <a href="/autos">
             <div className="logoModel2">
                     <div className="Model2">
                         <h3>Honda</h3>
@@ -300,10 +265,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={HondaPop110i} alt="" />
                 </div>
-                        </a>
 
 
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Jeep</h3>
@@ -311,9 +274,7 @@ export function ModelCarroussel() {
                     </div>
                     <img src={renegade} alt="" />
                 </div>
-                        </a>
 
-                        <a href="/autos">
             <div className="logoModel2">
                     <div className="Model2">
                         <h3>Honda</h3>
@@ -321,10 +282,8 @@ export function ModelCarroussel() {
                     </div>
                     <img src={biz} alt="" />
                 </div>
-                        </a>
 
 
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Chevrolet</h3>
@@ -332,8 +291,6 @@ export function ModelCarroussel() {
                     </div>
                     <img src={prisma} alt="" />
                 </div>
-                        </a>
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Fiat</h3>
@@ -341,8 +298,6 @@ export function ModelCarroussel() {
                     </div>
                     <img src={toro} alt="" />
                 </div>
-                        </a>
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Chevrolet</h3>
@@ -350,9 +305,7 @@ export function ModelCarroussel() {
                     </div>
                     <img src={s10} alt="" />
                 </div>
-                        </a>
  
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Ford</h3>
@@ -360,8 +313,6 @@ export function ModelCarroussel() {
                     </div>
                     <img src={ecosport} alt="" />
                 </div>
-                        </a>
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Fiat</h3>
@@ -369,8 +320,6 @@ export function ModelCarroussel() {
                     </div>
                     <img src={mobi} alt="" />
                 </div>
-                        </a>
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Chevrolet</h3>
@@ -378,8 +327,6 @@ export function ModelCarroussel() {
                     </div>
                     <img src={onixsedan} alt="" />
                 </div>
-                        </a>
-                        <a href="/autos">
             <div className="logoModel">
                     <div className="Model">
                         <h3>Fiat</h3>
@@ -387,7 +334,6 @@ export function ModelCarroussel() {
                     </div>
                     <img src={pulse} alt="" />
                 </div>
-                        </a>
 
             </Slide>
         </div>
