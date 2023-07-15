@@ -3,6 +3,7 @@ import "./blocckAutosHome.css";
 import { useState } from "react";
 import api from "../../services/api";
 import { PropertyUnicBlock } from "../PropertyUnicBlock/PropertyUnicBlock";
+import { PropertyUnicBlockLoader } from "../PropertyUnicBlockLoader/PropertyUnicBlockLoader";
 
 export function BlocckAutosHome() {
     const perPage = 12;
@@ -21,7 +22,18 @@ export function BlocckAutosHome() {
       }
   
       loadProperty()
-  }, [])
+  }, []);
+
+  if(data.length === 0) {
+    return (
+        <div className="BlocckAutosHomeLoader">
+        <PropertyUnicBlockLoader />
+        <PropertyUnicBlockLoader />
+        <PropertyUnicBlockLoader />
+        <PropertyUnicBlockLoader />
+        </div>
+    )
+  }
 
   const filterData = data?.slice(0, 8);
 
