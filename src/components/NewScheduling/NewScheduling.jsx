@@ -406,7 +406,7 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
             setLatitude(lat1);
             setLongitude(long1);
 
-            newView(lat1, long1)
+            // newView(lat1, long1)
             
           }
 
@@ -414,24 +414,24 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
         console.log('Unable to retrieve your location');
       }
 
-      async function newView(lat1, long1) {
-        const data = {
-          idAuto,
-          idCompany,
-          idClient: user === null ? "00000000" : user.id,
-          latitude: lat1,
-          longitude: long1,
-          origin: "Portal",
-          brand,
-          model,
-      }
-       await api.post("/viewAuto", data).then((res) => {
-        return
-      }).catch((err) => {
-          console.log(err)
-      });
+      // async function newView(lat1, long1) {
+      //   const data = {
+      //     idAuto,
+      //     idCompany,
+      //     idClient: user === null ? "00000000" : user.id,
+      //     latitude: lat1,
+      //     longitude: long1,
+      //     origin: "Portal",
+      //     brand,
+      //     model,
+      // }
+      //  await api.post("/viewAuto", data).then((res) => {
+      //   return
+      // }).catch((err) => {
+      //     console.log(err)
+      // });
       
-      }
+      // }
   
       
 
@@ -440,6 +440,30 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
     },[])
 
 
+    useEffect(() => {
+      async function newView() {
+        const data = {
+          idAuto,
+          idCompany,
+          idClient: user === null ? "00000000" : user.id,
+          latitude: latitude,
+          longitude: longitude,
+          origin: "Portal",
+          brand,
+          model,
+      }
+      console.log(data);
+       await api.post("/viewAuto", data).then((res) => {
+        return;
+      }).catch((err) => {
+          console.log(err)
+      });
+      
+      return;
+      }
+  
+      newView()
+    },[])
 
 
     useEffect(() => {
