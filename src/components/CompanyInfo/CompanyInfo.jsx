@@ -60,14 +60,14 @@ export function CompanyInfo({idAuto, idCompany, nameCompany, companyPhone}) {
 
     function handleNewContactButton(type) {
         newContact({
-        idAuto: idAuto, idCompany: idCompany, nameCompany:nameCompany, idClient: user.id, name: user.name, whatsappCompany: companyPhone, phoneCompany: companyPhone,
+        idAuto: idAuto, idCompany: idCompany, nameCompany:data[0]?.fantasyName, idClient: user.id, name: user.name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
         email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type, origin: "Portal", latitude, longitude,
         link: `http://www.suachaveauto.com.br/auto/${idAuto}`})
     }
 
     function handleNewContactModal(type) {
         newContact({
-        idAuto: idAuto, idCompany: idCompany, nameCompany:nameCompany, idClient: "User Sem cadastro", name: name, whatsappCompany: companyPhone, phoneCompany: companyPhone,
+        idAuto: idAuto, idCompany: idCompany, nameCompany:data[0]?.fantasyName, idClient: "User Sem cadastro", name: name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
         email: email, phone: phone, whatsapp: phone, type: type, origin: "Portal", latitude, longitude,
         link: `http://www.suachaveauto.com.br/auto/${idAuto}`})
 

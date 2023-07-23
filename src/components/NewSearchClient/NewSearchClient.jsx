@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 
 
 export function NewSearchClient() {
-  const Local = localStorage.getItem("suachave");
+  const Local = localStorage.getItem("suachaveauto");
   const user = JSON.parse(Local);
 
   const { handleNewSearchClient } = useContext(AuthContext);

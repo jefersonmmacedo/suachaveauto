@@ -460,6 +460,31 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
 
 
 
+    useEffect(() => {
+      async function newView() {
+        const data = {
+          idAuto,
+          idCompany,
+          idClient: user === null ? "00000000" : user.id,
+          latitude: latitude,
+          longitude: longitude,
+          origin: "Portal",
+          type,
+          subType,
+      }
+      console.log(data);
+       await api.post("/viewAuto", data).then((res) => {
+        return
+      }).catch((err) => {
+          console.log(err)
+      });
+      
+      }
+  
+      newView()
+    },[])
+
+
 
     function handleNewScheduling() {
         const status = "Pendente"

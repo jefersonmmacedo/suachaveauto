@@ -9,7 +9,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
 
 export function NewMessageAutos({idAuto, idCompany, imageAuto}) {
-  const Local = localStorage.getItem("suachave");
+  const Local = localStorage.getItem("suachaveauto");
   const user = JSON.parse(Local);
 
   const [isOpenModal, setIsOpenModa] = useState(false);

@@ -1,38 +1,40 @@
 import "./searchPropertyHomeCenter.css";
 import { useState } from "react";
-import {IoSearch, IoAddOutline, IoRemoveOutline, IoCarOutline, IoCarSportOutline, IoLocationOutline, IoCarSport, IoClose} from "react-icons/io5";
-import { useFetch } from "../../hooks/useFetch";
+import {IoSearch, IoCarOutline, IoCarSportOutline, IoLocationOutline, IoCarSport, IoClose, IoCloseOutline} from "react-icons/io5";
+import Modal from 'react-modal';
 import { toast } from "react-toastify";
-import { TbBone, TbSofa } from "react-icons/tb";
-import { MdElectricCar } from "react-icons/md";
 import { AiOutlineDollarCircle } from "react-icons/ai";
-import { FaBusAlt, FaMotorcycle, FaTruckMoving } from "react-icons/fa";
-import { HiTruck } from "react-icons/hi";
 import { useEffect } from "react";
 import api from "../../services/api";
+import buscaCep from "../../services/api-buscaCep";
 
 export function SearchPropertyHomeCenter() {
-    const [isCheckedPets, setIsCheckedPets] = useState(false);
-    const [isCheckedFurnished, setIsCheckedFurnished] = useState(false);
+    const Local = localStorage.getItem("suachaveauto");
+    const user = JSON.parse(Local);
 
-    const [pets, setPets] = useState("não");
-    const [furnished, setFurnished] = useState("não");
+    const LocalCity = localStorage.getItem("suachaveauto-address");
+    const userCity = JSON.parse(LocalCity);
+
+
+    const [isOpenModal, setIsOpenModal] = useState(false);
+
     const [code, setCode] = useState(false);
-    const [status, setStatus] = useState("Carros");
-    const [subType, setSubType] = useState("");
-    const [type, setType] = useState("");
+    const [state, setState] = useState("");
+    const [financing, setFinancing] = useState("");
+    const [type, setType] = useState("Carros");
     const [brandVehicle, setBrandVehicle] = useState("");
     const [modelVehicle, setModelVehicle] = useState("");
-    const [garage, setGarage] = useState("0");
-    const [restroom, setRestroom] = useState("0");
-    const [viewFilter, setViewFilter] = useState(true);
-    const [filter, setFilter] = useState(false);
+    const [city, setCity] = useState(user === null && userCity === null ? "" : user === null && userCity !== null ? userCity.city : user.city);
+    const [uf, setUf] = useState(user === null && userCity === null ? "" : user === null && userCity !== null ? userCity.uf : user.uf); 
     const [data, setData] = useState([]);
+
+    const [cep, setCep] = useState("");
+    const [newCity, setNewCity] = useState("");
+    const [newUf, setNewUf] = useState("");
 
     const [search, setSearch] = useState("");
     const searchLower = search.toLowerCase();
 
-    const availability = "Disponível";
 
     useEffect(() => {
         async function loadProperty() {
@@ -70,7 +72,6 @@ export function SearchPropertyHomeCenter() {
             brandModel.push(item);
         }
     });
-
     if(brand) {
         brand.sort(function(a,b) {
             if(a.brand < b.brand ) {
@@ -91,25 +92,18 @@ export function SearchPropertyHomeCenter() {
         }
    
         const searchFilter = brandModel?.filter((cars) => cars.brand.toLowerCase().includes(searchLower)
-                                                            || cars.model.toLowerCase().includes(searchLower))
+                                                            || cars.model.toLowerCase().includes(searchLower));
         const searchFilterBrand = brand?.filter((cars) => cars.brand.toLowerCase().includes(searchLower)
-                                                        || cars.model.toLowerCase().includes(searchLower))
+                                                        || cars.model.toLowerCase().includes(searchLower));
 
-
-      function handleActiveCode(data, status, filter) {
-        setCode(data)
-        setStatus(status)
-        setViewFilter(filter)
-      }
+                            
 
       function handleClearAdress() {
-        // setAdressSelected("")
         setSearch("")
         setBrandVehicle("")
-            setModelVehicle("")
+        setModelVehicle("")
       }
     
-
     function handleSelectAddress(brand, model) {
         if(model !== undefined) {
             setBrandVehicle(brand)
@@ -119,35 +113,7 @@ export function SearchPropertyHomeCenter() {
             setModelVehicle("")
         }  
       }
-      console.log(brandVehicle);
-      console.log(modelVehicle);
-      function handleFilter(e) {
-        e.preventDefault()
-        setFilter(!filter)
-      }
 
-      function handleSelectPets(e) {
-        e.preventDefault();
-        setIsCheckedPets(!isCheckedPets);
-        if(pets === "não") {
-            setPets("sim");
-        } else {
-            setPets("não");
-        }
-        console.log(pets)
-      };
-
-      function handleSelectFurnished(e) {
-        e.preventDefault();
-        setIsCheckedFurnished(!isCheckedFurnished);
-        if(furnished === "não") {
-            setFurnished("sim");
-        } else {
-            setFurnished("não");
-        }
-        console.log(furnished)
-      };
-    
       function handleLinkSearchProperty(e) {
           e.preventDefault();
         if(brandVehicle === "") {
@@ -155,17 +121,81 @@ export function SearchPropertyHomeCenter() {
             return
         }
 
-        if(brandVehicle !== "" && modelVehicle !== "" ) {
+        if(brandVehicle !== "" && modelVehicle !== "" && state !== "" && financing !== "") {
+            window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&condicao=${state}&financiamento=${financing}`,"_self")
+        }
+        if(brandVehicle !== "" && modelVehicle !== "" && state !== "" && financing === "" ) {
+            window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&condicao=${state}`,"_self")
+        }
+        if(brandVehicle !== "" && modelVehicle !== "" && state === "" && financing !== "") {
+            window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&financiamento=${financing}`,"_self")
+        }
+        
+        if(brandVehicle !== "" && modelVehicle !== "" && state === "" && financing === "") {
             window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}`,"_self")
         }
-        if(brandVehicle !== "" && modelVehicle === "" ) {
+        if(brandVehicle !== "" && modelVehicle === "" && state === "" && financing === "") {
             window.open(`/autos?marca=${brandVehicle}`,"_self")
+        }
+        if(brandVehicle !== "" && modelVehicle === "" && state !== "" && financing !== "") {
+            window.open(`/autos?marca=${brandVehicle}&condicao=${state}&financiamento=${financing}`,"_self")
+        }
+        if(brandVehicle !== "" && modelVehicle === "" && state !== "" && financing === "" ) {
+            window.open(`/autos?marca=${brandVehicle}&condicao=${state}`,"_self")
+        }
+        if(brandVehicle !== "" && modelVehicle === "" && state === "" && financing !== "") {
+            window.open(`/autos?marca=${brandVehicle}&financiamento=${financing}`,"_self")
         }
 
     }
 
+    function handleStatusAuto(data) {
+        setState(data)
+    }
+    function handleFinancingAuto(data) {
+        if(financing === "") {
+            setFinancing(data)
+        } else {
+            setFinancing("")
+        }
+    }
 
-    const frase = `Digite marca ou modelo`
+    function handleCloseModal(e) {
+        e.preventDefault();
+        setIsOpenModal(false);
+      }
+
+      function handleOpenModal(e) {
+        e.preventDefault();
+          setIsOpenModal(true)
+        }
+
+       async function handleCep() {
+            await buscaCep.get(`/${cep}/json/`).then((res) => {
+                console.log(res.data);
+                setNewCity(res.data.localidade);
+                setNewUf(res.data.uf);
+            }).catch((err) => {
+                console.log(err)
+            });
+        }
+
+        function handleNewCity(e) {
+            e.preventDefault();
+            const data = {
+                city: newCity,
+                uf: newUf
+            }
+
+            localStorage.setItem("suachaveauto-address", JSON.stringify(data));
+
+            window.open("/", "_self")
+        }
+
+
+
+
+    Modal.setAppElement('#root');
 
     return (
         <div className="SearchPropertyHomeCenter">
@@ -173,7 +203,7 @@ export function SearchPropertyHomeCenter() {
             <div className="search">
                 {code === false ?
                 <>
-                <input type="text" placeholder={frase} value={ brandVehicle !== "" && modelVehicle !== "" ?`${brandVehicle} - ${modelVehicle}` 
+                <input type="text" placeholder="Digite marca ou modelo" value={ brandVehicle !== "" && modelVehicle !== "" ?`${brandVehicle} - ${modelVehicle}` 
                                                             :brandVehicle !== "" ? `${brandVehicle}`
                                                             : search} onChange={e => setSearch(e.target.value)} />
                     {search === "" ? "" :
@@ -208,9 +238,9 @@ export function SearchPropertyHomeCenter() {
                                 }
 
 
-                     {filter ===  true ? "" :
+                 
                      <button className="btnSearch" onClick={handleLinkSearchProperty}><IoSearch /></button>
-                    }
+                  
                     <button className="mobile" onClick={handleLinkSearchProperty}><IoSearch /></button>
             </div>
 
@@ -234,28 +264,76 @@ export function SearchPropertyHomeCenter() {
                                 }
 
 
-            {/* <div className="textLocation">
+            <div className="textLocation">
                 <div className="blockInfo">
                 <div className="checkDiv">
-                    <input type="checkbox" value={pets} onChange={handleSelectPets} checked={isCheckedPets}/>
-                    <h5><IoCarSportOutline />Okm</h5>
+                    <button className={state === "" ? "ButtonSelect" : "ButtonState"} onClick={() => handleStatusAuto("")}></button>
+                    <h5><IoCarSportOutline />Todos</h5>
                 </div>
                 <div className="checkDiv">
-                    <input type="checkbox" value={pets} onChange={handleSelectPets} checked={isCheckedPets}/>
+                    <button className={state === "O km" ? "ButtonSelect" : "ButtonState"} onClick={() => handleStatusAuto("O km")}></button>
+                    <h5><IoCarSportOutline />O km</h5>
+                </div>
+                <div className="checkDiv">
+                    <button className={state === "Seminovo" ? "ButtonSelect" : "ButtonState"} onClick={() => handleStatusAuto("Seminovo")}></button>
+                    <h5><IoCarOutline />Seminovo</h5>
+                </div>
+                <div className="checkDiv">
+                    <button className={state === "Usados" ? "ButtonSelect" : "ButtonState"} onClick={() => handleStatusAuto("Usados")}></button>
                     <h5><IoCarOutline />Usados</h5>
                 </div>
+                </div>
+                <div className="blockInfo">
                 <div className="checkDiv">
-                    <input type="checkbox" value={furnished} onChange={handleSelectFurnished} checked={isCheckedFurnished}/>
+                <button className={financing === "Aceita financimento" ? "ButtonSelect" : "ButtonState"} onClick={() => handleFinancingAuto("Aceita financimento")}></button>
                     <h5><AiOutlineDollarCircle />Aceita financimento</h5>
                 </div>
                 </div>
                 <div className="blockInfo">
                 <div className="checkDiv">
-                    <h5><IoLocationOutline />Rio Bonito - RJ</h5>
+                    {city === "" && uf === "" ? "" :
+                    <h5><IoLocationOutline />{city} - {uf}</h5>
+                    }
                 </div>
-                <button>Alterar</button>
+                {city === "" && uf === "" ?
+                    <button onClick={handleOpenModal}>Escolha sua cidade</button>
+                    :
+                    <button onClick={handleOpenModal}>Alterar</button>
+                    }
                 </div>
-            </div> */}
+            </div>
+
+
+
+            <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
+            overlayClassName="react-modal-overlay"
+            className="react-modal-content">
+            <button type="button" className="react-modal-button" onClick={handleCloseModal}>
+            <IoCloseOutline /> 
+            </button>
+            <div className="content-modal-City">
+            <div className="itensModal-City">
+                     
+                    <h3>Digite o CEP para buscar a cidade!</h3>
+
+                  <div className="cep">
+                    <input type="text" value={cep} onChange={e => setCep(e.target.value)}/>
+                    <button onClick={handleCep}>Buscar</button>
+                  </div>
+                  <div className="address">
+                  <input type="text" value={newCity} onChange={e => setNewCity(e.target.value)}/>
+                  <input type="text" value={newUf} onChange={e => setNewUf(e.target.value)}/>
+                  </div>
+
+
+                    <div className="buttons">
+                    <button className="button2" onClick={handleNewCity}>Alterar </button>
+                    <button className="button1" onClick={handleCloseModal}>Cancelar</button>
+                </div>
+
+            </div>
+            </div>
+            </Modal>
 
         </div>
     )

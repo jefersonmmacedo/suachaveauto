@@ -9,7 +9,7 @@ import { Notification } from "../Notification/Notifications";
 
 
 export function NotificationView() {
-    const Local = localStorage.getItem("suachave");
+    const Local = localStorage.getItem("suachaveauto");
     const user = JSON.parse(Local);
 
     const [filter, setFilter] = useState(false);

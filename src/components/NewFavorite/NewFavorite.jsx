@@ -7,7 +7,7 @@ import api from "../../services/api";
 import { useEffect } from "react";
 
 export function NewFavorite({idAuto, idCompany, page}) {
-  const Local = localStorage.getItem("suachave");
+  const Local = localStorage.getItem("suachaveauto");
   const user = JSON.parse(Local);
 
   const [isOpenModal, setIsOpenModa] = useState(false);

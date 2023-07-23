@@ -7,7 +7,7 @@ import { AuthContext } from "../../contexts/Auth";
 import { IoAlertCircleOutline, IoCloseOutline } from "react-icons/io5";
 
 export function NewAlertClient({status, district, city, uf, type, subType, bedroom, suite, restroom, garage, pets, furnished, idProperty}) {
-  const Local = localStorage.getItem("suachave");
+  const Local = localStorage.getItem("suachaveauto");
   const user = JSON.parse(Local);
 
   console.log({status, district, city, uf, type, subType, bedroom, suite, restroom, garage, pets, furnished, idProperty});
