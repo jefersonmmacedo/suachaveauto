@@ -6,6 +6,7 @@ import 'react-calendar/dist/Calendar.css';
 import api from "../../services/api";
 import { AuthContext } from "../../contexts/Auth";
 import {IoArrowBackOutline, IoArrowForwardOutline} from "react-icons/io5";
+import {GiSteeringWheel} from "react-icons/gi";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 
@@ -637,7 +638,7 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
     Modal.setAppElement('#root');
     return (
         <>
-        <button className="buttonScheduling" onClick={handleOpenModal}><IoCalendarOutline/> Agendar visita</button>
+        <button className="buttonScheduling" onClick={handleOpenModal}><GiSteeringWheel/> Test drive</button>
 
         <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
             overlayClassName="react-modal-overlay"
@@ -755,7 +756,7 @@ export function NewScheduling({idAuto, idCompany, image, brand, model, version, 
                 : ""
                   }
 
-                <button style={{borderRadius: 25}}  className="btnSubmit" onClick={handleNewScheduling}>Enviar solicitação de agendamento</button>
+                <button style={{borderRadius: 25}}  className="btnSubmit" onClick={handleNewScheduling}>Agendar test drive</button>
                
                 </div>
             </div>

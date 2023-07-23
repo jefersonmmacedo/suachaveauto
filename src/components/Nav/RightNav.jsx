@@ -175,7 +175,7 @@ const RightNav = ({ open }) => {
           </li>
           <li className='nav-item'>
             <a href='/anunciar' >
-            Para agências
+            Para sua agência
             </a>
           </li>
           <li className='nav-item'>

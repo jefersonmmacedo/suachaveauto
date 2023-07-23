@@ -18,10 +18,10 @@ function AuthProvider({children}) {
 
     
     async function createAccount({
-        name, email, phone, whatsapp, password, status, verified, avatar, cep, city, uf
+        name, email, phone, whatsapp, password, status, verified, avatar, cep, city, uf, type
         }) {
         const data = {
-            name, email, phone, whatsapp, password, status, verified, avatar, cep, city, uf
+            name, email, phone, whatsapp, password, status, verified, avatar, cep, city, uf, type
             }
         console.log(data)
         
@@ -78,18 +78,18 @@ function AuthProvider({children}) {
 
 
 
-    async function updateAccount({id, avatar, cover, city, uf, relationship, nickname, cep, latitude, longitude, país, username, role, status, type, email, phone, online, patron}){
+    async function updateAccount({
+        id, name, email, phone, whatsapp, password, status, verified, avatar, cep, city, uf, type
+        }){
         const Local = localStorage.getItem("suachaveauto");
         const user = JSON.parse(Local)
-        const Local2 = localStorage.getItem("informations-suachaveauto");
-        const userInformations = JSON.parse(Local2)
-        const data = {avatar, cover, city, uf, relationship, nickname, cep, latitude, longitude, país, username, role, status, type, email, phone, online, patron};
-        const data2 = {avatar, cover, city, uf, relationship, nickname, cep, latitude, longitude, país, username, role, status, type, email, phone, online, patron, date:user.date , token:user.token  , expiresIn:user.expiresIn };
+        const data = { name, email, phone, whatsapp, password, status, verified, avatar, cep, city, uf, type};
+        const data2 = { name, email, phone, whatsapp, password, status, verified, avatar, cep, city, uf, type, date:user.date , token:user.token, expiresIn:user.expiresIn };
         console.log(id)
         console.log(data)
-        await api.patch(`/accounts/${id}`, data).then(res => {
+        await api.patch(`/client/${id}`, data).then(res => {
             localStorage.setItem("suachaveauto", JSON.stringify(data2));
-            window.open("/feed", "_self")
+            window.open("/minhaconta", "_self")
         }).catch(error => {
             console.log(error)
         });
@@ -337,19 +337,33 @@ async function newVisit(idAccount, username, idFriend) {
         idClient, idAuto, idCompany, dataCar, imageAuto, email, phone, whatsapp, status, meet, nameClient,
       day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted, type
     }) {
+
+        const Local = localStorage.getItem("suachave");
+        const user = JSON.parse(Local);
+
+
         const data = {idClient, idAuto, idCompany, dataCar, imageAuto, email, phone, whatsapp, status, meet, nameClient,
             day, month, year, shift, hour, ownACar, location, address, similarProperties, amountOfPeople, dateCompleted, type}
 
         await api.post("/scheduling/", data).then((res) => {
             
             toast.success("Agendamento criado com sucesso!");
-            window.location.reload(false);
+            mailScheduling(user.email);
            
 
         }).catch((error) => {
             console.log(error)
         })
     }
+
+    
+    async function mailScheduling(email) {
+        const res = await apiMail.post("/mail/scheduling", {mail: email});
+        if(res.status === 200) {
+            window.location.reload(false);
+        }
+    }
+    
 
     async function newContact({
         idAuto, idCompany, nameCompany, idClient, name, email, phone, whatsapp, origin, type, latitude, longitude, link, whatsappCompany, phoneCompany
