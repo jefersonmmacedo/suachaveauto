@@ -189,9 +189,9 @@ export function Autos() {
                         <h2>R$ {data[0]?.value}</h2>
                         </div>
                         <div className="PricingFipe">
-                        <h5>Fipe - Ref.:{textReferência}</h5>
-                        <h2>R$ {data[0]?.valueFipe}</h2>
-                       <a href={`/consulta-placa/${data[0]?.plate}`}>Ver Fipe atualizada</a>
+                        <h5>Cadastrado em {textReferência}</h5>
+                        {/* <h2>R$ {data[0]?.valueFipe}</h2> */}
+                       <a href={`/consulta-placa/${data[0]?.plate}`}><h2>Ver tabela Fipe</h2></a>
                         </div>
                        
                     </div>
