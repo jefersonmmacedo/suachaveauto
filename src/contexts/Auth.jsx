@@ -393,7 +393,7 @@ async function newVisit(idAccount, username, idFriend) {
                 window.open(`tel:+55${phoneCompany}`, "_self");
             }
             else {
-                window.open(`https://api.whatsapp.com/send?phone=55${whatsappCompany}&text=Olá. Me chamo ${name}, gostaria de atendimento`)
+                window.open(`https://api.whatsapp.com/send?phone=55${whatsappCompany}&text=Olá. Me chamo ${name}, gostaria de atendimento. Venho através da sua página no portal Sua Chave Auto`)
             }
 
         }).catch((error) => {
