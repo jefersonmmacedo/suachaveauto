@@ -119,14 +119,14 @@ export function Plains() {
                     <a href={user !== null && user?.type === "Imobiliária" || user !== null && user?.type === "Corretor" ? `/plano/${plain?.id}` : "/cadastro-profissional"}>Contratar plano</a>
                 } */}
 
-                <a href={`https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre o plano ${plain?.name} e os serviços que a Sua Chave pode me oferecer`}>Falar com time comercial</a>
+                {/* <a href={`https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre o plano ${plain?.name} e os serviços que a Sua Chave pode me oferecer`}>Falar com time comercial</a> */}
                 {/* <a href={`https://adm.suachave.com.br/cadastro/novocadastro`} target="_blank" rel="noreferrer">Teste por 7 dias grátis</a> */}
-                {/* <a href={`http://adm.suachave.com.br/cadastrar/${plain?.id}`} target="_blank" rel="noreferrer">Contratar</a> */}
+                <a href={`https://adm.suachaveauto.com.br/cadastro/novocadastro`} target="_blank" rel="noreferrer">Contratar</a>
 
                     <p>{plain?.note}</p>
                     {plain?.name === "Lite" ? 
                         <div className="featured">
-                            <h5>Mais Procurado</h5>
+                            <h5>Site incluso!</h5>
                         </div>
                          : ""}
                 </div>
