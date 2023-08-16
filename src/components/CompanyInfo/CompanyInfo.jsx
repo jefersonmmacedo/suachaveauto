@@ -9,6 +9,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
 import { useEffect } from "react";
 import ReactTooltip from 'react-tooltip';
+import api from "../../services/api";
 
 export function CompanyInfo({idAuto, idCompany, nameCompany, companyPhone}) {
     const Local = localStorage.getItem("suachaveauto");
@@ -27,6 +28,7 @@ export function CompanyInfo({idAuto, idCompany, nameCompany, companyPhone}) {
 
     const [latitude, setLatitude] = useState("")
     const [longitude, setLongitude] = useState("")
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         function getLocation() {
@@ -50,13 +52,27 @@ export function CompanyInfo({idAuto, idCompany, nameCompany, companyPhone}) {
   
     },[])
 
-    const {data} = useFetch(`/company/unic/${idCompany}`)
 
-    if(!data) {
+
+
+    useEffect(() => {
+        async function loadPlains() {
+            await api.get(`/company/unic/${idCompany}`).then((res) => {
+                setData(res.data);
+
+            }).catch((err) => {
+                console.log(err);
+            });
+        }
+        loadPlains() 
+    },[]);
+
+    if(data?.length === 0) {
         return (
             <h6>Carregando...</h6>
         )
     }
+
 
     function handleNewContactButton(type) {
         newContact({

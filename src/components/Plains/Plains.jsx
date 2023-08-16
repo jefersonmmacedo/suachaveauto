@@ -7,10 +7,21 @@ import 'react-slideshow-image/dist/styles.css';
 
 export function Plains() {
 
-    const { data } = useFetch("/plains");
+    const [data, setData] = useState([]);
 
+    useEffect(() => {
+        async function loadPlains() {
+            await api.get("/plains").then((res) => {
+                setData(res.data);
 
-    if(!data) {
+            }).catch((err) => {
+                console.log(err);
+            });
+        }
+        loadPlains() 
+    },[]);
+
+    if(data?.length === 0) {
         return (
             <div className="loader">
            carregando...
@@ -68,7 +79,7 @@ export function Plains() {
         }
     ]
 
-    const plainsFilter = data.filter((plains) => plains.status !== "Inativo" )
+    const plainsFilter = data?.filter((plains) => plains.status !== "Inativo" )
 
     return (
         <div className="Plains">
@@ -121,7 +132,7 @@ export function Plains() {
 
                 {/* <a href={`https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre o plano ${plain?.name} e os serviços que a Sua Chave pode me oferecer`}>Falar com time comercial</a> */}
                 {/* <a href={`https://adm.suachave.com.br/cadastro/novocadastro`} target="_blank" rel="noreferrer">Teste por 7 dias grátis</a> */}
-                <a href={`https://adm.suachaveauto.com.br/cadastro/novocadastro`} target="_blank" rel="noreferrer">Contratar</a>
+                <a href={`https://adm.suachaveauto.com.br/cadastro/novocadastro`} target="_blank" rel="noreferrer">Teste por 7 dias Grátis!</a>
 
                     <p>{plain?.note}</p>
                     {plain?.name === "Lite" ? 

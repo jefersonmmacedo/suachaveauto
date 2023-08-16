@@ -17,13 +17,20 @@ export function CompanyList() {
     const [search, setSearch] = useState("");
     const searchLower = search.toLowerCase();
 
-    const { data } = useFetch(`/company/all`)
-    if(!data) {
-        return (
-            <h5>Carregando...</h5>
-        )
-    }
-    
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        async function loadPlains() {
+            await api.get(`/company/all`).then((res) => {
+                setData(res.data);
+
+            }).catch((err) => {
+                console.log(err);
+            });
+        }
+        loadPlains() 
+    },[]);
+
     function handleClearAddress(e) {
         e.preventDefault();
         
