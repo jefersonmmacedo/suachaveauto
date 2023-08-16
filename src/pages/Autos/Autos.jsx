@@ -16,6 +16,7 @@ import { NewShare } from "../../components/NewShare/NewShare";
 import { FaMotorcycle } from "react-icons/fa";
 import { useEffect } from "react";
 import api from "../../services/api";
+import { useState } from "react";
 
 
 export function Autos() {

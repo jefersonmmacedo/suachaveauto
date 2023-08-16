@@ -3,6 +3,9 @@ import {IoArrowBackOutline, IoArrowForwardOutline, IoCheckmarkOutline} from "rea
 import { useFetch } from "../../hooks/useFetch";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import { useState } from "react";
+import { useEffect } from "react";
+import api from "../../services/api";
 
 
 export function Plains() {
