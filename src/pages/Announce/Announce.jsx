@@ -35,7 +35,7 @@ export function Announce() {
     function HandleOpen(e) {
         e.preventDefault();
       
-        window.open("https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave Auto pode me oferecer")
+        window.open("https://wa.me/5521999589219?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave Auto pode me oferecer")
       }
 
     return (
@@ -201,7 +201,7 @@ export function Announce() {
                     {/* <a href="/cadastro-profissional">Quero digitalizar minha agência</a> */}
                     {/* <a href="/cadastro-profissional">Quero digitalizar minha agência</a> */}
                 </div>
-                <a className="linkText" href="https://wa.me/5521997429585?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave Auto pode me oferecer" target="_Blank"> Clique aqui e saiba mais </a>
+                <a className="linkText" href="https://wa.me/5521999589219?text=Olá. Gostaria de saber mais detalhes sobre os planos e serviços que a Sua Chave Auto pode me oferecer" target="_Blank"> Clique aqui e saiba mais </a>
                 {/* <a href="https://adm.suachaveauto.com.br/cadastro/novocadastro" className="linkText" target="_Blank"><IoCheckboxOutline /> Criar minha conta agora!</a> */}
         </div>
     </div>

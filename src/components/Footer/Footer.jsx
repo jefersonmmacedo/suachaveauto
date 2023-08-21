@@ -37,7 +37,7 @@ export function Footer() {
                         </div>
                         <div className="sectionUnic">
                         <h3>ATENDIMENTO</h3>
-                            <h5><IoLogoWhatsapp />(21) 99742-9585</h5>
+                            <h5><IoLogoWhatsapp />(21) 99958-9219</h5>
                             <h5><IoMailOutline />contato@suachaveauto.com.br</h5>
                             <div className="network">
                             </div>
