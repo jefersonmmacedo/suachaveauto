@@ -1,19 +1,36 @@
 import { useState } from "react";
-import { IoClose, IoSearchOutline } from "react-icons/io5";
+import {IoSearch, IoCarOutline, IoCarSportOutline, IoLocationOutline, IoCarSport, IoClose, IoCloseOutline} from "react-icons/io5";
+import Modal from 'react-modal';
 import { toast } from "react-toastify";
 import "./filterPropertiesList.css"
 import { useEffect } from "react";
 import api from "../../services/api";
+import buscaCep from "../../services/api-buscaCep";
 
 export function FilterPropertiesList({marca, modelo}) {
+    const Local = localStorage.getItem("suachaveauto");
+    const user = JSON.parse(Local);
+    
+    const LocalCity = localStorage.getItem("suachaveauto-address");
+    const userCity = JSON.parse(LocalCity);
+
+
     const [filter, setFilter] = useState(false);
-    const [data, setData] = useState([]);
     const [brandVehicle, setBrandVehicle] = useState(marca === null || marca === undefined ? "" : marca);
     const [modelVehicle, setModelVehicle] = useState(modelo === null || modelo === undefined ? "" : modelo);
 
+    const [state, setState] = useState("");
+    const [city, setCity] = useState(user === null && userCity === null ? "" : user === null && userCity !== null ? userCity.city : user.city);
+    const [uf, setUf] = useState(user === null && userCity === null ? "" : user === null && userCity !== null ? userCity.uf : user.uf); 
+    const [data, setData] = useState([]);
+
+    const [cep, setCep] = useState("");
+    const [newCity, setNewCity] = useState("");
+    const [newUf, setNewUf] = useState("");
+
     const [search, setSearch] = useState("");
     const searchLower = search.toLowerCase();
-
+    const [isOpenModal, setIsOpenModal] = useState(false);
     const availability = "Disponível";
 
     useEffect(() => {
@@ -96,18 +113,64 @@ export function FilterPropertiesList({marca, modelo}) {
 
     function handleLinkSearchProperty(e) {
         e.preventDefault();
-      if(brandVehicle === "") {
-          toast.error("Sua busca não pode ser vazia!");
-          return
+
+
+      if(brandVehicle === "" && modelVehicle === "" && state !== "" && city !== "" && uf !== "") {
+          window.open(`/autos?condicao=${state}&cidade=${city}&uf=${uf}`,"_self")
+      }
+      if(brandVehicle === "" && modelVehicle === "" && state === "" && city !== "" && uf !== "") {
+          window.open(`/autos?cidade=${city}&uf=${uf}`,"_self")
       }
 
-      if(brandVehicle !== "" && modelVehicle !== "" ) {
+      if(brandVehicle !== "" && modelVehicle !== "" && state !== "" && city === "" && uf === "") {
+          window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&condicao=${state}`,"_self")
+      }
+      if(brandVehicle !== "" && modelVehicle !== "" && state !== "" && city !== "" && uf !== "") {
+          window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&condicao=${state}&cidade=${city}&uf=${uf}`,"_self")
+      }
+      if(brandVehicle !== "" && modelVehicle !== "" && state !== "" && city !== "" && uf === "") {
+          window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&condicao=${state}&cidade=${city}`,"_self")
+      }
+
+
+      if(brandVehicle !== "" && modelVehicle !== "" && state === "" && city === "" && uf === "") {
           window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}`,"_self")
       }
-      if(brandVehicle !== "" && modelVehicle === "" ) {
-          window.open(`/autos?marca=${brandVehicle}`,"_self")
+      if(brandVehicle !== "" && modelVehicle !== "" && state === "" && city !== "" && uf !== "") {
+          window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&cidade=${city}&uf=${uf}`,"_self")
+      }
+      if(brandVehicle !== "" && modelVehicle !== "" && state === "" && city !== "" && uf === "") {
+          window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&cidade=${city}`,"_self")
       }
 
+
+
+      if(brandVehicle !== "" && modelVehicle === "" && state !== "" && city === "" && uf === "") {
+          window.open(`/autos?marca=${brandVehicle}&condicao=${state}`,"_self")
+      }
+      if(brandVehicle !== "" && modelVehicle === "" && state !== "" && city !== "" && uf !== "") {
+          window.open(`/autos?marca=${brandVehicle}&condicao=${state}&cidade=${city}&uf=${uf}`,"_self")
+      }
+      if(brandVehicle !== "" && modelVehicle === "" && state !== "" && city !== "" && uf === "") {
+          window.open(`/autos?marca=${brandVehicle}&condicao=${state}&cidade=${city}`,"_self")
+      }
+
+
+
+      if(brandVehicle !== "" && modelVehicle === "" && state === "" && city === "" && uf === "") {
+          window.open(`/autos?marca=${brandVehicle}`,"_self")
+      }
+      if(brandVehicle !== "" && modelVehicle === "" && state === "" && city !== "" && uf !== "") {
+          window.open(`/autos?marca=${brandVehicle}&cidade=${city}&uf=${uf}`,"_self")
+      }
+      if(brandVehicle !== "" && modelVehicle === "" && state === "" && city !== "" && uf === "") {
+          window.open(`/autos?marca=${brandVehicle}&cidade=${city}`,"_self")
+      }
+
+  }
+
+  function handleStatusAuto(data) {
+      setState(data)
   }
     function handleLinkAll(e) {
         e.preventDefault();
@@ -129,6 +192,47 @@ export function FilterPropertiesList({marca, modelo}) {
             setModelVehicle("")
       }
     
+      function handleCloseModal(e) {
+        e.preventDefault();
+        setIsOpenModal(false);
+      }
+
+      function handleOpenModal(e) {
+        e.preventDefault();
+          setIsOpenModal(true)
+        }
+
+        async function removeCity() {
+            localStorage.removeItem("suachaveauto-address");
+            window.location.reload(false);
+        }
+
+       async function handleCep() {
+            await buscaCep.get(`/${cep}/json/`).then((res) => {
+                console.log(res.data);
+                setNewCity(res.data.localidade);
+                setNewUf(res.data.uf);
+            }).catch((err) => {
+                console.log(err)
+            });
+        }
+
+        function handleNewCity(e) {
+            e.preventDefault();
+            const data = {
+                city: newCity,
+                uf: newUf
+            }
+
+            localStorage.setItem("suachaveauto-address", JSON.stringify(data));
+
+            window.location.reload(false);
+        }
+
+
+
+
+    Modal.setAppElement('#root');
 
 
     return (
@@ -170,6 +274,50 @@ export function FilterPropertiesList({marca, modelo}) {
                                     </div>
                                 </div>
                                 }
+            </div>
+
+            <div className="textLocation">
+                <div className="blockInfo">
+                <div className="checkDiv">
+                    <button className={state === "" ? "ButtonSelect" : "ButtonState"} onClick={() => handleStatusAuto("")}></button>
+                    <h5><IoCarSportOutline />Todos</h5>
+                </div>
+                <div className="checkDiv">
+                    <button className={state === "O km" ? "ButtonSelect" : "ButtonState"} onClick={() => handleStatusAuto("O km")}></button>
+                    <h5><IoCarSportOutline />O km</h5>
+                </div>
+                <div className="checkDiv">
+                    <button className={state === "Seminovo" ? "ButtonSelect" : "ButtonState"} onClick={() => handleStatusAuto("Seminovo")}></button>
+                    <h5><IoCarOutline />Seminovo</h5>
+                </div>
+                <div className="checkDiv">
+                    <button className={state === "Usado" ? "ButtonSelect" : "ButtonState"} onClick={() => handleStatusAuto("Usado")}></button>
+                    <h5><IoCarOutline />Usados</h5>
+                </div>
+                </div>
+                {/* <div className="blockInfo">
+                <div className="checkDiv">
+                <button className={financing === "Aceita financimento" ? "ButtonSelect" : "ButtonState"} onClick={() => handleFinancingAuto("Aceita financimento")}></button>
+                    <h5><AiOutlineDollarCircle />Aceita financimento</h5>
+                </div>
+                </div> */}
+                <div className="blockInfo">
+                <div className="checkDiv">
+                    {city === "" && uf === "" ? "" :
+                    <h5><IoLocationOutline />{city} - {uf}</h5>
+                    }
+                </div>
+                {city === "" && uf === "" ?
+                   ""
+                    :
+                    <button onClick={removeCity}>X</button>
+                    }
+                {city === "" && uf === "" ?
+                    <button onClick={handleOpenModal}>Escolha sua cidade</button>
+                    :
+                    <button onClick={handleOpenModal}>Alterar</button>
+                    }
+                </div>
             </div>
              
              {/* <div className="dataSelects">
@@ -244,13 +392,46 @@ export function FilterPropertiesList({marca, modelo}) {
              </div> */}
 
             <div className="dataSelectsButtonsAction">
-                <button  onClick={handleLinkSearchProperty}><IoSearchOutline /> Buscar</button>
-                <button  onClick={handleLinkAll}><IoSearchOutline /> Todos os veículos</button>
+                <button  onClick={handleLinkSearchProperty}><IoSearch /> Buscar</button>
+                <button  onClick={handleLinkAll}><IoSearch /> Todos os veículos</button>
                 <button className="btn" onClick={handleClearItens}><IoClose /> Limpar</button>
         </div>
             </div>
         </div>
     </div>
+
+
+    <Modal isOpen={isOpenModal} onRequestClose={handleCloseModal}
+            overlayClassName="react-modal-overlay"
+            className="react-modal-content">
+            <button type="button" className="react-modal-button" onClick={handleCloseModal}>
+            <IoCloseOutline /> 
+            </button>
+            <div className="content-modal-City">
+            <div className="itensModal-City">
+                     
+                    <h3>Digite o CEP para buscar a cidade!</h3>
+
+                  <div className="cep">
+                    <input type="text" value={cep} onChange={e => setCep(e.target.value)}/>
+                    <button onClick={handleCep}>Buscar</button>
+                  </div>
+                  <div className="address">
+                  <input type="text" value={newCity} onChange={e => setNewCity(e.target.value)}/>
+                  <input type="text" value={newUf} onChange={e => setNewUf(e.target.value)}/>
+                  </div>
+
+
+                    <div className="buttons">
+                    <button className="button2" onClick={handleNewCity}>Alterar </button>
+                    <button className="button1" onClick={handleCloseModal}>Cancelar</button>
+                </div>
+
+            </div>
+            </div>
+            </Modal>
+
+
         </div>
     )
 }

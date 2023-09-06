@@ -10,6 +10,7 @@ import { AuthContext } from "../../contexts/Auth";
 import { useEffect } from "react";
 import ReactTooltip from 'react-tooltip';
 import api from "../../services/api";
+import { toast } from "react-toastify";
 
 export function CompanyInfo({idAuto, idCompany, nameCompany, companyPhone}) {
     const Local = localStorage.getItem("suachaveauto");
@@ -75,6 +76,11 @@ export function CompanyInfo({idAuto, idCompany, nameCompany, companyPhone}) {
 
 
     function handleNewContactButton(type) {
+        if(name === "" || phone === "") {
+            toast.error("Favor informar nome, whatsapp e email");
+            return;
+        }
+        
         newContact({
         idAuto: idAuto, idCompany: idCompany, nameCompany:data[0]?.fantasyName, idClient: user.id, name: user.name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
         email: user.email, phone: user.phone, whatsapp: user.whatsapp, type: type, origin: "Portal", latitude, longitude,
@@ -82,6 +88,11 @@ export function CompanyInfo({idAuto, idCompany, nameCompany, companyPhone}) {
     }
 
     function handleNewContactModal(type) {
+        if(name === "" || phone === "") {
+            toast.error("Favor informar nome, whatsapp e email");
+            return;
+        }
+
         newContact({
         idAuto: idAuto, idCompany: idCompany, nameCompany:data[0]?.fantasyName, idClient: "User Sem cadastro", name: name, whatsappCompany: data[0]?.whatsapp, phoneCompany: data[0]?.phone,
         email: email, phone: phone, whatsapp: phone, type: type, origin: "Portal", latitude, longitude,

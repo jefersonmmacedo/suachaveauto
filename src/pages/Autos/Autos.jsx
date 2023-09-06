@@ -17,6 +17,7 @@ import { FaMotorcycle } from "react-icons/fa";
 import { useEffect } from "react";
 import api from "../../services/api";
 import { useState } from "react";
+import { DownloadApp2 } from "../../components/DownloadApp2/DownloadApp2";
 
 
 export function Autos() {
@@ -255,6 +256,7 @@ export function Autos() {
 
                 </div>
         </div>
+        {/* <DownloadApp2 /> */}
         <Footer />
 
        </div>

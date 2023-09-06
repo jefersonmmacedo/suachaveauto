@@ -4,7 +4,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { FiArrowUpCircle } from "react-icons/fi";
 import { useParams } from "react-router-dom";
 import { useQuery } from "../../hooks/useQuery";
-import notFoundImage from "../../assets/images/svg/404property.svg";
+import notFoundImage from "../../assets/images/svg/404-2.svg";
 import loader from "../../assets/images/gif/loader.gif";
 import { PropertyUnicBlockLoader } from "../../components/PropertyUnicBlockLoader/PropertyUnicBlockLoader";
 import { useFetch } from "../../hooks/useFetch";
@@ -12,6 +12,7 @@ import { PropertyUnicBlock } from "../../components/PropertyUnicBlock/PropertyUn
 import { FilterPropertiesList } from "../../components/FilterPropertiesList/FilterPropertiesList";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
+import { DownloadApp2 } from "../../components/DownloadApp2/DownloadApp2";
 
 
 export function Properties(){
@@ -20,6 +21,10 @@ export function Properties(){
     const availability = "Disponível";
     const brand = query.get("marca") === null ? "" : query.get("marca")
     const model = query.get("modelo") === null ? "" : query.get("modelo")
+    const city = query.get("cidade") === null ? "" : query.get("cidade")
+    const uf = query.get("uf") === null ? "" : query.get("uf")
+    const state = query.get("condicao") === null ? "" : query.get("condicao")
+    const financing = query.get("financiamento") === null ? "" : query.get("financiamento")
 
     console.log(brand);
     console.log(model);
@@ -37,30 +42,25 @@ export function Properties(){
     // useEffect(() => {
     //     async function loadproperties() {
     //         await api.get(
-    //             status !== undefined && subType !== "" && district !== "" && city !== "" && uf !== "" ?
-    //             `/autos/listsadressfull/${availability}/${status}?type=${type}&subType=${subType}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             : type !== "" && status !== undefined  && district !== "" && city !== "" && uf !== "" ?
-    //           `/autos/listsadresscityuf/${availability}/${status}?type=${type}&district=${district}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             : status !== undefined && subType !== "" && city !== "" && uf !== "" ?
-    //             `property/listsadress/${availability}/${status}?type=${type}&subType=${subType}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             :type !== "" && status !== undefined  && city !== "" && uf !== "" ?
-    //             `/autos/listsadresstype/${availability}/${status}?type=${type}&city=${city}&uf=${uf}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             : status !== undefined &&  district !== "" && city !== "" && uf !== "" ?
-    //             `/autos/listsadressstatuscomplete/${availability}/${status}?district=${district}&city=${city}&uf=${uf}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             : status !== undefined  && city !== "" && uf !== "" ?
-    //             `/autos/listsadressstatus/${availability}/${status}?city=${city}&uf=${uf}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             : status !== undefined && subType !== "" ?
-    //             `/autos/listtypesubstatus/${availability}/${status}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             : subType !== "" ?
-    //             `/autos/listtypesubtype/${availability}?type=${type}&subType=${subType}&bedroom=${bedroom}&restroom=${restroom}&garage=${garage}&suite=${suite}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             : status !== undefined && type !== "" ?
-    //             `/autos/listtypestatus/${availability}/${status}?type=${type}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             : type !== "" ?
-    //             `property/listtype/${availability}?type=${type}&emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             : status !== undefined ?
-    //             `/autos/lists/${availability}/${status}?emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
-    //             : status === undefined ?
-    //             `/autos/allcars/${availability}?emphasis=true&page=${currentPage}&limit=${perPageEmphasis}`
+    //          brand !== "" && model !== "" && state !== "" && city !== "" && uf !== ""?
+    //          `/autos/allBrandModelcarsStateAdress/${availability}?emphasis=true&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}`
+    //          : brand !== "" && model !== "" && state !== "" && city === "" && uf === ""?
+    //          `/autos/allBrandModelcarsState/${availability}?emphasis=true&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}`
+    //          : brand !== "" && model !== "" && state === "" && city !== "" && uf !== ""?
+    //          `/autos/allBrandModelcarsAdress/${availability}?emphasis=true&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}`
+    //          : brand !== "" && model !== "" && state === "" && city === "" && uf === ""?
+    //          `/autos/allBrandModelcars/${availability}?emphasis=true&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}`
+
+    //          : brand !== "" && model === "" && state !== "" && city !== "" && uf !== "" ?
+    //          `/autos/allBrandcarsStateAdress/${availability}?emphasis=true&page=${currentPage}&limit=${perPage}&brand=${brand}`
+    //          : brand !== "" && model === "" && state !== "" && city === "" && uf === "" ?
+    //          `/autos/allBrandcarsState/${availability}?emphasis=true&page=${currentPage}&limit=${perPage}&brand=${brand}`
+    //          : brand !== "" && model === "" && state === "" && city !== "" && uf !== "" ?
+    //          `/autos/allBrandcarsAdress/${availability}?emphasis=true&page=${currentPage}&limit=${perPage}&brand=${brand}`
+    //          : brand !== "" && model === "" && state === "" && city === "" && uf === "" ?
+    //          `/autos/allBrandcars/${availability}?emphasis=true&page=${currentPage}&limit=${perPage}&brand=${brand}`
+    //          : brand === "" && model === "" && state === "" && city === "" && uf === "" ?
+    //          `/autos/allcars/${availability}?emphasis=true&page=${currentPage}&limit=${perPage}`
     //             :"").then((res) => {
     //             setEnphasisProperties(res.data)
     //         }).catch((error) => {
@@ -72,18 +72,36 @@ export function Properties(){
     // },[])
 
     const dataModel = model.split(" ");
-    console.log(dataModel[0]);
-//allBrandModelcars
+
     const {data} = useFetch(
-        brand !== "" && model !== "" ?
+        brand === "" && model === "" && state !== "" && city !== "" && uf !== ""?
+        `/autos/allStateAddress/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&state=${state}&city=${city}&uf=${uf}`
+        : brand === "" && model === "" && state === "" && city !== "" && uf !== ""?
+        `/autos/allAddress/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&city=${city}&uf=${uf}`
+        : brand !== "" && model !== "" && state !== "" && city !== "" && uf !== ""?
+        `/autos/allBrandModelcarsStateAdress/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}&state=${state}&city=${city}&uf=${uf}`
+        : brand !== "" && model !== "" && state !== "" && city === "" && uf === ""?
+        `/autos/allBrandModelcarsState/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}&state=${state}`
+        : brand !== "" && model !== "" && state === "" && city !== "" && uf !== ""?
+        `/autos/allBrandModelcarsAdress/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}&city=${city}&uf=${uf}`
+        : brand !== "" && model !== "" && state === "" && city === "" && uf === ""?
         `/autos/allBrandModelcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&model=${dataModel[0]}`
-        : brand !== "" && model === "" ?
+
+        : brand !== "" && model === "" && state !== "" && city !== "" && uf !== "" ?
+        `/autos/allBrandcarsStateAdress/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&state=${state}&city=${city}&uf=${uf}`
+        : brand !== "" && model === "" && state !== "" && city === "" && uf === "" ?
+        `/autos/allBrandcarsState/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&state=${state}`
+        : brand !== "" && model === "" && state === "" && city !== "" && uf !== "" ?
+        `/autos/allBrandcarsAdress/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}&city=${city}&uf=${uf}`
+        : brand !== "" && model === "" && state === "" && city === "" && uf === "" ?
         `/autos/allBrandcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}&brand=${brand}`
-        : brand === "" && model === "" ?
+        : brand === "" && model === "" && state === "" && city === "" && uf === "" ?
         `/autos/allcars/${availability}?emphasis=false&page=${currentPage}&limit=${perPage}`
         :"");
 
 
+
+        
         const filterCars = data?.filter((car) => car.model.includes(model));
         console.log(filterCars)
 
@@ -145,11 +163,12 @@ export function Properties(){
         <div className="Properties">
         <Navbar2 />
         <div className="listPage">
+        {/* <DownloadApp2 /> */}
         <div className="ListProperty">
         <div className="topList">
         <div className="textItens">
             {
-            <h3>Anúncios disponíveis</h3>
+            <h3>Anúncios <b>{brand}{model === "" ? "" : ` - ${model}`}{city === "" ? "" : `, ${city}`} {uf === "" ? "" : `- ${uf}`} </b>  disponíveis</h3>
             }
             </div>
         <FilterPropertiesList marca={brand} modelo={model} />
@@ -178,7 +197,7 @@ export function Properties(){
                     {propertyNotFound === false ? "" :
                     <>
                     <img src={notFoundImage} alt="" />
-                    <h3>Nenhum imóvel localizado</h3>
+                    <h3>Nenhum auto localizado</h3>
                     </>
                     }
                 </div>
@@ -213,30 +232,4 @@ export function Properties(){
 
 
 
-// let text = ""
 
-// if (status !== undefined && subType !== "" && district !== "" && city !== "" && uf !== "" -) {
-//     text = `${status} + ${subType} + ${district} + ${city} + ${uf}`
-// } else  if (type !== "" && status !== undefined  && district !== "" && city !== "" && uf !== "" -) {
-//     text = `${status} +${type} + ${district} + ${city} + ${uf}`
-// } else  if (status !== undefined && subType !== "" && city !== "" && uf !== "" -) {
-//     text = `${status} + ${subType} + ${city} + ${uf}`
-// } else  if (type !== "" && status !== undefined  && city !== "" && uf !== "" - ) {
-//     text = `${status} +${type} + ${city} + ${uf}`
-// } else if (status !== undefined &&  district !== "" && city !== "" && uf !== "" - ) {
-// text = `${status} + ${district} + ${city} + ${uf}`
-// } else if (status !== undefined  && city !== "" && uf !== ""-) {
-// text = `${status}  ${city} + ${uf}`
-// } else  if(status !== undefined && subType !== "" -) {
-// text = `${status} + ${type} & ${subType}`
-// } else if( subType !== "" -) {
-// text = `${type} & ${subType}`
-// } else if(status !== undefined && type !== "" -) {
-// text = `${status} + ${type}`
-// } else if(type !== "" -) {
-// text = `Type `
-// } else if (status !== undefined -) {
-// text = `${status}`
-// } else  if (status === undefined -) {
-// text = `Todos os imóveis`
-// }

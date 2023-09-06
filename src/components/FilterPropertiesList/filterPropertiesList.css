@@ -411,6 +411,116 @@
     border-radius: 30px;
 }
 
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation .blockInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation .blockInfo2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation .blockInfo h4 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Description);
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation .blockInfo select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    Background-color:var(--BorderHover);
+    color: var(--Description);
+    font-weight: 500;
+    border: none;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation .blockInfo button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    Background-color:var(--Border);
+    color: var(--Description);
+    font-weight: 500;
+    border: none;
+    margin: 5px 10px;
+    border-radius: 6px;
+}
+
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation .blockInfo .checkDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 5px;
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation .blockInfo .checkDiv .ButtonState {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 5px;
+    height: 18px;
+    margin: 0px;
+    background-color: var(--White);
+    border: 2px solid var(--Gray);
+}
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation .blockInfo .checkDiv .ButtonSelect {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 5px;
+    height: 18px;
+    margin: 0px;
+    background-color: var(--Description);
+    border: 2px solid var(--White);
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation .blockInfo .checkDiv h5 {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--Description);
+    font-weight: 700;
+}
+
+.FilterPropertiesList .searchItens .searchOptions .dataSearchOptions  .textLocation .blockInfo .checkDiv h5 svg {
+    margin-right: 3px;
+}
+
+
 @media(max-width:670px) {
     .FilterPropertiesList .searchItens {
         width: 100%;

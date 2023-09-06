@@ -19,11 +19,11 @@ export function SearchPropertyHomeCenter() {
     const [isOpenModal, setIsOpenModal] = useState(false);
 
     const [code, setCode] = useState(false);
-    const [state, setState] = useState("");
     const [financing, setFinancing] = useState("");
     const [type, setType] = useState("Carros");
     const [brandVehicle, setBrandVehicle] = useState("");
     const [modelVehicle, setModelVehicle] = useState("");
+    const [state, setState] = useState("");
     const [city, setCity] = useState(user === null && userCity === null ? "" : user === null && userCity !== null ? userCity.city : user.city);
     const [uf, setUf] = useState(user === null && userCity === null ? "" : user === null && userCity !== null ? userCity.uf : user.uf); 
     const [data, setData] = useState([]);
@@ -116,35 +116,58 @@ export function SearchPropertyHomeCenter() {
 
       function handleLinkSearchProperty(e) {
           e.preventDefault();
-        if(brandVehicle === "") {
-            toast.error("Sua busca não pode ser vazia!");
-            return
+          
+          if(brandVehicle === "" && modelVehicle === "" && state !== "" && city !== "" && uf !== "") {
+            window.open(`/autos?condicao=${state}&cidade=${city}&uf=${uf}`,"_self")
         }
+        if(brandVehicle === "" && modelVehicle === "" && state === "" && city !== "" && uf !== "") {
+            window.open(`/autos?cidade=${city}&uf=${uf}`,"_self")
+        }
+  
 
-        if(brandVehicle !== "" && modelVehicle !== "" && state !== "" && financing !== "") {
-            window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&condicao=${state}&financiamento=${financing}`,"_self")
-        }
-        if(brandVehicle !== "" && modelVehicle !== "" && state !== "" && financing === "" ) {
+        if(brandVehicle !== "" && modelVehicle !== "" && state !== "" && city === "" && uf === "") {
             window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&condicao=${state}`,"_self")
         }
-        if(brandVehicle !== "" && modelVehicle !== "" && state === "" && financing !== "") {
-            window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&financiamento=${financing}`,"_self")
+        if(brandVehicle !== "" && modelVehicle !== "" && state !== "" && city !== "" && uf !== "") {
+            window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&condicao=${state}&cidade=${city}&uf=${uf}`,"_self")
         }
-        
-        if(brandVehicle !== "" && modelVehicle !== "" && state === "" && financing === "") {
+        if(brandVehicle !== "" && modelVehicle !== "" && state !== "" && city !== "" && uf === "") {
+            window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&condicao=${state}&cidade=${city}`,"_self")
+        }
+
+
+        if(brandVehicle !== "" && modelVehicle !== "" && state === "" && city === "" && uf === "") {
             window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}`,"_self")
         }
-        if(brandVehicle !== "" && modelVehicle === "" && state === "" && financing === "") {
-            window.open(`/autos?marca=${brandVehicle}`,"_self")
+        if(brandVehicle !== "" && modelVehicle !== "" && state === "" && city !== "" && uf !== "") {
+            window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&cidade=${city}&uf=${uf}`,"_self")
         }
-        if(brandVehicle !== "" && modelVehicle === "" && state !== "" && financing !== "") {
-            window.open(`/autos?marca=${brandVehicle}&condicao=${state}&financiamento=${financing}`,"_self")
+        if(brandVehicle !== "" && modelVehicle !== "" && state === "" && city !== "" && uf === "") {
+            window.open(`/autos?marca=${brandVehicle}&modelo=${modelVehicle}&cidade=${city}`,"_self")
         }
-        if(brandVehicle !== "" && modelVehicle === "" && state !== "" && financing === "" ) {
+
+
+
+        if(brandVehicle !== "" && modelVehicle === "" && state !== "" && city === "" && uf === "") {
             window.open(`/autos?marca=${brandVehicle}&condicao=${state}`,"_self")
         }
-        if(brandVehicle !== "" && modelVehicle === "" && state === "" && financing !== "") {
-            window.open(`/autos?marca=${brandVehicle}&financiamento=${financing}`,"_self")
+        if(brandVehicle !== "" && modelVehicle === "" && state !== "" && city !== "" && uf !== "") {
+            window.open(`/autos?marca=${brandVehicle}&condicao=${state}&cidade=${city}&uf=${uf}`,"_self")
+        }
+        if(brandVehicle !== "" && modelVehicle === "" && state !== "" && city !== "" && uf === "") {
+            window.open(`/autos?marca=${brandVehicle}&condicao=${state}&cidade=${city}`,"_self")
+        }
+
+
+
+        if(brandVehicle !== "" && modelVehicle === "" && state === "" && city === "" && uf === "") {
+            window.open(`/autos?marca=${brandVehicle}`,"_self")
+        }
+        if(brandVehicle !== "" && modelVehicle === "" && state === "" && city !== "" && uf !== "") {
+            window.open(`/autos?marca=${brandVehicle}&cidade=${city}&uf=${uf}`,"_self")
+        }
+        if(brandVehicle !== "" && modelVehicle === "" && state === "" && city !== "" && uf === "") {
+            window.open(`/autos?marca=${brandVehicle}&cidade=${city}`,"_self")
         }
 
     }
@@ -168,6 +191,11 @@ export function SearchPropertyHomeCenter() {
       function handleOpenModal(e) {
         e.preventDefault();
           setIsOpenModal(true)
+        }
+
+        async function removeCity() {
+            localStorage.removeItem("suachaveauto-address");
+            window.location.reload(false);
         }
 
        async function handleCep() {
@@ -279,22 +307,27 @@ export function SearchPropertyHomeCenter() {
                     <h5><IoCarOutline />Seminovo</h5>
                 </div>
                 <div className="checkDiv">
-                    <button className={state === "Usados" ? "ButtonSelect" : "ButtonState"} onClick={() => handleStatusAuto("Usados")}></button>
+                    <button className={state === "Usado" ? "ButtonSelect" : "ButtonState"} onClick={() => handleStatusAuto("Usado")}></button>
                     <h5><IoCarOutline />Usados</h5>
                 </div>
                 </div>
-                <div className="blockInfo">
+                {/* <div className="blockInfo">
                 <div className="checkDiv">
                 <button className={financing === "Aceita financimento" ? "ButtonSelect" : "ButtonState"} onClick={() => handleFinancingAuto("Aceita financimento")}></button>
                     <h5><AiOutlineDollarCircle />Aceita financimento</h5>
                 </div>
-                </div>
+                </div> */}
                 <div className="blockInfo">
                 <div className="checkDiv">
                     {city === "" && uf === "" ? "" :
                     <h5><IoLocationOutline />{city} - {uf}</h5>
                     }
                 </div>
+                {city === "" && uf === "" ?
+                   ""
+                    :
+                    <button onClick={removeCity}>X</button>
+                    }
                 {city === "" && uf === "" ?
                     <button onClick={handleOpenModal}>Escolha sua cidade</button>
                     :

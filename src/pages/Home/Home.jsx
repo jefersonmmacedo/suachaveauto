@@ -24,6 +24,7 @@ import { FaBusAlt, FaMotorcycle, FaTruckMoving } from "react-icons/fa";
 import { HiTruck } from "react-icons/hi";
 import { MdElectricCar } from "react-icons/md";
 import { BlocckAutosHome } from "../../components/BlocckAutosHome/BlocckAutosHome";
+import { DownloadApp2 } from "../../components/DownloadApp2/DownloadApp2";
 
 export function Home() {
     const LocalCity = localStorage.getItem("suachaveautocity");
@@ -179,6 +180,7 @@ export function Home() {
           </div>
              <AutosModel type={typeCar}/> */}
 
+            {/* <DownloadApp2 /> */}
             <div className="textFeature2">
             <h3>Mais procurados</h3>
             </div>
@@ -193,7 +195,6 @@ export function Home() {
           </div> */}
             {/* <ExploreIconsProperties />
             <Cities /> */}
-            {/* <DownloadApp /> */}
 
             <Finance />
             {/* <NewSearchClient /> */}
