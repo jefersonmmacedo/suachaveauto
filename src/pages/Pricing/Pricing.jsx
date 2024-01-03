@@ -4,11 +4,15 @@ import { Plains } from "../../components/Plains/Plains";
 import { Footer } from "../../components/Footer/Footer";
 import {MdAlarm} from "react-icons/md";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import black from "../../assets/images/Black.png";
 
 export function Pricing() {
     return (
         <div className="Pricing">
             <Navbar2 />
+            <div className="imagePromo">
+                <img src={black} alt="" />
+            </div>
             <h2>Escolha o <span>plano ideal</span> para o seu negócio</h2>
             <h4>Cada plano atende a uma necessidade, de acordo com as ferramentas oferecidas. <br/>Você poderá alterar a qualquer momento.</h4>
 
